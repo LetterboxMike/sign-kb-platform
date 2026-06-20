@@ -1,0 +1,5 @@
+{
+  "record_id": "rec-invalid-missing-record-type-001",
+  "schema_version": "1.4",
+  "source": { "doc_type": "shop" }
+}

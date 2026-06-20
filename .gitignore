@@ -1,0 +1,15 @@
+# dependencies & build
+node_modules/
+dist/
+
+# secrets
+.env
+.env.local
+
+# logs / loader artifacts
+*.log
+load-reject-report.json
+
+# heavy source PDFs and scratch staging — not part of the serving surface
+Original Docs/
+_work/

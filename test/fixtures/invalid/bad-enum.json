@@ -1,0 +1,8 @@
+{
+  "record_id": "rec-invalid-bad-enum-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "source": { "doc_type": "shop" },
+  "classification": { "sign_category": "spaceship", "illuminated": true },
+  "structure": [{ "component": "panel", "provenance": "drawing" }]
+}
