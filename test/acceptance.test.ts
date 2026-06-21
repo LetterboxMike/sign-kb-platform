@@ -15,7 +15,7 @@ suite('Phase 1 acceptance (DB-backed)', () => {
   let initial: LoadSummary;
 
   beforeAll(async () => {
-    initial = await load({ rebuild: true });
+    initial = await load({ rebuild: true, embed: false });
   }, 180_000);
 
   afterAll(async () => {
@@ -34,7 +34,7 @@ suite('Phase 1 acceptance (DB-backed)', () => {
   });
 
   it('re-running with no changes updates zero rows (idempotent)', async () => {
-    const again = await load({ rebuild: false });
+    const again = await load({ rebuild: false, embed: false });
     expect(again.inserted).toBe(0);
     expect(again.updated).toBe(0);
     expect(again.deleted).toBe(0);
@@ -96,7 +96,7 @@ suite('Phase 1 acceptance (DB-backed)', () => {
       JSON.stringify({ record_id: 'rec-should-not-load-001', schema_version: '1.4', source: { doc_type: 'shop' } }),
     );
 
-    const s = await load({ rebuild: true, recordsDir: tmp, referenceFile: config.referenceFile });
+    const s = await load({ rebuild: true, embed: false, recordsDir: tmp, referenceFile: config.referenceFile });
     expect(s.validRecords).toBe(1);
     expect(s.rejected.length).toBe(1);
 
@@ -107,6 +107,6 @@ suite('Phase 1 acceptance (DB-backed)', () => {
 
     fs.rmSync(tmp, { recursive: true, force: true });
     // Restore the full corpus so the project is left in the loaded state.
-    await load({ rebuild: true });
+    await load({ rebuild: true, embed: false });
   }, 180_000);
 });
