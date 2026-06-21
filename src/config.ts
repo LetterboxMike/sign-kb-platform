@@ -9,9 +9,10 @@ export const config = {
   supabaseUrl: process.env.SUPABASE_URL ?? '',
   databaseUrl: process.env.DATABASE_URL ?? '',
 
-  // Phase 2 placeholders — not used by the Phase 1 loader.
-  embeddingModel: process.env.EMBEDDING_MODEL ?? 'text-embedding-3-small',
-  embeddingDim: Number(process.env.EMBEDDING_DIM ?? '1536'),
+  // Phase 2 — semantic retrieval.
+  embeddingModel: process.env.EMBEDDING_MODEL ?? 'text-embedding-3-large',
+  embeddingDim: Number(process.env.EMBEDDING_DIM ?? '3072'),
+  openaiApiKey: process.env.OPENAI_API_KEY ?? '',
 
   recordsDir: resolve(process.env.RECORDS_DIR ?? './records'),
   referenceFile: resolve(process.env.REFERENCE_FILE ?? './reference/manufacturer-reference.json'),
@@ -24,4 +25,11 @@ export function requireDatabaseUrl(): string {
     throw new Error('DATABASE_URL is not set. Copy .env.example to .env and fill it in.');
   }
   return config.databaseUrl;
+}
+
+export function requireOpenAIKey(): string {
+  if (!config.openaiApiKey) {
+    throw new Error('OPENAI_API_KEY is not set. Add it to .env (needed for Phase 2 embeddings).');
+  }
+  return config.openaiApiKey;
 }

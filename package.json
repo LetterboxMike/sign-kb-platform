@@ -6,6 +6,7 @@
   "description": "Rebuildable read index (serving surface) over the sign knowledge base. Phase 1: schema + loader (structured filtering).",
   "scripts": {
     "check": "tsx src/check.ts",
+    "chunks:preview": "tsx src/chunk-preview.ts",
     "load": "tsx src/loader.ts",
     "load:rebuild": "tsx src/loader.ts --rebuild",
     "typecheck": "tsc --noEmit",
