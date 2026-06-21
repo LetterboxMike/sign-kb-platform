@@ -1,0 +1,10 @@
+# Keep deployments lean. records/, reference/, canon/ are NOT ignored — the sync
+# function reads them at runtime.
+Original Docs/
+_work/
+review-queue/
+node_modules/
+.git/
+test/
+*.md
+load-reject-report.json

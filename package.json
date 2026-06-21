@@ -9,6 +9,9 @@
     "chunks:preview": "tsx src/chunk-preview.ts",
     "load": "tsx src/loader.ts",
     "load:rebuild": "tsx src/loader.ts --rebuild",
+    "sync": "tsx src/loader.ts",
+    "verify:index": "tsx src/verify.ts",
+    "eval": "tsx src/eval.ts",
     "typecheck": "tsc --noEmit",
     "test": "vitest run"
   },
