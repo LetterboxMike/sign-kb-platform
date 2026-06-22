@@ -33,6 +33,18 @@ export {
   type ClaimedJob,
 } from '@kb/ingest';
 export { rollupQualityGrades } from '@kb/ranker';
+export {
+  proposeFromPrompt,
+  proposeExplicit,
+  applyCorrection,
+  revertCorrection,
+  listCorrections,
+  getCorrection,
+  type ChangeEntry,
+  type CorrectionProposal,
+  type CorrectionRow,
+  type ApplyResult,
+} from '@kb/correct';
 export { exportCorpus } from '@kb/export';
 export { query } from '@kb/db';
 export { config as kbConfig } from '@kb/config';
