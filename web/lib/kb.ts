@@ -54,5 +54,8 @@ export {
   type ReferenceEntry as ReferenceLayerEntry,
   type ReferenceProposal,
 } from '@kb/reference';
+export { listProposedTerms, resolveProposedTerm, type ProposedTerm } from '@kb/vocab';
+export { listSavedQueries, saveQuery, deleteSavedQuery, type SavedQuery } from '@kb/saved';
+export { buildExportBundle, type ExportBundle } from '@kb/export';
 export { query } from '@kb/db';
 export { config as kbConfig } from '@kb/config';

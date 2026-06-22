@@ -1,7 +1,8 @@
 import { Search as SearchIcon } from 'lucide-react';
-import { search, type SignFilters } from '@/lib/kb';
+import { search, listSavedQueries, type SignFilters } from '@/lib/kb';
 import { getFacets } from '@/lib/queries';
 import { RecordCard, type RecordCardData } from '@/components/record-card';
+import { SavedQueries } from '@/components/saved-queries';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 
@@ -15,7 +16,7 @@ export default async function SearchPage({
   const sp = await searchParams;
   const q = (sp.q ?? '').toString().trim();
   const category = (sp.category ?? '').toString();
-  const facets = await getFacets();
+  const [facets, saved] = await Promise.all([getFacets(), listSavedQueries()]);
 
   const filters: SignFilters = category ? { sign_category: category } : {};
   let results: RecordCardData[] = [];
@@ -67,6 +68,8 @@ export default async function SearchPage({
         </select>
         <Button type="submit">Search</Button>
       </form>
+
+      <SavedQueries saved={saved} currentQ={q} currentCategory={category} />
 
       {q ? (
         results.length ? (
