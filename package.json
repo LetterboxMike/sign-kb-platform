@@ -14,6 +14,7 @@
     "sync": "tsx src/loader.ts",
     "verify:index": "tsx src/verify.ts",
     "eval": "tsx src/eval.ts",
+    "eval:chat": "tsx src/eval-chat.ts",
     "typecheck": "tsc --noEmit",
     "test": "vitest run"
   },
