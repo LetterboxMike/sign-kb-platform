@@ -19,8 +19,16 @@ const FILTERABLE = new Set([
   'record_type', 'sign_category', 'sub_type', 'fabrication_family', 'illumination_method',
   'illuminated', 'mounting', 'sides', 'digital_integration', 'doc_type', 'industry_vertical',
   'design_status', 'option_set_id', 'quality_grade', 'ada_tactile', 'ada_braille', 'title_24',
-  'is_program',
+  'is_program', 'status',
 ]);
+
+/** The query API defaults to status='live'. Resolve a caller-supplied status into the
+ *  signCriteria the WHERE builder consumes: undefined -> 'live'; '*'/'all' -> no status
+ *  constraint (the Phase 2 review UI uses this to see 'staging'/'rejected'). */
+function resolveStatus(status: unknown): string | undefined {
+  if (status === '*' || status === 'all') return undefined;
+  return (status as string) ?? 'live';
+}
 
 export type FilterValue = string | number | boolean | Array<string | number | boolean>;
 export type SignFilters = Record<string, FilterValue>;
@@ -55,6 +63,7 @@ export interface SignRow {
   industry_vertical: string | null;
   design_status: string | null;
   quality_grade: string | null;
+  status: string | null;
   raw: any;
 }
 
@@ -79,6 +88,7 @@ export interface ResolvedMaterial {
 
 export interface RecordResult {
   record: any; // the full source record (signs.raw)
+  status: string | null;
   components: Array<{
     component: string | null;
     fabrication_method: string | null;
@@ -122,7 +132,10 @@ export async function search(queryText: string, filters: SignFilters = {}, k = 1
   const [emb] = await embedTexts([queryText]);
   const dim = config.embeddingDim;
   const params: unknown[] = [toVectorLiteral(emb), k];
-  const conds = buildConditions(filters, 's', params);
+  const { status, ...rest } = filters as SignFilters & { status?: FilterValue };
+  const effectiveStatus = resolveStatus(status);
+  const signCriteria: SignFilters = effectiveStatus ? { ...rest, status: effectiveStatus } : rest;
+  const conds = buildConditions(signCriteria, 's', params);
   const where = conds.length ? `where ${conds.join(' and ')}` : '';
 
   const sql = `
@@ -145,7 +158,11 @@ export async function search(queryText: string, filters: SignFilters = {}, k = 1
 
 /** Pattern A: exact/faceted filter over signs, including material/component existence. */
 export async function filter(criteria: FilterCriteria = {}, limit = 100): Promise<SignRow[]> {
-  const { material_category, component, ...signCriteria } = criteria;
+  const { material_category, component, status, ...rest } = criteria as FilterCriteria & { status?: FilterValue };
+  const effectiveStatus = resolveStatus(status);
+  const signCriteria: Record<string, FilterValue> = effectiveStatus
+    ? { ...(rest as Record<string, FilterValue>), status: effectiveStatus }
+    : (rest as Record<string, FilterValue>);
   const params: unknown[] = [];
   const conds = buildConditions(signCriteria, 's', params);
   const matExists = existsClause('sign_materials', 'category', material_category, params);
@@ -158,7 +175,7 @@ export async function filter(criteria: FilterCriteria = {}, limit = 100): Promis
   const sql = `
     select s.record_id, s.record_type, s.sign_category, s.sub_type, s.fabrication_family,
            s.illumination_method, s.illuminated, s.mounting, s.doc_type, s.industry_vertical,
-           s.design_status, s.quality_grade, s.raw
+           s.design_status, s.quality_grade, s.status, s.raw
     from signs s
     ${where}
     order by s.record_id
@@ -169,7 +186,7 @@ export async function filter(criteria: FilterCriteria = {}, limit = 100): Promis
 
 /** One record, optionally with materials resolved to their reference entries (pattern C). */
 export async function getRecord(id: string, opts: { resolveRefs?: boolean } = {}): Promise<RecordResult | null> {
-  const rec = await query<{ raw: any }>('select raw from signs where record_id = $1', [id]);
+  const rec = await query<{ raw: any; status: string | null }>('select raw, status from signs where record_id = $1', [id]);
   if (rec.rows.length === 0) return null;
 
   const components = await query(
@@ -216,7 +233,7 @@ export async function getRecord(id: string, opts: { resolveRefs?: boolean } = {}
     materials = r.rows.map((row) => ({ ...row, reference: null }));
   }
 
-  return { record: rec.rows[0].raw, components: components.rows as any, materials };
+  return { record: rec.rows[0].raw, status: rec.rows[0].status, components: components.rows as any, materials };
 }
 
 /** Pattern C standalone: resolve a normalized reference id to its full reference entry. */
