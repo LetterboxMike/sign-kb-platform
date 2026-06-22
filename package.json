@@ -17,6 +17,7 @@
     "eval:chat": "tsx src/eval-chat.ts",
     "eval:extract": "tsx src/eval-extract.ts",
     "extract": "tsx src/extract-cli.ts",
+    "ingest": "tsx src/ingest-cli.ts",
     "typecheck": "tsc --noEmit",
     "test": "vitest run"
   },

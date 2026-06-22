@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Search, List, MessageSquare, Scale } from 'lucide-react';
+import { Search, List, MessageSquare, Scale, Inbox } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const links = [
@@ -10,6 +10,7 @@ const links = [
   { href: '/browse', label: 'Browse', icon: List },
   { href: '/chat', label: 'Chat', icon: MessageSquare },
   { href: '/ranker', label: 'Ranker', icon: Scale },
+  { href: '/review', label: 'Review', icon: Inbox },
 ];
 
 export function Nav() {
