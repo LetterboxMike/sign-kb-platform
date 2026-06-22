@@ -1,10 +1,11 @@
 import { createServerClient } from '@supabase/ssr';
 import { NextResponse, type NextRequest } from 'next/server';
 
-// Paths reachable without a session: the login/reset pages and Supabase auth callbacks. The
-// cron ingestion processor (GET /api/ingest/process) is also public but authenticates with
-// CRON_SECRET in the route; its POST (UI-triggered) still requires a session.
+// Paths reachable without a session: the login/reset pages and Supabase auth callbacks. The cron
+// GET routes (ingestion processor + eval suite) are also public but authenticate with CRON_SECRET
+// in the route; their UI/POST paths still require a session.
 const PUBLIC_PREFIXES = ['/login', '/reset-password', '/auth'];
+const CRON_GETS = ['/api/ingest/process', '/api/eval'];
 
 export async function updateSession(request: NextRequest): Promise<NextResponse> {
   let response = NextResponse.next({ request });
@@ -30,7 +31,7 @@ export async function updateSession(request: NextRequest): Promise<NextResponse>
   const { data: { user } } = await supabase.auth.getUser();
 
   const path = request.nextUrl.pathname;
-  const isCronGet = path === '/api/ingest/process' && request.method === 'GET';
+  const isCronGet = request.method === 'GET' && CRON_GETS.includes(path);
   const isPublic = isCronGet || PUBLIC_PREFIXES.some((p) => path === p || path.startsWith(`${p}/`));
 
   if (!user && !isPublic) {

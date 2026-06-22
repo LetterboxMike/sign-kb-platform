@@ -11,6 +11,9 @@ import { EditableField } from '@/components/editable-field';
 import { AiEditWidget } from '@/components/ai-edit-widget';
 
 export const dynamic = 'force-dynamic';
+// Approving an inline/AI edit runs the full regression suite (retrieval + chat grounding) inline
+// before committing, so the server action needs headroom beyond the default function timeout.
+export const maxDuration = 300;
 
 function Field({ label, value }: { label: string; value: React.ReactNode }) {
   if (value == null || value === '' || value === false) return null;

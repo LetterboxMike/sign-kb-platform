@@ -8,6 +8,9 @@ import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
 export const dynamic = 'force-dynamic';
+// Approving a correction runs the full regression suite (retrieval + chat grounding) inline before
+// committing, so the server action needs headroom beyond the default function timeout.
+export const maxDuration = 300;
 
 const statusVariant: Record<string, 'default' | 'secondary' | 'outline' | 'destructive'> = {
   approved: 'default',

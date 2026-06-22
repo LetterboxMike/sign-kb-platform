@@ -58,5 +58,6 @@ export {
 export { listProposedTerms, resolveProposedTerm, enumValuesFor, type ProposedTerm } from '@kb/vocab';
 export { listSavedQueries, saveQuery, deleteSavedQuery, type SavedQuery } from '@kb/saved';
 export { buildExportBundle, type ExportBundle } from '@kb/export';
+export { runRegressionSuite, type SuiteResult } from '@kb/eval-suite';
 export { query } from '@kb/db';
 export { config as kbConfig } from '@kb/config';

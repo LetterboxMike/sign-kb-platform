@@ -3,7 +3,7 @@ import { requireOpenAIKey } from './config';
 import { search } from './api';
 import { validateRecord } from './validate';
 import { writeRecord } from './write';
-import { runEval, passes } from './eval';
+import { runRegressionSuite } from './eval-suite';
 
 /**
  * Governed self-correction. A correction proposes a change set against live records; on approval
@@ -240,24 +240,38 @@ export async function applyCorrection(correctionId: string, opts: { approvedBy?:
     return { status: 'rejected', evalPassed: false, evalReasons: [error], error };
   }
 
-  // Eval gate against the now-updated index.
-  const report = await runEval();
-  const verdict = passes(report.metrics);
-  if (verdict.ok) {
+  // Full regression suite against the now-updated index (retrieval + chat grounding — build-plan
+  // eval #7). An eval *error* (e.g. a transient model/network failure) is treated as a failure so a
+  // correction never commits without a clean gate; the snapshot is restored either way.
+  let suite;
+  try {
+    suite = await runRegressionSuite();
+  } catch (e) {
+    await restore();
+    const error = e instanceof Error ? e.message : 'eval suite errored';
+    await query("update corrections set status='rejected', eval_result=$2::jsonb where id=$1", [
+      correctionId,
+      JSON.stringify({ passed: false, error }),
+    ]);
+    return { status: 'rejected', evalPassed: false, evalReasons: [`eval suite errored: ${error}`], error };
+  }
+
+  const metrics: Record<string, number> = suite.retrieval.metrics;
+  if (suite.ok) {
     await query(
       "update corrections set status='approved', approved_by=$2, committed_at=now(), eval_result=$3::jsonb where id=$1",
-      [correctionId, opts.approvedBy ?? null, JSON.stringify({ passed: true, metrics: report.metrics })],
+      [correctionId, opts.approvedBy ?? null, JSON.stringify({ passed: true, retrieval: suite.retrieval, chat: suite.chat })],
     );
-    return { status: 'approved', evalPassed: true, evalReasons: [], metrics: report.metrics };
+    return { status: 'approved', evalPassed: true, evalReasons: [], metrics };
   }
 
   // Regression — auto-revert.
   await restore();
   await query("update corrections set status='rejected', eval_result=$2::jsonb where id=$1", [
     correctionId,
-    JSON.stringify({ passed: false, reasons: verdict.reasons, metrics: report.metrics }),
+    JSON.stringify({ passed: false, reasons: suite.reasons, retrieval: suite.retrieval, chat: suite.chat }),
   ]);
-  return { status: 'rejected', evalPassed: false, evalReasons: verdict.reasons, metrics: report.metrics };
+  return { status: 'rejected', evalPassed: false, evalReasons: suite.reasons, metrics };
 }
 
 /** One-click revert of a committed correction: restore each record's snapshot exactly. */
