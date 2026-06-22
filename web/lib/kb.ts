@@ -46,5 +46,13 @@ export {
   type ApplyResult,
 } from '@kb/correct';
 export { exportCorpus } from '@kb/export';
+export {
+  listReference,
+  getReferenceEntry,
+  proposeReferenceEntry,
+  upsertReferenceEntry,
+  type ReferenceEntry as ReferenceLayerEntry,
+  type ReferenceProposal,
+} from '@kb/reference';
 export { query } from '@kb/db';
 export { config as kbConfig } from '@kb/config';

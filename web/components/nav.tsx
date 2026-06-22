@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Search, List, MessageSquare, Scale, Inbox, UploadCloud, Wand2 } from 'lucide-react';
+import { Search, List, MessageSquare, Scale, Inbox, UploadCloud, Wand2, Library } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const links = [
@@ -13,6 +13,7 @@ const links = [
   { href: '/ingest', label: 'Ingest', icon: UploadCloud },
   { href: '/review', label: 'Review', icon: Inbox },
   { href: '/corrections', label: 'Corrections', icon: Wand2 },
+  { href: '/reference', label: 'Reference', icon: Library },
 ];
 
 export function Nav() {
