@@ -16,6 +16,23 @@ interface FileState {
   error?: string;
 }
 
+// Browsers sometimes report an empty or generic file.type for PDFs; derive a sane content-type
+// from the extension so Supabase Storage's MIME check accepts the upload.
+function contentTypeFor(file: File): string {
+  if (file.type) return file.type;
+  const ext = file.name.toLowerCase().split('.').pop() ?? '';
+  const map: Record<string, string> = {
+    pdf: 'application/pdf',
+    png: 'image/png',
+    jpg: 'image/jpeg',
+    jpeg: 'image/jpeg',
+    webp: 'image/webp',
+    tif: 'image/tiff',
+    tiff: 'image/tiff',
+  };
+  return map[ext] ?? 'application/octet-stream';
+}
+
 // Step 1: file -> storage (signed URL) -> enqueue a durable 'queued' job. Survives a crash here.
 async function uploadAndEnqueue(file: File): Promise<string> {
   const urlRes = await fetch('/api/ingest/upload-url', {
@@ -29,7 +46,7 @@ async function uploadAndEnqueue(file: File): Promise<string> {
   const put = await fetch(urlData.signedUrl, {
     method: 'PUT',
     body: file,
-    headers: { 'content-type': file.type || 'application/octet-stream', 'x-upsert': 'true' },
+    headers: { 'content-type': contentTypeFor(file), 'x-upsert': 'true' },
   });
   if (!put.ok) throw new Error(`upload failed (${put.status})`);
 
