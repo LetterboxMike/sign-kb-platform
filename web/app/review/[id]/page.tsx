@@ -2,7 +2,8 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { FileText, ExternalLink } from 'lucide-react';
 import { getRecord } from '@/lib/kb';
-import { sourceFilenameFor } from '@/lib/review';
+import { sourceInfoFor } from '@/lib/review';
+import { signedViewUrl } from '@/lib/storage';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ReviewActions } from '@/components/review-actions';
@@ -12,13 +13,15 @@ export const dynamic = 'force-dynamic';
 export default async function ReviewDetail({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const recordId = decodeURIComponent(id);
-  const [rec, sourceFile] = await Promise.all([getRecord(recordId, { resolveRefs: true }), sourceFilenameFor(recordId)]);
+  const [rec, source] = await Promise.all([getRecord(recordId, { resolveRefs: true }), sourceInfoFor(recordId)]);
   if (!rec) notFound();
 
   const raw = rec.record ?? {};
   const cls = raw.classification ?? {};
   const k = raw.knowledge ?? {};
-  const isHttp = typeof sourceFile === 'string' && /^https?:\/\//i.test(sourceFile);
+  // Stored drawings (uploaded via the app) resolve to a signed URL; CLI-ingested local paths don't.
+  const viewUrl = source?.path ? await signedViewUrl(source.path) : null;
+  const sourceLabel = source?.filename ?? source?.path ?? null;
 
   return (
     <div className="space-y-6">
@@ -82,14 +85,14 @@ export default async function ReviewDetail({ params }: { params: Promise<{ id: s
             </CardTitle>
           </CardHeader>
           <CardContent>
-            {isHttp ? (
-              <iframe src={sourceFile as string} className="h-[600px] w-full rounded border" title="source drawing" />
+            {viewUrl ? (
+              <iframe src={viewUrl} className="h-[600px] w-full rounded border" title="source drawing" />
             ) : (
               <div className="rounded-md border border-dashed p-6 text-sm text-muted-foreground">
-                <div className="font-mono text-xs">{sourceFile ?? 'unknown source'}</div>
+                <div className="font-mono text-xs">{sourceLabel ?? 'unknown source'}</div>
                 <p className="mt-2">
-                  The drawing viewer renders here once drawings are stored in the cloud (Phase 2 upload/storage). For
-                  CLI-ingested drawings the file lives on the ingest host.
+                  Inline preview is available for drawings uploaded through the app (stored in the cloud). This record was
+                  ingested from a local file, so the drawing isn&apos;t served here.
                 </p>
               </div>
             )}

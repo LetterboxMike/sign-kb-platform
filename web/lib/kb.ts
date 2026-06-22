@@ -19,6 +19,7 @@ export {
 
 export { writeRecord, setRecordStatus, RecordValidationError, type RecordStatus } from '@kb/write';
 export { answerQuestion, type ChatAnswer, type ChatMessage, type RetrievedRecord } from '@kb/chat';
+export { ingestPdf, ingestFile, type IngestResult } from '@kb/ingest';
 export { rollupQualityGrades } from '@kb/ranker';
 export { exportCorpus } from '@kb/export';
 export { query } from '@kb/db';

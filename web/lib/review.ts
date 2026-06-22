@@ -42,11 +42,12 @@ export async function flaggedJobs(): Promise<FlaggedJob[]> {
   return r.rows;
 }
 
-export async function sourceFilenameFor(recordId: string): Promise<string | null> {
-  const r = await query<{ source_filename: string | null }>(
-    `select source_filename from ingestion_jobs
+export async function sourceInfoFor(recordId: string): Promise<{ filename: string | null; path: string | null } | null> {
+  const r = await query<{ source_filename: string | null; source_path: string | null }>(
+    `select source_filename, source_path from ingestion_jobs
      where $1 = any(candidate_record_ids) order by created_at desc limit 1`,
     [recordId],
   );
-  return r.rows[0]?.source_filename ?? null;
+  const row = r.rows[0];
+  return row ? { filename: row.source_filename, path: row.source_path } : null;
 }
