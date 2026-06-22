@@ -18,6 +18,11 @@ export const config = {
   referenceFile: resolve(process.env.REFERENCE_FILE ?? './reference/manufacturer-reference.json'),
   canonDir: resolve(process.env.CANON_DIR ?? './canon'),
   schemaPath: resolve(process.env.SCHEMA_PATH ?? './sign-record.schema.json'),
+
+  // Ingestion (Phase 2) — the extraction model + the ported playbook the prompt is built from.
+  extractionModel: process.env.EXTRACTION_MODEL ?? process.env.CHAT_MODEL ?? 'gpt-5.4',
+  extractionSkillPath: resolve(process.env.EXTRACTION_SKILL ?? './sign-drawing-extraction-SKILL.md'),
+  extractionContractPath: resolve(process.env.EXTRACTION_CONTRACT ?? './extraction-contract.md'),
 };
 
 export function requireDatabaseUrl(): string {

@@ -15,6 +15,8 @@
     "verify:index": "tsx src/verify.ts",
     "eval": "tsx src/eval.ts",
     "eval:chat": "tsx src/eval-chat.ts",
+    "eval:extract": "tsx src/eval-extract.ts",
+    "extract": "tsx src/extract-cli.ts",
     "typecheck": "tsc --noEmit",
     "test": "vitest run"
   },
