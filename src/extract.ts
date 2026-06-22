@@ -2,6 +2,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { config, requireOpenAIKey } from './config';
 import { validateRecord } from './validate';
+import schema from '../sign-record.schema.json';
+import { EXTRACTION_SKILL, EXTRACTION_CONTRACT } from './extraction-text';
 
 /**
  * The ingestion extraction engine. Turns a sign drawing (PDF) into candidate KB records by
@@ -31,9 +33,9 @@ let cachedPrompt: string | null = null;
 
 function buildSystemPrompt(): string {
   if (cachedPrompt) return cachedPrompt;
-  const schema = fs.readFileSync(config.schemaPath, 'utf8');
-  const skill = fs.readFileSync(config.extractionSkillPath, 'utf8');
-  const contract = fs.readFileSync(config.extractionContractPath, 'utf8');
+  const skill = EXTRACTION_SKILL;
+  const contract = EXTRACTION_CONTRACT;
+  const schemaText = JSON.stringify(schema, null, 2);
   cachedPrompt = [
     'You are the sign-drawing extraction agent for a commercial signage knowledge base. You turn a',
     'sign drawing (PDF) into one or more validated knowledge-base records. Execute the SKILL using',
@@ -81,7 +83,7 @@ function buildSystemPrompt(): string {
     contract,
     '',
     '===== SCHEMA (sign-record.schema.json) =====',
-    schema,
+    schemaText,
   ].join('\n');
   return cachedPrompt;
 }

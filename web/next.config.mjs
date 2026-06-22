@@ -24,8 +24,10 @@ abs('EXTRACTION_CONTRACT', 'extraction-contract.md');
 const nextConfig = {
   // Allow importing the TypeScript data core from ../src (outside the app dir).
   experimental: { externalDir: true },
-  // pg is a native-ish server module — never bundle it for the client/runtime.
-  serverExternalPackages: ['pg'],
+  // NOTE: do NOT mark pg as a serverExternalPackage. ../src/db.ts resolves pg from the repo-root
+  // node_modules, which Next's external-package tracer misses (it stayed out of the function
+  // bundle and 500'd on Vercel with "Cannot find module 'pg'"). Letting webpack bundle pg puts it
+  // in the function. pg's optional native/socket deps are handled below.
   // The repo root is the tracing root (the app imports ../src and reads repo-root files).
   outputFileTracingRoot: root,
   // These are read at runtime via fs (schema gate + extraction prompt). Force them into the
@@ -38,6 +40,15 @@ const nextConfig = {
       '../reference/manufacturer-reference.json',
       '../canon/**',
     ],
+  },
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      // pg pulls in optional native / Cloudflare-only modules behind try/catch; keep them external
+      // so bundling pg for the Node runtime doesn't fail to resolve them.
+      config.externals = config.externals || [];
+      config.externals.push({ 'pg-native': 'commonjs pg-native', 'cloudflare:sockets': 'commonjs cloudflare:sockets' });
+    }
+    return config;
   },
 };
 

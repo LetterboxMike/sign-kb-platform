@@ -1,12 +1,9 @@
-import fs from 'node:fs';
 import Ajv2020 from 'ajv/dist/2020';
 import type { ValidateFunction } from 'ajv';
 import addFormats from 'ajv-formats';
-import { config } from './config';
-
-// The validation gate. The same sign-record.schema.json that validate.py uses is the
-// single contract — an invalid record never enters the index.
-const schema = JSON.parse(fs.readFileSync(config.schemaPath, 'utf8'));
+// Bundle the schema as a module (not a runtime fs read) so the gate works in any runtime,
+// including serverless where cwd/paths differ. This is the same sign-record.schema.json contract.
+import schema from '../sign-record.schema.json';
 
 const ajv = new Ajv2020({ allErrors: true, strict: false });
 addFormats(ajv);

@@ -13,3 +13,6 @@ load-reject-report.json
 # heavy source PDFs and scratch staging — not part of the serving surface
 Original Docs/
 _work/
+
+# Vercel CLI link
+.vercel/

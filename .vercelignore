@@ -1,10 +1,34 @@
-# Keep deployments lean. records/, reference/, canon/ are NOT ignored — the sync
-# function reads them at runtime.
+# Keep the Vercel upload lean. The web app (root dir = web) imports ../src and reads these
+# repo-root files at runtime via outputFileTracingIncludes: sign-record.schema.json,
+# sign-drawing-extraction-SKILL.md, extraction-contract.md, reference/, canon/.
+# So do NOT use a broad *.md ignore — keep those two .md files. Exclude only heavy/build/unused.
 Original Docs/
-_work/
-review-queue/
 node_modules/
 .git/
+.next/
+.verify_tmp/
+_work/
+review-queue/
+sign-kb/
+records/
+export/
 test/
-*.md
 load-reject-report.json
+*.log
+# planning docs not needed at runtime (extraction SKILL + contract .md ARE kept)
+PRD-serving-surface.md
+PRD-kb-platform.md
+BUILD-PLAN-serving-surface.md
+platform-architecture.md
+platform-build-plan.md
+serving-surface-spec.md
+serving-surface-README.md
+serving-surface-HANDOFF.md
+calibration-report.md
+calibration-resolutions-v1.2.md
+contract-stress-test.md
+design-taste-model.md
+batch2-checkpoint.md
+claude-code-platform-prompt.md
+run-log.md
+CLAUDE.md

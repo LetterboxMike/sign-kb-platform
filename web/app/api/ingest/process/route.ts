@@ -53,12 +53,16 @@ export async function GET(req: Request) {
   if (secret && req.headers.get('authorization') !== `Bearer ${secret}`) {
     return NextResponse.json({ error: 'unauthorized' }, { status: 401 });
   }
-  const processed: ProcessedJob[] = [];
-  for (let i = 0; i < 10; i++) {
-    const job = await processOne();
-    if (!job) break;
-    processed.push(job);
+  try {
+    const processed: ProcessedJob[] = [];
+    for (let i = 0; i < 10; i++) {
+      const job = await processOne();
+      if (!job) break;
+      processed.push(job);
+    }
+    const remaining = await pendingJobCount();
+    return NextResponse.json({ processed: processed.length, jobs: processed, remaining });
+  } catch (e) {
+    return NextResponse.json({ error: e instanceof Error ? e.message : 'processing failed' }, { status: 500 });
   }
-  const remaining = await pendingJobCount();
-  return NextResponse.json({ processed: processed.length, jobs: processed, remaining });
 }
