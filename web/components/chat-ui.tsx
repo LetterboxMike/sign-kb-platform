@@ -2,10 +2,11 @@
 
 import { useRef, useState } from 'react';
 import Link from 'next/link';
-import { Send, AlertTriangle } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+import { Send, AlertTriangle, ChevronDown, ChevronRight, FileText } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
 
 interface Citation {
@@ -15,15 +16,48 @@ interface Citation {
 interface Message {
   role: 'user' | 'assistant';
   content: string;
+  suggestions?: string[];
   citations?: Citation[];
   fabricated?: string[];
 }
 
-const EXAMPLES = [
-  'How do halo-lit channel letters differ from front-lit ones?',
-  'What goes into a board-formed concrete monument base?',
-  'When would you use a push-through acrylic face?',
+const OPENERS = [
+  'How is a channel letter sign built?',
+  'What makes a good monument sign?',
+  'Tell me about illuminated cabinet signs',
 ];
+
+function References({ citations }: { citations: Citation[] }) {
+  const [open, setOpen] = useState(false);
+  if (!citations.length) return null;
+  return (
+    <div className="mt-3 border-t pt-2">
+      <button
+        onClick={() => setOpen((o) => !o)}
+        className="flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground"
+      >
+        {open ? <ChevronDown className="h-3 w-3" /> : <ChevronRight className="h-3 w-3" />}
+        <FileText className="h-3 w-3" /> {citations.length} source{citations.length === 1 ? '' : 's'}
+      </button>
+      {open ? (
+        <ul className="mt-2 space-y-1">
+          {citations.map((c) => (
+            <li key={c.record_id}>
+              <Link
+                href={`/record/${encodeURIComponent(c.record_id)}`}
+                target="_blank"
+                className="font-mono text-[11px] text-muted-foreground underline-offset-2 hover:text-foreground hover:underline"
+              >
+                {c.record_id}
+              </Link>
+              {c.sign_category ? <span className="ml-2 text-[11px] text-muted-foreground">{c.sign_category.replaceAll('_', ' ')}</span> : null}
+            </li>
+          ))}
+        </ul>
+      ) : null}
+    </div>
+  );
+}
 
 export function ChatUI() {
   const [messages, setMessages] = useState<Message[]>([]);
@@ -50,7 +84,13 @@ export function ChatUI() {
       if (!res.ok) throw new Error(data.error || 'Chat failed.');
       setMessages((m) => [
         ...m,
-        { role: 'assistant', content: data.answer, citations: data.citations, fabricated: data.fabricated },
+        {
+          role: 'assistant',
+          content: data.reply,
+          suggestions: data.suggestions,
+          citations: data.citations,
+          fabricated: data.fabricated,
+        },
       ]);
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Chat failed.');
@@ -60,19 +100,17 @@ export function ChatUI() {
     }
   }
 
+  const lastAssistantIdx = messages.map((m) => m.role).lastIndexOf('assistant');
+
   return (
     <div className="flex flex-col gap-4">
-      <div className="min-h-[320px] space-y-4">
+      <div className="min-h-[340px] space-y-4">
         {messages.length === 0 ? (
           <div className="rounded-lg border border-dashed p-6 text-sm text-muted-foreground">
-            <p>Ask the knowledge base anything about the corpus. Answers are grounded in retrieved records and cite them.</p>
+            <p>Ask the knowledge base anything about the corpus. I&apos;ll narrow down with you and cite the records behind every answer.</p>
             <div className="mt-3 flex flex-col gap-2">
-              {EXAMPLES.map((ex) => (
-                <button
-                  key={ex}
-                  onClick={() => ask(ex)}
-                  className="text-left text-sm text-foreground underline-offset-2 hover:underline"
-                >
+              {OPENERS.map((ex) => (
+                <button key={ex} onClick={() => ask(ex)} className="text-left text-sm text-foreground underline-offset-2 hover:underline">
                   → {ex}
                 </button>
               ))}
@@ -87,24 +125,34 @@ export function ChatUI() {
                   m.role === 'user' ? 'bg-primary text-primary-foreground' : 'border bg-card',
                 )}
               >
-                <p className="whitespace-pre-wrap leading-relaxed">{m.content}</p>
+                {m.role === 'assistant' ? (
+                  <div className="prose prose-sm max-w-none dark:prose-invert prose-p:my-2 prose-ul:my-2 prose-li:my-0.5 prose-headings:mt-3 prose-headings:mb-1">
+                    <ReactMarkdown remarkPlugins={[remarkGfm]}>{m.content}</ReactMarkdown>
+                  </div>
+                ) : (
+                  <p className="whitespace-pre-wrap leading-relaxed">{m.content}</p>
+                )}
+
                 {m.fabricated && m.fabricated.length > 0 ? (
                   <div className="mt-2 flex items-center gap-1 text-xs text-destructive">
                     <AlertTriangle className="h-3 w-3" /> referenced unknown ids: {m.fabricated.join(', ')}
                   </div>
                 ) : null}
-                {m.citations && m.citations.length > 0 ? (
-                  <div className="mt-3 border-t pt-2">
-                    <div className="mb-1 text-xs text-muted-foreground">Sources</div>
-                    <div className="flex flex-wrap gap-1.5">
-                      {m.citations.map((c) => (
-                        <Link key={c.record_id} href={`/record/${encodeURIComponent(c.record_id)}`} target="_blank">
-                          <Badge variant="secondary" className="font-mono text-[11px] hover:bg-secondary/70">
-                            {c.record_id}
-                          </Badge>
-                        </Link>
-                      ))}
-                    </div>
+
+                {m.role === 'assistant' && m.citations ? <References citations={m.citations} /> : null}
+
+                {m.role === 'assistant' && i === lastAssistantIdx && m.suggestions && m.suggestions.length > 0 ? (
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {m.suggestions.map((s) => (
+                      <button
+                        key={s}
+                        onClick={() => ask(s)}
+                        disabled={loading}
+                        className="rounded-full border bg-background px-3 py-1 text-xs font-medium transition-colors hover:bg-accent disabled:opacity-50"
+                      >
+                        {s}
+                      </button>
+                    ))}
                   </div>
                 ) : null}
               </div>
@@ -123,12 +171,7 @@ export function ChatUI() {
         }}
         className="flex gap-2"
       >
-        <Input
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          placeholder="Ask the knowledge base…"
-          disabled={loading}
-        />
+        <Input value={input} onChange={(e) => setInput(e.target.value)} placeholder="Ask the knowledge base…" disabled={loading} />
         <Button type="submit" size="icon" disabled={loading || !input.trim()}>
           <Send className="h-4 w-4" />
         </Button>

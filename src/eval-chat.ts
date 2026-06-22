@@ -11,13 +11,15 @@ import { closePool } from './db';
  * happening (at least half the questions produce >=1 resolvable citation).
  */
 
+// Specific questions, so the agent answers directly and grounds in records (rather than asking a
+// clarifying question, which is the correct behavior for broad prompts but cites nothing).
 const QUESTIONS = [
-  'How is a halo-illuminated monument sign constructed?',
-  'What materials are used for channel letter faces?',
-  'When would you choose a pylon sign over a monument sign?',
-  'How are ADA tactile and braille signs specified?',
-  'What is push-through acrylic and when is it used?',
-  'How can a sign be mounted to an existing pole without penetrating it?',
+  'How is a face-lit channel letter constructed — the face, returns, and trim cap?',
+  'How is a halo-illuminated reverse channel letter built and lit?',
+  'How is a board-formed concrete monument sign base constructed?',
+  'What materials and method are used for an ADA tactile and braille room ID plaque?',
+  'What is push-through acrylic and how is it fabricated into a sign face?',
+  'How is a sign mounted to an existing pole using a band clamp?',
 ];
 
 async function main() {
