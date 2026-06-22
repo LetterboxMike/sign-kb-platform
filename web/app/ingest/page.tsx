@@ -1,11 +1,13 @@
 import { UploadCloud } from 'lucide-react';
 import { storageConfigured } from '@/lib/storage';
+import { pendingJobCount } from '@/lib/kb';
 import { UploadUI } from '@/components/upload-ui';
 
 export const dynamic = 'force-dynamic';
 
-export default function IngestPage() {
+export default async function IngestPage() {
   const ok = storageConfigured();
+  const pending = ok ? await pendingJobCount() : 0;
   return (
     <div className="space-y-5">
       <div>
@@ -16,7 +18,7 @@ export default function IngestPage() {
         </p>
       </div>
       {ok ? (
-        <UploadUI />
+        <UploadUI initialPending={pending} />
       ) : (
         <div className="flex items-start gap-3 rounded-lg border border-dashed p-6 text-sm">
           <UploadCloud className="mt-0.5 h-5 w-5 text-muted-foreground" />

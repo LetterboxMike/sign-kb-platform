@@ -2,22 +2,22 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { UploadCloud, FileText, Check, AlertTriangle, Loader2 } from 'lucide-react';
+import { UploadCloud, FileText, Check, AlertTriangle, Loader2, Clock, RefreshCw } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
-type Status = 'pending' | 'uploading' | 'extracting' | 'done' | 'error';
+type Status = 'pending' | 'uploading' | 'queued' | 'extracting' | 'done' | 'error';
 interface FileState {
   name: string;
+  jobId?: string;
   status: Status;
   staged?: number;
   flagged?: number;
-  jobId?: string;
   error?: string;
 }
 
-async function ingestOne(file: File, onUpdate: (s: Partial<FileState>) => void): Promise<void> {
-  onUpdate({ status: 'uploading' });
+// Step 1: file -> storage (signed URL) -> enqueue a durable 'queued' job. Survives a crash here.
+async function uploadAndEnqueue(file: File): Promise<string> {
   const urlRes = await fetch('/api/ingest/upload-url', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -33,34 +33,71 @@ async function ingestOne(file: File, onUpdate: (s: Partial<FileState>) => void):
   });
   if (!put.ok) throw new Error(`upload failed (${put.status})`);
 
-  onUpdate({ status: 'extracting' });
-  const ingRes = await fetch('/api/ingest', {
+  const enq = await fetch('/api/ingest/enqueue', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ key: urlData.key, filename: file.name }),
   });
-  const ing = await ingRes.json();
-  if (!ingRes.ok) throw new Error(ing.error || 'ingestion failed');
-  onUpdate({ status: 'done', staged: ing.staged, flagged: ing.flagged?.length ?? 0, jobId: ing.jobId });
+  const enqData = await enq.json();
+  if (!enq.ok) throw new Error(enqData.error || 'enqueue failed');
+  return enqData.jobId as string;
 }
 
-export function UploadUI() {
+export function UploadUI({ initialPending }: { initialPending: number }) {
   const [files, setFiles] = useState<FileState[]>([]);
   const [busy, setBusy] = useState(false);
+  const [pending, setPending] = useState(initialPending);
+  const [drainNote, setDrainNote] = useState<string | null>(null);
+
+  // Step 2: drain the queue one job per call (resumable). Updates matching files by jobId.
+  async function drain() {
+    for (;;) {
+      const res = await fetch('/api/ingest/process', { method: 'POST' });
+      const data = await res.json();
+      if (!res.ok) {
+        setDrainNote(data.error || 'processing failed');
+        break;
+      }
+      setPending(data.remaining ?? 0);
+      if (!data.processed) break;
+      const j = data.job;
+      setFiles((prev) =>
+        prev.map((f) =>
+          f.jobId === j.id
+            ? { ...f, status: j.status === 'failed' ? 'error' : 'done', staged: j.staged, flagged: j.flagged, error: j.error }
+            : f,
+        ),
+      );
+    }
+  }
 
   async function handleFiles(list: FileList | null) {
     if (!list || !list.length || busy) return;
     const picked = Array.from(list);
     setFiles(picked.map((f) => ({ name: f.name, status: 'pending' as Status })));
     setBusy(true);
+    setDrainNote(null);
+    // Upload + enqueue all first (fast, durable), then process.
     for (let i = 0; i < picked.length; i++) {
       const update = (s: Partial<FileState>) => setFiles((prev) => prev.map((f, idx) => (idx === i ? { ...f, ...s } : f)));
       try {
-        await ingestOne(picked[i], update);
+        update({ status: 'uploading' });
+        const jobId = await uploadAndEnqueue(picked[i]);
+        update({ status: 'queued', jobId });
       } catch (e) {
         update({ status: 'error', error: e instanceof Error ? e.message : 'failed' });
       }
     }
+    await drain();
+    setBusy(false);
+  }
+
+  async function processPending() {
+    if (busy) return;
+    setBusy(true);
+    setDrainNote(null);
+    await drain();
+    setDrainNote('Processed pending jobs.');
     setBusy(false);
   }
 
@@ -68,6 +105,18 @@ export function UploadUI() {
 
   return (
     <div className="space-y-4">
+      {pending > 0 ? (
+        <div className="flex items-center justify-between gap-3 rounded-md border bg-muted/40 p-3 text-sm">
+          <span className="flex items-center gap-2">
+            <Clock className="h-4 w-4 text-muted-foreground" /> {pending} job{pending === 1 ? '' : 's'} queued (from this or a
+            prior session)
+          </span>
+          <Button size="sm" variant="secondary" onClick={processPending} disabled={busy}>
+            <RefreshCw className={cn('h-3.5 w-3.5', busy && 'animate-spin')} /> Process pending
+          </Button>
+        </div>
+      ) : null}
+
       <label
         className={cn(
           'flex cursor-pointer flex-col items-center justify-center gap-2 rounded-lg border border-dashed p-10 text-center transition-colors',
@@ -76,7 +125,7 @@ export function UploadUI() {
       >
         <UploadCloud className="h-6 w-6 text-muted-foreground" />
         <span className="text-sm font-medium">Drop sign drawings here or click to choose</span>
-        <span className="text-xs text-muted-foreground">PDF, PNG, or JPEG · single or bulk</span>
+        <span className="text-xs text-muted-foreground">PDF, PNG, or JPEG · single or bulk · uploads are queued durably</span>
         <input
           type="file"
           multiple
@@ -97,7 +146,7 @@ export function UploadUI() {
               </span>
               <span className="flex shrink-0 items-center gap-2 text-xs">
                 {f.status === 'uploading' ? (<><Loader2 className="h-3 w-3 animate-spin" /> uploading</>) : null}
-                {f.status === 'extracting' ? (<><Loader2 className="h-3 w-3 animate-spin" /> extracting</>) : null}
+                {f.status === 'queued' ? (<><Clock className="h-3 w-3" /> queued</>) : null}
                 {f.status === 'done' ? (
                   <span className="flex items-center gap-1 text-foreground">
                     <Check className="h-3 w-3" /> {f.staged} staged{f.flagged ? `, ${f.flagged} flagged` : ''}
@@ -114,7 +163,9 @@ export function UploadUI() {
         </ul>
       ) : null}
 
-      {anyDone ? (
+      {drainNote ? <p className="text-xs text-muted-foreground">{drainNote}</p> : null}
+
+      {anyDone || initialPending > 0 ? (
         <Link href="/review" className="inline-flex items-center text-sm font-medium underline-offset-2 hover:underline">
           → Review staged candidates
         </Link>
