@@ -17,6 +17,8 @@ abs('SCHEMA_PATH', 'sign-record.schema.json');
 abs('RECORDS_DIR', 'records');
 abs('REFERENCE_FILE', 'reference/manufacturer-reference.json');
 abs('CANON_DIR', 'canon');
+abs('EXTRACTION_SKILL', 'sign-drawing-extraction-SKILL.md');
+abs('EXTRACTION_CONTRACT', 'extraction-contract.md');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
