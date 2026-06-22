@@ -26,6 +26,19 @@ const nextConfig = {
   experimental: { externalDir: true },
   // pg is a native-ish server module — never bundle it for the client/runtime.
   serverExternalPackages: ['pg'],
+  // The repo root is the tracing root (the app imports ../src and reads repo-root files).
+  outputFileTracingRoot: root,
+  // These are read at runtime via fs (schema gate + extraction prompt). Force them into the
+  // serverless bundle so they exist on Vercel (paths relative to outputFileTracingRoot).
+  outputFileTracingIncludes: {
+    '/**': [
+      '../sign-record.schema.json',
+      '../sign-drawing-extraction-SKILL.md',
+      '../extraction-contract.md',
+      '../reference/manufacturer-reference.json',
+      '../canon/**',
+    ],
+  },
 };
 
 export default nextConfig;
