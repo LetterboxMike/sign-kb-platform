@@ -1,0 +1,149 @@
+{
+  "record_id": "rec-wayfinding-retrofit-header-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "From a multi-sign interior wayfinding package. All client, vendor, designer, building/department names, street address, project numbers, and the ADA-assistance phone number excluded at extraction. Higher-education vertical retained. Copy content excluded; copy structure retained.",
+  "source": {
+    "doc_type": "design_intent"
+  },
+  "context": {
+    "industry_vertical": "education_higher_ed_law_school"
+  },
+  "classification": {
+    "sign_category": "wayfinding",
+    "sub_type": "retrofit_slide_over_department_header_builtup_acrylic",
+    "primary_function": "add_department_or_building_header_band_to_existing_room_signs",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "one header design fabricated in a few standard widths (sign-type codes S1H/S2H/S3H), each deployed in quantity over existing room signs; copy and building color vary per unit",
+    "variant_axis": "header_width_and_department_color"
+  },
+  "knowledge": {
+    "plain_language_summary": "A built-up acrylic header band that slides over the top of an existing room sign and is glued in place, adding a painted, direct-printed department or building identifier above the existing message. Built from a 1/8in router-cut acrylic face, a spacer, and a backer laminated together; front and edges painted; finished with a non-glare ADA clear coat.",
+    "rationale": "A slide-over header lets a department be re-identified or rebranded without replacing the whole existing sign, which is cheap, fast, and field-installable across a large quantity of doors.",
+    "tradeoffs": "Retrofit headers are low-cost and minimally disruptive, but depend on a consistent host-sign top profile and add a visible seam where the header meets the existing sign.",
+    "when_to_use": "Campus or facility re-identification programs where existing room signs are sound and only the header/department band needs to change.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "built_up_acrylic_header",
+      "function": "department/building header band",
+      "construction": "1/2in built-up acrylic header: 1/8in router-cut acrylic face and notch, 1/4in spacer, and 1/8in backer laminated together; slides over existing sign and is glued in place",
+      "face": {
+        "material_refs": [
+          "A1"
+        ],
+        "decoration": "direct-print message on painted face",
+        "decoration_refs": [
+          "D1"
+        ]
+      },
+      "finish_refs": [
+        "P1",
+        "P5",
+        "P8"
+      ],
+      "mounted_via": "slide_over_glue",
+      "mounted_to": "existing_room_sign",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "substrate",
+      "product": "built-up laminated acrylic (face + spacer + backer)",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "D1",
+      "category": "graphic",
+      "product": "direct-print message",
+      "application": "digital_print",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews MP6425SP White, satin",
+      "manufacturer_normalized_id": "mfr-matthews"
+    },
+    {
+      "ref": "P5",
+      "category": "paint",
+      "product": "Matthews MP00959 (building/department background color), satin",
+      "code_status": "building_color_per_department",
+      "manufacturer_normalized_id": "mfr-matthews"
+    },
+    {
+      "ref": "P8",
+      "category": "coating",
+      "product": "Matthews (MAP) SOA 4158SP ADA non-glare clear coat",
+      "application": "sprayed",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "header_height_range_in": "7 to 9",
+    "build_up_thickness_in": 0.5,
+    "unit_system": "imperial",
+    "provenance": "drawing",
+    "note": "Three coded header widths; heights ~7-9in. Package states sizes need not be finalized prior to fabrication."
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "department_or_building_name",
+        "treatment": "single line, direct-print on painted band"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "compliance": {
+    "ada": {
+      "non_glare": true
+    },
+    "notes": "ADA non-glare clear coat (P8) applied on all interior signs per the package key."
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "rules_observations": [
+      "Header is a subordinate band sized to a consistent host-sign profile, holding system consistency across the program."
+    ],
+    "craft_observations": [
+      "Laminated build-up (face/spacer/backer) gives a dimensional reveal rather than a flat printed strip; glued slide-over keeps fasteners concealed."
+    ],
+    "aesthetic_notes": [
+      {
+        "note": "A pragmatic retrofit device; success depends on uniform host signs so the seam reads as intentional.",
+        "provenance": "opinion"
+      }
+    ]
+  },
+  "open_items": [
+    "Final header sizes not fixed on this design-intent set",
+    "Dependence on existing host-sign top profile not dimensioned"
+  ],
+  "extraction_meta": {
+    "field_confidence": "high on construction and finishes; sizes flexible per the design-intent documentation",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment",
+      "program_model"
+    ],
+    "modeling_notes": [
+      "Source labeled 'Design Intent Documentation' with sizes not finalized; mapped to doc_type 'shop' as the closest enum value because construction, paint codes, and ADA specs are at shop level. doc_type enum has no 'design_intent' value."
+    ],
+    "reconciliation_v1_2": "fabrication_family -> panel; doc_type -> design_intent (Ruling 3). Cleared to records/."
+  }
+}

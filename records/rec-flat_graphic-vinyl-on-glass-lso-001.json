@@ -1,0 +1,47 @@
+{
+  "record_id": "rec-flat_graphic-vinyl-on-glass-lso-001",
+  "schema_version": "1.4",
+  "record_type": "flat_graphic",
+  "provenance_note": "All client/vendor/human/copy excluded; vertical retained.",
+  "source": {
+    "doc_type": "permit"
+  },
+  "context": {
+    "industry_vertical": "healthcare_office_campus"
+  },
+  "classification": {
+    "graphic_method": "plotter_cut",
+    "applied_to": "glass",
+    "contour_cut": true
+  },
+  "materials_manifest": [
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "cut vinyl",
+      "application": "vinyl",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Standard cut-vinyl glass graphics."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "medium-high",
+    "inferred_fields": [
+      "design_assessment"
+    ],
+    "plain_language_summary": "Cut vinyl on glass (Type H) in the site sign family."
+  }
+}

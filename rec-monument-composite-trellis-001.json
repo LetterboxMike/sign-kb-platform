@@ -1,0 +1,128 @@
+{
+  "record_id": "rec-monument-composite-trellis-001",
+  "schema_version": "0.2-draft",
+  "provenance_note": "All client, vendor, and human-contact data excluded. Business name and tagline specifics stripped; business type retained as industry vertical.",
+  "source": { "doc_type": "design_conceptual" },
+  "context": { "industry_vertical": "agricultural_retail_farm_garden_hardware" },
+
+  "classification": {
+    "sign_category": "monument",
+    "sub_type": "composite_architectural_monument",
+    "primary_function": "primary_brand_identification",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "illumination_scope": "cabinet only; structure and columns unlit",
+    "sides": 1,
+    "fabrication_family": "composite_timber_masonry",
+    "mounting": "ground_mounted_masonry_columns",
+    "digital_integration": false
+  },
+
+  "knowledge": {
+    "plain_language_summary": "A landscape-style monument where an illuminated brand cabinet hangs from a rough-sawn redwood trellis spanning two stone-clad columns. It reads as a built architectural structure rather than a single sign panel, tying the brand to a rustic, agricultural setting.",
+    "rationale": "Suspending a serviceable metal cabinet inside a timber-and-stone structure gets a warm, site-rooted architectural read while keeping the lit, weatherable, changeable part of the sign as a conventional fabricated cabinet.",
+    "tradeoffs": "Three trades in one sign (timber, masonry, metal fabrication) raises cost and coordination, but produces a distinctive premium result a single cabinet on a pole cannot.",
+    "when_to_use": "Brands wanting a rustic, established, place-rooted identity, especially against natural or agricultural site context.",
+    "provenance": "inferred"
+  },
+
+  "structure": [
+    {
+      "ref": "01",
+      "component": "wooden_trellis_structure",
+      "function": "primary overhead structure spanning the columns; carries the suspended cabinet",
+      "construction": "rough-sawn redwood trellis with a double 2in x 10in redwood center beam",
+      "material_refs": ["W1"],
+      "finish": "sun-proof brown protective finish",
+      "illuminated": false,
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "sign_hangers",
+      "function": "suspend the cabinet from the trellis",
+      "construction": "fabricated aluminum tube support brackets styled to resemble I-beams, with 1/4in aluminum mounting plates",
+      "finish_refs": ["P1"],
+      "mounting_relationship": { "mounts": "sign_cabinet", "to": "wooden_trellis_structure" },
+      "provenance": "drawing"
+    },
+    {
+      "ref": "03",
+      "component": "sign_cabinet",
+      "function": "illuminated brand identification",
+      "construction": "6in deep fabricated aluminum cabinet; stencil-cut aluminum face backed with 3/4in clear acrylic push-thru letterforms",
+      "face": { "decoration": "translucent vinyl on push-thru letter faces", "decoration_refs": ["V1"] },
+      "finish_refs": ["P2"],
+      "illumination": "internally illuminated, white LEDs",
+      "fabrication_method": "push_thru_letters_in_fabricated_cabinet",
+      "mounted_via": "sign_hangers",
+      "mounted_to": "wooden_trellis_structure",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "04",
+      "component": "stone_columns_and_base",
+      "function": "structural supports and visual base; carry the trellis",
+      "construction": "fabricated aluminum frame sheathed in exterior cement backer board, finished with stone veneer",
+      "material_buildup": ["aluminum frame", "exterior cement backer board", "stone veneer"],
+      "material_refs": ["ST1", "CB1"],
+      "finish": "stone veneer to match building foundation",
+      "illuminated": false,
+      "provenance": "drawing"
+    }
+  ],
+
+  "materials_manifest": [
+    { "ref": "W1", "category": "structural_timber", "product": "rough-sawn redwood", "spec": "double 2x10 center beam", "finish": "sun-proof brown protective finish", "manufacturer_normalized_id": null },
+    { "ref": "ST1", "category": "cladding_stone", "product": "stone veneer", "spec": "matched to building foundation", "manufacturer_normalized_id": null },
+    { "ref": "CB1", "category": "substrate", "product": "exterior cement backer board", "manufacturer_normalized_id": null },
+    { "ref": "V1", "category": "vinyl", "product": "3M 3630-149 Light Beige, translucent", "manufacturer_normalized_id": "mfr-3m-graphics" },
+    { "ref": "P1", "category": "paint", "product": "Matthews MP20190 Duranodic 313 Metallic, matte", "manufacturer_normalized_id": "mfr-matthews" },
+    { "ref": "P2", "category": "paint", "product": "Matthews MP15394 Red Ferrari, satin", "manufacturer_normalized_id": "mfr-matthews" },
+    { "ref": "A1", "category": "letter_face", "product": "clear acrylic push-thru letterforms", "spec": "3/4in thick", "manufacturer_normalized_id": null }
+  ],
+
+  "dimensions": { "overall_width_in": 173, "cabinet_width_in": 92, "cabinet_copy_height_in": 42, "base_height_in": 30, "total_sign_area_sqft": 27, "unit_system": "imperial", "provenance": "drawing" },
+
+  "messaging_pattern": {
+    "copy_blocks": [
+      { "slot": "primary_wordmark", "location": "cabinet" },
+      { "slot": "established_date_badge", "location": "cabinet" },
+      { "slot": "services_line", "location": "cabinet", "treatment": "dotted-separated service categories" }
+    ],
+    "copy_content": "excluded_pii"
+  },
+
+  "utilities": { "power": "dedicated 120V/20A sign circuit, no other load" },
+
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Hangers styled as I-beams make the suspension itself a design feature rather than hidden hardware.",
+      "Stone veneer matched to the building foundation ties the sign to its architecture, a strong site-fit move.",
+      "Material palette (redwood, stone, bronze metal, red cabinet) is coherent and rooted to a rustic agricultural context."
+    ],
+    "aesthetic_notes": [ { "note": "Reads as a built gateway structure, warmer and more permanent than a standard cabinet monument.", "provenance": "opinion" } ]
+  },
+
+  "open_items": ["Sign attachment and support structure pending structural engineering review"],
+
+  "extraction_meta": {
+    "field_confidence": "high on construction and materials, medium on exact dimensions",
+    "inferred_fields": ["knowledge", "design_assessment"]
+  },
+
+  "schema_strain_log": {
+    "new_enum_values_surfaced": {
+      "sub_type": ["composite_architectural_monument"],
+      "fabrication_family": ["composite_timber_masonry"],
+      "mounting": ["ground_mounted_masonry_columns"],
+      "material_category": ["structural_timber", "cladding_stone", "substrate (cement_backer_board)"],
+      "component_types": ["wooden_trellis_structure", "sign_hangers", "stone_columns_and_base"]
+    },
+    "new_fields_added": ["classification.illumination_scope", "structure[].mounting_relationship", "structure[].mounted_via", "materials[].material_buildup", "utilities"],
+    "key_modeling_addition": "Intra-sign mounting relationships: a component can be mounted to or suspended from another component in the same sign, not just to the ground. The structure array needs to express these dependencies.",
+    "shape_finding": "Did NOT break the record shape. First sign with non-metal structural materials (timber, stone) and a layered cladding buildup. Still does not test the vehicle-wrap shape risk."
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "record_id": "rec-directional-builtup-acrylic-directory-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "From a multi-sign interior wayfinding package. All client, vendor, designer, building/department/room/person names, street address, project numbers, and the ADA-assistance phone number excluded at extraction. Higher-education vertical retained. Destination copy excluded; copy structure retained.",
+  "source": {
+    "doc_type": "design_intent"
+  },
+  "context": {
+    "industry_vertical": "education_higher_ed_law_school"
+  },
+  "classification": {
+    "sign_category": "directional",
+    "sub_type": "built_up_acrylic_directory_and_directional",
+    "primary_function": "interior_directional_and_directory_listing",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "a directional/directory design produced as several coded sizes (medium/large directional, freestanding directional) with destination lists set as full-size art by the designer; deployed at decision points",
+    "variant_axis": "size_mounting_and_destination_list"
+  },
+  "knowledge": {
+    "plain_language_summary": "A built-up acrylic interior directional/directory: a painted acrylic panel carrying a direct-printed list of destinations with directional arrows, grouped under a department or building header, finished with a non-glare ADA clear coat. Deployed at decision points as wall-mounted directories and, in a freestanding variant, as a standing directional.",
+    "rationale": "Direct-print destination lists let a directory carry many lines and be revised by reprinting the panel art, while the built-up acrylic body matches the rest of the interior sign family.",
+    "tradeoffs": "Direct-print panels are flexible and low-cost to revise but are not individually changeable line-by-line; a full reprint is needed when the directory changes.",
+    "when_to_use": "Decision points in an interior wayfinding system that need a grouped destination list with directional arrows.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "built_up_acrylic_panel",
+      "function": "directory/directional panel",
+      "construction": "built-up/laminated acrylic panel, front and edges painted, direct-print destination list and arrows; layouts provided full-size by designer",
+      "face": {
+        "material_refs": [
+          "A1"
+        ],
+        "decoration": "direct-print destinations, arrows, header lock-up",
+        "decoration_refs": [
+          "D1"
+        ]
+      },
+      "finish_refs": [
+        "P1",
+        "P5",
+        "P7",
+        "P8"
+      ],
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "non_glare_overlay",
+      "function": "ADA non-glare reading surface",
+      "construction": "clear non-glare medium matte acrylic over the printed field",
+      "material_refs": [
+        "M1"
+      ],
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "substrate",
+      "product": "built-up laminated acrylic panel",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "D1",
+      "category": "graphic",
+      "product": "direct-print destinations and arrows",
+      "application": "digital_print",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "M1",
+      "category": "substrate",
+      "product": "Clear P95 non-glare medium matte acrylic sheet",
+      "spec": "ADA non-glare",
+      "manufacturer_normalized_id": null,
+      "code_status": "manufacturer_unverified"
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews MP6425SP White, satin",
+      "manufacturer_normalized_id": "mfr-matthews"
+    },
+    {
+      "ref": "P5",
+      "category": "paint",
+      "product": "Matthews MP00959 Amsterdam Blue (department color), satin",
+      "code_status": "building_color_per_department",
+      "manufacturer_normalized_id": "mfr-matthews"
+    },
+    {
+      "ref": "P7",
+      "category": "paint",
+      "product": "Matthews MP59647 black, satin",
+      "manufacturer_normalized_id": "mfr-matthews"
+    },
+    {
+      "ref": "P8",
+      "category": "coating",
+      "product": "Matthews (MAP) SOA 4158SP ADA non-glare clear coat",
+      "application": "sprayed",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing",
+    "note": "Coded medium/large directional sizes plus a freestanding directional variant; full-size art supplied by designer, sizes flexible."
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "header_lockup",
+        "treatment": "department/building header"
+      },
+      {
+        "slot": "destination_lines",
+        "treatment": "stacked destination + arrow rows"
+      },
+      {
+        "slot": "ada_assistance_footer",
+        "treatment": "standard footer line with assistance contact",
+        "note": "contact value excluded as PII"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "compliance": {
+    "ada": {
+      "non_glare": true
+    },
+    "notes": "Non-glare matte surface and ADA non-glare clear coat. A directory footer carries an ADA-assistance contact line; the contact value is excluded as PII."
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "rules_observations": [
+      "Destinations grouped under a header with consistent arrow placement supports information sequencing at decision points.",
+      "Shared built-up acrylic body, type, and department color hold family consistency with the rest of the program."
+    ],
+    "craft_observations": [
+      "Direct-print on a non-glare matte field keeps a dense directory legible and revisable by reprinting rather than refabricating."
+    ],
+    "aesthetic_notes": [
+      {
+        "note": "Utility-first directory; the discipline is in consistent grouping and arrow logic, not ornament.",
+        "provenance": "opinion"
+      }
+    ]
+  },
+  "open_items": [
+    "Freestanding directional variant uses a different mounting and would be split into its own record in full production",
+    "Final sizes/layouts designer-supplied, not fixed on this set"
+  ],
+  "extraction_meta": {
+    "field_confidence": "high on construction and finishes; sizes/layouts designer-supplied",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment",
+      "program_model"
+    ],
+    "modeling_notes": [
+      "Record covers wall-mounted directories (mounting:wall_mounted); a freestanding directional variant in the same package has a different mounting and is flagged for its own record in full production rather than collapsed here."
+    ],
+    "reconciliation_v1_2": "fabrication_family -> panel; doc_type -> design_intent. Freestanding variant remains an open_item (separate record in full production). Cleared to records/."
+  }
+}

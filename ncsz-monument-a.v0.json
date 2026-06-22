@@ -1,0 +1,175 @@
+{
+  "record_id": "ncsz-monument-a",
+  "schema_version": "0.1-draft",
+  "source": {
+    "vendor": "Bender Signs",
+    "vendor_location": "Pollocksville, NC",
+    "designer_initials": "MR",
+    "sales_rep": "Jeremy Morton",
+    "drawing_version": "2.0",
+    "date_issued": "2025-05-27",
+    "source_file": "NC_Storage_Zones_-_Hubert_NC_-_Monument_Sign_v2_0.pdf",
+    "doc_type": "design_conceptual",
+    "doc_type_options": ["design_conceptual", "permit", "shop", "as_built", "survey", "wrap"]
+  },
+  "project": {
+    "client": "NC Storage Zones",
+    "industry": "self_storage",
+    "site_address": "409 Bear Creek Rd, Hubert, NC 28539"
+  },
+  "classification": {
+    "sign_category": "monument",
+    "sub_type": "double_sided_illuminated_cabinet_monument",
+    "primary_function": "primary_brand_identification",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 2,
+    "fabrication_family": "extruded_aluminum_cabinet_push_thru_facelit",
+    "mounting": "ground_mounted_pole_and_footing"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "topper",
+      "function": "architectural cap, visual termination of the stack",
+      "construction": "fabricated aluminum",
+      "finish_refs": ["P1"],
+      "illuminated": false,
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "primary_id_cabinet",
+      "function": "main brand identification, carries logo and wordmark",
+      "construction": "double-sided 16in deep extruded aluminum cabinet with 1-1/2in aluminum retainers",
+      "face": {
+        "material_refs": ["M1"],
+        "face_spec": "0.150in translucent white polycarbonate",
+        "decoration": "surface-applied vinyl graphics",
+        "decoration_refs": ["V1", "V2"]
+      },
+      "finish_refs": ["P2"],
+      "illumination": "12V 5500K white LEDs, internal",
+      "fabrication_method": "push-thru / face-lit cabinet",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "03",
+      "component": "ventilation_reveal",
+      "function": "horizontal reveal separating cabinets, also reads as a design break line",
+      "construction": "fabricated aluminum",
+      "finish_refs": ["P1"],
+      "illuminated": false,
+      "provenance": "drawing"
+    },
+    {
+      "ref": "04",
+      "component": "secondary_id_cabinet",
+      "function": "secondary messaging: tagline and URL",
+      "construction": "double-sided 16in deep extruded aluminum cabinet with 1-1/2in aluminum retainers",
+      "face": {
+        "material_refs": ["M1"],
+        "face_spec": "0.150in translucent white polycarbonate",
+        "decoration": "surface-applied vinyl graphics",
+        "decoration_refs": ["V1", "V2"]
+      },
+      "finish_refs": ["P2"],
+      "illumination": "12V 5500K white LEDs, internal",
+      "fabrication_method": "push-thru / face-lit cabinet",
+      "notes": "spec'd as upgradeable to digital message panels",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "05",
+      "component": "base_pole_cover",
+      "function": "visual base mass, conceals pole and footing transition",
+      "construction": "fabricated aluminum frame and cap",
+      "finish": "cap painted P2; base sheathed in faux brick panels",
+      "finish_refs": ["P2"],
+      "material_refs": ["M2"],
+      "illuminated": false,
+      "provenance": "drawing"
+    },
+    {
+      "ref": "06",
+      "component": "mounting_pole_footing",
+      "function": "structural support and ground anchoring",
+      "construction": "TBD pending structural engineering review",
+      "provenance": "drawing",
+      "status": "open"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "M1",
+      "category": "face_substrate",
+      "product": "solar-grade translucent white polycarbonate",
+      "spec": "0.150in thick",
+      "vendor": null,
+      "vendor_normalized_id": null
+    },
+    {
+      "ref": "M2",
+      "category": "cladding",
+      "product": "Texture Plus faux brick panels, black",
+      "vendor": "Texture Plus",
+      "vendor_normalized_id": null
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews Paint MP10206 Lead Pipe",
+      "finish": "satin",
+      "vendor": "Matthews Paint",
+      "vendor_normalized_id": null
+    },
+    {
+      "ref": "P2",
+      "category": "paint",
+      "product": "Matthews Paint Black",
+      "finish": "satin",
+      "vendor": "Matthews Paint",
+      "vendor_normalized_id": null
+    },
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "Oracal 8870-070 Black, opaque blockout",
+      "vendor": "Oracal",
+      "vendor_normalized_id": null
+    },
+    {
+      "ref": "V2",
+      "category": "vinyl",
+      "product": "Oracal 8800-017 Cherry Red, translucent",
+      "vendor": "Oracal",
+      "vendor_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "overall_width": "8ft 6in",
+    "overall_height": "8ft 9in",
+    "cabinet_depth": "16in",
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging": {
+    "logo": "NC Storage Zones",
+    "tagline": "Safe. Secure. Climate Controlled Storage.",
+    "url": "www.ncstoragezones.com"
+  },
+  "design_notes": [
+    "Two-tone strategy: Lead Pipe gray on topper and reveal frames a satin black cabinet body, giving the stack a layered architectural read rather than one flat slab.",
+    "Cherry red is the single accent, reserved for the logo and the URL bar, so it carries the night-time pop without competing with itself.",
+    "Faux brick base ties the sign to the masonry vernacular of the storage buildings behind it, grounding it as part of the site rather than a stuck-on pole sign.",
+    "provenance: inferred"
+  ],
+  "open_items": [
+    "Mounting pole and footing TBD pending structural engineering review"
+  ],
+  "extraction_meta": {
+    "extracted_by": "claude",
+    "field_confidence": "high on construction and materials, medium on exact dimensions",
+    "inferred_fields": ["design_notes", "component.function"]
+  }
+}

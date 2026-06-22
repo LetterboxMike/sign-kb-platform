@@ -1,0 +1,102 @@
+{
+  "record_id": "rec-dimensional-edge-lit-chrome-letters-asi105-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "corporate_campus_office"
+  },
+  "classification": {
+    "sign_category": "channel_letter",
+    "sub_type": "edge_illuminated_chrome_plate_building_id_letters",
+    "primary_function": "building_identification",
+    "illuminated": true,
+    "illumination_method": "halo_illuminated",
+    "illumination_detail": "edge-illuminated: chrome plate face + translucent white acrylic lit edge (edge glow, not face-lit)",
+    "sides": 1,
+    "fabrication_family": "dimensional_letter_or_logo",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "Fascia-mounted edge-illuminated building-ID letters: 3/8in aluminum plate letterforms with a chrome front face and a 1/4in translucent white acrylic lit edge, welded to angle backers.",
+    "rationale": "Chrome face plus a translucent acrylic lit edge produces an edge/halo glow rather than a face-lit read, a premium architectural detail.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "edge_lit_letters",
+      "construction": "3/8in + 1/4in aluminum plate letterforms, chrome plate face, 1/4in translucent white acrylic lit edge, flathead countersunk screws, welded to angle backer, LED edge illumination",
+      "material_refs": [
+        "AL1",
+        "A1"
+      ],
+      "finish_refs": [
+        "F1"
+      ],
+      "illumination": "edge LED",
+      "fabrication_method": "edge_illuminated_plate_letters",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "AL1",
+      "category": "letter_face",
+      "product": "3/8in aluminum plate, chrome finish",
+      "application": "material_finish",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "A1",
+      "category": "letter_face",
+      "product": "1/4in translucent white acrylic edge",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "F1",
+      "category": "coating",
+      "product": "chrome plate + powder coat",
+      "application": "sprayed",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "letter_run_in": [
+      380,
+      415
+    ],
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "building_wordmark"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Chrome face + translucent acrylic lit edge = edge/halo glow, not face-lit (mapped to halo_illuminated)."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ],
+    "vocab_notes": [
+      "Edge-lit is mapped to halo_illuminated (nearest enum); a distinct 'edge_illuminated' value is a vocab-pass candidate."
+    ]
+  }
+}

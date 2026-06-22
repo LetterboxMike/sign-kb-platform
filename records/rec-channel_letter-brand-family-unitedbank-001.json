@@ -1,0 +1,90 @@
+{
+  "record_id": "rec-channel_letter-brand-family-unitedbank-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data and actual copy excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "retail_banking"
+  },
+  "classification": {
+    "sign_category": "channel_letter",
+    "sub_type": "face_lit_channel_letters_size_matrix",
+    "primary_function": "branch_identification",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 1,
+    "fabrication_family": "channel_letter",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "channel-letter size matrix 12-36in cap height",
+    "variant_axis": "letter_height"
+  },
+  "knowledge": {
+    "plain_language_summary": "Face-lit channel letters in a 7-size matrix (12-36in): .063 aluminum returns, 1in trim cap, 3/16in plastic faces with V10/V1, LED modules, remote PSU box with toggle/lock, threaded-rod mount.",
+    "rationale": "A sized matrix reproduces consistent branch identity across building sizes.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "channel_letters",
+      "construction": ".063in aluminum returns painted P4, 1in trim cap P3/P4, white acrylic faces with V10/V1, internal LED modules, remote PSU box with toggle/lock, threaded-rod mount",
+      "material_refs": [
+        "V1"
+      ],
+      "illumination": "internal LED",
+      "fabrication_method": "face_lit_channel",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "brand vinyls V1 logo / V8 white copy / V10 lettering / V11 disclaimer",
+      "application": "vinyl",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews brand paints P1-P5",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "cap_height_in_range": "12-36",
+    "area_sqft": "19.9-179",
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "brand_wordmark"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Full section detailed; remote PSU box with toggle/lock standard."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

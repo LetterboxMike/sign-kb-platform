@@ -1,0 +1,56 @@
+{
+  "record_id": "rec-flat_graphic-plottercut-glass-wall-nexthealth-001",
+  "schema_version": "1.2",
+  "record_type": "flat_graphic",
+  "provenance_note": "All client/vendor/human/copy excluded; wellness clinic vertical retained.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "healthcare_wellness_clinic"
+  },
+  "classification": {
+    "graphic_method": "plotter_cut",
+    "applied_to": "glass",
+    "contour_cut": true
+  },
+  "program_model_note": "message_schedule of ~40 placements across glass/wall/door; one cut-vinyl archetype",
+  "materials_manifest": [
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "3M 7125-10 White / 7125-22 Matte Black plotter-cut vinyl",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    },
+    {
+      "ref": "F1",
+      "category": "vinyl",
+      "product": "Solyx SX-C300 Dusted Etch film (frosted base)",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-solyx"
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "One cut-vinyl archetype (white/matte black) across glass, wall, and door; frosted types add a dusted-etch base layer.",
+      "Logos reverse-cut for second-surface glass application."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "design_assessment"
+    ],
+    "plain_language_summary": "Contour-cut white and matte-black vinyl lettering and logos on glass, walls, and doors, with frosted dusted-etch film as a base layer on privacy glass; ~40 placements collapsed to one archetype."
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "record_id": "rec-plaque-bronze-stair-room-id-aurelius-001",
+  "schema_version": "1.3",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data and copy excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "corporate_office"
+  },
+  "classification": {
+    "sign_category": "plaque",
+    "sub_type": "bronze_panel_with_applied_tactile_and_braille",
+    "primary_function": "ada_room_and_stair_id",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A dark-bronze panel (satin brushed) with applied light-bronze laser-cut tactile characters, Type-II Raster braille, and an acrylic spacer, etched copy infilled to a metallic paint, VHB+silicone mounted.",
+    "rationale": "A brushed-bronze tactile panel matches the dimensional ID family while meeting ADA.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "bronze_panel",
+      "construction": "1/8in dark bronze panel satin brushed, 1/32in & 1/2in light bronze tactile chars VHB, Type-II Raster braille, 1/8in acrylic spacer painted to match inset 1/2in, etched copy infilled MP21248 Coppergold Metallic",
+      "material_refs": [
+        "BR1"
+      ],
+      "finish_refs": [
+        "P1"
+      ],
+      "fabrication_method": "tactile_plus_raster_braille",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "BR1",
+      "category": "face_substrate",
+      "product": "dark/light bronze, satin brushed",
+      "application": "material_finish",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews MP21248 Coppergold Metallic",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "mounting_height_in": 56,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "room_or_stair_id"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "compliance": {
+    "ada": {
+      "tactile": true,
+      "braille": true
+    },
+    "notes": "Type-II Raster braille; brushed-bronze tactile panel."
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Etched-and-filled brushed bronze matches the dimensional ID family."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

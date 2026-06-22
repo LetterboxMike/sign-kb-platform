@@ -1,0 +1,99 @@
+{
+  "record_id": "rec-cabinet-logo-vacuumform-face-zos-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data and actual copy excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "restaurant_qsr_burger"
+  },
+  "classification": {
+    "sign_category": "cabinet",
+    "sub_type": "single_face_vacuum_formed_logo_wall_cabinet",
+    "primary_function": "storefront_logo_identification",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 1,
+    "fabrication_family": "cabinet",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "front and rear identical logo cabinets",
+    "variant_axis": "location"
+  },
+  "knowledge": {
+    "plain_language_summary": "A single-face illuminated logo wall cabinet: 5in deep fabricated aluminum with a vacuum-formed translucent white polycarbonate embossed-logo face decorated with 3M translucent red vinyl, internal supplies, flush wall-mount.",
+    "rationale": "A vacuum-formed embossed face gives a dimensional branded logo cabinet; internal supplies keep it self-contained.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "logo_cabinet",
+      "construction": "5in deep fabricated aluminum frame + skin, 1.5in retainers painted MP satin white, vacuum-formed translucent white polycarbonate embossed-logo face with first-surface 3M translucent red vinyl, internal PSU, 6500K white LED",
+      "material_refs": [
+        "F1",
+        "V1"
+      ],
+      "finish_refs": [
+        "P1"
+      ],
+      "illumination": "internal 6500K LED",
+      "fabrication_method": "vacuum_formed_face_cabinet",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "F1",
+      "category": "face_substrate",
+      "product": "vacuum-formed translucent white polycarbonate, embossed",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "3M translucent red, first surface",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews satin white",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "cabinet_width_in": 48,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "logo"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Vacuum-formed embossed face gives a dimensional lit logo."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

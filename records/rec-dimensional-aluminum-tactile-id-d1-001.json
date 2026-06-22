@@ -1,0 +1,94 @@
+{
+  "record_id": "rec-dimensional-aluminum-tactile-id-d1-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "financial_investment_office"
+  },
+  "classification": {
+    "sign_category": "plaque",
+    "sub_type": "flat_cut_aluminum_letters_with_braille_tag",
+    "primary_function": "ada_room_identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "dimensional_letter_or_logo",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "general room ID + restroom (men/women/unisex)",
+    "variant_axis": "message_and_pictogram"
+  },
+  "knowledge": {
+    "plain_language_summary": "Flat-cut 1/4in aluminum letters mounted direct to wall (no backer), with a separate 1/8in aluminum braille tag using aluminum Type-II Raster braille dots; horizontal brushed, black-tinted clear lacquer.",
+    "rationale": "Direct-wall dimensional letters with a separate braille tag give a clean premium ADA ID.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "letters_and_braille",
+      "construction": "1/4in flat-cut aluminum letters, horizontal brushed black-tint lacquer, VHB+silicone; 1/8in aluminum braille tag with aluminum Raster braille",
+      "material_refs": [
+        "AL1"
+      ],
+      "fabrication_method": "flat_cut_plus_braille_tag",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "AL1",
+      "category": "letter_face",
+      "product": "1/4in aluminum, brushed black-tint lacquer",
+      "application": "material_finish",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "mount_height_in": [
+      60,
+      62
+    ],
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "room_id_or_restroom"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "compliance": {
+    "ada": {
+      "tactile": true,
+      "braille": true,
+      "pictogram": true,
+      "mounting_height_in": 60
+    },
+    "notes": "Aluminum Raster braille tag; 60in baseline."
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Direct-wall dimensional aluminum letters + separate braille tag."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

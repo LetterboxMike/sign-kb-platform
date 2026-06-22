@@ -1,0 +1,78 @@
+{
+  "record_id": "rec-digital_display-drive-thru-order-screen-drip-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "restaurant_qsr_drive_thru"
+  },
+  "classification": {
+    "sign_category": "digital_display",
+    "sub_type": "drive_thru_digital_order_screen_with_canopy",
+    "primary_function": "drive_thru_order_display",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 1,
+    "fabrication_family": "digital_display_assembly",
+    "mounting": "ground_mounted_footing",
+    "digital_integration": true
+  },
+  "knowledge": {
+    "plain_language_summary": "A drive-thru digital order screen with canopy on a new footing (existing speaker-post footing referenced; vehicle-detection loop retained).",
+    "rationale": "Digital order screen for the drive-thru order zone.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "order_screen",
+      "construction": "digital order screen + canopy on new footing",
+      "material_refs": [
+        "D1"
+      ],
+      "illumination": "self-emissive",
+      "mounted_to": "ground_footing",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "D1",
+      "category": "digital_display_module",
+      "product": "digital order display",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "dynamic_order_content"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "rules_observations": [
+      "Digital order screen in the drive-thru order zone."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "medium",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ],
+    "modeling_notes": [
+      "Order-zone assembly (screen + menu board) modeled as 2 records; sheet labeled 'Solution 1, Option A' (only Option A drawn)."
+    ]
+  }
+}

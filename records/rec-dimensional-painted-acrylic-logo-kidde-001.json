@@ -1,0 +1,76 @@
+{
+  "record_id": "rec-dimensional-painted-acrylic-logo-kidde-001",
+  "schema_version": "1.3",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "industrial_fire_safety_office"
+  },
+  "classification": {
+    "sign_category": "plaque",
+    "sub_type": "non_illuminated_painted_acrylic_logo",
+    "primary_function": "stairwell_identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "dimensional_letter_or_logo",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A non-illuminated stair logo: laser-cut 3/4in acrylic, painted matte to PMS colors, stud-mounted on 1/2in spacers; same logo geometry as the lit lobby version.",
+    "rationale": "A painted non-lit version covers the stairwell at lower cost.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "painted_logo",
+      "construction": "laser-cut 3/4in acrylic, matte to PMS 130C/White/200C, 1/2in standoff spacers, flush stud",
+      "finish_refs": [
+        "P1"
+      ],
+      "fabrication_method": "flat_cut_out",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews matte PMS 130C / White / 200C",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "overall_width_in": 72,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "logo"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Painted non-lit version of the lobby logo for the stairwell."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

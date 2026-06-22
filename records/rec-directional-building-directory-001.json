@@ -1,0 +1,75 @@
+{
+  "record_id": "rec-directional-building-directory-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data and actual copy excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "commercial_office_building"
+  },
+  "classification": {
+    "sign_category": "directional",
+    "sub_type": "building_directory_panel_digital_print",
+    "primary_function": "building_directory",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A building directory: a 3/8in aluminum backer plate with a 1/8in applied aluminum panel carrying a digitally printed 3M high-performance vinyl directory with matte laminate, silicone-stud mounted.",
+    "rationale": "Digital-print on an applied panel lets the directory be revised by reprinting; the backer plate gives a flush stud mount.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "directory_panel",
+      "construction": "3/8in aluminum backer + 1/8in applied aluminum panel, 3M HP vinyl digital print + matte laminate, silicone-filled stud mount",
+      "material_refs": [
+        "G1"
+      ],
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "G1",
+      "category": "graphic",
+      "product": "3M high-performance vinyl digital print + matte laminate, PMS 447C",
+      "application": "digital_print",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "tenant_directory"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Digital-print directory revisable by reprinting the applied panel."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

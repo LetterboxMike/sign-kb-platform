@@ -1,0 +1,98 @@
+{
+  "record_id": "rec-plaque-ada-photopolymer-with-notifier-sds-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "design_intent"
+  },
+  "context": {
+    "industry_vertical": "education_higher_ed"
+  },
+  "classification": {
+    "sign_category": "plaque",
+    "sub_type": "ada_photopolymer_tactile_with_apco_notifier_insert",
+    "primary_function": "ada_room_identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "photopolymer ADA room/office/suite IDs; some integrate Apco Notifier paper-insert holder",
+    "variant_axis": "size_and_insert"
+  },
+  "knowledge": {
+    "plain_language_summary": "ADA tactile IDs: painted photopolymer panels with 1/32in raised copy (silkscreened white) and integral Grade-2 braille; suite IDs add an Apco Notifier page holder for changeable paper occupant lists.",
+    "rationale": "Photopolymer integral tactile+braille is the compliant standard; the Notifier holds volatile occupant data as paper so the fabrication stays fixed.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "photopolymer_panel",
+      "construction": "0.0625-0.125in photopolymer, painted face+returns, raised 1/32in copy silkscreened white, integral Grade-2 braille; Apco Notifier custom-painted page holder + acrylic insert pocket (suite variant); 3M VHB",
+      "component_ref": "comp-apco-notifier",
+      "fabrication_method": "photopolymer_tactile",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "M1",
+      "category": "substrate",
+      "product": "photopolymer tactile panel",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews color-match",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "office_id_in": "8.5x6.5",
+    "suite_id_in": "8.5x14.75",
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "room_id",
+        "required": true
+      },
+      {
+        "slot": "occupant_paper_insert",
+        "required": false
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "compliance": {
+    "ada": {
+      "tactile": true,
+      "braille": true
+    },
+    "notes": "Integral photopolymer raised copy + Grade-2 braille; ANSI A117."
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Photopolymer integral tactile+braille; Apco Notifier paper insert for volatile occupant data."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

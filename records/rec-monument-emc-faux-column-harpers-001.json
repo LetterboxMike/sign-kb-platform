@@ -1,0 +1,122 @@
+{
+  "record_id": "rec-monument-emc-faux-column-harpers-001",
+  "schema_version": "1.3",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "design_conceptual"
+  },
+  "context": {
+    "industry_vertical": "commercial_real_estate_retail"
+  },
+  "option_set_id": "optset-harpers-monument-001",
+  "design_status": "proposed_option",
+  "classification": {
+    "sign_category": "monument",
+    "sub_type": "pushthru_cabinet_with_emc_and_faux_timber_column",
+    "primary_function": "center_identification_plus_dynamic_messaging",
+    "illuminated": true,
+    "illumination_method": "mixed",
+    "illumination_detail": "internal LED cabinet + external up/down sconce + full-color EMC",
+    "sides": 1,
+    "fabrication_family": "composite_structure",
+    "mounting": "ground_mounted_footing",
+    "digital_integration": true
+  },
+  "knowledge": {
+    "plain_language_summary": "Option 1: a single-sided monument with a push-through ID cabinet, a 12mm full-color EMC, a decorative faux-building timber/shingle column with an oil-rubbed-bronze up/down sconce, on a cultured-stone-veneer CMU base. Reuses an existing pole.",
+    "rationale": "A faux-building column ties the monument to the center's architecture; the large EMC carries dynamic messaging; reusing the existing pole/footing cuts cost.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "id_cabinet",
+      "construction": "fabricated aluminum, angle frame, 0.090in skin painted satin; push-thru 3/4in clear acrylic, white diffuser 2nd-surface, translucent red/blue vinyl 1st-surface; white LED",
+      "material_refs": [
+        "A1",
+        "V1"
+      ],
+      "illumination": "internal LED",
+      "fabrication_method": "push_thru_acrylic",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "emc",
+      "construction": "12mm full-color EMC, 36x48in, wireless, mounted to ID cabinet",
+      "material_refs": [
+        "EMC1"
+      ],
+      "provenance": "drawing"
+    },
+    {
+      "ref": "03",
+      "component": "faux_column",
+      "construction": "wood frame, plywood sheathing, wood trim + shingles to match buildings, crown cap; oil-rubbed bronze up/down sconce wired to sign power; bolted non-structural",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "04",
+      "component": "base",
+      "construction": "non-structural CMU on poured concrete footing, dry-stacked cultured stone veneer; saddle-mounted to two 4in steel poles (one existing + one new Sch40)",
+      "material_buildup": [
+        "CMU",
+        "cultured stone veneer"
+      ],
+      "mounted_to": "ground_footing",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "letter_face",
+      "product": "3/4in clear acrylic push-thru",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "translucent red/blue vinyl + white diffuser",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    },
+    {
+      "ref": "EMC1",
+      "category": "digital_display_module",
+      "product": "Watchfire 12mm full-color EMC",
+      "manufacturer_normalized_id": "mfr-watchfire"
+    }
+  ],
+  "dimensions": {
+    "overall_width_in": 131,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "center_name"
+      },
+      {
+        "slot": "dynamic_emc"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Faux-building column mimics center architecture; large landscape EMC; reuses existing pole."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

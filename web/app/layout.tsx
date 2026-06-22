@@ -7,7 +7,7 @@ import { Nav } from '@/components/nav';
 import { ThemeProvider } from '@/components/theme-provider';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { UserMenu } from '@/components/user-menu';
-import { createClient } from '@/lib/supabase/server';
+import { currentAppUser } from '@/lib/auth';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 
@@ -17,8 +17,7 @@ export const metadata: Metadata = {
 };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  const supabase = await createClient();
-  const { data: { user } } = await supabase.auth.getUser();
+  const user = await currentAppUser();
 
   return (
     <html lang="en" suppressHydrationWarning className={cn('font-sans', inter.variable)}>
@@ -31,9 +30,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                   Sign KB <span className="font-normal text-muted-foreground">Platform</span>
                 </Link>
                 <div className="flex items-center gap-1">
-                  <Nav />
+                  <Nav role={user.role} />
                   <ThemeToggle />
-                  <UserMenu email={user.email ?? ''} />
+                  <UserMenu email={user.email ?? ''} role={user.role} />
                 </div>
               </div>
             </header>

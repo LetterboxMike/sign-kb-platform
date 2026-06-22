@@ -1,0 +1,230 @@
+{
+  "record_id": "rec-monument-boardformed-concrete-halo-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client, vendor, designer, and contact data excluded at extraction. Vendor identity, job numbers, human names, install/branch addresses, and phone stripped. Outdoor-resort hospitality vertical retained; copy content excluded, copy structure retained.",
+  "source": {
+    "doc_type": "design_conceptual"
+  },
+  "context": {
+    "industry_vertical": "hospitality_outdoor_resort"
+  },
+  "classification": {
+    "sign_category": "monument",
+    "sub_type": "board_formed_concrete_monument_with_corten_planter",
+    "primary_function": "primary_brand_identification",
+    "illuminated": true,
+    "illumination_method": "halo_illuminated",
+    "illumination_detail": "reverse-pan channel letters halo-illuminated with warm white LEDs; no face illumination; concrete body and planter unlit",
+    "illumination_scope": "letters only; monument body and planter unlit",
+    "sides": 2,
+    "fabrication_family": "composite_structure",
+    "mounting": "ground_mounted_footing",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A low, wide, double-sided board-formed concrete monument with a CMU block core, carrying halo-lit reverse-pan aluminum channel letters (a logo and a primary line) that glow warm white against the concrete at night. A brushed anodized secondary line is pin-mounted to a Corten weathering-steel-clad planter at the base. The concrete is board-formed to match existing site concrete and finished the same front and back.",
+    "rationale": "Board-formed concrete plus a Corten planter roots the sign in a rugged outdoor-resort material language, while halo-lit reverse-pan letters keep the night read soft and architectural rather than a bright cabinet face.",
+    "tradeoffs": "Cast concrete and weathering steel give a permanent, site-rooted, high-end read but are heavy, costly, and require the concrete to be pre-wired and engineered; halo-only lighting is subtle but lower-impact at distance than a lit face.",
+    "when_to_use": "Resort, camp, or outdoor-hospitality entries wanting a permanent, material-driven monument that belongs to a rugged natural setting.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "concrete_monument_body",
+      "function": "primary structural mass and brand field",
+      "construction": "board-formed poured concrete over a CMU block core; texture and pattern to match existing site concrete; backside finished to match front; pre-wired for lighted signage",
+      "material_buildup": [
+        "CMU block core",
+        "board-formed poured concrete"
+      ],
+      "material_refs": [
+        "C1",
+        "CMU1"
+      ],
+      "illuminated": false,
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "logo_letters",
+      "function": "halo-lit brand logo",
+      "construction": "fabricated aluminum reverse-pan channel letters, 2in deep returns, painted matte black",
+      "finish_refs": [
+        "P1"
+      ],
+      "illumination": "halo-illuminated, warm white LEDs; remote power supplies in watertight box on backside",
+      "fabrication_method": "reverse_pan_halo_letters",
+      "mounted_via": "1in stainless steel spacers",
+      "mounted_to": "concrete_monument_body",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "03",
+      "component": "primary_copy_letters",
+      "function": "halo-lit primary brand line",
+      "construction": "fabricated aluminum reverse-pan channel letters, 1in deep returns, painted matte black",
+      "finish_refs": [
+        "P1"
+      ],
+      "illumination": "halo-illuminated, warm white LEDs; remote power supplies in watertight box on backside",
+      "fabrication_method": "reverse_pan_halo_letters",
+      "mounted_via": "1in stainless steel spacers",
+      "mounted_to": "concrete_monument_body",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "04",
+      "component": "secondary_copy_letters",
+      "function": "non-illuminated secondary line",
+      "construction": "1/2in thick flat cut-out aluminum letters, horizontal brushed grain with satin clear anodized finish",
+      "material_refs": [
+        "AN1"
+      ],
+      "illuminated": false,
+      "fabrication_method": "flush_pin_mounted_flat_cut_letters",
+      "mounted_via": "flush pins",
+      "mounted_to": "planter",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "05",
+      "component": "planter",
+      "function": "base mass and secondary-copy field",
+      "construction": "CMU block core clad in Corten weathering steel; rusted per manufacturer recommendation; sealed",
+      "material_buildup": [
+        "CMU block core",
+        "Corten weathering steel cladding"
+      ],
+      "material_refs": [
+        "COR1",
+        "CMU1",
+        "SL1"
+      ],
+      "illuminated": false,
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "C1",
+      "category": "structural_concrete_masonry",
+      "product": "board-formed poured concrete",
+      "spec": "texture/pattern matched to existing site concrete",
+      "manufacturer_normalized_id": null,
+      "note": "category placeholder: no material_category for structural concrete/masonry."
+    },
+    {
+      "ref": "CMU1",
+      "category": "structural_concrete_masonry",
+      "product": "CMU block core",
+      "manufacturer_normalized_id": null,
+      "note": "structural masonry core; same category gap as C1."
+    },
+    {
+      "ref": "COR1",
+      "category": "cladding",
+      "product": "Corten weathering steel cladding",
+      "spec": "rusted per manufacturer recommendation",
+      "application": "material_finish",
+      "manufacturer_normalized_id": null,
+      "note": "Corten/weathering steel is a genericized material, not normalized to a single manufacturer."
+    },
+    {
+      "ref": "SL1",
+      "category": "coating",
+      "product": "Everbrite protective sealer",
+      "application": "sprayed",
+      "manufacturer_normalized_id": "mfr-everbrite"
+    },
+    {
+      "ref": "AN1",
+      "category": "letter_face",
+      "product": "satin clear anodized aluminum, horizontal brushed grain",
+      "application": "material_finish",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews matte black",
+      "finish": "matte",
+      "code_status": "brand_color_no_full_product_code",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "overall_width_in": 192,
+    "overall_height_in": 96,
+    "concrete_body_height_in": 72,
+    "planter_height_in": 34,
+    "unit_system": "imperial",
+    "provenance": "drawing",
+    "note": "Read from 3/8in scaled elevation."
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "logo_mark",
+        "location": "concrete_body",
+        "treatment": "halo-lit reverse-pan logo"
+      },
+      {
+        "slot": "primary_name",
+        "location": "concrete_body",
+        "treatment": "halo-lit reverse-pan letters"
+      },
+      {
+        "slot": "descriptor",
+        "location": "concrete_body",
+        "treatment": "non-lit, grouped with primary"
+      },
+      {
+        "slot": "address_or_locator",
+        "location": "planter",
+        "treatment": "brushed anodized flat letters"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "utilities": {
+    "power": "pre-wired during construction; remote power supplies in a watertight electrical service box on the backside of the concrete monument"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "rules_observations": [
+      "Halo-only letters keep one quiet primary read and a deliberate night state distinct from the unlit concrete body.",
+      "Double-sided with the backside finished to match means both approaches are designed, not one-sided."
+    ],
+    "craft_observations": [
+      "Board-formed concrete matched to existing site concrete is a strong site-fit move; the form-board texture is the finish, not a cover-up.",
+      "Corten planter and brushed anodized letters extend a restrained rugged material palette (concrete, weathering steel, raw aluminum) rather than adding color.",
+      "Remote power in a watertight back box keeps the faces and field clean of visible hardware."
+    ],
+    "aesthetic_notes": [
+      {
+        "note": "Reads as a permanent built landform element appropriate to an outdoor resort, not a applied pole sign; material honesty carries the design.",
+        "provenance": "opinion"
+      }
+    ]
+  },
+  "open_items": [
+    "Footing and structural engineering for the concrete mass not detailed on the conceptual",
+    "Exact halo LED spacing/standoff not specified at conceptual stage (R3: acceptable for doc_type)"
+  ],
+  "extraction_meta": {
+    "field_confidence": "high on construction, materials, and lighting approach; conceptual so no full paint product codes (R3-acceptable)",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ],
+    "ambiguity_flags": [
+      "Spec text calls it an 'illuminated double-sided pylon sign' while the sheet labels and draws a low monument; modeled as monument per the elevation, conflict noted (R6).",
+      "Concrete/CMU have no material_category enum value; placeholdered as proposed_new_term in materials_manifest.category."
+    ],
+    "reconciliation_v1_2": "fabrication_family -> composite_structure (resolved). REMAINS in review-queue on two genuine enum gaps: halo-only illumination_method and structural concrete/masonry material_category.",
+    "reconciliation_v1_3": "Applied v1.3 enums (blade/awning/halo_illuminated/exposed_lamp/external_downlight + concrete/awning_fabric/digital_display_module/adhesive categories)."
+  }
+}

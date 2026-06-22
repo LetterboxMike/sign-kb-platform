@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data and room/donor copy excluded; hospitality vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "design_intent"
+  },
+  "context": {
+    "industry_vertical": "hospitality_private_club"
+  },
+  "record_id": "rec-plaque-etched-brushed-aluminum-notice-001",
+  "classification": {
+    "sign_category": "plaque",
+    "sub_type": "etched_brushed_aluminum_compliance_notice",
+    "primary_function": "compliance_notice",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A small brushed-aluminum compliance/notice plaque, vertical grain with satin clearcoat, copy surface-etched and paint-filled black, VHB-mounted.",
+    "rationale": "Etched-and-filled brushed aluminum is a durable, dignified non-ADA notice treatment that coordinates with the metal fixture palette.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "etched_plate",
+      "construction": "1/8in brushed aluminum, vertical grain, satin clearcoat, surface-etched + black paint-fill, VHB mount",
+      "material_refs": [
+        "AL1"
+      ],
+      "fabrication_method": "etched_and_filled",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "AL1",
+      "category": "face_substrate",
+      "product": "1/8in brushed aluminum, satin clearcoat",
+      "application": "material_finish",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "face_in": "6x2.5",
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "notice_copy"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Etched-and-filled brushed aluminum is durable and dignified, matching the metal palette."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

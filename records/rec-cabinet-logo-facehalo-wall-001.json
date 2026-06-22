@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data excluded. Multifamily residential vertical retained.",
+  "source": {
+    "doc_type": "permit"
+  },
+  "context": {
+    "industry_vertical": "residential_multifamily"
+  },
+  "record_id": "rec-cabinet-logo-facehalo-wall-001",
+  "classification": {
+    "sign_category": "cabinet",
+    "sub_type": "primary_cabinet_plus_facehalo_acrylic_logo_wall",
+    "primary_function": "wall_identification",
+    "illuminated": true,
+    "illumination_method": "combination_face_and_halo",
+    "sides": 1,
+    "fabrication_family": "cabinet",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "same cabinet+logo vocabulary applied at multiple wall locations",
+    "variant_axis": "location_and_copy"
+  },
+  "knowledge": {
+    "plain_language_summary": "A wall-mounted version of the community sign vocabulary: a shallow primary cabinet with a 3in logo cabinet carrying face-and-halo illuminated acrylic logo letters and a painted reveal.",
+    "rationale": "Re-using the monument's cabinet+logo system on the wall holds family consistency across the property's signs.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "primary_cabinet",
+      "construction": "2in deep fabricated aluminum cabinet",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "logo_cabinet",
+      "construction": "3in deep with 3/4in acrylic logo letters flush-stud mounted, face- and halo-illuminated",
+      "illumination": "face and halo white LED",
+      "fabrication_method": "face_and_halo_acrylic_letters",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews PMS Cool Gray palette",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "logo"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Same cabinet+logo system as the monuments, wall-applied for family consistency."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "medium-high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

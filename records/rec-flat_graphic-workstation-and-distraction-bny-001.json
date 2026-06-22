@@ -1,0 +1,55 @@
+{
+  "record_id": "rec-flat_graphic-workstation-and-distraction-bny-001",
+  "schema_version": "1.4",
+  "record_type": "flat_graphic",
+  "provenance_note": "All client/vendor/human/copy excluded; vertical retained.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "financial_services_office"
+  },
+  "classification": {
+    "graphic_method": "plotter_cut",
+    "applied_to": "glass",
+    "contour_cut": true
+  },
+  "materials_manifest": [
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "3M Dusted Crystal (privacy band, second surface) + 3M Matte White 100 (cut directional letters)",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    },
+    {
+      "ref": "P1",
+      "category": "graphic",
+      "product": "first-surface direct-print workstation ID plate (1/16in metal, Benjamin Moore OC-61), PMS Cool Gray 10",
+      "application": "digital_print",
+      "manufacturer_normalized_id": "mfr-benjamin-moore"
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing",
+    "note": "workstation plates 144-264/floor; distraction bands; receptacle icon decals (Avery Silver)"
+  },
+  "messaging_pattern": {
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "High-volume workstation plates collapse to one direct-print archetype; distraction band 1.5in cut-thru; receptacle icon set in Avery silver."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "medium-high",
+    "inferred_fields": [
+      "design_assessment"
+    ],
+    "plain_language_summary": "Glass privacy/distraction bands (Dusted Crystal), cut directional wall letters, direct-print workstation ID plates, and adhesive recycle/waste icon decals."
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "record_id": "rec-blade-acrylic-flag-corridor-asi105-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "corporate_campus_office"
+  },
+  "classification": {
+    "sign_category": "blade",
+    "sub_type": "projecting_acrylic_flag_corridor_id",
+    "primary_function": "corridor_identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 2,
+    "fabrication_family": "blade",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "flag/blade corridor IDs incl elevator-car ID variant",
+    "variant_axis": "message"
+  },
+  "knowledge": {
+    "plain_language_summary": "Double-sided projecting flag signs: a 1/4in acrylic face painted all sides, flag-mounted on aluminum L-angles for perpendicular corridor visibility.",
+    "rationale": "L-angle projecting mount gives corridor/perpendicular read; painted acrylic keeps it light.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "flag_blade",
+      "construction": "1/4in acrylic face painted all sides, flag-mounted on aluminum L-angles with mechanical fasteners",
+      "material_refs": [
+        "A1"
+      ],
+      "fabrication_method": "projecting_acrylic_flag",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "face_substrate",
+      "product": "1/4in acrylic, painted",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "face_in": "6x90",
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "corridor_or_car_id"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "L-angle projecting mount for corridor visibility; ISA/AED symbol variants."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

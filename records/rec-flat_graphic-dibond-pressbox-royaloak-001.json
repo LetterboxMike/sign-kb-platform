@@ -1,0 +1,54 @@
+{
+  "record_id": "rec-flat_graphic-dibond-pressbox-royaloak-001",
+  "schema_version": "1.3",
+  "record_type": "flat_graphic",
+  "provenance_note": "All client/vendor/human/copy excluded; vertical retained.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "education_high_school_athletics"
+  },
+  "classification": {
+    "graphic_method": "digital_print",
+    "applied_to": "wall",
+    "contour_cut": false
+  },
+  "materials_manifest": [
+    {
+      "ref": "G1",
+      "category": "graphic",
+      "product": "3M IJ180C-10 print + 3M 8519 luster UV overlaminate on 3mm Dibond ACM",
+      "application": "digital_print",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    },
+    {
+      "ref": "SUB1",
+      "category": "substrate",
+      "product": "3mm Dibond ACM panel",
+      "manufacturer_normalized_id": "mfr-3a-composites"
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing",
+    "note": "rear sign + 2 end signs (end signs top-cut to roof pitch)"
+  },
+  "messaging_pattern": {
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Rigid ACM panel print, flush-screwed with color-matched heads; end panels follow the roof pitch."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "medium-high",
+    "inferred_fields": [
+      "design_assessment"
+    ],
+    "plain_language_summary": "A press-box athletic graphic: full-color print on 3mm Dibond with luster overlaminate, flush-mounted with painted-head screws; end panels top-cut to the roof pitch."
+  }
+}

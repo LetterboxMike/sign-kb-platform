@@ -1,0 +1,90 @@
+{
+  "record_id": "rec-directional-regulatory-panels-bulleri-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data and actual copy excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "design_intent"
+  },
+  "context": {
+    "industry_vertical": "commercial_multitenant_building"
+  },
+  "classification": {
+    "sign_category": "directional",
+    "sub_type": "flat_aluminum_regulatory_directional_panels",
+    "primary_function": "regulatory_and_directional",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "regulatory/directional plate family (no trespassing, no parking, reserved, tenants-only, drive-in teller, etc.)",
+    "variant_axis": "message_and_size"
+  },
+  "knowledge": {
+    "plain_language_summary": "A family of flat 0.090in aluminum regulatory/directional panels painted matte duranodic with die-cut 3M opaque vinyl copy, flush wall-mounted.",
+    "rationale": "A coded plate family covers statutory and directional copy in the building's finish system.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "flat_panel",
+      "construction": "0.090in aluminum painted matte MP Duranodic 313, die-cut 3M opaque vinyl (7125-10 White, 7125-25 Sunflower Yellow, 7125-53 Cardinal Red), flush mount",
+      "material_refs": [
+        "V1"
+      ],
+      "finish_refs": [
+        "P1"
+      ],
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "3M 7125 opaque cast vinyl",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews MP20190 Duranodic 313 matte",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing",
+    "note": "sizes 14-118in incl drive-in teller"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "regulatory_or_directional_copy"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Coded plate family in one finish system covers statutory + directional needs."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

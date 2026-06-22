@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, type DragEvent } from 'react';
 import Link from 'next/link';
 import { UploadCloud, FileText, Check, AlertTriangle, Loader2, Clock, RefreshCw } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -60,11 +60,16 @@ async function uploadAndEnqueue(file: File): Promise<string> {
   return enqData.jobId as string;
 }
 
+// Soft client-side guard: above this the extraction model call tends to time out. We warn but
+// still allow the upload — the server surfaces the real error if it does fail.
+const SOFT_MAX_BYTES = 25 * 1024 * 1024; // 25 MB
+
 export function UploadUI({ initialPending }: { initialPending: number }) {
   const [files, setFiles] = useState<FileState[]>([]);
   const [busy, setBusy] = useState(false);
   const [pending, setPending] = useState(initialPending);
   const [drainNote, setDrainNote] = useState<string | null>(null);
+  const [dragActive, setDragActive] = useState(false);
 
   // Step 2: drain the queue one job per call (resumable). Updates matching files by jobId.
   async function drain() {
@@ -93,7 +98,12 @@ export function UploadUI({ initialPending }: { initialPending: number }) {
     const picked = Array.from(list);
     setFiles(picked.map((f) => ({ name: f.name, status: 'pending' as Status })));
     setBusy(true);
-    setDrainNote(null);
+    const oversize = picked.filter((f) => f.size > SOFT_MAX_BYTES);
+    setDrainNote(
+      oversize.length
+        ? `Heads up: ${oversize.map((f) => f.name).join(', ')} ${oversize.length === 1 ? 'is' : 'are'} large (>25 MB) and may time out during extraction. Try one sheet at a time if it fails.`
+        : null,
+    );
     // Upload + enqueue all first (fast, durable), then process.
     for (let i = 0; i < picked.length; i++) {
       const update = (s: Partial<FileState>) => setFiles((prev) => prev.map((f, idx) => (idx === i ? { ...f, ...s } : f)));
@@ -118,6 +128,23 @@ export function UploadUI({ initialPending }: { initialPending: number }) {
     setBusy(false);
   }
 
+  function onDragOver(e: DragEvent) {
+    e.preventDefault();
+    if (!busy && !dragActive) setDragActive(true);
+  }
+  function onDragLeave(e: DragEvent) {
+    e.preventDefault();
+    // Ignore leaves into child elements; only clear when leaving the dropzone itself.
+    if (e.currentTarget.contains(e.relatedTarget as Node)) return;
+    setDragActive(false);
+  }
+  function onDrop(e: DragEvent) {
+    e.preventDefault();
+    setDragActive(false);
+    if (busy) return;
+    handleFiles(e.dataTransfer.files);
+  }
+
   const anyDone = files.some((f) => f.status === 'done');
 
   return (
@@ -135,9 +162,14 @@ export function UploadUI({ initialPending }: { initialPending: number }) {
       ) : null}
 
       <label
+        onDragOver={onDragOver}
+        onDragEnter={onDragOver}
+        onDragLeave={onDragLeave}
+        onDrop={onDrop}
         className={cn(
           'flex cursor-pointer flex-col items-center justify-center gap-2 rounded-lg border border-dashed p-10 text-center transition-colors',
           busy ? 'opacity-60' : 'hover:border-ring hover:bg-accent/40',
+          dragActive && !busy ? 'border-ring bg-accent/60 ring-2 ring-ring/40' : '',
         )}
       >
         <UploadCloud className="h-6 w-6 text-muted-foreground" />

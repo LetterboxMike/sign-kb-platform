@@ -1,0 +1,109 @@
+{
+  "record_id": "rec-pylon-brand-family-pushthru-unitedbank-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data and actual copy excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "retail_banking"
+  },
+  "classification": {
+    "sign_category": "pylon",
+    "sub_type": "vertical_internally_illuminated_pushthru_pylon",
+    "primary_function": "branch_identification",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 2,
+    "fabrication_family": "cabinet",
+    "mounting": "ground_mounted_footing",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "vertical pylon standard in width/height tiers",
+    "variant_axis": "height_width_tier"
+  },
+  "knowledge": {
+    "plain_language_summary": "The brand's vertical internally-illuminated pylon: a routed pylon face with push-through 1/2in acrylic logo and lettering (1/4in protrusion), a backed-up acrylic vertical accent stripe, and a disclaimer panel. 42/48in width family, 150-216in tall.",
+    "rationale": "Push-through 1/2in acrylic with 1/4in protrusion is the brand's signature dimensional lit detail, reproduced across pylon sizes.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "pylon_face",
+      "construction": "routed pylon face painted P1, vertical structure P3, cladding P2, push-through 1/2in acrylic logo + lettering with first-surface V1/V10, backed-up acrylic accent stripe, V11 disclaimer panel, internal LED",
+      "material_refs": [
+        "A1",
+        "V1"
+      ],
+      "finish_refs": [
+        "P1"
+      ],
+      "illumination": "internal LED",
+      "fabrication_method": "push_through_acrylic",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "letter_face",
+      "product": "1/2in push-through acrylic (1/4in protrusion)",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "brand vinyls V1 logo / V8 white copy / V10 lettering / V11 disclaimer",
+      "application": "vinyl",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews brand paints P1-P5",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "width_in_options": [
+      42,
+      48
+    ],
+    "height_in_range": "150-216",
+    "area_sqft": "55-72",
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "brand_logo"
+      },
+      {
+        "slot": "tenant_copy"
+      },
+      {
+        "slot": "disclaimer"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Push-through 1/2in acrylic with 1/4in protrusion is the brand's signature lit detail across all ground/building signs."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

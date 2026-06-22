@@ -1,0 +1,82 @@
+{
+  "record_id": "rec-plaque-steel-id-panel-raine-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data and actual copy excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "financial_investment_office"
+  },
+  "classification": {
+    "sign_category": "wayfinding",
+    "sub_type": "blackened_steel_panel_with_applied_steel_copy",
+    "primary_function": "wayfinding_and_emergency_id",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "Steel ID/wayfinding panels: a 3/16in blackened-steel panel with applied flat-cut steel copy (vertical-brushed or mirror-polished) on a shim backer, with photopolymer braille; emergency/stair messaging included.",
+    "rationale": "Brushed/mirror copy against a blackened panel keeps the premium finish system consistent across wayfinding and egress.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "steel_panel",
+      "construction": "3/16in steel panel, blackened face/returns; copy 1/16-1/8in flat-cut steel, vertical brushed or mirror-polished; 1/16in shim backer inset 1/8in; photopolymer braille; VHB + silicone",
+      "material_refs": [
+        "ST1"
+      ],
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "ST1",
+      "category": "face_substrate",
+      "product": "3/16in blackened steel",
+      "application": "material_finish",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "wayfinding_or_emergency"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "compliance": {
+    "ada": {
+      "tactile": true,
+      "braille": true
+    },
+    "notes": "Photopolymer raster braille; emergency/stair messaging."
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Brushed vs mirror copy against blackened panel; high-finish wayfinding system."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

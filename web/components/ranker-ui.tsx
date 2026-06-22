@@ -39,7 +39,15 @@ function SignPanel({ card, onPick, label }: { card: RankerCard; onPick: () => vo
   );
 }
 
-export function RankerUI({ initialPair, initialCount }: { initialPair: RankerCard[]; initialCount: number }) {
+export function RankerUI({
+  initialPair,
+  initialCount,
+  canRollup = true,
+}: {
+  initialPair: RankerCard[];
+  initialCount: number;
+  canRollup?: boolean;
+}) {
   const [pair, setPair] = useState<RankerCard[]>(initialPair);
   const [count, setCount] = useState(initialCount);
   const [busy, setBusy] = useState(false);
@@ -109,9 +117,11 @@ export function RankerUI({ initialPair, initialCount }: { initialPair: RankerCar
         <Button variant="ghost" onClick={() => choose('skip')} disabled={busy}>
           Skip
         </Button>
-        <Button variant="secondary" onClick={doRollup} disabled={busy}>
-          Roll up grades
-        </Button>
+        {canRollup ? (
+          <Button variant="secondary" onClick={doRollup} disabled={busy}>
+            Roll up grades
+          </Button>
+        ) : null}
         {error ? <span className="text-sm text-destructive">{error}</span> : null}
       </div>
 

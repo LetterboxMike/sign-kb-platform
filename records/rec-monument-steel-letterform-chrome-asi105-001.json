@@ -1,0 +1,93 @@
+{
+  "record_id": "rec-monument-steel-letterform-chrome-asi105-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "corporate_campus_office"
+  },
+  "classification": {
+    "sign_category": "monument",
+    "sub_type": "freestanding_steel_letterform_on_tube_plinth",
+    "primary_function": "site_building_identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "composite_structure",
+    "mounting": "ground_mounted_footing",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A freestanding monument of fabricated dimensional steel letterforms (chrome + powder coat) on a letterform rail mechanically fastened to 4x6x1/2in steel tubes set in a concrete footing.",
+    "rationale": "A welded steel-tube-to-footing path carries the heavy chrome letterforms; the base is detailed to discourage sitting.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "steel_letterforms",
+      "construction": "4in deep fabricated steel letterforms, 1/8in steel skin, chrome finish + powder coat, front+back letterform with structural tabs on a letterform rail",
+      "material_refs": [
+        "ST1"
+      ],
+      "fabrication_method": "fabricated_steel_letterform",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "plinth_footing",
+      "construction": "rail fastened to 4x6x1/2in steel tubes, 1/2in steel plate elements, set in concrete base/footing (reinforce as required); 'no seating surface' base detail",
+      "material_refs": [
+        "C1"
+      ],
+      "mounted_to": "ground_footing",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "ST1",
+      "category": "letter_face",
+      "product": "1/8in steel letterform skin, chrome + powder coat",
+      "application": "material_finish",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "C1",
+      "category": "structural_concrete_masonry",
+      "product": "concrete footing",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "letter_run_in": 380,
+    "letter_depth_in": 4,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "building_wordmark"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Welded steel-tube-to-footing structural path; anti-sitting base detail; chrome + powder-coat dual finish."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "record_id": "rec-pylon-multitenant-001",
+  "schema_version": "0.2-draft",
+  "provenance_note": "All client, vendor, and human-contact data excluded at extraction. Only technical signage knowledge retained.",
+  "source": { "doc_type": "design_conceptual" },
+  "context": { "industry_vertical": "retail_mixed_use_plaza" },
+
+  "classification": {
+    "sign_category": "pylon",
+    "sub_type": "multi_tenant_identification_pylon",
+    "primary_function": "plaza_identification_plus_tenant_directory",
+    "illuminated": true,
+    "illumination_method": "mixed",
+    "illumination_detail": "5500K internal/face/halo white LED on letters and tenant panels; 3000K warm white external up-firing spotlights on the body",
+    "sides": 2,
+    "fabrication_family": "fabricated_aluminum_pylon_spine",
+    "mounting": "ground_mounted_pedestal",
+    "digital_integration": false
+  },
+
+  "knowledge": {
+    "plain_language_summary": "A tall, double-sided plaza pylon. A stacked THE / HUB brand mark crowns the sign, with a row of interchangeable lit tenant panels below it on a central aluminum spine, all rising from an uplit base on a concrete pedestal. It identifies the center and lists its tenants in one freestanding statement.",
+    "rationale": "Separating the brand mark, the tenant directory, and the architectural base into distinct fabricated systems lets each be built, lit, and serviced on its own, and lets tenant panels be swapped as the roster changes without touching the brand letters.",
+    "tradeoffs": "A fabricated spine with channel letters, push-thru letters, and a perforated crown is fabrication-intensive and costly, but yields a distinctive, dimensional, premium read that a flat cabinet pylon cannot.",
+    "when_to_use": "Multi-tenant retail or mixed-use centers needing a single high-impact identity plus a serviceable, changeable tenant directory.",
+    "provenance": "inferred"
+  },
+
+  "structure": [
+    {
+      "ref": "01",
+      "component": "channel_letters_the",
+      "function": "upper brand mark, 'THE'",
+      "construction": "3in deep fabricated channel letters, trimless translucent white acrylic faces and clear backs, mounted to a 3in deep oversized fabricated backer",
+      "finish": "painted brand medium and light blue",
+      "illumination": "combination face- and halo-illuminated, 5500K white LEDs",
+      "fabrication_method": "face_and_halo_channel_letters",
+      "rationale": "Face plus halo gives a bright face read and a soft backlit glow, a dual day/night effect and depth that flat letters lack.",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "central_spine_with_crown",
+      "function": "structural and visual core; carries letters and tenant panels; open perforated crown at top",
+      "construction": "fabricated aluminum square tube frame with aluminum skin and custom perforated aluminum in the open upper crown",
+      "finish": "painted brand light blue",
+      "illumination": "none",
+      "rationale": "The perforated open crown lightens the top mass so the pylon does not read as a solid slab, and adds transparency against the sky.",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "03",
+      "component": "push_thru_letters_hub",
+      "function": "primary brand mark, 'HUB', the focal element",
+      "construction": "10-1/2in deep fabricated aluminum letterforms with removable aluminum faces and 3/4in thick push-thru acrylic letters",
+      "finish": "faces and returns painted in a rainbow stripe pattern matching brand colors",
+      "illumination": "face-illuminated, 5500K white LEDs",
+      "fabrication_method": "push_thru_dimensional_letters",
+      "rationale": "Deep push-thru acrylic gives crisp lit letterforms with dimensional sidewalls; the rainbow stripe carries the brand signature across the largest element.",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "04",
+      "component": "tenant_id_panels",
+      "function": "interchangeable tenant directory",
+      "construction": "fabricated aluminum with removable faces for service; tenant names are 3/4in thick push-through translucent white acrylic",
+      "finish": "painted brand medium blue",
+      "illumination": "internally illuminated, 5500K white LEDs",
+      "rationale": "Removable faces and push-through names let tenants be changed individually without rebuilding the panel run.",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "05",
+      "component": "pole_skirt",
+      "function": "transition cover between body and base",
+      "construction": "fabricated aluminum",
+      "finish": "painted brand red",
+      "illumination": "none",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "06",
+      "component": "sign_base",
+      "function": "visual base mass",
+      "construction": "fabricated aluminum",
+      "finish": "painted brand dark gray",
+      "illumination": "qty 8 external up-firing spotlights, 3000K warm white, grazing the sign body sides",
+      "rationale": "Warm 3000K uplighting separates the architectural base from the cool 5500K message illumination above it.",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "07",
+      "component": "concrete_pedestal",
+      "function": "structural footing and base",
+      "construction": "poured concrete footing/pedestal",
+      "provenance": "drawing"
+    }
+  ],
+
+  "materials_manifest": [
+    { "ref": "A1", "category": "letter_face", "product": "translucent white acrylic", "spec": "trimless faces, clear backs (THE)", "manufacturer_normalized_id": null },
+    { "ref": "A2", "category": "letter_face", "product": "push-thru acrylic", "spec": "3/4in thick (HUB and tenant names)", "manufacturer_normalized_id": null },
+    { "ref": "AL1", "category": "structure_skin", "product": "fabricated aluminum (tube frame, skin, perforated crown, letterforms, panels, skirt, base)", "manufacturer_normalized_id": null },
+    { "ref": "PB", "category": "paint", "product": "brand colors: medium blue, light blue, rainbow stripe, red, dark gray", "finish": "painted", "code_status": "brand_color_no_product_code", "manufacturer_normalized_id": null }
+  ],
+
+  "finish_patterns": [
+    { "id": "rainbow_stripe", "type": "multi_color_painted_stripe", "applied_to": ["push_thru_letters_hub"], "note": "brand-signature multi-color stripe across faces and returns" }
+  ],
+
+  "dimensions": { "overall_width_in": 114, "overall_height_in": 145, "base_width_in": 120, "tenant_panel_width_in": 60, "unit_system": "imperial", "provenance": "drawing" },
+
+  "messaging_pattern": {
+    "copy_blocks": [
+      { "slot": "brand_mark", "location": "upper_stack", "treatment": "THE over HUB, HUB as oversized push-thru focal" },
+      { "slot": "tenant_directory", "location": "spine", "treatment": "stacked interchangeable lit panels" }
+    ]
+  },
+
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_scale": ["exemplary", "strong", "competent", "weak", "poor"],
+    "grade_provenance": "ungraded_pending_review",
+    "rules_observations": [
+      "Clear hierarchy: oversized HUB mark dominates, tenant panels are uniform and subordinate.",
+      "Tenant panels and channel/push-thru faces are all removable for service, a maintainability win on a multi-tenant sign."
+    ],
+    "craft_observations": [
+      "Combination face-and-halo on THE plus push-thru on HUB stacks two premium letter techniques for a layered, dimensional brand mark.",
+      "Perforated open crown lightens the top mass and adds transparency rather than a solid termination.",
+      "Mixed color temperature is intentional: cool 5500K message illumination over warm 3000K base uplight separates message from architecture."
+    ],
+    "aesthetic_notes": [
+      { "note": "Chunky letterforms plus the rainbow stripe read as playful, approachable, community-plaza branding rather than corporate-minimal.", "provenance": "opinion" }
+    ]
+  },
+
+  "open_items": ["Structural footing/pedestal sizing not detailed on conceptual"],
+
+  "extraction_meta": {
+    "field_confidence": "high on construction and illumination, medium on exact dimensions, low on paint product codes (conceptual specifies brand colors, not coded products)",
+    "inferred_fields": ["knowledge", "design_assessment.craft_observations", "design_assessment.aesthetic_notes", "structure.rationale"]
+  },
+
+  "schema_strain_log": {
+    "new_enum_values_surfaced": {
+      "sign_category": ["pylon"],
+      "illumination_method": ["mixed", "combination_face_and_halo", "external_uplight"],
+      "fabrication_family": ["fabricated_aluminum_pylon_spine"],
+      "fabrication_method": ["face_and_halo_channel_letters", "push_thru_dimensional_letters"],
+      "component_types": ["channel_letters", "central_spine_with_crown", "perforated_crown", "tenant_id_panels", "pole_skirt", "sign_base", "concrete_pedestal"]
+    },
+    "new_fields_added": ["classification.illumination_detail", "finish_patterns", "materials[].code_status"],
+    "doc_type_completeness_pattern": "Conceptual drawings specify finishes as brand colors without product codes, so materials.manufacturer_normalized_id stays null and code_status flags it. Shop/permit drawings (e.g. DFW) carry exact coded products. The contract should expect completeness to vary by doc_type and not treat missing paint codes on a conceptual as a data gap."
+  }
+}

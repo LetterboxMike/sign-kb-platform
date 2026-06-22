@@ -1,0 +1,93 @@
+{
+  "record_id": "rec-directional-postmount-band-clamp-regulatory-asi105-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "corporate_campus_office"
+  },
+  "classification": {
+    "sign_category": "directional",
+    "sub_type": "post_mounted_parking_regulatory_panels_band_clamped",
+    "primary_function": "parking_and_regulatory",
+    "illuminated": false,
+    "illumination_method": "non_illuminated_reflective",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "band_clamp_to_pole_or_column",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "parking/regulatory panels (CC) + greenway panels (LL); band-clamped to aluminum post or existing light pole",
+    "variant_axis": "message_and_host"
+  },
+  "knowledge": {
+    "plain_language_summary": "Post-mounted parking and regulatory panels: .080 aluminum panels (painted or reflective) band-clamped (Band-It) to a 2in round aluminum post or to an existing light pole.",
+    "rationale": "Band-clamp mounting attaches panels to existing poles/posts without drilling; reflective film carries night legibility.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "post_panel",
+      "construction": ".080 aluminum panel (painted CC / digitally printed reflective LL), Band-It clamp to 2in round extruded aluminum post (welded cap, bolt-down baseplate) or to existing light pole",
+      "component_ref": "comp-bandit-clamp",
+      "material_refs": [
+        "V1"
+      ],
+      "mounted_to": "post_or_existing_pole",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "Reflectiv reflective film + digital print",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-reflectiv"
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "corporate-standard paint",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "panel_w_in": 18,
+    "post_height_in": [
+      60,
+      72
+    ],
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "parking_or_regulatory_copy"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "rules_observations": [
+      "Reserved/accessible-stall regulatory layouts; reflective for night."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ],
+    "reconciliation_v1_5": "mounting now a promoted v1.5 enum value (band_clamp_to_pole_or_column)."
+  }
+}

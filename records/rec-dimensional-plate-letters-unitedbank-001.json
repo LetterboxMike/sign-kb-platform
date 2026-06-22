@@ -1,0 +1,81 @@
+{
+  "record_id": "rec-dimensional-plate-letters-unitedbank-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data and actual copy excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "retail_banking"
+  },
+  "classification": {
+    "sign_category": "channel_letter",
+    "sub_type": "non_illuminated_plate_fco_letters",
+    "primary_function": "branch_identification_non_illuminated",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "dimensional_letter_or_logo",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "plate letter size matrix PL-8 to PL-24",
+    "variant_axis": "size"
+  },
+  "knowledge": {
+    "plain_language_summary": "Non-illuminated 1/4in-thick flat-cut-out plate letters, face and return painted P3/P5, threaded-rod + epoxy adhesive mount, in a size matrix.",
+    "rationale": "A non-lit plate-letter standard for restricted applications.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "plate_letters",
+      "construction": "1/4in flat-cut-out letters, face+return P3/P5, threaded rod + epoxy mount",
+      "finish_refs": [
+        "P1"
+      ],
+      "fabrication_method": "flat_cut_out",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews brand paints P1-P5",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "area_sqft": "8.8-79.7",
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "brand_wordmark"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Non-lit plate-letter standard for restricted applications."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

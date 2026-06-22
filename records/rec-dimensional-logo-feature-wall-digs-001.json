@@ -1,0 +1,74 @@
+{
+  "record_id": "rec-dimensional-logo-feature-wall-digs-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/copy excluded; veterinary/pet-care office vertical retained.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "pet_care_veterinary_office"
+  },
+  "classification": {
+    "sign_category": "plaque",
+    "sub_type": "dimensional_logo_over_textured_infill_feature_wall",
+    "primary_function": "reception_feature_identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "dimensional_letter_or_logo",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A dimensional reception feature: raised white logo elements mounted over a recessed textured (ball-pit-style spherical) infill panel within a white frame.",
+    "rationale": "A raised logo over a playful textured infill makes a tactile reception feature appropriate to a pet brand.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "logo_over_infill",
+      "construction": "raised white logo elements over recessed spherical-infill textured panel in a white frame; substrate not specified in text",
+      "status": "open",
+      "mounted_to": "feature_wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "logo"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "aesthetic_notes": [
+      {
+        "note": "Playful tactile reception feature on-brand for a pet-care company.",
+        "provenance": "opinion"
+      }
+    ]
+  },
+  "open_items": [
+    "Feature-wall logo substrate/illumination unconfirmed (render-only)"
+  ],
+  "extraction_meta": {
+    "field_confidence": "low",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ],
+    "ambiguity_flags": [
+      "Substrate/illumination unconfirmed; render-only."
+    ]
+  }
+}

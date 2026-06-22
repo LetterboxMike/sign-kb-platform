@@ -1,0 +1,75 @@
+{
+  "record_id": "rec-directional-parking-postmount-band-lso-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "permit"
+  },
+  "context": {
+    "industry_vertical": "healthcare_office_campus"
+  },
+  "classification": {
+    "sign_category": "directional",
+    "sub_type": "reflective_post_mounted_parking_id",
+    "primary_function": "parking_identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated_reflective",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "breakaway_slipbase_post",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A reflective parking-ID post panel: .080 painted aluminum with reflective vinyl on a 2in round galvanized extruded aluminum post (welded cap, Bandit breakaway hardware) in an engineered footing.",
+    "rationale": "Reflective post panel with breakaway hardware for roadside/parking safety.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "post_panel",
+      "construction": ".080 painted aluminum panel, reflective vinyl, 2in round extruded aluminum post galvanized + welded cap, Bandit breakaway hardware, engineered footing",
+      "material_refs": [
+        "V1"
+      ],
+      "mounted_to": "ground_footing",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "reflective vinyl",
+      "application": "vinyl",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "parking_id"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "rules_observations": [
+      "Reflective + breakaway post for parking/roadside."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

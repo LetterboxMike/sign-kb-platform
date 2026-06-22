@@ -1,0 +1,50 @@
+{
+  "record_id": "rec-flat_graphic-glass-and-entry-vinyl-asi105-001",
+  "schema_version": "1.4",
+  "record_type": "flat_graphic",
+  "provenance_note": "All client/vendor/human/copy excluded; vertical retained.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "corporate_campus_office"
+  },
+  "classification": {
+    "graphic_method": "plotter_cut",
+    "applied_to": "glass",
+    "contour_cut": true
+  },
+  "materials_manifest": [
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "pressure-sensitive vinyl, Dusted Crystal frost (open-office glass) + matte white (entry messages, No.1/No.2 surface sandwich)",
+      "application": "vinyl",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "cap_height_in_range": "0.75-2",
+    "unit_system": "imperial",
+    "provenance": "drawing",
+    "note": "glass ID qty 95; entry/door messages qty TBD"
+  },
+  "messaging_pattern": {
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "No.1/No.2 surface layering protects copy and gives opacity on clear glass.",
+      "Dusted-crystal frost for furniture-glass IDs, no substrate."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "medium-high",
+    "inferred_fields": [
+      "design_assessment"
+    ],
+    "plain_language_summary": "Cut frost vinyl IDs on open-office furniture glass plus entry/door messages built as a No.1/No.2-surface vinyl sandwich (backer on outer surface, message on inner) for protected legibility."
+  }
+}

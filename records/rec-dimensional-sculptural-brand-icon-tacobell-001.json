@@ -1,0 +1,77 @@
+{
+  "record_id": "rec-dimensional-sculptural-brand-icon-tacobell-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "restaurant_qsr_drive_thru"
+  },
+  "classification": {
+    "sign_category": "plaque",
+    "sub_type": "sculptural_icon",
+    "primary_function": "brand_icon_feature",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "dimensional_letter_or_logo",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A swinging sculptural 'bell' brand-icon feature (~21.7 sq ft, contoured ~13.3 sq ft).",
+    "rationale": "A dimensional brand icon as a feature element; the swinging form is distinctive.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "brand_icon",
+      "construction": "fabricated dimensional 'bell' brand icon, swinging mount",
+      "fabrication_method": "sculptural_icon",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "AL1",
+      "category": "structure_skin",
+      "product": "fabricated metal icon",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "sign_area_sqft": 21.7,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "brand_icon"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "aesthetic_notes": [
+      {
+        "note": "Sculptural swinging brand icon; between signage and brand sculpture.",
+        "provenance": "opinion"
+      }
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "medium",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ],
+    "reconciliation_v1_5": "sign_category proposed_new_term -> plaque; sub_type sculptural_icon (fabrication_family dimensional_letter_or_logo retained)."
+  }
+}

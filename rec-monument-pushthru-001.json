@@ -1,0 +1,205 @@
+{
+  "record_id": "rec-monument-pushthru-001",
+  "schema_version": "0.2-draft",
+  "provenance_note": "All client, vendor, and human-contact data excluded at extraction. Only technical signage knowledge retained.",
+  "source": {
+    "doc_type": "design_conceptual"
+  },
+  "context": {
+    "industry_vertical": "self_storage"
+  },
+  "classification": {
+    "sign_category": "monument",
+    "sub_type": "double_sided_illuminated_cabinet_monument",
+    "primary_function": "primary_brand_identification",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 2,
+    "fabrication_family": "extruded_aluminum_cabinet_push_thru_facelit",
+    "mounting": "ground_mounted_pole_and_footing"
+  },
+
+  "knowledge": {
+    "plain_language_summary": "A double-sided, internally lit monument built from two stacked aluminum cabinets. The brand and logo live in the upper cabinet, the tagline and web address in the lower one. Both cabinets light evenly from within through translucent faces, and a faux-brick base ties the sign visually to the building behind it.",
+    "rationale": "Stacking two separate cabinets with a reveal between them lets each message group light and update independently, and makes the lower cabinet a clean candidate for a future digital panel swap without rebuilding the whole sign.",
+    "tradeoffs": "An extruded-aluminum cabinet with translucent faces gives bright, even night presence and easy face service, but costs more than a flat non-illuminated panel and requires a power run and structural footing.",
+    "when_to_use": "Strong fit where a freestanding road-facing brand statement is needed at a site with vehicle traffic and night visibility requirements.",
+    "provenance": "inferred"
+  },
+
+  "structure": [
+    {
+      "ref": "01",
+      "component": "topper",
+      "function": "architectural cap, visual termination of the stack",
+      "construction": "fabricated aluminum",
+      "finish_refs": ["P1"],
+      "illuminated": false,
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "primary_id_cabinet",
+      "function": "main brand identification, carries logo and wordmark",
+      "construction": "double-sided 16in deep extruded aluminum cabinet with 1-1/2in aluminum retainers",
+      "face": {
+        "material_refs": ["M1"],
+        "face_spec": "0.150in translucent white polycarbonate",
+        "decoration": "surface-applied vinyl graphics",
+        "decoration_refs": ["V1", "V2"]
+      },
+      "finish_refs": ["P2"],
+      "illumination": "12V 5500K white LEDs, internal",
+      "fabrication_method": "push-thru / face-lit cabinet",
+      "rationale": "Translucent face with surface-applied blockout and translucent color vinyl produces a halo-free, evenly lit graphic at night while keeping a clean painted-cabinet read in daylight.",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "03",
+      "component": "ventilation_reveal",
+      "function": "horizontal reveal separating cabinets, reads as a design break line",
+      "construction": "fabricated aluminum",
+      "finish_refs": ["P1"],
+      "illuminated": false,
+      "provenance": "drawing"
+    },
+    {
+      "ref": "04",
+      "component": "secondary_id_cabinet",
+      "function": "secondary messaging cabinet",
+      "construction": "double-sided 16in deep extruded aluminum cabinet with 1-1/2in aluminum retainers",
+      "face": {
+        "material_refs": ["M1"],
+        "face_spec": "0.150in translucent white polycarbonate",
+        "decoration": "surface-applied vinyl graphics",
+        "decoration_refs": ["V1", "V2"]
+      },
+      "finish_refs": ["P2"],
+      "illumination": "12V 5500K white LEDs, internal",
+      "fabrication_method": "push-thru / face-lit cabinet",
+      "notes": "spec'd as upgradeable to digital message panels",
+      "rationale": "Built to the same cabinet standard as the primary so it can be retrofitted with a digital panel later without altering the sign envelope.",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "05",
+      "component": "base_pole_cover",
+      "function": "visual base mass, conceals pole and footing transition",
+      "construction": "fabricated aluminum frame and cap",
+      "finish": "cap painted P2; base sheathed in faux brick panels",
+      "finish_refs": ["P2"],
+      "material_refs": ["M2"],
+      "illuminated": false,
+      "provenance": "drawing"
+    },
+    {
+      "ref": "06",
+      "component": "mounting_pole_footing",
+      "function": "structural support and ground anchoring",
+      "construction": "TBD pending structural engineering review",
+      "status": "open",
+      "provenance": "drawing"
+    }
+  ],
+
+  "materials_manifest": [
+    {
+      "ref": "M1",
+      "category": "face_substrate",
+      "product": "solar-grade translucent white polycarbonate",
+      "spec": "0.150in thick",
+      "manufacturer": null,
+      "manufacturer_normalized_id": null,
+      "optical_behavior": {
+        "day_unlit": "flat opaque-reading white face, graphics read by color and contrast",
+        "night_lit": "even diffuse white glow, no visible hot spots or LED dotting when baffled correctly",
+        "provenance": "inferred_needs_verify"
+      }
+    },
+    {
+      "ref": "M2",
+      "category": "cladding",
+      "product": "faux brick panels, black",
+      "manufacturer": "Texture Plus",
+      "manufacturer_normalized_id": null,
+      "optical_behavior": {
+        "day_unlit": "matte textured masonry read, absorbs light, anchors the base visually",
+        "night_lit": "recedes into shadow unless separately uplit",
+        "provenance": "inferred_needs_verify"
+      }
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews Paint MP10206 Lead Pipe",
+      "finish": "satin",
+      "manufacturer": "Matthews Paint",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "P2",
+      "category": "paint",
+      "product": "Matthews Paint Black",
+      "finish": "satin",
+      "manufacturer": "Matthews Paint",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "Oracal 8870-070 Black, opaque blockout",
+      "manufacturer": "Oracal",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "V2",
+      "category": "vinyl",
+      "product": "Oracal 8800-017 Cherry Red, translucent",
+      "manufacturer": "Oracal",
+      "manufacturer_normalized_id": null
+    }
+  ],
+
+  "dimensions": {
+    "overall_width_in": 102,
+    "overall_height_in": 105,
+    "cabinet_depth_in": 16,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+
+  "messaging_pattern": {
+    "copy_blocks": [
+      { "slot": "logo_wordmark", "location": "primary_cabinet" },
+      { "slot": "tagline", "location": "secondary_cabinet" },
+      { "slot": "url", "location": "secondary_cabinet", "treatment": "reversed_white_on_accent_bar" }
+    ],
+    "accent_color_strategy": "single accent reserved for logo and url bar"
+  },
+
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_scale": ["exemplary", "strong", "competent", "weak", "poor"],
+    "grade_provenance": "ungraded_pending_review",
+    "rules_observations": [
+      "Two-cabinet split with a reveal maintains clear message grouping and legibility hierarchy.",
+      "Single internal-LED color temperature (5500K) across both cabinets keeps night color consistent."
+    ],
+    "craft_observations": [
+      "Lead Pipe gray on topper and reveal frames a satin black body, giving a layered architectural read instead of a single flat slab.",
+      "Accent color is restricted to logo and url bar so it carries night pop without competing with itself."
+    ],
+    "aesthetic_notes": [
+      { "note": "Faux brick base ties the sign to the masonry vernacular of the site, reading as part of the architecture rather than a stuck-on pole sign.", "provenance": "opinion" }
+    ]
+  },
+
+  "open_items": [
+    "Mounting pole and footing TBD pending structural engineering review"
+  ],
+
+  "extraction_meta": {
+    "field_confidence": "high on construction and materials, medium on exact dimensions",
+    "inferred_fields": ["knowledge", "design_assessment.craft_observations", "design_assessment.aesthetic_notes", "structure.rationale", "materials.optical_behavior"]
+  }
+}

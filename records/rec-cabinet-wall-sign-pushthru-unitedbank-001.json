@@ -1,0 +1,98 @@
+{
+  "record_id": "rec-cabinet-wall-sign-pushthru-unitedbank-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data and actual copy excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "retail_banking"
+  },
+  "classification": {
+    "sign_category": "cabinet",
+    "sub_type": "face_lit_wall_cabinet_with_pushthru_letters",
+    "primary_function": "branch_identification",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 1,
+    "fabrication_family": "cabinet",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "wall sign cabinet size matrix",
+    "variant_axis": "size"
+  },
+  "knowledge": {
+    "plain_language_summary": "A face-lit wall cabinet with push-through letters: cabinet face and returns painted P1, V1 logo + V10 copy, internal LED, in a size matrix.",
+    "rationale": "A wall cabinet variant for facades that suit a cabinet over individual letters.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "wall_cabinet",
+      "construction": "face-lit cabinet, face+returns P1, push-through letters V1 logo + V10 copy, internal LED",
+      "material_refs": [
+        "A1",
+        "V1"
+      ],
+      "finish_refs": [
+        "P1"
+      ],
+      "illumination": "internal LED",
+      "fabrication_method": "push_through_acrylic",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "letter_face",
+      "product": "1/2in push-through acrylic (1/4in protrusion)",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "brand vinyls V1 logo / V8 white copy / V10 lettering / V11 disclaimer",
+      "application": "vinyl",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews brand paints P1-P5",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "brand_logo"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Cabinet variant of the brand wall sign with push-through letters."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

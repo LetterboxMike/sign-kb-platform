@@ -1,0 +1,90 @@
+{
+  "record_id": "rec-plaque-identity-logo-d1-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "financial_investment_office"
+  },
+  "classification": {
+    "sign_category": "plaque",
+    "sub_type": "flat_cut_aluminum_or_acrylic_identity_logo",
+    "primary_function": "lobby_and_reception_identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "dimensional_letter_or_logo",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "elevator-lobby aluminum identity + reception acrylic logo",
+    "variant_axis": "substrate_and_location"
+  },
+  "knowledge": {
+    "plain_language_summary": "Identity signs in two substrates: 3/8in flat-cut aluminum (horizontal grain, sandblasted edges, black-tint lacquer) at the elevator lobby, and a 3/8in clear P95 acrylic cut-out logo (back-painted + vinyl opacity) at reception.",
+    "rationale": "Two substrates carry the same identity function across lobby and reception.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "identity_logo",
+      "construction": "3/8in flat-cut aluminum (brushed black-tint) or 3/8in clear P95 acrylic (sandblasted edges, back-painted + white vinyl), flush VHB+silicone",
+      "material_refs": [
+        "AL1",
+        "M1"
+      ],
+      "fabrication_method": "flat_cut",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "AL1",
+      "category": "letter_face",
+      "product": "3/8in aluminum, brushed black-tint",
+      "application": "material_finish",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "M1",
+      "category": "letter_face",
+      "product": "3/8in clear P95 acrylic, back-painted",
+      "manufacturer_normalized_id": "mfr-p95-acrylic"
+    }
+  ],
+  "dimensions": {
+    "lobby_in": "24x6.875",
+    "reception_in": "12x12",
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "identity_logo"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Same identity in aluminum (lobby) and acrylic (reception)."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

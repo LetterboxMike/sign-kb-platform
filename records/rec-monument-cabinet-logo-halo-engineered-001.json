@@ -1,0 +1,121 @@
+{
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data excluded. Multifamily residential vertical retained.",
+  "source": {
+    "doc_type": "permit"
+  },
+  "context": {
+    "industry_vertical": "residential_multifamily"
+  },
+  "record_id": "rec-monument-cabinet-logo-halo-engineered-001",
+  "classification": {
+    "sign_category": "monument",
+    "sub_type": "multielement_cabinet_monument_with_face_halo_logo_on_steel_pipe",
+    "primary_function": "community_identification",
+    "illuminated": true,
+    "illumination_method": "combination_face_and_halo",
+    "sides": 1,
+    "fabrication_family": "composite_structure",
+    "mounting": "ground_mounted_footing",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "primary monument shown single-sided (Type 1) and double-sided (Type 3)",
+    "variant_axis": "sides_and_size"
+  },
+  "knowledge": {
+    "plain_language_summary": "A multi-element cabinet monument: a primary fabricated aluminum cabinet plus a logo cabinet with face-and-halo illuminated acrylic letters, a painted reveal, and modular tenant panels, carried on an internal steel-pipe structure in an engineered rebar footing.",
+    "rationale": "The engineered steel-pipe-in-concrete substructure (not the aluminum skin) carries the load, so the archetype is a composite structure; the logo cabinet and reveal/tenant-panel system are modular and serviceable.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "primary_cabinet",
+      "construction": "fabricated aluminum 2in-13in+ deep with 0.090in skin and 1.5in angle frames, on 4in/6in dia Sch40 steel pipe set 36in in 3500psi poured footing with #5 rebar cage 12in OC",
+      "finish_refs": [
+        "P1"
+      ],
+      "mounted_to": "ground_footing",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "logo_cabinet",
+      "construction": "fabricated aluminum 3in deep with 3/4in illuminated acrylic logo letters, face- and halo-illuminated",
+      "illumination": "face and halo white LED",
+      "fabrication_method": "face_and_halo_acrylic_letters",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "03",
+      "component": "reveal_and_tenant_panels",
+      "construction": "fabricated aluminum reveal 1-2in deep painted medium/dark gray; extruded aluminum tenant panels 1.5-3in deep; 3mm/6mm Dibond faces with opaque/translucent 3M vinyl",
+      "material_refs": [
+        "D1",
+        "V1"
+      ],
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "D1",
+      "category": "substrate",
+      "product": "3mm/6mm Dibond ACM faces",
+      "manufacturer_normalized_id": "mfr-3a-composites"
+    },
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "3M opaque/translucent vinyl, PMS Cool Gray 9C/11C",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews, PMS Cool Gray palette",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing",
+    "note": "cabinet faces ~96-100in; 30x36x36in / 24x24x30in footings"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "community_wordmark"
+      },
+      {
+        "slot": "logo"
+      },
+      {
+        "slot": "tenant_panels"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Engineered steel-pipe substructure + rebar footing = composite structure, not a simple cabinet.",
+      "Face-and-halo acrylic logo adds dimensional depth; modular reveal/tenant panels are serviceable."
+    ]
+  },
+  "open_items": [
+    "Structural footing/rebar engineered; HDU element noted on one logo cabinet"
+  ],
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "record_id": "rec-channel_letter-facelit-bank-imagenational-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "financial_services_retail_bank"
+  },
+  "classification": {
+    "sign_category": "channel_letter",
+    "sub_type": "facelit_channel_letters_and_logo_sized_program",
+    "primary_function": "branch_identification",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 1,
+    "fabrication_family": "channel_letter",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "one channel-letter+logo program in 3 sizes (BAN-NEW 48-C; 57.6/62.5/78.4 sqft)",
+    "variant_axis": "size"
+  },
+  "knowledge": {
+    "plain_language_summary": "LED channel letters and logo in three sizes: 1/8in formed acrylic logo / 3/16in acrylic letters (white 2447), Tangerine + Arlon Turquoise vinyl overlays, 5in pre-painted .040 aluminum returns (dark bronze ext / white int), 1in black Jewelite trim cap, GE 5-UP Max White LED, code disconnect.",
+    "rationale": "A sized channel-letter program reproduces the brand at three storefront scales.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "channel_letters",
+      "construction": "1/8in formed acrylic logo / 3/16in acrylic letters (2447 white), #84 Tangerine + Arlon #236 Turquoise vinyl, 5in .040 pre-painted aluminum returns (dark bronze/white), 1in black Jewelite trim cap, GE 5-UP Max White LED, rivet-nut/all-thread, 20A/120V + disconnect, weep holes",
+      "material_refs": [
+        "A1",
+        "V1",
+        "T1"
+      ],
+      "illumination": "internal LED",
+      "fabrication_method": "face_lit_channel",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "letter_face",
+      "product": "3/16in acrylic 2447 white / 1/8in formed acrylic",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "#84 Tangerine + Arlon #236 Turquoise",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-arlon"
+    },
+    {
+      "ref": "T1",
+      "category": "coating",
+      "product": "1in black Jewelite trim cap",
+      "manufacturer_normalized_id": "mfr-jewelite"
+    }
+  ],
+  "dimensions": {
+    "logo_h_in": [
+      48,
+      50,
+      56
+    ],
+    "overall_in": [
+      173,
+      180,
+      201.5
+    ],
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "brand_wordmark"
+      },
+      {
+        "slot": "logo"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "compliance": {
+    "notes": "Disconnect in transformer box; weep holes; non-corrosive securement."
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "3-size sized program; GE LED; Jewelite cap; Arlon turquoise overlay."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

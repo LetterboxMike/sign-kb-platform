@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "From a retail-bank brand sign-standards family. All client/vendor/human/address data excluded; banking vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "retail_banking"
+  },
+  "record_id": "rec-cabinet-brand-family-atm-reface-001",
+  "classification": {
+    "sign_category": "cabinet",
+    "sub_type": "atm_surround_and_topper_reface",
+    "primary_function": "atm_branding",
+    "illuminated": true,
+    "illumination_method": "mixed",
+    "illumination_detail": "some illuminated headers; surrounds match-existing",
+    "sides": 1,
+    "fabrication_family": "cabinet",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "ATM surround/topper reface in LH/RH/narrow and header-only variants",
+    "variant_axis": "atm_handing_and_scope"
+  },
+  "knowledge": {
+    "plain_language_summary": "ATM walk-up/drive-up surround refaces and toppers (left/right/narrow variants) plus header refaces, finished to match the existing stipple ATM finish.",
+    "rationale": "Refacing matches new brand to existing ATM hardware finish, a partial-fabrication rebrand scope.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "reface_faces",
+      "construction": "1/8in aluminum faces, match-existing stipple finish, 3M films (3632-157 Sultan Blue, Lt Blue VQ13323)",
+      "material_refs": [
+        "V1"
+      ],
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "3M translucent films (3635-70 white, 3630-125 yellow-gold, 3632-157 Sultan Blue)",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews, match-existing stipple",
+      "code_status": "match_existing",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "brand_mark"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Brand-match to existing ATM stipple finish; reface (not full new fab) scope."
+    ]
+  },
+  "open_items": [
+    "Reface-only scope: partial fabrication vs new build"
+  ],
+  "extraction_meta": {
+    "field_confidence": "medium-high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ],
+    "modeling_notes": [
+      "ATM reface treated as cabinet reface; full ATM kiosk shape flagged separately under United Bank."
+    ]
+  }
+}

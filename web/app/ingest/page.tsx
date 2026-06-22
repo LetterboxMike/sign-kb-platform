@@ -1,11 +1,17 @@
+import { redirect } from 'next/navigation';
 import { UploadCloud } from 'lucide-react';
 import { storageConfigured } from '@/lib/storage';
 import { pendingJobCount } from '@/lib/kb';
+import { currentAppUser, roleAtLeast } from '@/lib/auth';
+import { NotAuthorized } from '@/components/not-authorized';
 import { UploadUI } from '@/components/upload-ui';
 
 export const dynamic = 'force-dynamic';
 
 export default async function IngestPage() {
+  const me = await currentAppUser();
+  if (!me) redirect('/login');
+  if (!roleAtLeast(me.role, 'contributor')) return <NotAuthorized required="contributor" have={me.role} />;
   const ok = storageConfigured();
   const pending = ok ? await pendingJobCount() : 0;
   return (

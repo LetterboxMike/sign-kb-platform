@@ -1,0 +1,77 @@
+{
+  "record_id": "rec-flat_graphic-perforated-window-001",
+  "schema_version": "1.2",
+  "record_type": "flat_graphic",
+  "provenance_note": "All client, vendor, designer, and contact data excluded at extraction. K-12 school athletics vertical retained; copy excluded, copy structure retained.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "education_k12_school_athletics"
+  },
+  "classification": {
+    "graphic_method": "digital_print",
+    "applied_to": "window",
+    "contour_cut": false
+  },
+  "materials_manifest": [
+    {
+      "ref": "G1",
+      "category": "graphic",
+      "product": "digitally printed graphic on 70/30 perforated one-way vision film",
+      "spec": "70/30 perforation (one-way vision: graphic outside, see-through from inside)",
+      "application": "digital_print",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "G2",
+      "category": "vinyl",
+      "product": "matching optically clear overlaminate",
+      "application": "vinyl",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "overall_width_ft": 22.2,
+    "lite_height_in": 43.75,
+    "lite_width_in_typical": 35,
+    "unit_system": "imperial",
+    "provenance": "drawing",
+    "note": "Applied across a run of ~6 window lites (~35in each) plus an end lite; sized per glazing."
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "spirit_graphic_band",
+        "treatment": "continuous graphic spanning a window run, tiled per lite"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "rules_observations": [
+      "One-way vision film keeps an exterior-facing spirit graphic while preserving daylight and outward view from inside."
+    ],
+    "craft_observations": [
+      "70/30 perforation balances graphic opacity and see-through; optically clear overlaminate keeps the inside view from hazing.",
+      "Tiling a continuous graphic across discrete lites requires registering the art to the mullion spacing."
+    ],
+    "aesthetic_notes": [
+      {
+        "note": "Window graphics extend the athletic brand to the glazing without blocking the rooms behind; appropriate restraint for occupied spaces.",
+        "provenance": "opinion"
+      }
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high on method and film; sizing per glazing",
+    "inferred_fields": [
+      "design_assessment"
+    ],
+    "completeness_notes": [
+      "Perforated film brand not named on the drawing; manufacturer left null (70/30 one-way vision spec is generic/3M-compatible). R3 completeness note, not an unresolved ambiguity."
+    ]
+  }
+}

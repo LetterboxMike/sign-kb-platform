@@ -1,0 +1,50 @@
+{
+  "record_id": "rec-flat_graphic-illustrated-wall-murals-digs-001",
+  "schema_version": "1.2",
+  "record_type": "flat_graphic",
+  "provenance_note": "All client/vendor/human/copy excluded; veterinary/pet-care office vertical retained.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "pet_care_veterinary_office"
+  },
+  "classification": {
+    "graphic_method": "digital_print",
+    "applied_to": "wall",
+    "contour_cut": true
+  },
+  "materials_manifest": [
+    {
+      "ref": "G1",
+      "category": "graphic",
+      "product": "printed wall vinyl illustrations + contour-cut vinyl headline lettering",
+      "application": "digital_print",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Illustrated brand-culture murals + cut-vinyl headlines across office walls; one mural-graphic archetype."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "medium",
+    "inferred_fields": [
+      "design_assessment"
+    ],
+    "plain_language_summary": "Large-format illustrated wall murals with contour-cut headline copy across an office; collapsed to one mural archetype.",
+    "ambiguity_flags": [
+      "Specs render/vector-only; mural method (printed vs cut vinyl) inferred."
+    ]
+  }
+}

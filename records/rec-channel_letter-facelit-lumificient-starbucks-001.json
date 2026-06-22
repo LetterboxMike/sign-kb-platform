@@ -1,0 +1,81 @@
+{
+  "record_id": "rec-channel_letter-facelit-lumificient-starbucks-001",
+  "schema_version": "1.3",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "food_beverage_retail"
+  },
+  "classification": {
+    "sign_category": "channel_letter",
+    "sub_type": "facelit_wordmark_channel_letters",
+    "primary_function": "storefront_identification",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 1,
+    "fabrication_family": "channel_letter",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "Face-lit wordmark channel letters: 3in deep aluminum returns (white interior / black exterior), 3/16in white acrylic faces, 1in black trim cap, Lumificient white LEDs, remote 120V supplies with disconnect in sight.",
+    "rationale": "National-brand storefront channel-letter standard with remote supplies and code disconnect.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "channel_letters",
+      "construction": "3in deep 0.040in/3003 aluminum returns (white interior / black polyurethane exterior), 0.063in backs pop-riveted/sealed, 3/16in white acrylic faces, 1in black trim cap, Lumificient white LEDs, remote 120V supplies, disconnect in sight",
+      "material_refs": [
+        "A1"
+      ],
+      "illumination": "internal LED",
+      "fabrication_method": "face_lit_channel",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "letter_face",
+      "product": "3/16in white acrylic",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "letter_height_in": 14,
+    "overall_width_in": 135.5,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "brand_wordmark"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "compliance": {
+    "notes": "NEC 110-3(B)/600-2 disconnect in sight; UL/cUL."
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "National-brand channel-letter standard; disconnect-in-sight per code."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

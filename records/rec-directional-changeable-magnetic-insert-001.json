@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/room copy excluded; county rehab hospital vertical retained; bilingual program.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "healthcare_county_rehab_hospital"
+  },
+  "record_id": "rec-directional-changeable-magnetic-insert-001",
+  "classification": {
+    "sign_category": "directional",
+    "sub_type": "changeable_magnetic_and_slider_insert_directory",
+    "primary_function": "directory_and_changeable_room_id",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "Changeable/insert ID and directory panels: 1/4in acrylic panel + printed paper insert + 1/16in spacer + 1/8in backer, with magnetic face/backer assemblies and a milled-slot slider plus an 'in-use' window variant.",
+    "rationale": "Magnetic and slider inserts let large directories and occupancy status be updated without re-fab in a high-churn hospital.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "changeable_panel",
+      "construction": "1/4in acrylic panel + printed paper insert + 1/16in spacer + 1/8in backer; magnetic assemblies (VHB foam); milled-slot slider + in-use window variant",
+      "fabrication_method": "magnetic_and_slider_insert",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "M1",
+      "category": "substrate",
+      "product": "1/4in acrylic",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "changeable_directory_or_room"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Magnetic + slider inserts make a high-churn hospital directory updatable without re-fab."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ],
+    "modeling_notes": [
+      "Magnetic changeable directory / in-use slider are notable sub-types within the panel family."
+    ]
+  }
+}

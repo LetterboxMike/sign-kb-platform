@@ -1,0 +1,76 @@
+{
+  "record_id": "rec-pylon-custom-pole-cmg440-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "retail_quick_service"
+  },
+  "classification": {
+    "sign_category": "pylon",
+    "sub_type": "custom_pole_sign",
+    "primary_function": "roadside_identification",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 2,
+    "fabrication_family": "cabinet",
+    "mounting": "ground_mounted_footing",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A custom illuminated pole sign in the reskin program (low detail on this set).",
+    "rationale": "Roadside pole ID for the tenant.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "pole_cabinet",
+      "construction": "fabricated aluminum cabinet on pole, internal LED (detail limited)",
+      "illumination": "internal LED",
+      "mounted_to": "ground_footing",
+      "status": "open",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "face_substrate",
+      "product": "acrylic face",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "brand"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "open_items": [
+    "Pole sign construction detail limited on this set"
+  ],
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Custom pole sign; low detail."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "low",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

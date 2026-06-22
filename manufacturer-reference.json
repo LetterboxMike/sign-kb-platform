@@ -1,0 +1,113 @@
+{
+  "artifact": "manufacturer_reference",
+  "schema_version": "0.1-draft",
+  "purpose": "Normalized, deduplicated knowledge about manufacturers and their components. Sign records reference entries here by id instead of re-describing a product. Each manufacturer/component is researched once, deeply, and reused everywhere it appears.",
+  "research_scope_rule": "Corpus-complete, not catalog-cloning. Document the company and the specific components that appear in the drawing corpus, plus directly relevant alternatives. Do not mirror entire vendor catalogs.",
+
+  "entries": [
+    {
+      "id": "mfr-signcomp",
+      "type": "manufacturer",
+      "name": "SignComp",
+      "founded": 1986,
+      "category": "extruded_aluminum_framing",
+      "summary": "Long-standing supplier of extruded aluminum framing, cabinet, and raceway systems to the sign industry. Sells full-length extrusions or cut-and-mitered kits with corner keys and hardware included.",
+      "product_lines": [
+        { "name": "EconoComp", "use": "lightweight cabinets, slide access, smaller wall and monument signs" },
+        { "name": "Standard (1Part-2Part / 1P2P)", "use": "medium-duty cabinets, removable retainers on three sides, also channel-letter raceways, snap frames, edge-lit LED, vandal systems" },
+        { "name": "Commercial", "use": "heavy-duty cabinets for rigid or flex faces, hinge or slide service, radius corners and ends" },
+        { "name": "Architectural", "use": "post-and-panel wayfinding, hingeable wall and monument cabinets, insert panel systems, monolithic edges, radius ends" }
+      ],
+      "distribution": ["Grimco", "Glantz", "S&F Supplies"],
+      "provenance": "researched",
+      "sources": ["https://signcomp.com/about-us/", "https://signcomp.com/", "https://www.linkedin.com/company/signcomp"]
+    },
+    {
+      "id": "comp-signcomp-1927",
+      "type": "component",
+      "manufacturer_id": "mfr-signcomp",
+      "name": "#1927 extruded aluminum sign body",
+      "spec": "8in deep, 2-part extruded aluminum cabinet body profile",
+      "used_for": "single-faced internally illuminated cabinet sign bodies",
+      "spec_provenance": "from_drawing",
+      "context_provenance": "researched",
+      "notes": "Profile number and depth read from drawing; classified within SignComp's cabinet body system via research."
+    },
+    {
+      "id": "comp-signcomp-k1602-32",
+      "type": "component",
+      "manufacturer_id": "mfr-signcomp",
+      "name": "K1602/32 hinge-body cabinet",
+      "spec": "6in deep single-faced hinge-body extruded aluminum cabinet, welded construction",
+      "used_for": "wall-mounted single-faced cabinet signs with serviceable hinged face",
+      "spec_provenance": "from_drawing",
+      "context_provenance": "researched"
+    },
+    {
+      "id": "mfr-indect",
+      "type": "manufacturer",
+      "name": "Indect",
+      "category": "parking_guidance_systems",
+      "summary": "Manufacturer of parking guidance and wayfinding signage synced to its own space sensors and web-based software. Signage rated IP-65 for outdoor use, with a stated minimum 99% space-counting accuracy.",
+      "product_families": ["entry signs", "monument signs", "pillar signs", "aisle signs", "matrix (full-color) signs"],
+      "provenance": "researched",
+      "sources": ["https://indect.com/wayfinding-signage/", "https://indect.com/aisle-signs/", "https://parkingguidancesystems.com/my-product/matrix-signs/"]
+    },
+    {
+      "id": "comp-indect-ak4d130",
+      "type": "component",
+      "manufacturer_id": "mfr-indect",
+      "name": "AK 4-Digit 130 space counter display",
+      "spec": "4-digit LED count display, 130mm (5.1in) digit height",
+      "digit_color_options": ["green", "red", "blue", "white", "amber"],
+      "function": "displays live available space count per level/zone, synced to Indect sensors and software",
+      "behavior": {
+        "auto_brightness": "ambient light sensor auto-dims by time of day to maintain legibility",
+        "states": "can display numeric count plus OPEN / FULL / CLOSED",
+        "rating": "IP-65 outdoor"
+      },
+      "optical_behavior": {
+        "appearance": "high-contrast lit digits on dark face; green digits read as the parking-availability convention",
+        "provenance": "researched"
+      },
+      "spec_provenance": "from_drawing",
+      "context_provenance": "researched"
+    },
+    {
+      "id": "mfr-matthews",
+      "type": "manufacturer",
+      "name": "Matthews Paint",
+      "category": "sign_coatings",
+      "summary": "Industry-standard polyurethane paint system for sign and architectural finishing; specified by MP color codes, named colors, or color-matched to PMS/RAL, in gloss/satin/matte with optional anti-graffiti clear topcoats.",
+      "provenance": "knowledge",
+      "depth": "stub_expand_later"
+    },
+    {
+      "id": "mfr-3m-graphics",
+      "type": "manufacturer",
+      "name": "3M Commercial Graphics",
+      "category": "vinyl_films",
+      "summary": "Major manufacturer of sign films. 3630 series is translucent film for internally illuminated faces; 4090DG3 is a reflective film for traffic and roadside signage; films often paired with luster or gloss UV overlaminates.",
+      "provenance": "knowledge",
+      "depth": "stub_expand_later"
+    },
+    {
+      "id": "mfr-oracal",
+      "type": "manufacturer",
+      "name": "Oracal (Orafol)",
+      "category": "vinyl_films",
+      "summary": "Sign vinyl maker; 8870 series is opaque blockout used to mask light, 8800 series is translucent for illuminated faces.",
+      "provenance": "knowledge",
+      "depth": "stub_expand_later"
+    },
+    {
+      "id": "mfr-texture-plus",
+      "type": "manufacturer",
+      "name": "Texture Plus",
+      "category": "faux_architectural_panels",
+      "summary": "Maker of lightweight faux brick, stone, and masonry panels used to clad sign bases and pole covers for an architectural read.",
+      "provenance": "knowledge",
+      "depth": "stub_expand_later"
+    }
+  ]
+}

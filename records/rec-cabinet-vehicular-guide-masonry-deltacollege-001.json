@@ -1,0 +1,128 @@
+{
+  "record_id": "rec-cabinet-vehicular-guide-masonry-deltacollege-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data and actual copy excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "design_intent"
+  },
+  "context": {
+    "industry_vertical": "education_community_college"
+  },
+  "classification": {
+    "sign_category": "wayfinding",
+    "sub_type": "illuminated_signcomp_cabinet_directory_on_masonry_base",
+    "primary_function": "vehicular_wayfinding_directory",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 1,
+    "fabrication_family": "cabinet",
+    "mounting": "ground_mounted_masonry_columns",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "vehicular guide in 3 size tiers (L/M/S)",
+    "variant_axis": "size_tier"
+  },
+  "knowledge": {
+    "plain_language_summary": "An internally illuminated vehicular wayfinding directory: a SignComp Architectural Series 7 hinge-body cabinet with push-through acrylic and a raised logo cabinet (flex-face), set on a modular red-brick base with a limestone cap and an engineered concrete footing.",
+    "rationale": "A SignComp extruded cabinet on a mason-built brick/limestone base ties the sign to campus architecture; push-through acrylic and a flex-face logo carry the lit content.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "signcomp_cabinet",
+      "construction": "SignComp Arch Series 7 hinge body with 7in radius post-end caps painted MP Dark Green, 1/8in aluminum face panels, lower removable panels with push-through #7328 acrylic (1/8in proud), US LED internal white LED",
+      "component_ref": "comp-signcomp-series7",
+      "material_refs": [
+        "A1",
+        "V1"
+      ],
+      "illumination": "internal white LED",
+      "fabrication_method": "push_through_acrylic",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "logo_cabinet",
+      "construction": "raised corner logo cabinet 10in deep, 3M flex-face on tension frame",
+      "material_refs": [
+        "FX1"
+      ],
+      "provenance": "drawing"
+    },
+    {
+      "ref": "03",
+      "component": "masonry_base",
+      "construction": "4in limestone cap + modular red-brick base (mason-built), engineered concrete footing with leveling bolts; electrical stub through base; photocell + timer",
+      "material_buildup": [
+        "concrete footing",
+        "red-brick base",
+        "limestone cap"
+      ],
+      "mounted_to": "ground_footing",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "letter_face",
+      "product": "Acrylite #7328 push-through acrylic",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "3M 180mC opaque + 3M reflective (Engineer Grade 3290 + 1170 UV overlam)",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    },
+    {
+      "ref": "FX1",
+      "category": "graphic",
+      "product": "3M Panaflex flex-face on tension frame",
+      "application": "digital_print",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews MP Dark Green; MP27386 Verizon White; MP18076 Silver Cup Metallic",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "gx1_overall_ft": 15,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "destination_and_sublisting_with_arrows"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "SignComp extruded cabinet on mason-built brick/limestone base ties sign to campus architecture.",
+      "Fabricator coordinates electrical stub through the masonry base."
+    ]
+  },
+  "open_items": [
+    "Concrete footing engineered; mason coordination"
+  ],
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

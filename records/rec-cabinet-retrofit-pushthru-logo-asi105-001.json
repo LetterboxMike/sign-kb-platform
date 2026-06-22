@@ -1,0 +1,92 @@
+{
+  "record_id": "rec-cabinet-retrofit-pushthru-logo-asi105-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "corporate_campus_office"
+  },
+  "classification": {
+    "sign_category": "cabinet",
+    "sub_type": "existing_cabinet_retrofit_pushthru_letters_plus_standoff_logo",
+    "primary_function": "identification",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 2,
+    "fabrication_family": "cabinet",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A retrofit of an existing double-sided internally illuminated cabinet: replace the painted aluminum panel with push-through black acrylic letters (reuse existing LEDs), plus a separate clear-anodized aluminum dimensional logo on standoffs.",
+    "rationale": "Push-through acrylic into the existing cabinet keeps the existing LED gear, a low-cost re-identification.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "cabinet_retrofit",
+      "construction": "existing fabricated aluminum cabinet; new push-through black acrylic letters; reuse existing internal LED",
+      "material_refs": [
+        "A1"
+      ],
+      "illumination": "existing internal LED",
+      "fabrication_method": "push_thru_retrofit",
+      "mounted_to": "existing_cabinet",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "standoff_logo",
+      "construction": "1/4in-3/16in aluminum letters, clear anodized, VHB / 1in spacer standoff",
+      "material_refs": [
+        "AL1"
+      ],
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "letter_face",
+      "product": "push-through black acrylic",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "AL1",
+      "category": "letter_face",
+      "product": "aluminum letters, clear anodized",
+      "application": "material_finish",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "logo"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Push-through retrofit reuses existing cabinet LEDs."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

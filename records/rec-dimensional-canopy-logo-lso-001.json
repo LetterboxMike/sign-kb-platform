@@ -1,0 +1,76 @@
+{
+  "record_id": "rec-dimensional-canopy-logo-lso-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "permit"
+  },
+  "context": {
+    "industry_vertical": "healthcare_office_campus"
+  },
+  "classification": {
+    "sign_category": "channel_letter",
+    "sub_type": "canopy_band_dimensional_logo",
+    "primary_function": "canopy_identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "dimensional_letter_or_logo",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A canopy-band dimensional logo (low construction detail on this set).",
+    "rationale": "Logo applied to a canopy band.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "canopy_logo",
+      "construction": "dimensional logo on canopy band (detail limited)",
+      "fabrication_method": "dimensional_logo",
+      "mounted_to": "canopy",
+      "status": "open",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "AL1",
+      "category": "letter_face",
+      "product": "aluminum/acrylic logo",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "logo"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "open_items": [
+    "Canopy logo construction detail limited"
+  ],
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Canopy-band logo; low detail."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "low",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

@@ -1,0 +1,244 @@
+{
+  "record_id": "rec-channel_letter-illuminated-storefront-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client, vendor, designer, sales-rep, and contact data excluded at extraction. Vendor identity, vendor address/phone, and human names stripped. Client wordmark/descriptor copy excluded as PII; copy structure retained as pattern. Only technical signage knowledge retained.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "staffing_employment_services"
+  },
+  "classification": {
+    "sign_category": "channel_letter",
+    "sub_type": "internally_illuminated_storefront_channel_letter_set",
+    "primary_function": "storefront_brand_identification",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "illumination_detail": "internal white LEDs in each pan-channel element, fed by remote power supplies",
+    "sides": 1,
+    "fabrication_family": "channel_letter",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A storefront wall sign made of separate internally lit pan-channel elements: a logo 'cloud' (a shaped channel holding a pictorial mark in a filled disc), the brand wordmark as individual channel letters, and a small descriptor 'cloud' below. All elements are 5in deep with black returns and a 1in trim cap, lit with white LEDs behind 3/16in translucent white acrylic faces decorated with translucent and dual-color films. The wordmark mounts on a painted extruded raceway; the clouds flush-mount to the wall over remote power supplies.",
+    "rationale": "Building the mark as discrete pan-channel clouds plus individual channel letters gives a crisp dimensional daytime read and an even white-lit night read, while the raceway consolidates wiring and transformers for the wordmark and the remote supplies keep the clouds shallow against the wall.",
+    "tradeoffs": "Pan-channel letters with trim caps and translucent faces give a clean, serviceable, brightly lit storefront read, but cost more than flat-cut dimensional letters and require wall penetrations, a raceway, and remote power supplies.",
+    "when_to_use": "Tenant storefront identification where night illumination and a dimensional, branded read are required on a masonry or EIFS facade.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "logo_cloud",
+      "function": "pictorial brand mark held in a shaped illuminated channel disc",
+      "construction": "fabricated aluminum pan-channel cloud, 5in deep black aluminum returns and 1in trim cap",
+      "face": {
+        "material_refs": [
+          "A1"
+        ],
+        "face_spec": "3/16in translucent white acrylic",
+        "decoration": "surface-applied film graphics",
+        "decoration_refs": [
+          "V1",
+          "V2",
+          "V3"
+        ]
+      },
+      "illumination": "internal white LEDs, remote power supplies",
+      "fabrication_method": "pan_channel_cloud_face_lit",
+      "mounted_via": "flush_wall_mount",
+      "rationale": "Dual-color film reads black in daylight and illuminates white at night, so the mark holds contrast in both states from one face buildup.",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "channel_letters_wordmark",
+      "function": "primary brand wordmark",
+      "construction": "fabricated aluminum pan-channel letters, 5in deep black aluminum returns and 1in trim cap",
+      "face": {
+        "material_refs": [
+          "A1"
+        ],
+        "face_spec": "3/16in translucent white acrylic",
+        "decoration": "surface-applied film graphics",
+        "decoration_refs": [
+          "V2",
+          "V3"
+        ]
+      },
+      "illumination": "internal white LEDs, remote power supplies",
+      "fabrication_method": "pan_channel_letters_face_lit",
+      "mounted_via": "raceway",
+      "mounted_to": "extruded_aluminum_raceway",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "03",
+      "component": "descriptor_cloud",
+      "function": "secondary descriptor element below the wordmark",
+      "construction": "fabricated aluminum pan-channel cloud, 5in deep black aluminum returns and 1in trim cap",
+      "face": {
+        "material_refs": [
+          "A1"
+        ],
+        "face_spec": "3/16in translucent white acrylic",
+        "decoration": "surface-applied film graphics",
+        "decoration_refs": [
+          "V2"
+        ]
+      },
+      "illumination": "internal white LEDs, remote power supplies",
+      "fabrication_method": "pan_channel_cloud_face_lit",
+      "mounted_via": "flush_wall_mount",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "04",
+      "component": "extruded_aluminum_raceway",
+      "function": "mounting and wiring channel for the wordmark; conceals transformers/wiring",
+      "construction": "5in x 7in extruded aluminum raceway",
+      "finish_refs": [
+        "P1"
+      ],
+      "finish_note": "painted to match wall color",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "05",
+      "component": "flat_cut_dibond_element",
+      "function": "flat-cut dimensional element flush mounted to wall; specific role (backer vs. standalone graphic) not dimensioned on this sheet",
+      "construction": "flat-cut 6mm white Dibond aluminum composite panel, flush mounted to wall",
+      "material_refs": [
+        "SUB1"
+      ],
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "letter_face",
+      "product": "translucent white acrylic",
+      "spec": "3/16in thick",
+      "manufacturer_normalized_id": null,
+      "optical_behavior": {
+        "day_unlit": "flat white face, graphics read by applied film color",
+        "night_lit": "even white glow behind translucent and dual-color films",
+        "provenance": "inferred"
+      }
+    },
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "3M 7125-20 opaque matte white",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    },
+    {
+      "ref": "V2",
+      "category": "vinyl",
+      "product": "3M 3630-57 translucent Olympic Blue",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    },
+    {
+      "ref": "V3",
+      "category": "vinyl",
+      "product": "3M 3635-222 black dual-color film",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-3m-graphics",
+      "optical_behavior": {
+        "day_unlit": "reads opaque black",
+        "night_lit": "transmits white where lit, so black daytime graphics illuminate white at night",
+        "provenance": "researched"
+      }
+    },
+    {
+      "ref": "AL1",
+      "category": "structure_skin",
+      "product": "fabricated aluminum (pan-channel returns, 1in trim caps, extruded raceway)",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "SUB1",
+      "category": "substrate",
+      "product": "6mm white Dibond aluminum composite panel",
+      "manufacturer_normalized_id": "mfr-3a-composites"
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "field paint matched to wall color",
+      "code_status": "match_to_substrate_no_product_code",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "overall_width_in": 136,
+    "overall_height_in": 51.5,
+    "channel_depth_in": 5,
+    "trim_cap_in": 1,
+    "raceway_profile_in": "5 x 7",
+    "unit_system": "imperial",
+    "provenance": "drawing",
+    "note": "Overall envelope read from elevation; some per-element dimensions (cloud vs. letter cap heights) carried at medium confidence."
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "logo_mark",
+        "location": "logo_cloud",
+        "treatment": "pictorial mark in filled disc"
+      },
+      {
+        "slot": "brand_wordmark",
+        "location": "channel_letters",
+        "treatment": "two-tone wordmark, dual-color film"
+      },
+      {
+        "slot": "descriptor",
+        "location": "descriptor_cloud",
+        "treatment": "single-color descriptor in pill cloud"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "rules_observations": [
+      "Single internal white LED source across all elements keeps night color consistent; dual-color film preserves the daytime two-tone read while unifying to white at night.",
+      "Clear hierarchy: logo cloud and wordmark dominate, descriptor cloud is subordinate in scale."
+    ],
+    "craft_observations": [
+      "Trim-cap pan-channel construction with translucent faces is the conventional pro storefront build; black returns frame each lit face and hide the wall transition.",
+      "Raceway consolidates the wordmark wiring but adds a visible band; painting it to wall color is the standard move to suppress it."
+    ],
+    "aesthetic_notes": [
+      {
+        "note": "Dimensional clouds-plus-letters reads as a mid-market retail/service storefront identity rather than a minimal flush-cut treatment.",
+        "provenance": "opinion"
+      }
+    ]
+  },
+  "open_items": [
+    "Role of the flat-cut 6mm Dibond element (standalone graphic vs. backer panel) not dimensioned or labeled on this sheet"
+  ],
+  "extraction_meta": {
+    "field_confidence": "high on construction, films, and illumination; medium on per-element dimensions",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment.craft_observations",
+      "design_assessment.aesthetic_notes",
+      "structure.rationale",
+      "materials.optical_behavior"
+    ],
+    "modeling_notes": [
+      "Flat-cut Dibond element role unlabeled (open_items).",
+      "Raceway and clouds described as both flush-mounted and raceway-mounted across elements; modeled per-element via mounted_via."
+    ],
+    "reconciliation_v1_2": "fabrication_family proposed_new_term -> channel_letter (closed set). Specificity retained in sub_type. Cleared to records/."
+  }
+}

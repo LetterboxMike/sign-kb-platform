@@ -1,0 +1,84 @@
+{
+  "record_id": "rec-display-framed-case-maples-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "design_intent"
+  },
+  "context": {
+    "industry_vertical": "collegiate_athletics_venue"
+  },
+  "classification": {
+    "sign_category": "cabinet",
+    "sub_type": "framed_display_case",
+    "primary_function": "trophy_and_history_display",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "cabinet",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "framed jerseys, photo-wall frame grids, TV frame (screen by others)",
+    "variant_axis": "display_content"
+  },
+  "knowledge": {
+    "plain_language_summary": "Framed display assemblies: metal-frame jersey and photo-wall grids (1.5in frame profiles, ~8ft tall) and a frame-for-TV-screen, with glazing/acrylic and wall-covering backgrounds.",
+    "rationale": "These are display fixtures (artifact/photo/TV frames) that are part of the sign program but not conventional signs.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "display_frame",
+      "construction": "1.5in metal frame profile, acrylic/glazing, wall-covering background; TV by others",
+      "material_refs": [
+        "AL1"
+      ],
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "AL1",
+      "category": "structure_skin",
+      "product": "metal frame + glazing",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "frame_h_ft": 8,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "jersey_or_photo_display"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "aesthetic_notes": [
+      {
+        "note": "Trophy/history display fixtures blur signage and casework.",
+        "provenance": "opinion"
+      }
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "medium",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ],
+    "reconciliation_v1_5": "sign_category -> cabinet; fabrication_family composite_structure -> cabinet; sub_type framed_display_case."
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/room copy excluded; medical-device office vertical retained.",
+  "source": {
+    "doc_type": "design_intent"
+  },
+  "context": {
+    "industry_vertical": "medical_device_corporate_office"
+  },
+  "record_id": "rec-directional-layered-acrylic-directory-001",
+  "classification": {
+    "sign_category": "directional",
+    "sub_type": "layered_acrylic_directory_evacuation_with_insert",
+    "primary_function": "directory_and_egress",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A directory/evacuation panel in the same layered laser-cut acrylic system, with a masked clear window for a slide-in 11x17in directory/egress paper insert updated by the client.",
+    "rationale": "Re-using the room-ID system's component vocabulary for the directory holds family consistency and keeps the directory client-updatable.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "layered_directory_panel",
+      "construction": "laser-cut acrylic backer + header + non-glare main panel with masked clear window for 11x17in paper, VHB + spacer build-up",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "P2",
+      "category": "paint",
+      "product": "Matthews PMS Cool Gray 11C / Lime",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "directory_and_egress_insert"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "compliance": {
+    "ada": {
+      "non_glare": true
+    },
+    "notes": "Non-glare changeable-copy directory."
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Changeable-insert directory consistent with the room-ID system."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

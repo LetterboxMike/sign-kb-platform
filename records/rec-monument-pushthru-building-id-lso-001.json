@@ -1,0 +1,86 @@
+{
+  "record_id": "rec-monument-pushthru-building-id-lso-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "permit"
+  },
+  "context": {
+    "industry_vertical": "healthcare_office_campus"
+  },
+  "classification": {
+    "sign_category": "monument",
+    "sub_type": "internally_illuminated_pushthru_building_id_monument",
+    "primary_function": "building_identification",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 1,
+    "fabrication_family": "composite_structure",
+    "mounting": "ground_mounted_footing",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "An internally illuminated building-ID monument: 1/8in 5052 aluminum panel on a 6x2x.25in 6061 aluminum channel primary frame with a 1x1x1/8in 6063 panel frame and a mitered brushed-aluminum cap angle, 1/4in white push-through acrylic LED-lit, on a base plate over non-shrink grout and engineered footing.",
+    "rationale": "Engineered aluminum frame + footing carries a push-through-lit monument panel.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "monument",
+      "construction": "1/8in 5052 aluminum panel, 6x2x.25in 6061 channel primary frame, 1x1x1/8in 6063 panel frame, 2x2x3/16in anodized brushed cap angle (mitered/continuous), 1/4in white push-thru acrylic + LED, vacuum-form vinyl wrap, 3M 4950 VHB; base plate on 1in min grout + engineered footing",
+      "material_refs": [
+        "A1",
+        "AD1"
+      ],
+      "illumination": "internal LED",
+      "fabrication_method": "push_thru_monument",
+      "mounted_to": "ground_footing",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "letter_face",
+      "product": "1/4in white push-through acrylic",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "AD1",
+      "category": "adhesive",
+      "product": "3M 4950 VHB",
+      "manufacturer_normalized_id": "mfr-3m-industrial"
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "building_id"
+      },
+      {
+        "slot": "address_block"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Engineered aluminum channel frame + footing; push-through-lit panel."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

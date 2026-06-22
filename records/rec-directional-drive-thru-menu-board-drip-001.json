@@ -1,0 +1,71 @@
+{
+  "record_id": "rec-directional-drive-thru-menu-board-drip-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "restaurant_qsr_drive_thru"
+  },
+  "classification": {
+    "sign_category": "directional",
+    "sub_type": "five_panel_drive_thru_menu_board",
+    "primary_function": "drive_thru_menu",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "ground_mounted_pedestal",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A new 5-panel drive-thru menu board set at 20 degrees on the existing menu-board footing.",
+    "rationale": "Menu board paired with the digital order screen in the order zone.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "menu_board",
+      "construction": "5-panel menu board at 20deg on existing footing",
+      "mounted_to": "ground_pedestal",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "face_substrate",
+      "product": "menu board panel",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "menu"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "rules_observations": [
+      "5-panel menu board at 20deg approach angle."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "medium",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

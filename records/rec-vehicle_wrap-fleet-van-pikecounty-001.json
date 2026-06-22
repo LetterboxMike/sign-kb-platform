@@ -1,0 +1,65 @@
+{
+  "record_id": "rec-vehicle_wrap-fleet-van-pikecounty-001",
+  "schema_version": "1.4",
+  "record_type": "vehicle_wrap",
+  "provenance_note": "All client/vendor/human/agency-name/badge/staff-name/copy data excluded; government-corrections vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "design_conceptual"
+  },
+  "context": {
+    "industry_vertical": "government_corrections_fleet"
+  },
+  "classification": {
+    "vehicle_class": "cargo_van",
+    "coverage": "full_wrap"
+  },
+  "coverage_areas": [
+    "driver_side",
+    "passenger_side"
+  ],
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "agency_wordmark"
+      },
+      {
+        "slot": "badge_or_seal_emblem"
+      },
+      {
+        "slot": "staff_name_and_role"
+      },
+      {
+        "slot": "flag_background_graphic"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_status": "proposed_option",
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "aesthetic_notes": [
+      {
+        "note": "Full-bleed flag-background government fleet wrap with agency wordmark and badge; a conventional law-enforcement/corrections livery rather than a designed identity.",
+        "provenance": "opinion"
+      }
+    ]
+  },
+  "open_items": [
+    "Print film, base media, and overlaminate not specified (design-approval proof only) — capture at production",
+    "Roof, hood, and rear coverage not shown on the proof; window perforation possible but unconfirmed",
+    "Single-vehicle proof; fleet deployment (program_model) not confirmed on this sheet"
+  ],
+  "extraction_meta": {
+    "field_confidence": "medium on body style and coverage from the proof; low on materials (none specified)",
+    "inferred_fields": [
+      "design_assessment",
+      "coverage_areas"
+    ],
+    "remodeled_from": "v1.3 deferred vehicle_wrap marker -> v1.4 real record (sibling now specified).",
+    "captured_attributes": {
+      "body_style_detail": "high_roof_cargo_van (Ram ProMaster-style)",
+      "panels": "per-side full-coverage panels (both sides shown)"
+    }
+  }
+}

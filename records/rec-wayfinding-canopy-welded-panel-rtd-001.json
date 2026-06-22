@@ -1,0 +1,94 @@
+{
+  "record_id": "rec-wayfinding-canopy-welded-panel-rtd-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "public_transit_light_rail"
+  },
+  "classification": {
+    "sign_category": "wayfinding",
+    "sub_type": "canopy_mounted_aluminum_station_id_directional_panel",
+    "primary_function": "station_id_and_directional",
+    "illuminated": false,
+    "illumination_method": "non_illuminated_reflective",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "station ID (1A) + directional (1B) panels on welded steel frames field-welded to canopy",
+    "variant_axis": "id_vs_directional"
+  },
+  "knowledge": {
+    "plain_language_summary": "Aluminum station-ID/directional panels on 1x2x1/8in mitered welded steel frames, field-welded to the existing 2x8 canopy steel and field-painted before face attachment; 1/8in aluminum faces with reflective graphics on 3M VHB.",
+    "rationale": "Field-welded canopy frames carry the panels off existing structure; reflective films give night legibility.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "canopy_panel",
+      "construction": "1x2x1/8in mitered welded steel frame field-welded to existing 2x8 tube-steel canopy, field-painted; 1/8in aluminum face (Matthews MP41342SP Brushed Aluminum / MP42204SP Black), 3M Scotchlite 208/280 reflective + logo 3M 7125 red, 3M VHB",
+      "material_refs": [
+        "V1"
+      ],
+      "finish_refs": [
+        "P1"
+      ],
+      "mounted_to": "existing_canopy",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "3M Scotchlite 208/280 reflective + 7125 red",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews MP41342SP Brushed Aluminum / MP42204SP Black",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "face_in": "18x18.75",
+    "aff_in": "102-106",
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "station_name_or_directional"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Field-weld-then-paint sequence on existing canopy; reflective faces on VHB."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ],
+    "modeling_notes": [
+      "Field-welded-to-canopy mapped to wall_mounted (mounted to existing structure)."
+    ]
+  }
+}

@@ -1,4 +1,7 @@
+import { redirect } from 'next/navigation';
 import { listCorrections } from '@/lib/kb';
+import { currentAppUser, roleAtLeast } from '@/lib/auth';
+import { NotAuthorized } from '@/components/not-authorized';
 import { CorrectionsUI } from '@/components/corrections-ui';
 import { RevertButton } from '@/components/revert-button';
 import { Card } from '@/components/ui/card';
@@ -14,6 +17,9 @@ const statusVariant: Record<string, 'default' | 'secondary' | 'outline' | 'destr
 };
 
 export default async function CorrectionsPage() {
+  const me = await currentAppUser();
+  if (!me) redirect('/login');
+  if (!roleAtLeast(me.role, 'admin')) return <NotAuthorized required="admin" have={me.role} />;
   const rows = await listCorrections();
 
   return (

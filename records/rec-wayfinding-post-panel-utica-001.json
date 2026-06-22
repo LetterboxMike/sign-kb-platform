@@ -1,0 +1,94 @@
+{
+  "record_id": "rec-wayfinding-post-panel-utica-001",
+  "schema_version": "1.3",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data and actual copy excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "education_k12"
+  },
+  "classification": {
+    "sign_category": "wayfinding",
+    "sub_type": "single_sided_post_and_panel",
+    "primary_function": "campus_wayfinding",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "ground_mounted_footing",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A single-sided post-and-panel wayfinding sign: two 4x4 aluminum posts in direct-burial concrete carrying a mitered/welded aluminum tube frame with a Lord-Signlok-bonded aluminum face and surface vinyl.",
+    "rationale": "A welded tube frame on twin direct-burial posts is the durable exterior wayfinding standard; bonded face avoids fasteners through the graphic.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "post_panel",
+      "construction": "two 4x4x1/4in aluminum posts 8ft-6in with welded caps, 2x2x1/8in aluminum tube frame mitered/welded, 1/8in aluminum face bonded with Lord Signlok 810, surface vinyl one side",
+      "material_refs": [
+        "V1",
+        "AD1"
+      ],
+      "finish_refs": [
+        "P1"
+      ],
+      "mounted_to": "ground_footing",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "3M 7125-20 white opaque",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    },
+    {
+      "ref": "AD1",
+      "category": "adhesive",
+      "product": "Lord Signlok 810 structural adhesive",
+      "manufacturer_normalized_id": "mfr-lord"
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews P4",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "face_in": 60,
+    "height_above_grade_in": 66,
+    "post_in": 102,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "wayfinding_copy"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Bonded face (Lord Signlok) avoids fasteners through the graphic."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

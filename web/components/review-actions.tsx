@@ -2,7 +2,7 @@
 
 import { useState, useTransition } from 'react';
 import { useRouter } from 'next/navigation';
-import { Check, X } from 'lucide-react';
+import { Check, X, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { approveRecord, rejectRecord } from '@/app/review/actions';
 
@@ -31,10 +31,10 @@ export function ReviewActions({ recordId }: { recordId: string }) {
   return (
     <div className="flex gap-2">
       <Button onClick={() => act('live')} disabled={pending}>
-        <Check className="h-4 w-4" /> Approve to live
+        {pending ? <Loader2 className="h-4 w-4 animate-spin" /> : <Check className="h-4 w-4" />} Approve to live
       </Button>
       <Button variant="destructive" onClick={() => act('rejected')} disabled={pending}>
-        <X className="h-4 w-4" /> Reject
+        {pending ? <Loader2 className="h-4 w-4 animate-spin" /> : <X className="h-4 w-4" />} Reject
       </Button>
     </div>
   );

@@ -1,0 +1,98 @@
+{
+  "record_id": "rec-dimensional-logo-letters-facelit-maples-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "design_intent"
+  },
+  "context": {
+    "industry_vertical": "collegiate_athletics_venue"
+  },
+  "classification": {
+    "sign_category": "channel_letter",
+    "sub_type": "dimensional_logo_and_letters_facelit_and_nonlit",
+    "primary_function": "brand_and_championship_identification",
+    "illuminated": true,
+    "illumination_method": "mixed",
+    "illumination_detail": "face-lit S logo + non-illuminated dimensional text variants",
+    "sides": 1,
+    "fabrication_family": "dimensional_letter_or_logo",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "dimensional logos/letters: color logo, tonal logo, trophy/championship text",
+    "variant_axis": "illumination_and_message"
+  },
+  "knowledge": {
+    "plain_language_summary": "Dimensional team logos and letters in brushed/polished aluminum and translucent acrylic, both face-lit (10in 'S' logo, 3in channel letters) and non-illuminated dimensional championship text.",
+    "rationale": "A dimensional letter/logo family carries the venue brand at multiple scales and lighting states.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "dimensional_logo",
+      "construction": "aluminum (brushed MT-01 / polished MT-05) + translucent acrylic AC-06 faces, gloss paint; face-lit variants internal LED, others non-lit; flush-mounted",
+      "material_refs": [
+        "AL1",
+        "A1"
+      ],
+      "illumination": "internal LED / none",
+      "fabrication_method": "dimensional_letter_or_logo",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "AL1",
+      "category": "letter_face",
+      "product": "aluminum (brushed/polished)",
+      "application": "material_finish",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "A1",
+      "category": "letter_face",
+      "product": "AC-06 translucent acrylic",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "logo_depth_in": 10,
+    "channel_depth_in": 3,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "team_logo"
+      },
+      {
+        "slot": "championship_text"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Mixed face-lit and non-lit dimensional brand elements; FPO placeholder artwork."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "medium-high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ],
+    "modeling_notes": [
+      "~200 tagged elements collapsed to 6 archetypes."
+    ]
+  }
+}

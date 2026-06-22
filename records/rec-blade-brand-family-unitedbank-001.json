@@ -1,0 +1,93 @@
+{
+  "record_id": "rec-blade-brand-family-unitedbank-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data and actual copy excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "retail_banking"
+  },
+  "classification": {
+    "sign_category": "blade",
+    "sub_type": "double_faced_illuminated_projecting_blade",
+    "primary_function": "pedestrian_branch_identification",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 2,
+    "fabrication_family": "blade",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "blade in 2 sizes (36/48)",
+    "variant_axis": "size"
+  },
+  "knowledge": {
+    "plain_language_summary": "A double-faced illuminated projecting blade sign: cabinet and trim cap painted P2, white acrylic face with V1 logo. Two sizes.",
+    "rationale": "A projecting blade for pedestrian branch ID.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "blade_cabinet",
+      "construction": "cabinet + trim cap P2, white acrylic face with V1, internal LED",
+      "material_refs": [
+        "V1"
+      ],
+      "finish_refs": [
+        "P1"
+      ],
+      "illumination": "internal LED",
+      "fabrication_method": "face_lit_cabinet",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "brand vinyls V1 logo / V8 white copy / V10 lettering / V11 disclaimer",
+      "application": "vinyl",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews brand paints P1-P5",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "area_sqft": "5.7-10.2",
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "brand_logo"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Double-faced projecting blade in the brand vocabulary."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ],
+    "reconciliation_v1_3": "Applied v1.3 enums (blade/awning/halo_illuminated/exposed_lamp/external_downlight + concrete/awning_fabric/digital_display_module/adhesive categories)."
+  }
+}

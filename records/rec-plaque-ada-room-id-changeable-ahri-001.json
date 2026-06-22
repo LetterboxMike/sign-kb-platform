@@ -1,0 +1,113 @@
+{
+  "record_id": "rec-plaque-ada-room-id-changeable-ahri-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data and actual copy excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "corporate_trade_association_office"
+  },
+  "classification": {
+    "sign_category": "plaque",
+    "sub_type": "ada_tactile_room_id_with_changeable_vinyl_insert",
+    "primary_function": "ada_room_identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "ADA room/office/restroom IDs in one panel archetype",
+    "variant_axis": "message_and_icon"
+  },
+  "knowledge": {
+    "plain_language_summary": "An ADA room ID: 3/8in P95 non-glare acrylic back-painted with flat-cut 1/32in white Rowmark tactile copy and clear raster braille; a changeable variant adds a CNC-milled slot for a second-surface vinyl insert behind a gloss-acrylic window.",
+    "rationale": "Non-glare back-painted acrylic with raised Rowmark tactile + raster braille is the compliant standard; the milled-slot insert allows changeable copy.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "face_panel",
+      "construction": "3/8in P95 non-glare acrylic, back-painted PMS 424C, edges polished/eased",
+      "material_refs": [
+        "M1"
+      ],
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "tactile_copy",
+      "construction": "flat-cut 1/32in white Rowmark self-adhesive engraving plastic + clear raster braille",
+      "material_refs": [
+        "M2"
+      ],
+      "fabrication_method": "tactile_plus_raster_braille",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "03",
+      "component": "changeable_variant",
+      "construction": "1/8in gloss acrylic masked/backpainted window + 1/16in spacers + 1/4in gloss acrylic with CNC-milled slot for changeable 2nd-surface vinyl insert",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "M1",
+      "category": "substrate",
+      "product": "3/8in P95 non-glare acrylic",
+      "manufacturer_normalized_id": "mfr-p95-acrylic"
+    },
+    {
+      "ref": "M2",
+      "category": "substrate",
+      "product": "1/32in white Rowmark engraving plastic",
+      "manufacturer_normalized_id": "mfr-rowmark"
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "room_id",
+        "required": true
+      },
+      {
+        "slot": "changeable_insert",
+        "required": false
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "compliance": {
+    "ada": {
+      "tactile": true,
+      "braille": true,
+      "non_glare": true
+    },
+    "notes": "Raised tactile copy + raster braille on non-glare acrylic."
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Milled-slot changeable insert behind a gloss window adds flexibility to a compliant ID."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

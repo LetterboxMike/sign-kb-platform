@@ -1,0 +1,93 @@
+{
+  "record_id": "rec-monument-carved-signfoam-cedar-siberia-001",
+  "schema_version": "1.3",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "retail_roadside_camp_store"
+  },
+  "classification": {
+    "sign_category": "monument",
+    "sub_type": "carved_signfoam_panels_on_cedar_posts_stone_base",
+    "primary_function": "roadside_identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 2,
+    "fabrication_family": "composite_structure",
+    "mounting": "ground_mounted_masonry_columns",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A double-sided carved monument: router-carved SignFoam HDU name/scene/services panels (woodgrain textured, hand-painted) on aluminum tube frames between cedar-wrapped posts with HDU caps, on stone pedestal bases by others.",
+    "rationale": "Carved HDU with hand-painted scenes on cedar posts gives a rustic roadside camp-store identity; aluminum tube frames carry the panels between posts.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "carved_panels",
+      "construction": "3D router-carved SignFoam HDU name/scene/services panels, woodgrain texture, hand-painted, on 2x2 and 1x1 aluminum tube frames with 1/4in plates, gloss black",
+      "material_refs": [
+        "HDU1"
+      ],
+      "fabrication_method": "carved_hdu",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "posts_and_caps",
+      "construction": "cedar-wrapped wood posts, brown stain + sun-proof sealant, 2in HDU caps gloss black; stone pedestal bases by others",
+      "material_refs": [
+        "W1"
+      ],
+      "mounted_to": "ground_footing",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "HDU1",
+      "category": "substrate",
+      "product": "SignFoam HDU sign board (carved)",
+      "manufacturer_normalized_id": "mfr-signfoam"
+    },
+    {
+      "ref": "W1",
+      "category": "structural_timber",
+      "product": "cedar-wrapped posts",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "place_name"
+      },
+      {
+        "slot": "services_list"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Hand-painted carved HDU scenes + cedar posts = rustic roadside identity."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

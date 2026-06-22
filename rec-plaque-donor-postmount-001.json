@@ -1,0 +1,120 @@
+{
+  "record_id": "rec-plaque-donor-postmount-001",
+  "schema_version": "0.2-draft",
+  "provenance_note": "All client, vendor, and human-contact data excluded. This drawing is predominantly donor names (personal data); only the small technical core survives extraction. Donor copy content is excluded; copy structure is retained as a pattern.",
+  "source": { "doc_type": "shop" },
+  "context": { "industry_vertical": "education_private_school" },
+
+  "classification": {
+    "sign_category": "plaque",
+    "sub_type": "donor_recognition_tree_plaque",
+    "primary_function": "donor_recognition",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "post_mounted_plaque",
+    "mounting": "ground_mounted_footer",
+    "digital_integration": false
+  },
+
+  "program_model": {
+    "is_program": true,
+    "instance_model": "single fabricated design produced as many units; copy varies per unit, fabrication is identical across all units",
+    "rule_demonstrated": "Copy-only variants are per-unit instance data, not separate sign records. One design record, N copy instances.",
+    "variant_axis": "donor_copy"
+  },
+
+  "knowledge": {
+    "plain_language_summary": "A small brushed-aluminum donor plaque with digitally printed recognition copy, clear-coated and mounted on a short square post set in a concrete footer, installed at the base of a memorial or donor tree. Produced as a set with identical construction and different donor copy per unit.",
+    "rationale": "Brushed aluminum with a sprayed clear coat is a durable, low-cost outdoor memorial treatment; digital print allows fully variable per-donor copy with no tooling change between units.",
+    "provenance": "inferred"
+  },
+
+  "structure": [
+    {
+      "ref": "01",
+      "component": "face_panel",
+      "construction": "4in x 7in x 1/4in brushed aluminum face panel",
+      "material_refs": ["M1"],
+      "decoration": "digitally printed copy and client crest, finished with sprayed clear coat",
+      "decoration_refs": ["D1", "P1"],
+      "provenance": "drawing"
+    },
+    {
+      "ref": "04",
+      "component": "mounting_post",
+      "construction": "2in x 1/8in wall aluminum square tube, welded to back of panel",
+      "finish_refs": ["P1"],
+      "finish_note": "callout specifies color P1 (clear coat); rendering reads dark. Minor finish ambiguity flagged.",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "05",
+      "component": "footer",
+      "construction": "8in dia x 18in deep poured concrete footer",
+      "provenance": "drawing"
+    }
+  ],
+
+  "materials_manifest": [
+    { "ref": "M1", "category": "face_substrate", "product": "brushed aluminum", "spec": "1/4in panel; vertical brushed finish", "application": "material_finish", "manufacturer_normalized_id": null },
+    { "ref": "D1", "category": "graphic", "product": "digital print, to match standard black", "application": "digital_print", "manufacturer_normalized_id": null },
+    { "ref": "P1", "category": "coating", "product": "clear coat", "application": "sprayed", "manufacturer_normalized_id": null }
+  ],
+
+  "typography": { "typeface": "Helvetica Medium", "provenance": "drawing" },
+
+  "messaging_pattern": {
+    "copy_blocks": [
+      { "slot": "donor_name", "required": true },
+      { "slot": "affiliation_or_class_years", "required": false },
+      { "slot": "dedication_or_quote", "required": false },
+      { "slot": "client_crest", "required": true }
+    ],
+    "copy_content": "excluded_pii",
+    "layout_rule": "copy centered within a 6in maximum copy area with 1/2in side margins; consistent 3/16in interline spacing"
+  },
+
+  "dimensions": { "face_width_in": 7, "face_height_in": 4, "face_thickness_in": 0.25, "overall_height_in": 38.4375, "footer_dia_in": 8, "footer_depth_in": 18, "unit_system": "imperial", "provenance": "drawing" },
+
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "rules_observations": ["Copy constrained to a defined max copy area with equal margins and consistent line spacing, keeping a multi-line memorial message balanced."],
+    "craft_observations": ["Brushed aluminum plus sprayed clear coat is a restrained, durable, dignified treatment appropriate to a commemorative object."],
+    "aesthetic_notes": [ { "note": "Understated and quiet, which is the correct register for memorial and donor recognition.", "provenance": "opinion" } ]
+  },
+
+  "extraction_meta": {
+    "field_confidence": "high on construction and materials; copy content intentionally excluded as PII",
+    "inferred_fields": ["knowledge", "design_assessment"]
+  },
+
+  "schema_strain_log": {
+    "new_enum_values_surfaced": {
+      "sign_category": ["plaque"],
+      "fabrication_family": ["post_mounted_plaque"],
+      "mounting": ["ground_mounted_footer"],
+      "component_types": ["face_panel", "mounting_post", "footer"]
+    },
+    "new_application_methods_vocab": {
+      "source": "AGS Color and Finish Key on the drawing",
+      "values": {
+        "P": "paint",
+        "D": "digital_print_or_silkscreen_print",
+        "S": "silkscreen_print",
+        "H": "hot_stamp_or_tipped",
+        "V": "vinyl",
+        "M": "special_material",
+        "F": "material_finish"
+      },
+      "note": "Clean canonical seed for the decoration/application enum, taken directly from a shop's own finish-key convention."
+    },
+    "new_fields_added": ["program_model", "materials[].application", "typography", "messaging_pattern.copy_content"],
+    "rules_reinforced": [
+      "Copy-instance separation: 5 identical plaques with different donor copy = 1 design record + per-unit copy data, not 5 records.",
+      "PII exclusion: this is the first drawing that is mostly personal data; the rule correctly reduces it to a small technical core."
+    ],
+    "shape_finding": "Did NOT break the record shape. Confirms the fabricated_sign shape generalizes down to small plaques. Does not test the vehicle-wrap shape risk."
+  }
+}

@@ -1,12 +1,20 @@
+import { redirect } from 'next/navigation';
 import { Download, ShieldCheck } from 'lucide-react';
 import { corpusStats } from '@/lib/queries';
+import { currentAppUser, roleAtLeast } from '@/lib/auth';
+import { NotAuthorized } from '@/components/not-authorized';
+import { UserRoles } from '@/components/user-roles';
+import { listAppUsers } from './actions';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
 export const dynamic = 'force-dynamic';
 
 export default async function AdminPage() {
-  const stats = await corpusStats();
+  const me = await currentAppUser();
+  if (!me) redirect('/login');
+  if (!roleAtLeast(me.role, 'admin')) return <NotAuthorized required="admin" have={me.role} />;
+  const [stats, users] = await Promise.all([corpusStats(), listAppUsers()]);
 
   return (
     <div className="space-y-6">
@@ -50,13 +58,18 @@ export default async function AdminPage() {
 
       <Card>
         <CardHeader>
-          <CardTitle className="flex items-center gap-2"><ShieldCheck className="h-4 w-4" /> Users &amp; roles</CardTitle>
+          <CardTitle className="flex items-center gap-2">
+            <ShieldCheck className="h-4 w-4" /> Users &amp; roles
+          </CardTitle>
           <CardDescription>
-            Role-based access (admin / contributor / viewer) and RLS arrive with authentication — deferred from Phase 2 by
-            choice. The <span className="font-mono">app_users</span> table and write-path provenance columns are already in
-            place; wiring Supabase Auth turns them on.
+            <span className="font-medium">viewer</span> reads · <span className="font-medium">contributor</span> uploads,
+            proposes, and grades · <span className="font-medium">admin</span> approves, governs, and exports. Rows appear
+            once a user signs in; the project owner is bootstrapped to admin.
           </CardDescription>
         </CardHeader>
+        <CardContent>
+          <UserRoles users={users} currentUserId={me.id} />
+        </CardContent>
       </Card>
     </div>
   );

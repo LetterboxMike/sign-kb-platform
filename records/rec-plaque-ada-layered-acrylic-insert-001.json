@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/room copy excluded; medical-device office vertical retained.",
+  "source": {
+    "doc_type": "design_intent"
+  },
+  "context": {
+    "industry_vertical": "medical_device_corporate_office"
+  },
+  "record_id": "rec-plaque-ada-layered-acrylic-insert-001",
+  "classification": {
+    "sign_category": "plaque",
+    "sub_type": "layered_acrylic_ada_room_id_with_paper_insert",
+    "primary_function": "ada_room_identification_with_changeable_copy",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "one layered-acrylic insert-panel system across office/lab/conf/restroom/elevator/stair types, floor-coded",
+    "variant_axis": "sign_type_x_floor_room_code"
+  },
+  "knowledge": {
+    "plain_language_summary": "A modular layered-acrylic ADA room-ID: laser-cut backer + direct-printed header + accent bar + non-glare main panel, with 1/32in Rowmark raised tactile + braille and a window for a slide-in printed paper insert. One component vocabulary reused across all sign types.",
+    "rationale": "Separating permanent tactile ID from a changeable paper insert behind a non-glare window satisfies ADA while letting occupant copy change without re-fab; the modular component set keeps the whole program consistent.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "layered_panel",
+      "construction": "1/8in laser-cut acrylic backer (satin white / MP00468 Lime) + 1/8in header w/ direct-printed first-surface logo + 1/4in accent bar + 1/8in non-glare main panel 2nd-surface painted PMS Cool Gray 11C",
+      "finish_refs": [
+        "P1",
+        "P2"
+      ],
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "tactile_and_insert",
+      "construction": "1/32in white Rowmark raised tactile + braille; 1/16in acrylic spacer; window for slide-in printed paper insert (2x8in / 11x17in)",
+      "material_refs": [
+        "M2"
+      ],
+      "fabrication_method": "laser_cut_tactile_plus_insert_window",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "03",
+      "component": "mount",
+      "construction": "3M VHB foam tape (cubicle variant = double pin-back for fabric wall)",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "M2",
+      "category": "substrate",
+      "product": "1/32in white Rowmark tactile",
+      "manufacturer_normalized_id": "mfr-rowmark"
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews MP00468 Lime (brand green)",
+      "manufacturer_normalized_id": "mfr-matthews"
+    },
+    {
+      "ref": "P2",
+      "category": "paint",
+      "product": "Matthews 2nd-surface PMS Cool Gray 11C",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "department_logo_header"
+      },
+      {
+        "slot": "permanent_room_id",
+        "required": true
+      },
+      {
+        "slot": "changeable_paper_insert",
+        "required": false
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "compliance": {
+    "ada": {
+      "tactile": true,
+      "braille": true,
+      "non_glare": true,
+      "pictogram": true
+    },
+    "notes": "Non-glare main panel; raised tactile + braille."
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Single modular component vocabulary (backer/header/accent/main/spacer/window) reused across all sign types.",
+      "Direct-printed logo header is the brand carrier; changeable paper inserts cut re-fab cost."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

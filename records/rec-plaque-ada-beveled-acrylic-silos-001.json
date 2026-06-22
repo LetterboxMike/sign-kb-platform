@@ -1,0 +1,103 @@
+{
+  "record_id": "rec-plaque-ada-beveled-acrylic-silos-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "multifamily_residential"
+  },
+  "classification": {
+    "sign_category": "plaque",
+    "sub_type": "beveled_back_painted_acrylic_tactile_ada",
+    "primary_function": "ada_identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "unit/room/stair/fire/exit/stairwell/directional IDs, each in 2 color options (Iron Ore/Putty and Pure White/Charcoal)",
+    "variant_axis": "message_size_x_color_option"
+  },
+  "knowledge": {
+    "plain_language_summary": "An ADA tactile panel: non-glare clear acrylic with 45-degree polished bevel edges, 2nd-surface painted, 1/32in Rowmark ADA-Alternative raised tactile + Grade-2 clear Raster braille, VHB; every type ships in two color options.",
+    "rationale": "One beveled-edge non-glare panel scales across nine sign types and unit numbers; color is a pure schedule duplication.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "ada_panel",
+      "construction": "1/8in (Opt1) or 1/4in (Opt2) non-glare clear acrylic, 45deg polished bevel, 2nd-surface painted (Matthews/SW7069 Iron Ore or SW7005 Pure White), 1/32in Rowmark ADA-Alt raised tactile (Putty 311806 / Charcoal 311307), Grade-2 clear Raster braille, VHB",
+      "material_refs": [
+        "M1",
+        "M2"
+      ],
+      "fabrication_method": "tactile_beveled_acrylic",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "M1",
+      "category": "substrate",
+      "product": "non-glare clear acrylic",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "M2",
+      "category": "substrate",
+      "product": "1/32in Rowmark ADA-Alternative",
+      "manufacturer_normalized_id": "mfr-rowmark"
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews/SW7069 Iron Ore or SW7005 Pure White",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "unit_id_in": "4x7",
+    "stairwell_in": "12x18",
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "unit_room_or_egress_id"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "compliance": {
+    "ada": {
+      "tactile": true,
+      "braille": true,
+      "non_glare": true
+    },
+    "notes": "Grade-2 Raster braille; IBC stairwell content."
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "One beveled non-glare panel, message+color schedule; 2 color options per type."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

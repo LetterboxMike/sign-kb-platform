@@ -1,0 +1,82 @@
+{
+  "record_id": "rec-directional-double-face-drivethru-cabinet-starbucks-001",
+  "schema_version": "1.3",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "food_beverage_retail"
+  },
+  "classification": {
+    "sign_category": "directional",
+    "sub_type": "double_face_backlit_drivethru_cabinet_on_base",
+    "primary_function": "drive_thru_directional",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 2,
+    "fabrication_family": "cabinet",
+    "mounting": "ground_mounted_pedestal",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "qty 3 double-faced drive-thru cabinets + a non-illuminated panel directional",
+    "variant_axis": "illuminated_vs_panel"
+  },
+  "knowledge": {
+    "plain_language_summary": "A double-faced backlit drive-thru directional cabinet: welded aluminum, no visible fasteners, black, with a routed-out siren disk and routed arrow/'DRIVE THRU' backed by translucent diffuser film, on a retrofit base tube to an existing footing. A single-faced non-illuminated panel directional is also in the set.",
+    "rationale": "Routed-and-diffused faces give clean lit drive-thru graphics; the base tube retrofits to the existing footing.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "drivethru_cabinet",
+      "construction": "0.090in welded aluminum cabinet, no visible fasteners, black to RAL; siren disk + arrow + DRIVE THRU routed; 3M Scotchcal 3735-50 white diffuser film, siren translucent overlay + protection film; base tube retrofit to existing footing",
+      "material_refs": [
+        "V1"
+      ],
+      "illumination": "internal LED",
+      "fabrication_method": "routed_and_diffused",
+      "mounted_to": "ground_pedestal",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "3M Scotchcal 3735-50 white diffuser film",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "directional_and_drive_thru"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Routed-and-diffused faces; seamless welded cabinet; base-tube retrofit."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

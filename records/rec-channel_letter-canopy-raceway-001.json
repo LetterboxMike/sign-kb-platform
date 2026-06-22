@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/room copy excluded; county rehab hospital vertical retained; bilingual program.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "healthcare_county_rehab_hospital"
+  },
+  "record_id": "rec-channel_letter-canopy-raceway-001",
+  "classification": {
+    "sign_category": "channel_letter",
+    "sub_type": "illuminated_acrylic_face_channel_letters_on_canopy_raceway",
+    "primary_function": "entrance_identification",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 1,
+    "fabrication_family": "channel_letter",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "Illuminated acrylic-face channel letters with silver returns, mounted on a fabricated aluminum raceway through-bolted to the existing steel canopy tube, with remote power.",
+    "rationale": "A raceway through-bolted to the existing HSS canopy carries the entrance ID without new structure; remote supply keeps the canopy clean.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "channel_letters",
+      "construction": "illuminated white acrylic-face channel letters, returns painted MP Sterling Silver, remote power",
+      "finish_refs": [
+        "P1"
+      ],
+      "illumination": "internal white LED",
+      "fabrication_method": "face_lit_channel",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "raceway",
+      "construction": "fabricated aluminum 2x3in raceway/wireway (removable bottom), through-bolted to existing 3x6 HSS canopy with 3/16x4in stainless lag/bolts",
+      "mounted_to": "existing_canopy",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews MP Sterling Silver",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "entrance_wordmark"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Raceway reuses the existing canopy steel; remote supply keeps it clean."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

@@ -1,0 +1,229 @@
+{
+  "artifact": "design_canon_seed",
+  "schema_version": "0.1-draft",
+  "purpose": "Seeds the principles and exemplar strata of the design-taste model from external award canon rather than the corpus, so the taste layer is calibrated to recognized excellence. Principles are stored knowledge; exemplars are referenced, not image-ingested, due to copyright.",
+  "weighting_note": "SEGD supplies the high-design ceiling (systems, placemaking, typography). Trade contests (Signs of the Times, ISA-adjacent, regional sign associations) supply taste applied to the commercial categories Substrate shops actually quote. Exemplars are weighted toward corpus-relevant categories.",
+
+  "canon_sources": [
+    {
+      "name": "SEGD Global Design Awards",
+      "type": "experiential_graphic_design",
+      "teaches": "placemaking, wayfinding systems, typography, material innovation, connection to context",
+      "corpus_relevance": "ceiling_reference",
+      "url": "https://segd.org/awards/the-segd-global-design-awards/"
+    },
+    {
+      "name": "Signs of the Times Annual Sign Contest",
+      "type": "commercial_sign_trade",
+      "teaches": "shop-fabricated illuminated and non-illuminated commercial signs, channel letters, pylons, monuments, themed work",
+      "corpus_relevance": "high",
+      "url": "https://signsofthetimes.com/"
+    },
+    {
+      "name": "Sign trade and regional association design awards (ISA-adjacent, MSSA, etc.)",
+      "type": "commercial_sign_trade",
+      "teaches": "category criteria by sign type and size, finish and fabrication quality benchmarks",
+      "corpus_relevance": "high"
+    }
+  ],
+
+  "judging_criteria_consensus": [
+    "Design creativity and originality",
+    "Finish quality, precision, and fabrication technique",
+    "Durability and material suitability",
+    "Visual impact and message effectiveness",
+    "Innovation: offers something new vs. existing solutions",
+    "Aesthetics: form, color, texture, finishing, materials",
+    "Functionality and legibility in real use"
+  ],
+
+  "principles": [
+    {
+      "id": "leg-01",
+      "stratum": "rule",
+      "principle": "Legibility before everything. The core message must read at the intended distance and approach speed before any styling is judged.",
+      "rationale": "A sign that looks beautiful in a portfolio but fails at 40mph has failed its job. Trade and design juries both score message effectiveness.",
+      "applies_to": ["all"]
+    },
+    {
+      "id": "leg-02",
+      "stratum": "rule",
+      "principle": "One primary read. Establish a single clear hierarchy: one element wins, everything else is subordinate.",
+      "rationale": "Competing focal points flatten the message and read as amateur.",
+      "applies_to": ["all"]
+    },
+    {
+      "id": "leg-03",
+      "stratum": "rule",
+      "principle": "Contrast must hold in every condition the sign lives in, day and night, lit and unlit.",
+      "rationale": "Self-storage monuments and pylons are encountered in full sun and full dark; both states must be deliberate.",
+      "applies_to": ["monument", "pylon", "channel_letter", "wayfinding"]
+    },
+    {
+      "id": "craft-01",
+      "stratum": "principle",
+      "principle": "Finish discipline. Clean returns, consistent reveals, concealed fasteners, no visible seams or light leaks.",
+      "rationale": "Sign juries weight finish quality and precision heavily; this is the single clearest pro-vs-amateur tell.",
+      "applies_to": ["all"]
+    },
+    {
+      "id": "craft-02",
+      "stratum": "principle",
+      "principle": "Optical correction over mechanical correctness. Overshoot rounded forms, compensate baselines and spacing for how the eye reads, not how the ruler measures.",
+      "rationale": "Mechanically equal looks visually uneven; corrected work reads as intentional and refined.",
+      "applies_to": ["channel_letter", "dimensional_letter", "monument"]
+    },
+    {
+      "id": "craft-03",
+      "stratum": "principle",
+      "principle": "Let the fabrication method be the aesthetic. Push-thru depth, halo glow, and reveal shadows are features to design around, not hide.",
+      "rationale": "The strongest commercial signs use their construction as the visual idea rather than decorating over it.",
+      "applies_to": ["channel_letter", "monument", "cabinet"]
+    },
+    {
+      "id": "craft-04",
+      "stratum": "principle",
+      "principle": "Material honesty. Use each material for what it does well; avoid faking one material with another unless the fake is itself the craft.",
+      "rationale": "Juries reward suitable, durable material use; mismatches read cheap and age badly.",
+      "applies_to": ["all"]
+    },
+    {
+      "id": "rest-01",
+      "stratum": "principle",
+      "principle": "Earned color. Limit the palette; reserve accent color for the single thing that must be emphasized.",
+      "rationale": "Restraint makes the accent work; everything-is-loud reads as noise.",
+      "applies_to": ["all"]
+    },
+    {
+      "id": "rest-02",
+      "stratum": "principle",
+      "principle": "Negative space is a design element, not leftover. Give primary copy room to breathe.",
+      "rationale": "Crowded layouts lose hierarchy and legibility; space signals confidence.",
+      "applies_to": ["all"]
+    },
+    {
+      "id": "rest-03",
+      "stratum": "principle",
+      "principle": "Type restraint. Few families, deliberate weights, generous and even spacing.",
+      "rationale": "Type discipline is a core legibility and refinement signal across all judging frameworks.",
+      "applies_to": ["all"]
+    },
+    {
+      "id": "site-01",
+      "stratum": "principle",
+      "principle": "Site fit. The sign should belong to its architecture and surroundings, reading as part of the place rather than applied to it.",
+      "rationale": "This is SEGD's central ethos: connecting people to place. It elevates even simple commercial signs.",
+      "applies_to": ["monument", "pylon", "wayfinding", "branded_environment"]
+    },
+    {
+      "id": "site-02",
+      "stratum": "principle",
+      "principle": "Design for the actual approach. Account for viewing angle, speed, sightline obstructions, and where the viewer is when the sign matters.",
+      "rationale": "Wayfinding and roadside ID succeed or fail on real-world encounter, not elevation-view symmetry.",
+      "applies_to": ["wayfinding", "pylon", "directional", "monument"]
+    },
+    {
+      "id": "site-03",
+      "stratum": "principle",
+      "principle": "Dual life. Design the lit night state and the unlit day state as two intentional looks, not one with the lights off.",
+      "rationale": "Illuminated signs are seen in both; strong work makes each deliberate.",
+      "applies_to": ["monument", "pylon", "channel_letter", "cabinet"]
+    },
+    {
+      "id": "sys-01",
+      "stratum": "principle",
+      "principle": "Family consistency. Across a multi-sign package, hold a consistent system of materials, type, color, and detailing.",
+      "rationale": "A coherent sign family reads as designed; inconsistency reads as assembled. Directly relevant to multi-sign permit and wayfinding packages.",
+      "applies_to": ["wayfinding", "sign_system", "directional"]
+    },
+    {
+      "id": "sys-02",
+      "stratum": "principle",
+      "principle": "Information sequencing. In wayfinding, deliver the right information at each decision point, no more, no less.",
+      "rationale": "Over-loading or under-serving decision points is the most common wayfinding failure.",
+      "applies_to": ["wayfinding", "directional"]
+    },
+    {
+      "id": "inn-01",
+      "stratum": "principle",
+      "principle": "Distinctiveness without gimmick. Be memorable through a strong, coherent idea, not bolted-on novelty.",
+      "rationale": "Innovation is an award differentiator, but juries separate genuine concept from gimmick that ages poorly.",
+      "applies_to": ["all"]
+    }
+  ],
+
+  "exemplars": [
+    {
+      "name": "Talking Stick Resort & Casino Roadside Pylon Replacement",
+      "category": "pylon",
+      "award": "Signs of the Times Sign Contest, category winner",
+      "year": 2025,
+      "firms": ["Media Resources Inc.", "YESCO Phoenix"],
+      "why_it_won": "Large-format roadside identification pylon executed at high fabrication and finish quality.",
+      "corpus_relevance": "high",
+      "source_url": "https://signsofthetimes.com/2025-sign-contest-winners-announced/"
+    },
+    {
+      "name": "Route 66 Experience",
+      "category": "themed_illuminated",
+      "award": "Signs of the Times, Best of Show",
+      "year": 2023,
+      "firms": ["Ace Sign Co."],
+      "why_it_won": "Immersive themed tribute integrating multiple illuminated sign elements with strong craft.",
+      "corpus_relevance": "medium",
+      "source_url": "https://signsofthetimes.com/the-15-winners-of-the-2023-sign-contest/"
+    },
+    {
+      "name": "Gainbridge Fieldhouse signage",
+      "category": "venue_identification",
+      "award": "Signs of the Times Sign Contest",
+      "year": 2023,
+      "firms": ["ISF Signs"],
+      "why_it_won": "Large venue identification program, fabrication-heavy with coordinated design.",
+      "corpus_relevance": "medium",
+      "source_url": "https://signsofthetimes.com/the-15-winners-of-the-2023-sign-contest/"
+    },
+    {
+      "name": "Canes x Dallas Cowboys x Post Malone restaurant takeover",
+      "category": "branded_environment",
+      "award": "Signs of the Times, Best of Show",
+      "year": 2024,
+      "firms": ["Visual Graphic Systems Inc.", "AGI"],
+      "why_it_won": "Comprehensive, immersive three-brand environmental program.",
+      "corpus_relevance": "medium",
+      "source_url": "https://signsofthetimes.com/the-15-winners-of-signs-of-the-times-2024-sign-contest/"
+    },
+    {
+      "name": "Te Matawai wayfinding",
+      "category": "wayfinding_system",
+      "award": "SEGD Global Design Awards, Sylvia Harris / Honor Award",
+      "year": 2024,
+      "firms": ["Maynard"],
+      "why_it_won": "Bilingual wayfinding integrating local material and cultural context, exemplifying connection to place.",
+      "corpus_relevance": "medium",
+      "source_url": "https://segd.org/news/announcing-the-2024-segd-global-design-award-winners/"
+    },
+    {
+      "name": "First Light Pavilion",
+      "category": "experiential_exhibition",
+      "award": "SEGD Global Design Awards, Best of Show",
+      "year": 2024,
+      "firms": ["Casson Mann"],
+      "why_it_won": "Top experiential project of the year; systems-level storytelling and spatial design.",
+      "corpus_relevance": "low",
+      "source_url": "https://segd.org/news/announcing-the-2024-segd-global-design-award-winners/"
+    },
+    {
+      "name": "Home of Carlsberg",
+      "category": "branded_environment",
+      "award": "SEGD Global Design Awards, winner",
+      "year": 2024,
+      "firms": ["Event"],
+      "why_it_won": "Branded environment extending a corporate identity into spatial experience.",
+      "corpus_relevance": "low",
+      "source_url": "https://segd.org/news/announcing-the-2024-segd-global-design-award-winners/"
+    }
+  ],
+
+  "open_calibration": "Principles and exemplars are canon-seeded and need one pass from Michael: confirm the principles match how he actually judges a sign, flag anything wrong or missing, and confirm corpus_relevance weighting. His correction is what calibrates the seed to Tradecraft's standard."
+}

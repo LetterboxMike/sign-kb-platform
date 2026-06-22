@@ -1,0 +1,76 @@
+{
+  "record_id": "rec-plaque-steel-drawer-changeable-raine-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data and actual copy excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "financial_investment_office"
+  },
+  "classification": {
+    "sign_category": "plaque",
+    "sub_type": "blackened_steel_changeable_insert_drawer_label",
+    "primary_function": "amenity_identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A changeable amenity label: a 3/16in blackened steel body with a milled slot and a mirror-polished stainless insert, with a milled finger-pick bevel and black paint fill.",
+    "rationale": "A milled-slot drawer label with a finger-pull is a craft-forward changeable amenity sign matching the steel family.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "steel_drawer_label",
+      "construction": "3/16in steel, milled slot, blackened; 1/8in stainless insert mirror-polished; milled bevel/finger-pick; black paint fill",
+      "material_refs": [
+        "ST1"
+      ],
+      "fabrication_method": "milled_slot_changeable_insert",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "ST1",
+      "category": "face_substrate",
+      "product": "3/16in blackened steel + stainless insert",
+      "application": "material_finish",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "amenity_label"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Milled finger-pull changeable insert is a craft-forward detail."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

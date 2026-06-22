@@ -1,0 +1,83 @@
+{
+  "record_id": "rec-plaque-brushed-metal-etched-knead-001",
+  "schema_version": "1.3",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "restaurant_hospitality"
+  },
+  "classification": {
+    "sign_category": "plaque",
+    "sub_type": "brushed_metal_panel_with_etched_copy_and_fco_letters",
+    "primary_function": "wall_identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "dimensional_letter_or_logo",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "same construction in aluminum or yellow-brass across 8+ locations",
+    "variant_axis": "substrate_metal_and_size"
+  },
+  "knowledge": {
+    "plain_language_summary": "A brushed-metal wall plaque: a 3/8in 5052 aluminum (or yellow-brass) background panel, 100-grit satin brushed, with 1/4in brushed metal letterforms VHB-mounted and copy etched into the background infilled satin black, on stainless studs/spacers.",
+    "rationale": "A brushed-metal panel with applied letters and etched copy gives a premium restaurant plaque; aluminum vs brass is the only real variant across locations.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "metal_plaque",
+      "construction": "3/8in 5052 aluminum or 3/8in yellow-brass background panel, 100-grit satin brushed, 1/4in brushed letterforms VHB, etched copy infilled satin black, 1/2in stainless studs + 1/2in spacers",
+      "material_refs": [
+        "M1"
+      ],
+      "fabrication_method": "brushed_panel_etched_plus_fco",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "M1",
+      "category": "face_substrate",
+      "product": "3/8in brushed aluminum or yellow brass",
+      "application": "material_finish",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "example_in": "20x19.25",
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "plaque_copy"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Brushed-metal panel + applied letters + etched/filled copy; aluminum vs brass is the only variant."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ],
+    "option_set_note": "aluminum / yellow brass material variants"
+  }
+}

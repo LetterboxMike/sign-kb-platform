@@ -1,0 +1,83 @@
+{
+  "record_id": "rec-directional-layered-acrylic-directory-acorn-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "design_intent"
+  },
+  "context": {
+    "industry_vertical": "education_higher_ed"
+  },
+  "classification": {
+    "sign_category": "directional",
+    "sub_type": "layered_acrylic_directory_with_paper_insert",
+    "primary_function": "building_directory",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "composite_structure",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A layered-acrylic building directory: Chemetal Satin Silver header/trim laminated to acrylic, painted floor-number, non-glare clear face, clear spacers, back-painted backer + clear offset, and a digitally-printed paper insert for updatable listings.",
+    "rationale": "The layered-acrylic stack with a paper insert allows directory updates without refabrication.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "directory_stack",
+      "construction": "Chemetal Satin Silver header(4in)/trim(1in) laminated to acrylic, 0.125in painted floor-number, 0.125in non-glare clear face, clear spacers (3.75/0.75in), 0.125in back-painted backer + clear offset, 18x25.375in paper insert",
+      "material_refs": [
+        "CL1",
+        "A1"
+      ],
+      "fabrication_method": "layered_acrylic_reveal",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "CL1",
+      "category": "cladding",
+      "product": "Chemetal Satin Silver aluminum laminate (0.025in)",
+      "manufacturer_normalized_id": "mfr-chemetal"
+    },
+    {
+      "ref": "A1",
+      "category": "face_substrate",
+      "product": "cast/clear acrylic",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "panel_in": "18x30",
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "floor_directory_insert"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Paper insert allows directory updates without refab; Chemetal accent."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

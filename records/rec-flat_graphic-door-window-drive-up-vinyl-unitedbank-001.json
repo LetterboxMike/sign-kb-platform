@@ -1,0 +1,48 @@
+{
+  "record_id": "rec-flat_graphic-door-window-drive-up-vinyl-unitedbank-001",
+  "schema_version": "1.2",
+  "record_type": "flat_graphic",
+  "provenance_note": "All client/vendor/human/copy excluded; retail banking vertical retained.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "retail_banking"
+  },
+  "classification": {
+    "graphic_method": "plotter_cut",
+    "applied_to": "glass",
+    "contour_cut": true
+  },
+  "program_model_note": "family: door vinyl, distraction vinyl, drive-up window band, FDIC optically-clear notice",
+  "materials_manifest": [
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "cut/printed vinyl first- and second-surface; optically-clear FDIC notice",
+      "application": "vinyl",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Window graphics family: hours, FDIC notice, distraction band, drive-up window green band."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "design_assessment"
+    ],
+    "plain_language_summary": "A family of branch window/door graphics: door hours, FDIC notice (optically clear), distraction band, and drive-up window band."
+  }
+}

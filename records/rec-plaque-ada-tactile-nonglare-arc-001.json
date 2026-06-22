@@ -1,0 +1,110 @@
+{
+  "record_id": "rec-plaque-ada-tactile-nonglare-arc-001",
+  "schema_version": "1.3",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data and actual copy excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "multifamily_residential"
+  },
+  "classification": {
+    "sign_category": "plaque",
+    "sub_type": "ada_tactile_2nd_surface_painted_nonglare_acrylic",
+    "primary_function": "ada_identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "one ADA panel across restroom/room/unit IDs (216 unit numbers in 6 sets)",
+    "variant_axis": "copy_and_qty"
+  },
+  "knowledge": {
+    "plain_language_summary": "An ADA tactile ID panel: 1/8in non-glare clear acrylic, 2nd-surface painted black satin, with 1/32in Rowmark ADA-Alternative raised tactile characters painted to a PMS, Grade-II clear Raster braille, VHB-mounted. One construction across restroom, room, and unit IDs.",
+    "rationale": "2nd-surface paint on non-glare acrylic + Rowmark tactile + Raster braille is the compliant apartment ID standard; one construction scales across 200+ unit numbers.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "panel",
+      "construction": "1/8in non-glare clear acrylic, 2nd-surface painted black satin",
+      "material_refs": [
+        "M1"
+      ],
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "tactile_braille",
+      "construction": "1/32in Rowmark ADA-Alternative raised tactile painted PMS 7151C, Grade-II clear Raster braille",
+      "material_refs": [
+        "M2",
+        "BR1"
+      ],
+      "fabrication_method": "tactile_plus_raster_braille",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "M1",
+      "category": "substrate",
+      "product": "1/8in non-glare clear acrylic",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "M2",
+      "category": "substrate",
+      "product": "1/32in Rowmark ADA-Alternative",
+      "manufacturer_normalized_id": "mfr-rowmark"
+    },
+    {
+      "ref": "BR1",
+      "category": "coating",
+      "product": "Grade-II clear Raster braille",
+      "manufacturer_normalized_id": "mfr-raster-braille"
+    }
+  ],
+  "dimensions": {
+    "mounting_height_in_range": "48-60 AFF baseline; 51 to bottom",
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "room_or_unit_id"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "compliance": {
+    "ada": {
+      "tactile": true,
+      "braille": true,
+      "non_glare": true
+    },
+    "notes": "Grade-2 braille, raised tactile, strike-side placement 2in from door trim."
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "One compliant construction scales across 200+ unit numbers."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

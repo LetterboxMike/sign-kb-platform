@@ -1,0 +1,100 @@
+{
+  "record_id": "rec-channel_letter-entry-id-colite-carlsbad-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "design_intent"
+  },
+  "context": {
+    "industry_vertical": "retail_shopping_center"
+  },
+  "classification": {
+    "sign_category": "channel_letter",
+    "sub_type": "internally_illuminated_canopy_entry_channel_letters_and_logo",
+    "primary_function": "building_entry_identification",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 1,
+    "fabrication_family": "channel_letter",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "canopy letters (1.1A) + entry logo (1.1B); the permit/OTB scope",
+    "variant_axis": "element"
+  },
+  "knowledge": {
+    "plain_language_summary": "Dimensional internally-illuminated entry channel letters and logo, trimless/minimal cap, translucent white acrylic faces with metallic-painted returns, Colite Signature LED LP4, minimal raceway behind letters on the canopy.",
+    "rationale": "The illuminated exterior entry elements are the permit-bearing scope; Colite LED modules drive the faces.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "channel_letters_logo",
+      "construction": "dimensional channel letters/logo, translucent white acrylic faces, metallic-painted returns, Colite Signature LED LP4, minimal raceway; logo on 0.5in plate + 1in standoff with 1x4in armature raceway",
+      "component_ref": "comp-colite-lp4",
+      "material_refs": [
+        "A1"
+      ],
+      "finish_refs": [
+        "P1"
+      ],
+      "illumination": "internal LED",
+      "fabrication_method": "channel_letter",
+      "mounted_to": "canopy",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "letter_face",
+      "product": "translucent white acrylic",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews metallic",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "letter_h_in": 39,
+    "logo_h_in": 66,
+    "aff_in": 178,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "center_wordmark"
+      },
+      {
+        "slot": "logo"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "compliance": {
+    "notes": "UL/NEC; concealed transformers; building-department permit (OTB) scope."
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Trimless faces + Colite LED; minimal raceway on canopy."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "record_id": "rec-awning-replacement-fabric-unitedbank-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data and actual copy excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "retail_banking"
+  },
+  "classification": {
+    "sign_category": "awning",
+    "sub_type": "replacement_fabric_awning_cover",
+    "primary_function": "branch_canopy",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "composite_structure",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A replacement fabric awning cover over existing hardware, in Sunbrella 4684 Slate, with new bolts and wall shields.",
+    "rationale": "A fabric reskin of existing awning hardware is a low-cost rebrand.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "awning_cover",
+      "construction": "Sunbrella 4684 Slate fabric cover over existing awning hardware, new bolts/wall shields",
+      "material_refs": [
+        "FAB1"
+      ],
+      "mounted_to": "building_wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "FAB1",
+      "category": "awning_fabric",
+      "product": "Sunbrella 4684 Slate awning fabric",
+      "manufacturer_normalized_id": "mfr-sunbrella"
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Fabric reskin of existing awning hardware."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ],
+    "reconciliation_v1_3": "Applied v1.3 enums (blade/awning/halo_illuminated/exposed_lamp/external_downlight + concrete/awning_fabric/digital_display_module/adhesive categories)."
+  }
+}

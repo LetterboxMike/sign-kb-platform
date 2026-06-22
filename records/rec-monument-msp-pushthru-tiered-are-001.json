@@ -1,0 +1,132 @@
+{
+  "record_id": "rec-monument-msp-pushthru-tiered-are-001",
+  "schema_version": "1.3",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data and actual copy excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "design_intent"
+  },
+  "context": {
+    "industry_vertical": "commercial_real_estate_life_science"
+  },
+  "classification": {
+    "sign_category": "monument",
+    "sub_type": "pushthru_cabinet_monument_tiered_inset_accents",
+    "primary_function": "center_identification",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 2,
+    "fabrication_family": "cabinet",
+    "mounting": "ground_mounted_masonry_columns",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A tall double-sided primary monument (Master Sign Program standard): a fabricated aluminum cabinet with push-through white acrylic copy and tiered stepped-inset side accents (painted + internally lit acrylic), set at a landscape masonry wall on an engineered steel support.",
+    "rationale": "Push-through acrylic gives crisp lit copy on an opaque field; the stepped-inset side profile adds sculptural depth to a campus identity monument.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "id_cabinet",
+      "construction": "fabricated aluminum cabinet with internal structural frame (P1 Onyx), push-through 1/2in-proud white acrylic #7328, internal LED, removable face/back panels with stainless socket-drive screws",
+      "material_refs": [
+        "A1"
+      ],
+      "finish_refs": [
+        "P1"
+      ],
+      "illumination": "internal LED",
+      "fabrication_method": "push_thru_acrylic",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "tiered_side_accents",
+      "construction": "painted P3 inset 1in, internally-illuminated acrylic accent with first-surface translucent vinyl inset 2in, painted P8 inset 3in",
+      "material_refs": [
+        "V2"
+      ],
+      "provenance": "drawing"
+    },
+    {
+      "ref": "03",
+      "component": "base_support",
+      "construction": "set at landscape masonry wall (by others); steel support per sign engineer; concrete M3",
+      "mounted_to": "masonry_wall_and_footing",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "letter_face",
+      "product": "white acrylic #7328 push-thru",
+      "manufacturer_normalized_id": "mfr-acrylite"
+    },
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "3M white reflective + blue translucent vinyl",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    },
+    {
+      "ref": "V2",
+      "category": "vinyl",
+      "product": "first-surface translucent vinyl accent",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews Onyx / Angora Grey / Designer White palette",
+      "manufacturer_normalized_id": "mfr-matthews"
+    },
+    {
+      "ref": "P9",
+      "category": "coating",
+      "product": "Precision Coating silver metallic",
+      "application": "sprayed",
+      "manufacturer_normalized_id": "mfr-precision-coating"
+    }
+  ],
+  "dimensions": {
+    "overall_height_in": 228,
+    "width_in": 48,
+    "band_depth_in": 15,
+    "total_sign_area_sqft": 76,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "center_name"
+      },
+      {
+        "slot": "tenant_or_address"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "compliance": {
+    "notes": "NEC Article 600 grounding/bonding; local sign-area analysis (<=1 sqft/linear ft frontage, max 200 sqft)."
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Push-through acrylic = crisp lit copy on opaque field.",
+      "Stepped-inset side tiers add sculptural depth."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

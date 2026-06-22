@@ -1,0 +1,145 @@
+{
+  "record_id": "rec-monument-institutional-flatcut-unlit-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data excluded. Higher-ed vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "education_higher_ed"
+  },
+  "classification": {
+    "sign_category": "monument",
+    "sub_type": "long_horizontal_unlit_cabinet_with_flatcut_letters_recessed_panel",
+    "primary_function": "department_identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "cabinet",
+    "mounting": "ground_mounted_footing",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A long, low, single-sided non-illuminated aluminum cabinet monument with a recessed brushed ID panel, crisp flat-cut aluminum primary and secondary letters, and a decorative reveal, carried on twin steel poles in augered footings. Dark bronze metallic body reads premium and permanent.",
+    "rationale": "A non-lit fabricated cabinet with mechanically fastened flat-cut letters needs no power runs and stays field-serviceable (removable back skin, nuts from behind); dark bronze plus a brushed recessed panel signals institutional permanence.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "cabinet_body",
+      "construction": "1.5x1.5x1/8in aluminum angle frame + 1/8in skins, corners welded/sealed except removable back panel (drilled #10-24x1/2in), painted dark bronze metallic",
+      "finish_refs": [
+        "C1"
+      ],
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "recessed_id_panel",
+      "construction": "1in deep aluminum tube frame (1x1x1/8in) with 1x2x1/8in square-tube border, recessed brushed/dark ID field",
+      "finish_refs": [
+        "C2"
+      ],
+      "provenance": "drawing"
+    },
+    {
+      "ref": "03",
+      "component": "primary_letters",
+      "construction": "flat-cut 1/2in plate aluminum, 1/8in SS studs, flush-mounted, nutted from behind",
+      "material_refs": [
+        "AL1"
+      ],
+      "fabrication_method": "flatcut_stud_mounted",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "04",
+      "component": "secondary_letters",
+      "construction": "flat-cut 1/4in plate aluminum, SS stud-mounted",
+      "material_refs": [
+        "AL2"
+      ],
+      "provenance": "drawing"
+    },
+    {
+      "ref": "05",
+      "component": "reveal_and_mounting",
+      "construction": "1in aluminum tube reveal welded to frame; 1.5x1.5x1/8in steel angle saddles on twin 4in dia Sch40 steel poles in 24in dia augered direct-burial 3000psi concrete footings to match campus standard",
+      "status": "open",
+      "mounted_to": "ground_footing",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "AL1",
+      "category": "letter_face",
+      "product": "1/2in flat-cut plate aluminum letters",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "AL2",
+      "category": "letter_face",
+      "product": "1/4in flat-cut plate aluminum letters",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "C1",
+      "category": "paint",
+      "product": "Matthews dark bronze metallic satin (MP20303/MP33348)",
+      "manufacturer_normalized_id": "mfr-matthews"
+    },
+    {
+      "ref": "C2",
+      "category": "paint",
+      "product": "Matthews Blackstone satin (MP31645)",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "overall_width_in": 112,
+    "overall_height_in": 44,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "primary_wordmark"
+      },
+      {
+        "slot": "institution_subline"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Mechanically fastened flat-cut letters with removable back skin = field-serviceable, no power.",
+      "Dark bronze body + brushed recessed panel + crisp flat-cut letters reads institutional and permanent."
+    ],
+    "aesthetic_notes": [
+      {
+        "note": "Restrained, monolithic, low-and-wide; appropriate to an academic department.",
+        "provenance": "opinion"
+      }
+    ]
+  },
+  "open_items": [
+    "Footing/concrete to match university standard (TBD)"
+  ],
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ],
+    "modeling_notes": [
+      "Dominant archetype is the fabricated cabinet body; flat-cut letters are applied components."
+    ]
+  }
+}

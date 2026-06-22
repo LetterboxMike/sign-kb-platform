@@ -1,0 +1,48 @@
+{
+  "record_id": "rec-flat_graphic-cut-vinyl-branch-glass-cccu-001",
+  "schema_version": "1.3",
+  "record_type": "flat_graphic",
+  "provenance_note": "All client/vendor/human/copy excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "design_intent"
+  },
+  "context": {
+    "industry_vertical": "financial_services_credit_union"
+  },
+  "classification": {
+    "graphic_method": "plotter_cut",
+    "applied_to": "glass",
+    "contour_cut": true
+  },
+  "materials_manifest": [
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "white opaque/translucent cut vinyl + brand-blue translucent band vinyl",
+      "application": "vinyl",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Mixed first-surface and interior-mullion application; regulatory + legal copy blocks standard for a credit union."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "medium-high",
+    "inferred_fields": [
+      "design_assessment"
+    ],
+    "plain_language_summary": "Cut-vinyl branch glass/door graphics: wordmark, hours block, NCUA regulatory, funds-availability policy, alarm-permit line, and a translucent blue stripe band with white copy.",
+    "option_set_note": "sheet marked OPTION 01"
+  }
+}

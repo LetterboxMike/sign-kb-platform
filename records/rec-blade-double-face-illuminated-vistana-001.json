@@ -1,0 +1,104 @@
+{
+  "record_id": "rec-blade-double-face-illuminated-vistana-001",
+  "schema_version": "1.3",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "design_intent"
+  },
+  "context": {
+    "industry_vertical": "multifamily_residential"
+  },
+  "classification": {
+    "sign_category": "blade",
+    "sub_type": "double_face_illuminated_projecting_blade_on_steel_arm",
+    "primary_function": "building_identification",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 2,
+    "fabrication_family": "blade",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "Type A (qty 3) + larger Type B (qty 1)",
+    "variant_axis": "size"
+  },
+  "knowledge": {
+    "plain_language_summary": "A double-faced illuminated projecting blade: 1/8in aluminum faces with routed graphics painted satin black, letters backed with translucent white polycarbonate and a metallic-gold vinyl border, removable retainers for service, on an HSS steel arm through the facade into structural blocking.",
+    "rationale": "A projecting blade reads down the street; routed-and-backed faces give clean lit copy; the HSS arm carries the load into blocking.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "blade_faces",
+      "construction": "1/8in aluminum faces routed, satin black, letters backed 0.150in translucent white polycarbonate, metallic gold vinyl border 1st-surface, 1x1x1/8in + 2x2x1/8in angle frame, aluminum baffle, removable retainers, power-supply access panel, Class-II LED",
+      "material_refs": [
+        "V1"
+      ],
+      "finish_refs": [
+        "P1"
+      ],
+      "illumination": "internal LED",
+      "fabrication_method": "routed_and_backed",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "steel_arm",
+      "construction": "4x4 (Type B 6x6) HSS steel arm painted black, 8x8x3/8in (Type B 12x12x1/2in) steel plate, 3/8in stainless allthread through facade into blocking",
+      "mounted_to": "building_wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "metallic gold border vinyl",
+      "application": "vinyl",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "satin black",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "type_a_face_in": "30x10",
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "building_wordmark"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "compliance": {
+    "notes": "NEC Article 600; grounding/bonding."
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Routed-and-backed lit faces; HSS arm into structural blocking; A/B size variants."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ],
+    "ambiguity_flags": [
+      "Source file named 'Vistana Apartments - Parking Signs' but content is Inspire Downtown blade signs; recorded per actual content."
+    ]
+  }
+}

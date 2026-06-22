@@ -1,12 +1,18 @@
 import Link from 'next/link';
+import { redirect } from 'next/navigation';
 import { Inbox, AlertTriangle, FileText } from 'lucide-react';
 import { stagingItems, flaggedJobs } from '@/lib/review';
+import { currentAppUser, roleAtLeast } from '@/lib/auth';
+import { NotAuthorized } from '@/components/not-authorized';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
 export const dynamic = 'force-dynamic';
 
 export default async function ReviewPage() {
+  const me = await currentAppUser();
+  if (!me) redirect('/login');
+  if (!roleAtLeast(me.role, 'admin')) return <NotAuthorized required="admin" have={me.role} />;
   const [items, flagged] = await Promise.all([stagingItems(), flaggedJobs()]);
 
   return (

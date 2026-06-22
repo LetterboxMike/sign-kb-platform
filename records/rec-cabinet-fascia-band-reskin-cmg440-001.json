@@ -1,0 +1,82 @@
+{
+  "record_id": "rec-cabinet-fascia-band-reskin-cmg440-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "retail_quick_service"
+  },
+  "classification": {
+    "sign_category": "cabinet",
+    "sub_type": "fascia_band_cabinet_reskin_h_molding",
+    "primary_function": "fascia_identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "cabinet",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "reskin of existing marquee fascia + disk + pole program (variants N1/N2/N3)",
+    "variant_axis": "module_and_location"
+  },
+  "knowledge": {
+    "plain_language_summary": "A fascia-band reskin: .090 aluminum faces/backs/returns on 1.5in square-tube frame in 4ft modules, replacing existing marquee panels using Brunner H/J molding; non-illuminated band (logos lit separately).",
+    "rationale": "Reskinning the existing fascia with modular panels and H-molding is a fast low-cost rebrand.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "fascia_band",
+      "construction": ".090 aluminum faces/backs/returns on 1.5in sq tube frame, 4ft modules, Brunner G849S H-molding (1/4in, 3/4in face) + 1/4in J-molding, satin paint PMS 4625",
+      "component_ref": "comp-brunner-hmolding",
+      "finish_refs": [
+        "P1"
+      ],
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "satin PMS 4625",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "module_h_in": 48,
+    "run_in": 271.25,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "brand_band"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Modular H-molding fascia reskin; non-lit band with separately-lit logos."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

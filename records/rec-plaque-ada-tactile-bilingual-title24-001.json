@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/room copy excluded; county rehab hospital vertical retained; bilingual program.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "healthcare_county_rehab_hospital"
+  },
+  "record_id": "rec-plaque-ada-tactile-bilingual-title24-001",
+  "classification": {
+    "sign_category": "wayfinding",
+    "sub_type": "ada_tactile_room_area_id_bilingual_non_glare",
+    "primary_function": "ada_room_and_area_identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "one tactile-panel archetype across room/reception/restroom/exit IDs, bilingual EN/ES",
+    "variant_axis": "room_copy_x_size_x_language"
+  },
+  "knowledge": {
+    "plain_language_summary": "An ADA tactile room/area ID panel: 1/4in P99 non-glare acrylic face back-painted (white or PMS) on a 1/8in backer, with 1/32in charcoal raised tactile characters and Grade-2 braille, screen-printed graphics, and bilingual English/Spanish copy. Restroom variants meet California Title 24.",
+    "rationale": "Non-glare back-painted acrylic with raised tactile + braille is the compliant institutional standard; bilingual copy and Title 24 restroom variants suit a California county hospital.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "face_and_backer",
+      "construction": "1/4in P99 non-glare acrylic face back-painted white or PMS, on 1/8in acrylic backer; some with bronze accent bar",
+      "material_refs": [
+        "M1"
+      ],
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "tactile_copy",
+      "construction": "1/32in charcoal-gray raised tactile characters + Grade-2 braille; screen-printed graphics/pictograms",
+      "fabrication_method": "raised_tactile_plus_braille",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "03",
+      "component": "mount",
+      "construction": "silicone adhesive / VHB to wall",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "M1",
+      "category": "substrate",
+      "product": "1/4in P99 non-glare acrylic",
+      "manufacturer_normalized_id": "mfr-p99-acrylic"
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "room_name_en"
+      },
+      {
+        "slot": "room_name_es"
+      },
+      {
+        "slot": "pictogram",
+        "required": false
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "compliance": {
+    "ada": {
+      "tactile": true,
+      "braille": true,
+      "pictogram": true,
+      "non_glare": true,
+      "contrast_compliant": true
+    },
+    "title_24": true,
+    "notes": "Raised 1/32in tactile + Grade-2 braille; California Title 24 restroom variants; ISA/restroom pictograms; bilingual EN/ES."
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "rules_observations": [
+      "Bilingual copy and consistent pictograms serve a diverse patient population."
+    ],
+    "craft_observations": [
+      "Non-glare back-painted P99 acrylic is the compliant institutional face."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

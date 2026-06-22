@@ -1,0 +1,112 @@
+{
+  "record_id": "rec-monument-illuminated-logo-sculpture-autovol-001",
+  "schema_version": "1.3",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data and copy excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "industrial_modular_construction"
+  },
+  "classification": {
+    "sign_category": "monument",
+    "sub_type": "illuminated_logo_sculpture_monument_multi_technique",
+    "primary_function": "primary_brand_identification",
+    "illuminated": true,
+    "illumination_method": "mixed",
+    "illumination_detail": "interior-perimeter LED + edge-lit push-thru logo + face/halo channel letters + internal pillbox cabinet",
+    "sides": 1,
+    "fabrication_family": "composite_structure",
+    "mounting": "ground_mounted_footing",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A multi-technique illuminated monument: a painted fabricated aluminum frame lit around its interior perimeter, an illuminated aluminum logo sculpture with edge-lit and push-through acrylic, combination face-and-halo channel letters on a backer, an internal pill-box cabinet with push-through letters, and perforated aluminum panels, on a poured concrete base.",
+    "rationale": "Stacking edge-lit, face/halo, and cabinet techniques in one structure makes a signature industrial-brand monument; the assembly is a composite structure.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "frame_and_logo",
+      "construction": "fabricated aluminum frame painted, interior-perimeter light-blue LEDs; illuminated aluminum logo sculpture with raised edge-illuminated acrylic push-thru + push-thru letters",
+      "illumination": "edge-lit + perimeter LED",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "channel_letters",
+      "construction": "combination face-and-halo channel letters 5in deep, translucent red trimless faces / white halo, on aluminum backer with 1in spacers",
+      "illumination": "face and halo LED",
+      "fabrication_method": "face_and_halo_channel",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "03",
+      "component": "pillbox_cabinet",
+      "construction": "internally illuminated pillbox cabinet 6in deep, painted, 3/4in clear acrylic push-thru letters; perforated aluminum panels",
+      "illumination": "internal LED",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "04",
+      "component": "base",
+      "construction": "poured concrete base/footing",
+      "material_refs": [
+        "C1"
+      ],
+      "mounted_to": "ground_footing",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "letter_face",
+      "product": "acrylic push-thru / edge-lit",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "C1",
+      "category": "structural_concrete_masonry",
+      "product": "poured concrete base",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews palette",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "logo_sculpture"
+      },
+      {
+        "slot": "brand_wordmark"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Edge-lit + face/halo + cabinet techniques layered into one signature monument."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "medium-high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "record_id": "rec-channel_letter-standard-illumination-variants-nexthealth-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data and actual copy excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "design_intent"
+  },
+  "context": {
+    "industry_vertical": "healthcare_wellness_franchise"
+  },
+  "classification": {
+    "sign_category": "channel_letter",
+    "sub_type": "channel_letter_standard_halo_face_facehalo_variants",
+    "primary_function": "brand_identification_standard",
+    "illuminated": true,
+    "illumination_method": "halo_illuminated",
+    "illumination_detail": "standard offers halo (clear-poly backs), face (translucent acrylic + dual-color film), or face&halo; representative spec = face",
+    "sides": 1,
+    "fabrication_family": "channel_letter",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "brand channel-letter standard, multiple finish/illumination/mount combos, 15-48in size matrix",
+    "variant_axis": "finish(painted/brushed) x illumination(halo/face/face&halo) x mount(wall/raceway/wireway)"
+  },
+  "knowledge": {
+    "plain_language_summary": "The brand's channel-letter standard offered in painted/brushed finishes, halo/face/face-and-halo illumination, and wall/raceway/wireway mounting. Representative face spec: .063 aluminum face welded to 3in .040 returns, .150 clear poly backs, Iron Ore matte, 12V 3000K LED, remote Class II PSU; face variant uses 1/2in acrylic + 3M dual-color film.",
+    "rationale": "A single sized standard with illumination/finish/mount variants reproduces the brand consistently; the dual-color film gives an Iron-Ore-by-day, warm-white-by-night signature.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "channel_letters",
+      "construction": ".063 aluminum face welded to 3in deep .040 returns, .150 clear polycarbonate backs, MP Iron Ore matte, 12V 3000K LED, remote Class II PSU, 1.5in spacer mount; face variant = 1/2in #7328 acrylic face + 3M dual-color film, 1/8in ACM backs",
+      "material_refs": [
+        "A1",
+        "V1"
+      ],
+      "finish_refs": [
+        "P1"
+      ],
+      "illumination": "internal/halo 3000K LED",
+      "fabrication_method": "channel_letter_variants",
+      "mounted_to": "wall_or_raceway_or_wireway",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "letter_face",
+      "product": "#7328 translucent white acrylic / .150 clear polycarbonate backs",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "3M Dual Color perforated film (Iron Ore day / warm-white night)",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews T/M SW7069 Iron Ore matte / Brushed Aluminum Metallic",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "cap_height_in_range": "15-48",
+    "area_sqft": "11.7-119.7",
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "brand_wordmark"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Single sized standard with finish/illumination/mount variants.",
+      "3M dual-color perforated film gives an Iron-Ore-day / warm-white-night signature."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ],
+    "reconciliation_v1_3": "Applied v1.3 enums (blade/awning/halo_illuminated/exposed_lamp/external_downlight + concrete/awning_fabric/digital_display_module/adhesive categories)."
+  }
+}

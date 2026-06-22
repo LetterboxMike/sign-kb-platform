@@ -1,0 +1,99 @@
+{
+  "record_id": "rec-channel_letter-facelit-spectrum-001",
+  "schema_version": "1.3",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "industrial_electronics_manufacturing"
+  },
+  "classification": {
+    "sign_category": "channel_letter",
+    "sub_type": "facelit_channel_letters_brick_wall",
+    "primary_function": "building_identification",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 1,
+    "fabrication_family": "channel_letter",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "Face-lit channel letters and logo: 7328 white acrylic faces, 1in black Jewelite trim cap, 5in 0.040in black returns (reflective-white interiors), 1/8in ACM backs, 12V 5500K LEDs, remote supplies, allthread-stud mounted to a brick curtain wall.",
+    "rationale": "Standard face-lit channel letters with reflective interiors and remote supplies, mounted through brick with baffled drain holes.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "channel_letters",
+      "construction": "1/8in 7328 white acrylic faces (logo with 3M 3630-44 orange translucent), 1in black Jewelite trim cap, 5in 0.040in returns black w/ reflective-white interiors, 1/8in ACM backs, 12V 5500K white LED, remote Class-II UL supplies, 1/8in-3/16in allthread studs in silicone-filled holes (min 3/letter), drain hole + baffle",
+      "material_refs": [
+        "A1",
+        "V1",
+        "T1"
+      ],
+      "illumination": "internal 5500K LED",
+      "fabrication_method": "face_lit_channel",
+      "mounted_to": "brick_wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "letter_face",
+      "product": "1/8in 7328 white acrylic",
+      "manufacturer_normalized_id": "mfr-acrylite"
+    },
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "3M 3630-44 Orange translucent",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    },
+    {
+      "ref": "T1",
+      "category": "coating",
+      "product": "1in black Jewelite trim cap",
+      "manufacturer_normalized_id": "mfr-jewelite"
+    }
+  ],
+  "dimensions": {
+    "overall_width_in": 115.5,
+    "cap_height_in": 36,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "logo"
+      },
+      {
+        "slot": "company_name"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "utilities": {
+    "power": "dedicated 120V/20A circuit; through-wall SealTite + MC12/2 conduit"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Reflective-white return interiors + baffled drain holes; remote UL supplies."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

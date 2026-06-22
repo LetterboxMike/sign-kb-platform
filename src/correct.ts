@@ -110,10 +110,23 @@ export async function proposeExplicit(changeSet: ChangeEntry[], prompt: string |
 
 /** Propose a correction from a plain-language prompt: retrieve relevant records, have the model
  *  produce a precise change set limited to those records, then preview + re-validate. */
-export async function proposeFromPrompt(prompt: string, opts: { k?: number } = {}): Promise<CorrectionProposal> {
-  const hits = await search(prompt, {}, opts.k ?? 8);
-  const allowed = new Set(hits.map((h) => h.record_id));
-  const records = hits.map((h) => ({ record_id: h.record_id, raw: h.raw }));
+export async function proposeFromPrompt(
+  prompt: string,
+  opts: { k?: number; recordIds?: string[] } = {},
+): Promise<CorrectionProposal> {
+  // When recordIds are given (the per-record AI edit widget), target exactly those records and
+  // skip the corpus search; otherwise retrieve the most relevant records for the request.
+  let allowed: Set<string>;
+  let records: { record_id: string; raw: any }[];
+  if (opts.recordIds && opts.recordIds.length) {
+    const loaded = await loadRaw(opts.recordIds);
+    records = [...loaded.entries()].map(([record_id, v]) => ({ record_id, raw: v.raw }));
+    allowed = new Set(records.map((r) => r.record_id));
+  } else {
+    const hits = await search(prompt, {}, opts.k ?? 8);
+    allowed = new Set(hits.map((h) => h.record_id));
+    records = hits.map((h) => ({ record_id: h.record_id, raw: h.raw }));
+  }
   const system = [
     'You correct knowledge-base sign records. Given a correction request and the candidate records,',
     'produce a PRECISE change set: only the fields that should change, only on the records provided.',
@@ -260,6 +273,20 @@ export async function revertCorrection(correctionId: string): Promise<void> {
     await writeRecord(snap.raw, { status: snap.status as any });
   }
   await query("update corrections set status='reverted', reverted_at=now() where id=$1", [correctionId]);
+}
+
+/** Direct field edit for a NON-live (staging) record — used by inline editing before approval.
+ *  Re-validates the whole record through the schema gate (writeRecord). Live records are refused:
+ *  they must go through the governed correction workflow (propose → eval-gate → approve). */
+export async function setRecordField(recordId: string, path: string, value: unknown): Promise<void> {
+  const r = await query<{ raw: any; status: string }>('select raw, status from signs where record_id = $1', [recordId]);
+  if (r.rows.length === 0) throw new Error('record not found');
+  if (r.rows[0].status === 'live') {
+    throw new Error('live records must be edited through the correction workflow, not direct edit');
+  }
+  const raw = structuredClone(r.rows[0].raw);
+  setPath(raw, path, value);
+  await writeRecord(raw, { status: r.rows[0].status as any });
 }
 
 export interface CorrectionRow {

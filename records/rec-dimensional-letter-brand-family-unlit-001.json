@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "From a retail-bank brand sign-standards family. All client/vendor/human/address data excluded; banking vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "retail_banking"
+  },
+  "record_id": "rec-dimensional-letter-brand-family-unlit-001",
+  "classification": {
+    "sign_category": "channel_letter",
+    "sub_type": "non_illuminated_routed_dimensional_letters_v_and_h",
+    "primary_function": "branch_identification_restricted_applications",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "dimensional_letter_or_logo",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "non-illuminated counterpart to the channel-letter standard",
+    "variant_axis": "orientation_and_size"
+  },
+  "knowledge": {
+    "plain_language_summary": "Non-illuminated routed/fabricated dimensional letters, vertical and horizontal, full color, for applications that prohibit illuminated signage.",
+    "rationale": "A non-lit counterpart keeps brand identity available where codes or landlords forbid illumination.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "dimensional_letters",
+      "construction": ".125in aluminum letters, brand silver gloss / blue satin, 3M films",
+      "material_refs": [
+        "V1b"
+      ],
+      "finish_refs": [
+        "P1"
+      ],
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "V1b",
+      "category": "vinyl",
+      "product": "3M films",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews Rockland Silver gloss / Blue satin",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "brand_wordmark"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Non-lit brand letters for restricted applications, same letterforms as the lit standard."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

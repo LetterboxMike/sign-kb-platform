@@ -1,0 +1,114 @@
+{
+  "record_id": "rec-plaque-dimensional-logo-panel-vpm-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/copy excluded; media/broadcast office vertical retained.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "media_broadcast_office"
+  },
+  "classification": {
+    "sign_category": "plaque",
+    "sub_type": "framed_aluminum_panel_with_applied_acrylic_letters",
+    "primary_function": "logo_identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A dimensional logo panel: a mitered/welded aluminum C-channel frame with a 1/8in aluminum face bonded with Lord structural epoxy, seams filled/sanded, and laser-cut 3/8in acrylic letterforms VHB-mounted to the face.",
+    "rationale": "A framed panel with bonded face and applied acrylic letters gives a clean dimensional logo plaque; Lord epoxy + VHB are the bonding standard.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "framed_panel",
+      "construction": "1x3x1/8in aluminum C-channel frame, mitered/welded, 1/8in aluminum face bonded with Lord 310 epoxy, seams filled/sanded",
+      "material_refs": [
+        "AD1"
+      ],
+      "finish_refs": [
+        "P1",
+        "P2"
+      ],
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "acrylic_letters",
+      "construction": "laser-cut 3/8in acrylic letterforms, VHB-mounted to face",
+      "material_refs": [
+        "A1"
+      ],
+      "mounted_via": "3M VHB",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "03",
+      "component": "mount",
+      "construction": "4x 1/4x2in aluminum all-thread studs into tapped C-channel + 4x 1/2x16in VHB strips",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "letter_face",
+      "product": "3/8in laser-cut acrylic letters",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "AD1",
+      "category": "coating",
+      "product": "Lord 310 structural epoxy",
+      "manufacturer_normalized_id": "mfr-lord"
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews PMS Black 6C satin",
+      "manufacturer_normalized_id": "mfr-matthews"
+    },
+    {
+      "ref": "P2",
+      "category": "paint",
+      "product": "Matthews PMS 284C satin",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "panel_in": "20x14.375",
+    "depth_in": 3,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "logo"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Bonded face (Lord epoxy) + filled/sanded seams = clean dimensional panel."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

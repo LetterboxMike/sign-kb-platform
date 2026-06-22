@@ -1,0 +1,143 @@
+{
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data excluded. Self-storage vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "design_intent"
+  },
+  "context": {
+    "industry_vertical": "self_storage"
+  },
+  "record_id": "rec-monument-storage-changeable-option-001",
+  "option_set_id": "optset-ncstorage-monument-001",
+  "design_status": "proposed_option",
+  "classification": {
+    "sign_category": "monument",
+    "sub_type": "pushthru_id_cabinet_over_zipchange_reader_on_corrugated_base",
+    "primary_function": "primary_brand_identification_plus_changeable_copy",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "illumination_detail": "12V 5500K white LED",
+    "sides": 2,
+    "fabrication_family": "cabinet",
+    "mounting": "ground_mounted_footing",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "Option 2 of two: a double-sided illuminated primary ID cabinet over a secondary illuminated changeable-copy (Zip-Change) reader cabinet, on a corrugated-aluminum base. Same cabinet footprint as Option 1.",
+    "rationale": "The changeable-letter option is lower cost than a digital EMC while still allowing manual message updates (rates, specials).",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "topper",
+      "construction": "fabricated aluminum painted P1",
+      "finish_refs": [
+        "P1"
+      ],
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "primary_id_cabinet",
+      "construction": "double-sided 20in deep extruded aluminum painted P2, 12V 5500K LEDs, surface-applied vinyl",
+      "finish_refs": [
+        "P2"
+      ],
+      "material_refs": [
+        "V1",
+        "V2"
+      ],
+      "illumination": "internal 5500K LED",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "03",
+      "component": "changeable_copy_cabinet",
+      "construction": "double-sided 20in deep extruded aluminum with Zip-Change letter track (3 rows of 5in letters), painted P2, 12V 5500K LEDs, polycarbonate translucent white faces",
+      "component_ref": "comp-zipchange-track",
+      "material_refs": [
+        "M1"
+      ],
+      "illumination": "internal 5500K LED",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "04",
+      "component": "base_pole_cover",
+      "construction": "fabricated aluminum with corrugated aluminum paneling, painted P2",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "M1",
+      "category": "face_substrate",
+      "product": "polycarbonate translucent white",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "Oracal 8800-509 Sea Blue translucent",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-oracal"
+    },
+    {
+      "ref": "V2",
+      "category": "vinyl",
+      "product": "Oracal 8800-017 Cherry Red translucent",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-oracal"
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews MP10206 Lead Pipe satin",
+      "manufacturer_normalized_id": "mfr-matthews"
+    },
+    {
+      "ref": "P2",
+      "category": "paint",
+      "product": "Matthews MP00544 Grey Haven satin",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "overall_width_in": 102,
+    "overall_height_in": 105,
+    "cabinet_depth_in": 20,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "primary_wordmark"
+      },
+      {
+        "slot": "changeable_reader_copy"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Manual changeable-letter reader is the low-cost counterpart to the digital EMC option.",
+      "Corrugated-aluminum base gives an industrial read vs Option 1's faux brick."
+    ]
+  },
+  "open_items": [
+    "Mounting pole/footing TBD pending structural"
+  ],
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

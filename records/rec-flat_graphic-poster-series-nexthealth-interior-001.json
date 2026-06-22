@@ -1,0 +1,52 @@
+{
+  "record_id": "rec-flat_graphic-poster-series-nexthealth-interior-001",
+  "schema_version": "1.4",
+  "record_type": "flat_graphic",
+  "provenance_note": "All client/vendor/human/copy excluded; vertical retained.",
+  "source": {
+    "doc_type": "design_intent"
+  },
+  "context": {
+    "industry_vertical": "healthcare_wellness_clinic"
+  },
+  "classification": {
+    "graphic_method": "digital_print",
+    "applied_to": "wall",
+    "contour_cut": false
+  },
+  "materials_manifest": [
+    {
+      "ref": "G1",
+      "category": "graphic",
+      "product": "digitally printed heavyweight synthetic poster paper",
+      "application": "digital_print",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "sizes_in": [
+      "24x36",
+      "36x24",
+      "16x24"
+    ],
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Loose client-installed posters; content-scheduled series, no mounting hardware specified."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "medium-high",
+    "inferred_fields": [
+      "design_assessment"
+    ],
+    "plain_language_summary": "A free-hanging educational poster series (modality content), digitally printed on heavyweight synthetic poster paper, client-installed."
+  }
+}

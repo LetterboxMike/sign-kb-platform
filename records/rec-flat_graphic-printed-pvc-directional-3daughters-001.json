@@ -1,0 +1,55 @@
+{
+  "record_id": "rec-flat_graphic-printed-pvc-directional-3daughters-001",
+  "schema_version": "1.2",
+  "record_type": "flat_graphic",
+  "provenance_note": "All client/vendor/human/copy excluded; restaurant (BBQ) vertical retained.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "restaurant_bbq"
+  },
+  "classification": {
+    "graphic_method": "digital_print",
+    "applied_to": "wall",
+    "contour_cut": true
+  },
+  "program_model_note": "variant_axis = size; message_schedule = directional copy",
+  "materials_manifest": [
+    {
+      "ref": "G1",
+      "category": "graphic",
+      "product": "digitally printed vinyl + matte laminate on cut 3/4in PVC (painted dark brown)",
+      "application": "digital_print",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "sizes_in": [
+      "24x24",
+      "~6.75 tall"
+    ],
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Printed-graphic-over-routed-PVC sits between flat_graphic and dimensional plaque; recorded as flat_graphic with cut substrate."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "design_assessment"
+    ],
+    "plain_language_summary": "Interior directional signs: digitally printed laminated vinyl on cut-out painted PVC, two sizes.",
+    "completeness_notes": [
+      "Borderline plaque vs flat_graphic; cut PVC substrate."
+    ]
+  }
+}

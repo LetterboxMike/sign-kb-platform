@@ -1,9 +1,14 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { getRecord } from '@/lib/kb';
+import { FileText } from 'lucide-react';
+import { getRecord, enumValuesFor } from '@/lib/kb';
+import { sourceInfoFor } from '@/lib/review';
+import { signedViewUrl } from '@/lib/storage';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { GradeBadge } from '@/components/grade-badge';
+import { EditableField } from '@/components/editable-field';
+import { AiEditWidget } from '@/components/ai-edit-widget';
 
 export const dynamic = 'force-dynamic';
 
@@ -30,7 +35,8 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 
 export default async function RecordPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const rec = await getRecord(decodeURIComponent(id), { resolveRefs: true });
+  const recordId = decodeURIComponent(id);
+  const [rec, source] = await Promise.all([getRecord(recordId, { resolveRefs: true }), sourceInfoFor(recordId)]);
   if (!rec) notFound();
 
   const raw = rec.record ?? {};
@@ -38,11 +44,30 @@ export default async function RecordPage({ params }: { params: Promise<{ id: str
   const k = raw.knowledge ?? {};
   const da = raw.design_assessment ?? {};
   const dims = raw.dimensions ?? {};
+  const status = rec.status;
+  const editable = status === 'live' || status === 'staging';
+  // Stored drawings (uploaded via the app) resolve to a signed URL; CLI/JSON-imported records don't.
+  const viewUrl = source?.path ? await signedViewUrl(source.path) : null;
   const obs: string[] = [
     ...(da.rules_observations ?? []),
     ...(da.craft_observations ?? []),
     ...(da.aesthetic_notes ?? []).map((o: any) => (typeof o === 'string' ? o : o?.note)).filter(Boolean),
   ];
+
+  const ef = (label: string, path: string, value: any, kind: 'text' | 'textarea' | 'enum' = 'text', leaf?: string) =>
+    editable ? (
+      <EditableField
+        recordId={recordId}
+        status={status}
+        path={path}
+        label={label}
+        value={value ?? null}
+        kind={kind}
+        options={kind === 'enum' ? enumValuesFor(leaf ?? label) : []}
+      />
+    ) : (
+      <Field label={label} value={value?.toString().replaceAll('_', ' ')} />
+    );
 
   return (
     <div className="space-y-6">
@@ -56,30 +81,37 @@ export default async function RecordPage({ params }: { params: Promise<{ id: str
             {cls.sub_type ? <span className="text-muted-foreground"> · {cls.sub_type.replaceAll('_', ' ')}</span> : null}
           </h1>
           <GradeBadge grade={da.quality_grade} />
-          {rec.status && rec.status !== 'live' ? <Badge variant="destructive">{rec.status}</Badge> : null}
+          {status && status !== 'live' ? <Badge variant="destructive">{status}</Badge> : null}
         </div>
         <div className="mt-1 font-mono text-xs text-muted-foreground">{raw.record_id}</div>
+        {editable ? (
+          <p className="mt-2 text-xs text-muted-foreground">
+            {status === 'live'
+              ? 'Hover a field to edit. Live edits are governed — you’ll preview the change and approve it (eval-gated, with revert).'
+              : 'Hover a field to edit. This record is staging, so edits save directly through the schema gate.'}
+          </p>
+        ) : null}
       </div>
 
-      {(k.plain_language_summary || k.rationale || k.tradeoffs || k.when_to_use) && (
-        <Section title="Knowledge">
-          <div className="space-y-3 text-sm leading-relaxed">
-            {k.plain_language_summary ? <p>{k.plain_language_summary}</p> : null}
-            {k.rationale ? <p><span className="text-muted-foreground">Rationale. </span>{k.rationale}</p> : null}
-            {k.tradeoffs ? <p><span className="text-muted-foreground">Tradeoffs. </span>{k.tradeoffs}</p> : null}
-            {k.when_to_use ? <p><span className="text-muted-foreground">When to use. </span>{k.when_to_use}</p> : null}
-          </div>
-        </Section>
-      )}
+      {editable ? <AiEditWidget recordId={recordId} status={status} /> : null}
+
+      <Section title="Knowledge">
+        <dl className="grid gap-4 sm:grid-cols-2">
+          {ef('plain_language_summary', 'knowledge.plain_language_summary', k.plain_language_summary, 'textarea')}
+          {ef('rationale', 'knowledge.rationale', k.rationale, 'textarea')}
+          {ef('tradeoffs', 'knowledge.tradeoffs', k.tradeoffs, 'textarea')}
+          {ef('when_to_use', 'knowledge.when_to_use', k.when_to_use, 'textarea')}
+        </dl>
+      </Section>
 
       <Section title="Classification">
         <dl className="grid grid-cols-2 gap-4 sm:grid-cols-3">
           <Field label="record_type" value={raw.record_type?.replaceAll('_', ' ')} />
-          <Field label="category" value={cls.sign_category?.replaceAll('_', ' ')} />
-          <Field label="sub_type" value={cls.sub_type?.replaceAll('_', ' ')} />
-          <Field label="fabrication_family" value={cls.fabrication_family?.replaceAll('_', ' ')} />
-          <Field label="illumination" value={cls.illuminated ? cls.illumination_method?.replaceAll('_', ' ') ?? 'yes' : 'non illuminated'} />
-          <Field label="mounting" value={cls.mounting?.replaceAll('_', ' ')} />
+          {ef('sign_category', 'classification.sign_category', cls.sign_category, 'enum')}
+          {ef('sub_type', 'classification.sub_type', cls.sub_type, 'text')}
+          {ef('fabrication_family', 'classification.fabrication_family', cls.fabrication_family, 'enum')}
+          {ef('illumination_method', 'classification.illumination_method', cls.illumination_method, 'enum')}
+          {ef('mounting', 'classification.mounting', cls.mounting, 'enum')}
           <Field label="sides" value={cls.sides} />
           <Field label="doc_type" value={raw.source?.doc_type?.replaceAll('_', ' ')} />
           <Field label="industry" value={raw.context?.industry_vertical?.replaceAll('_', ' ')} />
@@ -87,6 +119,20 @@ export default async function RecordPage({ params }: { params: Promise<{ id: str
           <Field label="height_in" value={dims.overall_height_in ?? dims.height_in} />
           <Field label="area_sqft" value={dims.area_sqft} />
         </dl>
+      </Section>
+
+      <Section title="Source drawing">
+        {viewUrl ? (
+          <iframe src={viewUrl} className="h-[600px] w-full rounded border" title="source drawing" />
+        ) : (
+          <div className="flex items-start gap-3 rounded-md border border-dashed p-6 text-sm text-muted-foreground">
+            <FileText className="mt-0.5 h-4 w-4 shrink-0" />
+            <p>
+              No source drawing is served for this record. Inline preview is available for drawings uploaded through the app;
+              JSON/CLI-imported records have no stored drawing.
+            </p>
+          </div>
+        )}
       </Section>
 
       {Array.isArray(raw.structure) && raw.structure.length ? (
@@ -123,7 +169,9 @@ export default async function RecordPage({ params }: { params: Promise<{ id: str
                 {m.reference ? (
                   <div className="mt-2 rounded bg-muted/50 p-2 text-xs">
                     <div className="font-medium text-foreground">
-                      {m.reference.company ?? m.reference.product ?? m.reference.normalized_id}
+                      <Link href={`/reference/${encodeURIComponent(m.reference.normalized_id)}`} className="underline-offset-2 hover:underline">
+                        {m.reference.company ?? m.reference.product ?? m.reference.normalized_id}
+                      </Link>
                       <span className="ml-2 font-normal text-muted-foreground">({m.reference.depth})</span>
                     </div>
                     {m.reference.knowledge ? <p className="mt-1 text-muted-foreground">{m.reference.knowledge}</p> : null}

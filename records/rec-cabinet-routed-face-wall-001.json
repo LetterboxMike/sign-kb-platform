@@ -1,0 +1,94 @@
+{
+  "record_id": "rec-cabinet-routed-face-wall-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data excluded. Commercial mixed-use vertical retained.",
+  "source": {
+    "doc_type": "permit"
+  },
+  "context": {
+    "industry_vertical": "commercial_mixed_use"
+  },
+  "classification": {
+    "sign_category": "cabinet",
+    "sub_type": "single_face_routed_face_illuminated_wall_cabinet",
+    "primary_function": "tenant_building_identification",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 1,
+    "fabrication_family": "cabinet",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A single-face illuminated wall cabinet with a routed-and-backed aluminum face behind a translucent polycarbonate lens, deep U-channel frame, mounted off battens on plywood/Hardie blocking with a deliberate air gap.",
+    "rationale": "A reinforced deep U-channel frame and battened air-gap mount handle a wide cabinet on fiber-cement siding without compressing it; routed-and-backed face gives even lit copy.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "cabinet_frame",
+      "construction": "10x2.6in 6063-T52 aluminum U-channel, mitered/welded, 1.5in aluminum angle mounting bars, 1/8in aluminum back",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "face_and_lens",
+      "construction": "routed aluminum face backed with translucent material, 0.150in translucent white polycarbonate lens, 1.5in aluminum angle face frame, 0.063in pre-finished white aluminum LED baffle, 12V 6000K white LEDs",
+      "finish_refs": [
+        "P1"
+      ],
+      "illumination": "internal 6000K LED",
+      "fabrication_method": "routed_and_backed_face",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "03",
+      "component": "mounting",
+      "construction": "off battens on 3/4in exterior plywood blocking + 5/16in Hardie board with air gap, qty 12 1/2x6in SS lag bolts",
+      "mounted_to": "building_wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews satin, T/M PMS 539C Blue",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "overall_width_in": 126,
+    "total_sign_area_sqft": 19.69,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "tenant_wordmark"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Deliberate air-gap detail off batten siding prevents compression of fiber-cement.",
+      "Deep reinforced U-channel handles the wide single-face cabinet."
+    ]
+  },
+  "open_items": [
+    "Dedicated circuit + disconnect + photocell/timer (electrical code)"
+  ],
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

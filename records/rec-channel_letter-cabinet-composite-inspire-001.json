@@ -1,0 +1,113 @@
+{
+  "record_id": "rec-channel_letter-cabinet-composite-inspire-001",
+  "schema_version": "1.3",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "multifamily_residential"
+  },
+  "classification": {
+    "sign_category": "channel_letter",
+    "sub_type": "facelit_daynight_letters_over_pushvinyl_cabinet_on_bracket",
+    "primary_function": "building_identification",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 1,
+    "fabrication_family": "composite_structure",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A two-tier illuminated wall display on one steel bracket: face-lit pan channel letters with a black perforated day/night film over an internally lit 10in extruded cabinet with a polycarbonate face and gold/blockout vinyl.",
+    "rationale": "Letters-over-cabinet on a shared engineered bracket reads as one lockup; day/night film gives a black-day, white-night letter read.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "channel_letters",
+      "construction": "face-lit pan channel, 5in black returns, 1in gold Jewelite trim cap, white LED, 3/16in translucent white acrylic faces with 1st-surface black perforated day/night film",
+      "material_refs": [
+        "A1",
+        "V1"
+      ],
+      "illumination": "internal LED",
+      "fabrication_method": "face_lit_channel",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "cabinet",
+      "construction": "10in deep extruded aluminum, 1in removable retainers, white LED, satin black; 0.150in translucent white polycarbonate face with blockout-black + translucent gold vinyl",
+      "illumination": "internal LED",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "03",
+      "component": "bracket",
+      "construction": "3x3x3/16in steel angle bracket + welded 1x1 uprights, 3/8in stainless allthread through wall + steel beam, blocking at 3 columns (pending structural)",
+      "status": "open",
+      "mounted_to": "building_wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "letter_face",
+      "product": "3/16in translucent white acrylic",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "black perforated day/night film + translucent gold",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    },
+    {
+      "ref": "T1",
+      "category": "coating",
+      "product": "1in gold Jewelite trim cap",
+      "manufacturer_normalized_id": "mfr-jewelite"
+    }
+  ],
+  "dimensions": {
+    "letters_width_in": 153.75,
+    "cabinet_width_in": 168,
+    "cabinet_depth_in": 10,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "building_letters"
+      },
+      {
+        "slot": "wordmark_cabinet"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "compliance": {
+    "notes": "NEC Article 600 / UL listed; Class II LV supplies, disconnect per raceway."
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Day/night perf-film letters over a lit cabinet on one engineered bracket reads as a single lockup."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

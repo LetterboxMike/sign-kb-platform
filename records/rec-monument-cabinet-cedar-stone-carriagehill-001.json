@@ -1,0 +1,130 @@
+{
+  "record_id": "rec-monument-cabinet-cedar-stone-carriagehill-001",
+  "schema_version": "1.3",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "multifamily_residential"
+  },
+  "classification": {
+    "sign_category": "monument",
+    "sub_type": "pushthru_cabinet_in_cedar_timber_and_faux_stone_surround",
+    "primary_function": "community_identification",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 2,
+    "fabrication_family": "composite_structure",
+    "mounting": "ground_mounted_masonry_columns",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A community monument: a double-sided internally lit extruded aluminum push-through cabinet held within a rough-sawn cedar timber frame on a wood-framed faux-stone base with pre-cast concrete caps.",
+    "rationale": "A serviceable lit cabinet inside genuine cedar timber and faux stone gives a warm residential architectural read.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "id_cabinet",
+      "construction": "6in deep double-sided extruded aluminum cabinet, internal white LED, 1/8in aluminum faces routed with 3/4in clear acrylic push-thru faced translucent white vinyl",
+      "material_refs": [
+        "A1",
+        "V1"
+      ],
+      "finish_refs": [
+        "P1"
+      ],
+      "illumination": "internal LED",
+      "fabrication_method": "push_thru_acrylic",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "cedar_frame",
+      "construction": "rough-sawn 8x8 cedar horizontals; verticals two 2x6 rough-sawn cedar; Minwax #171 Dark Walnut stain",
+      "material_refs": [
+        "W1"
+      ],
+      "provenance": "drawing"
+    },
+    {
+      "ref": "03",
+      "component": "stone_base",
+      "construction": "wood-framed structure with Harristone Uintah Ledgestone Slate faux stone veneer, pre-cast concrete caps",
+      "material_buildup": [
+        "wood frame",
+        "faux stone veneer"
+      ],
+      "material_refs": [
+        "ST1"
+      ],
+      "mounted_to": "ground_footing",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "letter_face",
+      "product": "3/4in clear acrylic push-thru",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "translucent white vinyl",
+      "application": "vinyl",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "W1",
+      "category": "structural_timber",
+      "product": "rough-sawn cedar (8x8, 2x6), Minwax #171 Dark Walnut",
+      "manufacturer_normalized_id": "mfr-minwax"
+    },
+    {
+      "ref": "ST1",
+      "category": "cladding_stone",
+      "product": "Harristone Uintah Ledgestone Slate faux stone",
+      "manufacturer_normalized_id": "mfr-harristone"
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Sherwin-Williams 6236 Grays Harbor (cabinet), Matthews color-match",
+      "manufacturer_normalized_id": "mfr-sherwin-williams"
+    }
+  ],
+  "dimensions": {
+    "overall_width_in": 192,
+    "sign_mass_height_in": 96,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "community_wordmark"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Genuine cedar timber + faux stone hybrid; serviceable lit push-through cabinet.",
+      "Two end-view variants drawn (double-sided)."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

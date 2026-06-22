@@ -1,0 +1,85 @@
+{
+  "record_id": "rec-channel_letter-lit-acrylic-logo-kidde-001",
+  "schema_version": "1.3",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "industrial_fire_safety_office"
+  },
+  "classification": {
+    "sign_category": "channel_letter",
+    "sub_type": "internally_lit_laser_cut_acrylic_logo",
+    "primary_function": "lobby_identification",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 1,
+    "fabrication_family": "dimensional_letter_or_logo",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "An internally lit lobby logo: laser-cut acrylic letters/logo with embedded LEDs and removable stainless backs, translucent vinyl over white 7328 acrylic faces, flush stud-mounted with remote supplies.",
+    "rationale": "Embedded-LED acrylic with removable backs gives a serviceable glowing lobby logo.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "lit_logo",
+      "construction": "laser-cut 7328 translucent white acrylic with embedded 12V 5000K white LEDs, removable stainless backs, surface translucent vinyl, remote supplies, flush stud",
+      "material_refs": [
+        "A1",
+        "V1"
+      ],
+      "illumination": "internal 5000K LED",
+      "fabrication_method": "lit_acrylic_logo",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "letter_face",
+      "product": "7328 translucent white acrylic",
+      "manufacturer_normalized_id": "mfr-acrylite"
+    },
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "3M 3630-53 Cardinal Red + 3630-130 Sunflower Yellow translucent",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    }
+  ],
+  "dimensions": {
+    "overall_width_in": 72,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "logo"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Removable backs make the embedded LEDs serviceable."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

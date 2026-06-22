@@ -1,0 +1,80 @@
+{
+  "record_id": "rec-flat_graphic-vinyl-on-glass-001",
+  "schema_version": "1.2",
+  "record_type": "flat_graphic",
+  "provenance_note": "From a multi-sign interior wayfinding package. All client, vendor, designer, building/level names, street address, and project numbers excluded at extraction. Higher-education vertical retained. Entry copy excluded; copy structure retained.",
+  "source": {
+    "doc_type": "design_intent"
+  },
+  "context": {
+    "industry_vertical": "education_higher_ed_law_school"
+  },
+  "classification": {
+    "graphic_method": "digital_print",
+    "applied_to": "glass",
+    "contour_cut": false
+  },
+  "materials_manifest": [
+    {
+      "ref": "G1",
+      "category": "graphic",
+      "product": "reverse-printed graphic, white copy on a transparent vinyl background",
+      "application": "digital_print",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "G2",
+      "category": "vinyl",
+      "product": "protective overlaminate vinyl on the back of the applied graphic",
+      "application": "vinyl",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing",
+    "note": "Submitted as full-size art; final field size to be determined to suit the glass lite."
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "institution_lockup",
+        "treatment": "primary title line"
+      },
+      {
+        "slot": "building_or_area_name",
+        "treatment": "secondary line"
+      },
+      {
+        "slot": "level_entry_statement",
+        "treatment": "you-are-entering level/orientation line"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "rules_observations": [
+      "Three-line hierarchy (institution / area / level) gives a clear single primary read on a glass entry."
+    ],
+    "craft_observations": [
+      "Second-surface reverse print with a backing protection vinyl puts the ink behind the glass, protecting it and giving a clean first-surface read.",
+      "White copy on a translucent field reads against the glazing and the space beyond without a hard opaque panel."
+    ],
+    "aesthetic_notes": [
+      {
+        "note": "Applied-to-glass entry graphic reads as part of the architecture rather than a mounted sign; appropriate for a level/threshold orientation cue.",
+        "provenance": "opinion"
+      }
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high on method and application; size to be determined to suit the glass",
+    "inferred_fields": [
+      "design_assessment"
+    ],
+    "notes": "First flat_graphic in this run: validates the v1.1 flat_graphic sibling on a real second-surface vinyl-on-glass case from the Cornell package. No structure/mounting/illumination, as the sibling intends.",
+    "reconciliation_v1_2": "doc_type shop -> design_intent (Cornell, Ruling 3)."
+  }
+}

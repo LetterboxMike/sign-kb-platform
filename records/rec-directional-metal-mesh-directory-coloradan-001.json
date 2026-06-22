@@ -1,0 +1,92 @@
+{
+  "record_id": "rec-directional-metal-mesh-directory-coloradan-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "residential_high_rise"
+  },
+  "classification": {
+    "sign_category": "directional",
+    "sub_type": "illuminated_metal_mesh_tenant_directory",
+    "primary_function": "tenant_directory",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 1,
+    "fabrication_family": "composite_structure",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "metal-mesh tenant directory, qty 3 (panels swap on mesh)",
+    "variant_axis": "tenant_panels"
+  },
+  "knowledge": {
+    "plain_language_summary": "A fabricated .090 aluminum frame (3in deep) holding GKD 'Tigris PC' stainless metal mesh bonded with Lord epoxy, with a warm-white perimeter LED edge-glow and waterjet-cut 1/2in aluminum tenant panels fastened to the mesh.",
+    "rationale": "Metal mesh as the directory field gives a premium architectural look; tenant panels swap on the mesh.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "mesh_directory",
+      "construction": ".090 aluminum frame 3in deep (ext bronze / int brushed), GKD Tigris PC stainless mesh in angle frame bonded with Lord epoxy, perimeter warm-white LED edge-glow, waterjet 1/2in aluminum tenant panels with cut vinyl fastened to mesh",
+      "material_refs": [
+        "MESH1",
+        "AD1"
+      ],
+      "illumination": "perimeter LED",
+      "fabrication_method": "metal_mesh_directory",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "MESH1",
+      "category": "cladding",
+      "product": "GKD Tigris PC stainless architectural metal mesh",
+      "manufacturer_normalized_id": "mfr-gkd"
+    },
+    {
+      "ref": "AD1",
+      "category": "adhesive",
+      "product": "Lord epoxy",
+      "manufacturer_normalized_id": "mfr-lord"
+    }
+  ],
+  "dimensions": {
+    "in": "48x35",
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "tenant_directory"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Metal mesh directory field with perimeter edge-glow; swappable tenant panels."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ],
+    "modeling_notes": [
+      "GKD architectural metal mesh mapped to material_category cladding."
+    ]
+  }
+}

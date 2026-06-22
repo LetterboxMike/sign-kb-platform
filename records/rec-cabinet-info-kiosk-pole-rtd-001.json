@@ -1,0 +1,111 @@
+{
+  "record_id": "rec-cabinet-info-kiosk-pole-rtd-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "public_transit_light_rail"
+  },
+  "classification": {
+    "sign_category": "cabinet",
+    "sub_type": "internally_illuminated_double_sided_info_kiosk_on_pole",
+    "primary_function": "station_information_kiosk",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 2,
+    "fabrication_family": "cabinet",
+    "mounting": "ground_mounted_pedestal",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "double-sided info kiosk, qty 11",
+    "variant_axis": "station"
+  },
+  "knowledge": {
+    "plain_language_summary": "An internally-illuminated double-sided fabricated aluminum information kiosk: welded angle frame + .125 skin, hinged door with .150 clear polycarbonate lens and continuous hinge, security-lockable, LED + translucent acrylic diffuser, on a 5in pole with mounting plates and clamshell base cover.",
+    "rationale": "A serviceable lockable lit kiosk holds posted station information on both faces.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "kiosk_cabinet",
+      "construction": "1x1x1/8in aluminum angle welded frame, .125 skin, hinged door with .150 clear polycarbonate + continuous hinge, security screw, LED + 3/16in translucent white acrylic diffuser + supply + removable service panel",
+      "material_refs": [
+        "A1",
+        "PC1"
+      ],
+      "finish_refs": [
+        "P1"
+      ],
+      "illumination": "internal LED",
+      "fabrication_method": "illuminated_kiosk",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "pole_base",
+      "construction": "5in dia aluminum/steel pole, 1/2x8in plates, clamshell base cover",
+      "mounted_to": "ground_footing",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "letter_face",
+      "product": "3/16in translucent white acrylic diffuser",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "PC1",
+      "category": "face_substrate",
+      "product": ".150 clear polycarbonate lens",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews 41342SP Brushed Aluminum",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "cabinet_h_ft": 6,
+    "pole_dia_in": 5,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "posted_station_information"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "compliance": {
+    "notes": "UL/NEC; double-sided; serviceable lockable door."
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Lockable hinged poly-lens door + removable service panel; double-sided lit kiosk."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ],
+    "modeling_notes": [
+      "'Info kiosk' mapped to sign_category/fabrication_family cabinet (internally lit cabinet on pole)."
+    ]
+  }
+}

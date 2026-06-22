@@ -1,0 +1,221 @@
+{
+  "record_id": "rec-wayfinding-ada-roomid-insert-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "From a multi-sign interior wayfinding package. All client, vendor, designer, building/department/room names, street address, project numbers, and the ADA-assistance phone number excluded at extraction. Higher-education vertical retained. Room copy excluded; copy structure retained as pattern.",
+  "source": {
+    "doc_type": "design_intent"
+  },
+  "context": {
+    "industry_vertical": "education_higher_ed_law_school"
+  },
+  "classification": {
+    "sign_category": "wayfinding",
+    "sub_type": "ada_tactile_room_identification_with_paper_insert",
+    "primary_function": "ada_room_identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "one ADA room-ID design produced in a few standard sizes (small/medium/large, with and without changeable insert; sign-type codes across the S-series) and deployed in quantity; permanent tactile copy is fabricated per door, the directory/occupant line is a changeable paper insert behind a non-glare window",
+    "variant_axis": "size_and_room_assignment"
+  },
+  "knowledge": {
+    "plain_language_summary": "A built-up acrylic ADA room-identification sign: painted acrylic plaque carrying laser-cut raised tactile copy and braille for permanent room information, plus a changeable paper insert held behind a clear non-glare matte acrylic window for occupant or function copy that changes over time. Finished with an ADA non-glare clear coat.",
+    "rationale": "Splitting permanent tactile identification from a changeable insert satisfies ADA (raised characters and braille at the door) while letting occupant names change without refabricating the tactile sign.",
+    "tradeoffs": "Laser-cut tactile plus braille plus an insert window is more fabrication than a flat printed sign, but it is the compliant, durable, serviceable standard for institutional room ID.",
+    "when_to_use": "Any permanent interior room that requires ADA identification and whose occupant or function copy may change.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "built_up_acrylic_plate",
+      "function": "primary plaque body and tactile field",
+      "construction": "built-up/laminated acrylic plate, front and edges painted; built-up header detail where used",
+      "face": {
+        "material_refs": [
+          "A1"
+        ],
+        "decoration": "direct-print background graphic and lock-up",
+        "decoration_refs": [
+          "D1"
+        ]
+      },
+      "finish_refs": [
+        "P1",
+        "P6",
+        "P8"
+      ],
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "tactile_copy_and_braille",
+      "function": "ADA permanent identification",
+      "construction": "laser-cut ADA-compliant raised tactile letters with Grade 2 braille",
+      "material_refs": [
+        "M10"
+      ],
+      "fabrication_method": "laser_cut_applied_tactile_plus_braille",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "03",
+      "component": "insert_window",
+      "function": "changeable occupant/function copy",
+      "construction": "clear non-glare matte acrylic window over a changeable paper insert",
+      "material_refs": [
+        "M1"
+      ],
+      "fabrication_method": "non_glare_insert_window",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "substrate",
+      "product": "built-up laminated acrylic plate",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "D1",
+      "category": "graphic",
+      "product": "direct-print background and lock-up",
+      "application": "digital_print",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "M1",
+      "category": "substrate",
+      "product": "Clear P95 non-glare medium matte acrylic sheet (insert window)",
+      "spec": "non-glare matte; ADA non-glare",
+      "manufacturer_normalized_id": null,
+      "code_status": "manufacturer_unverified"
+    },
+    {
+      "ref": "M10",
+      "category": "substrate",
+      "product": "Rowmark Clear 311-101 clear acrylic, 1/32in thick (tactile)",
+      "manufacturer_normalized_id": "mfr-rowmark"
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews MP6425SP White, satin",
+      "manufacturer_normalized_id": "mfr-matthews"
+    },
+    {
+      "ref": "P6",
+      "category": "paint",
+      "product": "Matthews MP00817 Alga Green (department color), satin",
+      "code_status": "building_color_per_department",
+      "manufacturer_normalized_id": "mfr-matthews"
+    },
+    {
+      "ref": "P8",
+      "category": "coating",
+      "product": "Matthews (MAP) SOA 4158SP ADA non-glare clear coat",
+      "application": "sprayed",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing",
+    "note": "Multiple coded sizes (small/medium/large room-ID variants); package states sizes need not be finalized prior to fabrication, so exact per-size dimensions left to the size schedule."
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "department_building_lockup",
+        "treatment": "direct-print, top of plate"
+      },
+      {
+        "slot": "permanent_room_id",
+        "treatment": "laser-cut tactile + braille",
+        "required": true
+      },
+      {
+        "slot": "changeable_occupant_or_function",
+        "treatment": "paper insert behind non-glare window",
+        "required": false
+      },
+      {
+        "slot": "pictogram",
+        "treatment": "where applicable, e.g. restroom signs",
+        "required": false
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "message_schedule": {
+    "sign_type_code": "S-series room ID",
+    "instances": [
+      {
+        "location_ref": "room_id_instance_permanent",
+        "copy_content": "excluded_pii"
+      },
+      {
+        "location_ref": "room_id_instance_with_changeable_insert",
+        "copy_content": "excluded_pii"
+      },
+      {
+        "location_ref": "restroom_id_with_pictogram",
+        "copy_content": "excluded_pii"
+      }
+    ]
+  },
+  "compliance": {
+    "ada": {
+      "tactile": true,
+      "braille": true,
+      "pictogram": true,
+      "non_glare": true,
+      "contrast_compliant": true
+    },
+    "notes": "Laser-cut raised tactile copy with braille; non-glare matte insert window and ADA non-glare clear coat on all interior signs. Mounting height not dimensioned on this design-intent set."
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "rules_observations": [
+      "Permanent tactile/braille separated from changeable insert keeps the compliant identification stable while occupant copy changes.",
+      "Department color is the only varying accent, holding family consistency across the program."
+    ],
+    "craft_observations": [
+      "Built-up/laminated acrylic with painted edges and a non-glare insert window is the institutional standard; laser-cut tactile plus braille is the compliant, durable execution.",
+      "Non-glare matte over the insert addresses ADA glare while keeping the changeable copy legible."
+    ],
+    "aesthetic_notes": [
+      {
+        "note": "Quiet, system-driven institutional ID; restraint and consistency are the design value here, not expression.",
+        "provenance": "opinion"
+      }
+    ]
+  },
+  "open_items": [
+    "ADA mounting height not dimensioned on the design-intent set",
+    "Per-size dimension schedule not finalized"
+  ],
+  "extraction_meta": {
+    "field_confidence": "high on construction, ADA approach, and finishes; sizes flexible per design-intent documentation",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment",
+      "program_model",
+      "compliance.ada.contrast_compliant"
+    ],
+    "completeness_notes": [
+      "Braille not explicitly labeled on every sheet but implied by 'ADA compliant tactile letters'; set braille:true with this note.",
+      "M1 non-glare matte acrylic 'Clear P95' manufacturer not identified on the drawing; left unverified."
+    ],
+    "reconciliation_v1_2": "fabrication_family -> panel; doc_type -> design_intent. 'identification' sign_category observation withdrawn (wayfinding umbrella accepted). Cleared to records/."
+  }
+}

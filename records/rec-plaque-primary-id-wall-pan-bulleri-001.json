@@ -1,0 +1,86 @@
+{
+  "record_id": "rec-plaque-primary-id-wall-pan-bulleri-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data and actual copy excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "design_intent"
+  },
+  "context": {
+    "industry_vertical": "commercial_multitenant_building"
+  },
+  "classification": {
+    "sign_category": "plaque",
+    "sub_type": "fabricated_wall_pan_with_flatcut_brushed_letters",
+    "primary_function": "primary_building_identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A primary wall ID: a fabricated aluminum 1in-deep wall pan with a 1/8in face and flush-mounted flat-cut 1/2in brushed-aluminum (clear satin anodized) letterforms.",
+    "rationale": "A shallow fabricated pan with brushed flat-cut letters gives a clean dimensional building ID without illumination.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "wall_pan_and_letters",
+      "construction": "fabricated aluminum 1in deep wall pan, 1/8in face painted MP20190 Duranodic 313 matte; flat-cut 1/2in aluminum letters, horizontal brushed + clear satin anodized, flush-mounted",
+      "material_refs": [
+        "AL1"
+      ],
+      "finish_refs": [
+        "P1"
+      ],
+      "fabrication_method": "wall_pan_flatcut_letters",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "AL1",
+      "category": "letter_face",
+      "product": "1/2in brushed clear-anodized aluminum",
+      "application": "material_finish",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews MP20190 Duranodic 313 metallic matte",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "field_height_in": 42,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "building_wordmark"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Brushed flat-cut letters on a duranodic pan = restrained commercial ID."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

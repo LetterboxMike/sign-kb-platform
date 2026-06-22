@@ -1,0 +1,85 @@
+{
+  "record_id": "rec-feature-magnetic-story-wall-acorn-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "design_intent"
+  },
+  "context": {
+    "industry_vertical": "education_higher_ed"
+  },
+  "classification": {
+    "sign_category": "feature_wall",
+    "sub_type": "magnetic_story_wall",
+    "primary_function": "feature_storytelling_wall",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "composite_structure",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A feature wall combining a 1/2in clear acrylic polished logo, painted acrylic letters/directional bars, and a changeable magnetic-panel system: ferrous-faced acrylic panels carry digitally-printed magnetic graphics that swap for owner-updatable story content.",
+    "rationale": "The ferrous-face + magnetic-graphic system makes an owner-updatable storytelling feature wall.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "feature_wall",
+      "construction": "1/2in clear acrylic polished logo (18.5in), 3/8in painted acrylic letters (7in), 1/4in painted directional bars; 1/4in acrylic panels faced with ferrous tin + edge-to-edge magnetic sheet carrying opaque-white-vinyl printed graphics",
+      "material_refs": [
+        "A1",
+        "MG1"
+      ],
+      "fabrication_method": "magnetic_changeable_feature",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "letter_face",
+      "product": "clear/painted acrylic",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "MG1",
+      "category": "graphic",
+      "product": "magnetic sheet with printed opaque-white vinyl",
+      "application": "digital_print",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "story_panels_in": "17.5-30.5 sq",
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "featured_story_content"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Owner-updatable magnetic-panel story system."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ],
+    "reconciliation_v1_5": "sign_category -> feature_wall (promoted v1.5); sub_type magnetic_story_wall."
+  }
+}

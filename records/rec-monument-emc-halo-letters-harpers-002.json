@@ -1,0 +1,115 @@
+{
+  "record_id": "rec-monument-emc-halo-letters-harpers-002",
+  "schema_version": "1.3",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "design_conceptual"
+  },
+  "context": {
+    "industry_vertical": "commercial_real_estate_retail"
+  },
+  "option_set_id": "optset-harpers-monument-001",
+  "design_status": "proposed_option",
+  "classification": {
+    "sign_category": "monument",
+    "sub_type": "halo_letters_with_strip_emc_in_stone_base",
+    "primary_function": "center_identification_plus_dynamic_messaging",
+    "illuminated": true,
+    "illumination_method": "combination_face_and_halo",
+    "illumination_detail": "halo reverse-pan letters + push-thru tagline + strip EMC",
+    "sides": 1,
+    "fabrication_family": "composite_structure",
+    "mounting": "ground_mounted_footing",
+    "digital_integration": true
+  },
+  "knowledge": {
+    "plain_language_summary": "Option 2: a monument with halo-illuminated reverse-pan channel letters, a push-through tagline with a day/night perforated film, and a horizontal 12mm strip EMC embedded in the stone base. No decorative column.",
+    "rationale": "Halo letters plus a strip EMC give a cleaner, more contemporary version of the same center identity.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "halo_letters",
+      "construction": "reverse-pan channel letters, 0.040in returns 3in deep, 0.063in faces, clear acrylic backs, 1in standoffs, halo LED",
+      "illumination": "halo LED",
+      "fabrication_method": "reverse_pan_halo",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "tagline",
+      "construction": "push-thru 3/4in acrylic, white diffuser 2nd-surface, digitally-printed blue perforated day/night film 1st-surface (blue day / white night)",
+      "material_refs": [
+        "V1"
+      ],
+      "illumination": "internal LED",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "03",
+      "component": "strip_emc",
+      "construction": "12mm full-color EMC, 12x96in, wireless, embedded in stone base",
+      "material_refs": [
+        "EMC1"
+      ],
+      "provenance": "drawing"
+    },
+    {
+      "ref": "04",
+      "component": "base",
+      "construction": "cultured stone veneer base on poured footing",
+      "mounted_to": "ground_footing",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "digitally-printed blue perforated day/night film",
+      "application": "digital_print",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    },
+    {
+      "ref": "EMC1",
+      "category": "digital_display_module",
+      "product": "Watchfire 12mm full-color EMC",
+      "manufacturer_normalized_id": "mfr-watchfire"
+    }
+  ],
+  "dimensions": {
+    "overall_width_in": 110,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "center_name"
+      },
+      {
+        "slot": "tagline"
+      },
+      {
+        "slot": "dynamic_emc"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Halo letters + strip EMC = cleaner contemporary version of the same identity."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

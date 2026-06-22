@@ -1,0 +1,83 @@
+{
+  "record_id": "rec-feature-display-steel-artifact-mount-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/copy data excluded; GC office vertical retained.",
+  "source": {
+    "doc_type": "design_intent"
+  },
+  "context": {
+    "industry_vertical": "construction_general_contractor_office"
+  },
+  "classification": {
+    "sign_category": "feature_wall",
+    "sub_type": "artifact_mount",
+    "primary_function": "feature_wall_storytelling_display",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "composite_structure",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A fabricated blackened-steel feature panel with a stencil-cut etched background and mounting hooks for a ceremonial groundbreaking shovel, brake-bent at the corner and fastened to the wall on an aluminum cleat. One variant is a two-layer CNC-routed wood display.",
+    "rationale": "This is a storytelling display fixture (artifact mount) rather than a conventional sign; it straddles signage and millwork.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "steel_feature_panel",
+      "construction": "0.075in blackened steel face with stencil-cut etched background, brake-bent at corner, mounting hooks for a shovel, on a fabricated aluminum cleat",
+      "material_refs": [
+        "ST1"
+      ],
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "ST1",
+      "category": "face_substrate",
+      "product": "0.075in blackened steel",
+      "application": "material_finish",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "etched_background_graphic"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "aesthetic_notes": [
+      {
+        "note": "Sign program doubles as a storytelling environment; the shovel-mount artifact is the signature piece.",
+        "provenance": "opinion"
+      }
+    ]
+  },
+  "open_items": [
+    "Rod-mounting details TBD (early design intent)"
+  ],
+  "extraction_meta": {
+    "field_confidence": "medium",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ],
+    "reconciliation_v1_3": "Applied v1.3 enums (blade/awning/halo_illuminated/exposed_lamp/external_downlight + concrete/awning_fabric/digital_display_module/adhesive categories).",
+    "reconciliation_v1_5": "dimensional_feature_display folded into feature_wall; sub_type artifact_mount (fabrication_family composite_structure retained)."
+  }
+}

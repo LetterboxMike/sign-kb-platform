@@ -1,0 +1,124 @@
+{
+  "record_id": "rec-cabinet-pushthru-multitenant-exteriorsignage-001",
+  "schema_version": "1.3",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "veterinary_healthcare_retail"
+  },
+  "classification": {
+    "sign_category": "cabinet",
+    "sub_type": "internally_lit_pushthru_wall_cabinets_and_blade",
+    "primary_function": "tenant_identification",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 1,
+    "fabrication_family": "cabinet",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "multi-tenant exterior set: non-lit cabinet (A), lit projecting blade (B), lit push-thru wall cabinets (C,D)",
+    "variant_axis": "illumination_mounting_and_size"
+  },
+  "knowledge": {
+    "plain_language_summary": "A multi-tenant exterior set sharing a fabricated aluminum cabinet vocabulary: a non-illuminated cabinet with flat-cut acrylic graphics, a projecting illuminated blade with push-through and an exposed lit edge, and internally lit push-through wall cabinets with diffuser-backed clear acrylic and Sloan LEDs (one painted to match existing).",
+    "rationale": "One fabricated-cabinet system spans non-lit, projecting, and wall-mounted lit tenant signs; push-through clear acrylic with diffuser backing gives crisp lit copy.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "nonlit_cabinet",
+      "construction": "4in deep fabricated aluminum single-face cabinet, Matthews matte black, no visible attachments, 0.125in face with 1/2in flat-cut acrylic graphics matte white, 3M 220-22 black opaque vinyl arrow/tagline, clip-mount flush",
+      "material_refs": [
+        "V1"
+      ],
+      "finish_refs": [
+        "P1"
+      ],
+      "illumination": "none",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "lit_pushthru_cabinets",
+      "construction": "4-8in deep fabricated aluminum cabinets, routed face, 3/4in clear acrylic push-thru with white diffuser 2nd-surface, 3M 230-20 white / 230-73 dark red translucent 1st-surface, Sloan white LED, remote/self-contained supply (one painted to match existing)",
+      "material_refs": [
+        "V2"
+      ],
+      "illumination": "internal LED",
+      "fabrication_method": "push_thru_acrylic",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "03",
+      "component": "projecting_blade",
+      "construction": "6in deep single-face cabinet, matte black, reverse-routed face with 1in clear acrylic push-thru, 3/4in exposed illuminated acrylic edge, white LED grid, 2in tube bracket + 1/2in plate through blocking",
+      "fabrication_method": "push_thru_blade",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "3M 220-22 black opaque",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    },
+    {
+      "ref": "V2",
+      "category": "vinyl",
+      "product": "3M 230-20 white / 230-73 dark red translucent",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews matte black/white",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "tenant_wordmark"
+      },
+      {
+        "slot": "logo"
+      },
+      {
+        "slot": "tagline"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "compliance": {
+    "notes": "UL-labeled, NEC Article 600."
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "One fabricated-cabinet system spans non-lit, projecting, and wall-mounted lit tenant signs.",
+      "Push-through clear acrylic with diffuser backing for crisp lit copy."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

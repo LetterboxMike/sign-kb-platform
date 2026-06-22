@@ -4,7 +4,18 @@ import { query } from './kb';
 // and record fetch; these add the small faceting/aggregate reads the UI needs. Column names are
 // a fixed allowlist (never user input), so interpolating them into SQL is safe.
 
-const FACET_COLS = ['record_type', 'sign_category', 'fabrication_family', 'illumination_method', 'mounting'] as const;
+const FACET_COLS = [
+  'record_type',
+  'sign_category',
+  'sub_type',
+  'fabrication_family',
+  'illumination_method',
+  'mounting',
+  'doc_type',
+  'industry_vertical',
+  'design_status',
+  'quality_grade',
+] as const;
 export type FacetColumn = (typeof FACET_COLS)[number];
 
 export async function getFacets(): Promise<Record<FacetColumn, string[]>> {
@@ -16,6 +27,27 @@ export async function getFacets(): Promise<Record<FacetColumn, string[]>> {
     out[c] = r.rows.map((x) => x.v);
   }
   return out;
+}
+
+export interface ReferenceUsage {
+  record_id: string;
+  sign_category: string | null;
+  record_type: string | null;
+}
+
+/** Live records whose materials resolve to this reference entry — the "used by" list on the
+ *  reference detail page. Joins sign_materials.manufacturer_normalized_id back to the record. */
+export async function referenceUsage(normalizedId: string, limit = 50): Promise<ReferenceUsage[]> {
+  const r = await query<ReferenceUsage>(
+    `select distinct s.record_id, s.sign_category, s.record_type
+       from sign_materials m
+       join signs s on s.record_id = m.record_id
+      where m.manufacturer_normalized_id = $1 and s.status = 'live'
+      order by s.record_id
+      limit $2`,
+    [normalizedId, limit],
+  );
+  return r.rows;
 }
 
 export interface CorpusStats {

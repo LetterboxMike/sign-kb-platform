@@ -1,0 +1,94 @@
+{
+  "record_id": "rec-plaque-egress-ss-frame-panel-bny-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "financial_services_office"
+  },
+  "classification": {
+    "sign_category": "plaque",
+    "sub_type": "fire_egress_code_panel_with_stainless_frame",
+    "primary_function": "life_safety_egress",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "composite_structure",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A fire-egress code panel: 3/16in P95 back-painted acrylic with a .080in water-jet stainless frame (No.6 brush, .080 reveal), direct-printed first-surface graphics, VHB or concealed mechanical fasteners on wall covering.",
+    "rationale": "A stainless-framed code panel matches the premium finish system for life-safety signage.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "egress_panel",
+      "construction": "3/16in P95 backpainted (Benjamin Moore #1601 Hearthstone) + .080 waterjet SS frame, painted shim, first-surface direct print; VHB/stud",
+      "material_refs": [
+        "M1",
+        "ST1"
+      ],
+      "finish_refs": [
+        "P1"
+      ],
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "M1",
+      "category": "substrate",
+      "product": "3/16in P95 acrylic",
+      "manufacturer_normalized_id": "mfr-p95-acrylic"
+    },
+    {
+      "ref": "ST1",
+      "category": "structure_skin",
+      "product": ".080 waterjet stainless frame, No.6 brush",
+      "application": "material_finish",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Benjamin Moore #1601 Hearthstone",
+      "manufacturer_normalized_id": "mfr-benjamin-moore"
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "egress_code_copy"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "compliance": {
+    "notes": "Fire-egress / life-safety code panel."
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Stainless-framed code panel in the premium finish system."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

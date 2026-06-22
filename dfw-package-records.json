@@ -1,0 +1,214 @@
+{
+  "artifact": "sign_record_set",
+  "schema_version": "0.2-draft",
+  "package_note": "Extracted from a single multi-sign permit/shop package. One source file yields multiple records. In production each array element below is stored as its own record file; they are grouped here only for review.",
+  "shared_context": {
+    "industry_vertical": "transportation_aviation",
+    "site_type": "parking_structure",
+    "note": "All four signs share the Indect AK 4-Digit 130 counter (comp-indect-ak4d130), referenced once, reused four times."
+  },
+
+  "records": [
+    {
+      "record_id": "rec-wayfinding-spacecount-cabinet-001",
+      "source": { "doc_type": "shop" },
+      "classification": {
+        "sign_category": "wayfinding",
+        "sub_type": "vehicular_space_count_sign",
+        "primary_function": "live_space_availability_by_level",
+        "illuminated": true,
+        "illumination_method": "internal_led",
+        "sides": 1,
+        "fabrication_family": "extruded_aluminum_cabinet_backlit",
+        "mounting": "ground_mounted_footing",
+        "digital_integration": true
+      },
+      "knowledge": {
+        "plain_language_summary": "A single-faced, internally lit cabinet that lists each parking level and shows a live count of open spaces per level on green LED displays, with the current level highlighted. Drivers read total availability before committing to a level.",
+        "rationale": "Backlit translucent face keeps the static level labels bright at night, while the graphics are knocked out behind each counter so the LED digits read cleanly through their own windows.",
+        "provenance": "inferred"
+      },
+      "structure": [
+        {
+          "ref": "01",
+          "component": "backlit_sign_cabinet",
+          "construction": "SignComp #1927 8in deep single-faced extruded aluminum cabinet, 1-3/4in retainers, fully welded",
+          "component_ref": "comp-signcomp-1927",
+          "face": {
+            "material_refs": ["M1"],
+            "face_spec": "0.177in clear solar-grade polycarbonate",
+            "decoration": "translucent vinyl applied first-surface; graphics knocked out to create a window for each counter",
+            "decoration_refs": ["V1", "V2", "V3"]
+          },
+          "finish_refs": ["P1"],
+          "illumination": "internal 12V 5500K white LEDs",
+          "fabrication_method": "backlit cabinet with reverse-weeded counter windows",
+          "provenance": "drawing"
+        },
+        {
+          "ref": "02",
+          "component": "space_counting_unit",
+          "construction": "Indect AK 4-Digit 130, mounted in cabinet on custom aluminum brackets, qty 6 (one per level)",
+          "component_ref": "comp-indect-ak4d130",
+          "provenance": "drawing"
+        },
+        {
+          "ref": "03",
+          "component": "footing",
+          "construction": "TBD pending structural engineering review",
+          "status": "open",
+          "provenance": "drawing"
+        }
+      ],
+      "materials_manifest": [
+        { "ref": "M1", "category": "face_substrate", "product": "clear solar-grade polycarbonate", "spec": "0.177in", "manufacturer_normalized_id": null },
+        { "ref": "P1", "category": "paint", "product": "Matthews MP02110 Cook Islands Blue, anti-graffiti gloss clear", "manufacturer_normalized_id": "mfr-matthews" },
+        { "ref": "V1", "category": "vinyl", "product": "3M 3630-157 Sultan Blue, translucent", "manufacturer_normalized_id": "mfr-3m-graphics" },
+        { "ref": "V2", "category": "vinyl", "product": "3M 3630-20 White, translucent", "manufacturer_normalized_id": "mfr-3m-graphics" },
+        { "ref": "V3", "category": "vinyl", "product": "3M 3630-61 Slate Gray, translucent", "manufacturer_normalized_id": "mfr-3m-graphics" }
+      ],
+      "dimensions": { "overall_width_in": 65, "overall_height_in": 108, "cabinet_depth_in": 8, "unit_system": "imperial", "provenance": "drawing" },
+      "design_assessment": {
+        "quality_grade": null,
+        "grade_provenance": "ungraded_pending_review",
+        "rules_observations": ["Current-level highlight (reverse field on the active row) gives an immediate you-are-here read."],
+        "craft_observations": ["Knocking the face graphics out behind each counter integrates the digital units into the layout instead of bolting them on top."]
+      }
+    },
+
+    {
+      "record_id": "rec-wayfinding-spacecount-roadside-001",
+      "source": { "doc_type": "shop" },
+      "classification": {
+        "sign_category": "wayfinding",
+        "sub_type": "roadside_level_space_count_sign",
+        "primary_function": "approach_level_availability_and_direction",
+        "illuminated": false,
+        "illumination_method": "non_illuminated_reflective",
+        "sides": 1,
+        "fabrication_family": "post_and_panel",
+        "mounting": "breakaway_slipbase_post",
+        "digital_integration": true
+      },
+      "knowledge": {
+        "plain_language_summary": "A roadside post-mounted panel that directs drivers toward a terminal and garage and shows a single live space count, built non-illuminated with reflective films and a breakaway post for roadside safety.",
+        "rationale": "Reflective vinyl carries legibility at night from headlights without internal power, and the TXDOT slipbase lets the post shear away safely on vehicle impact.",
+        "provenance": "inferred"
+      },
+      "structure": [
+        { "ref": "01", "component": "clearance_panel", "construction": "1/4in aluminum, bolted to main panel with aluminum tie plates", "finish_refs": ["P3"], "decoration_refs": ["V4"], "provenance": "drawing" },
+        { "ref": "02", "component": "main_sign_panel", "construction": "1/4in aluminum, bolted to 2-1/2in x 3in extruded aluminum windbeam", "finish_refs": ["P1"], "decoration_refs": ["V5", "V6", "V7"], "provenance": "drawing" },
+        { "ref": "03", "component": "space_counting_unit", "construction": "Indect AK 4-Digit 130", "component_ref": "comp-indect-ak4d130", "provenance": "drawing" },
+        { "ref": "04", "component": "post_assembly", "construction": "10 BWG steel tube post, capped/welded ends, TXDOT-approved triangular slipbase, bolted to poured footings", "finish_refs": ["P2"], "provenance": "drawing" },
+        { "ref": "05", "component": "footing", "construction": "TBD pending structural engineering review", "status": "open", "provenance": "drawing" }
+      ],
+      "materials_manifest": [
+        { "ref": "P1", "category": "paint", "product": "Matthews PMS 287C, anti-graffiti gloss clear", "manufacturer_normalized_id": "mfr-matthews" },
+        { "ref": "P2", "category": "paint", "product": "Matthews 41342SP Brushed Aluminum Metallic, matte", "manufacturer_normalized_id": "mfr-matthews" },
+        { "ref": "P3", "category": "paint", "product": "Matthews RAL1023 Traffic Yellow, anti-graffiti gloss clear", "manufacturer_normalized_id": "mfr-matthews" },
+        { "ref": "V4", "category": "vinyl", "product": "3M 680-85 Black, reflective", "manufacturer_normalized_id": "mfr-3m-graphics" },
+        { "ref": "V5", "category": "vinyl", "product": "3M 4090DG3 White, reflective", "manufacturer_normalized_id": "mfr-3m-graphics" },
+        { "ref": "V6", "category": "vinyl", "product": "3M 4090DG3 digital print PMS 287C, luster UV overlaminate", "manufacturer_normalized_id": "mfr-3m-graphics" },
+        { "ref": "V7", "category": "vinyl", "product": "3M 4090DG3 digital print PMS 124C, luster UV overlaminate", "manufacturer_normalized_id": "mfr-3m-graphics" }
+      ],
+      "dimensions": { "overall_width_in": 54, "panel_height_in": 91, "unit_system": "imperial", "provenance": "drawing" },
+      "design_assessment": {
+        "quality_grade": null,
+        "grade_provenance": "ungraded_pending_review",
+        "rules_observations": ["Clearance height broken out into its own high-contrast yellow panel above the blue field, the standard hierarchy for overhead-clearance warnings."]
+      }
+    },
+
+    {
+      "record_id": "rec-wayfinding-garage-entrance-wall-001",
+      "source": { "doc_type": "shop" },
+      "variant_note": "Drawing set includes per-level variants (Level A, Level C) that differ only in the level letter; treated as one design family.",
+      "classification": {
+        "sign_category": "wayfinding",
+        "sub_type": "garage_entrance_identification",
+        "primary_function": "garage_entry_id_and_rate_with_live_count",
+        "illuminated": false,
+        "illumination_method": "non_illuminated",
+        "sides": 1,
+        "fabrication_family": "dimensional_letters_plus_cabinet",
+        "mounting": "wall_mounted",
+        "digital_integration": true
+      },
+      "knowledge": {
+        "plain_language_summary": "A wall-mounted garage entrance treatment combining fabricated dimensional letters (TERMINAL / GARAGE C), a logo, a small cabinet showing gate range and a live rate display, and a suspended chevron-striped clearance bar.",
+        "rationale": "Dimensional fabricated letters give depth and shadow on the wall for a premium architectural read, while the separate cabinet isolates the dynamic rate/count content for service.",
+        "provenance": "inferred"
+      },
+      "structure": [
+        { "ref": "01", "component": "dimensional_letters", "construction": "0.090in aluminum faces, welded 2in deep 0.063in returns, removable backs, 3/4in x 2in aluminum bar stock bottom bar; clamped to mesh panels with countersunk screws", "finish_refs": ["P2"], "provenance": "drawing" },
+        { "ref": "02", "component": "dimensional_logo", "construction": "0.125in aluminum face, 2in deep returns; CNC-cut 1/4in aluminum C letter, flush-stud mounted to logo panel", "finish_refs": ["P3", "P4"], "provenance": "drawing" },
+        { "ref": "03", "component": "sign_cabinet", "construction": "SignComp K1602/32 6in deep single-faced hinge-body extruded aluminum cabinet, welded; 1/8in aluminum face; flush wall mount", "component_ref": "comp-signcomp-k1602-32", "finish_refs": ["P1", "P4"], "provenance": "drawing" },
+        { "ref": "04", "component": "space_counting_unit", "construction": "Indect AK 4-Digit 130 (rate/count display)", "component_ref": "comp-indect-ak4d130", "provenance": "drawing" },
+        { "ref": "05", "component": "clearance_bar", "construction": "8in O.D. PVC tube, capped ends, surface-applied reflective chevron, suspended on stainless cable", "finish_refs": ["P3"], "decoration_refs": ["V4"], "provenance": "drawing" }
+      ],
+      "materials_manifest": [
+        { "ref": "P1", "category": "paint", "product": "Matthews PMS 287C, anti-graffiti gloss clear", "manufacturer_normalized_id": "mfr-matthews" },
+        { "ref": "P2", "category": "paint", "product": "Matthews 41342SP Brushed Aluminum Metallic, matte", "manufacturer_normalized_id": "mfr-matthews" },
+        { "ref": "P3", "category": "paint", "product": "Matthews RAL1023 Traffic Yellow, anti-graffiti gloss clear", "manufacturer_normalized_id": "mfr-matthews" },
+        { "ref": "P4", "category": "paint", "product": "Matthews MP02110 Cook Islands Blue, anti-graffiti gloss clear", "manufacturer_normalized_id": "mfr-matthews" },
+        { "ref": "V4", "category": "vinyl", "product": "3M 680-85 Black, reflective", "manufacturer_normalized_id": "mfr-3m-graphics" }
+      ],
+      "dimensions": { "letter_set_width_in": 120, "unit_system": "imperial", "provenance": "drawing" },
+      "design_assessment": {
+        "quality_grade": null,
+        "grade_provenance": "ungraded_pending_review",
+        "craft_observations": ["Fabricated returns with removable backs allow service access while keeping clean faces; this is the construction choice that separates a fabricated letter from a flat cut panel."]
+      }
+    },
+
+    {
+      "record_id": "rec-directional-suspended-001",
+      "source": { "doc_type": "shop" },
+      "classification": {
+        "sign_category": "directional",
+        "sub_type": "suspended_vehicular_directional",
+        "primary_function": "in_garage_directional_with_live_count",
+        "illuminated": false,
+        "illumination_method": "non_illuminated_reflective",
+        "sides": 2,
+        "fabrication_family": "suspended_hatbox_cabinet",
+        "mounting": "ceiling_suspended",
+        "digital_integration": true
+      },
+      "knowledge": {
+        "plain_language_summary": "A double-sided sign hung from the parking structure ceiling that points drivers toward 1-hour parking and shows a live space count, readable from both directions of travel.",
+        "rationale": "Back-to-back cabinets on a single hanging frame serve both approach directions; reflective film carries legibility under garage lighting without internal power.",
+        "provenance": "inferred"
+      },
+      "structure": [
+        { "ref": "01", "component": "hanging_bracket_frame", "construction": "fabricated 1-1/2in x 1-1/2in x 3/16in aluminum square tube frame with ceiling-mounting brackets; mechanically fastened to existing post-tensioned concrete ceiling", "finish_refs": ["P2"], "install_caution": "verify hardware and placement with structural review and GPR/X-ray of post-tensioned slab", "provenance": "drawing" },
+        { "ref": "02", "component": "sign_cabinets", "construction": "2in x 2in x 1/4in aluminum angle inner frame inside a 3in x 3in x 1/4in hatbox-style outer frame; 1/8in aluminum face bonded with Lord's epoxy; bolted back-to-back", "finish_refs": ["P1"], "decoration_refs": ["V5"], "provenance": "drawing" },
+        { "ref": "03", "component": "space_counting_unit", "construction": "Indect AK 4-Digit 130", "component_ref": "comp-indect-ak4d130", "provenance": "drawing" }
+      ],
+      "materials_manifest": [
+        { "ref": "P1", "category": "paint", "product": "Matthews PMS 287C, anti-graffiti gloss clear", "manufacturer_normalized_id": "mfr-matthews" },
+        { "ref": "P2", "category": "paint", "product": "Matthews 41342SP Brushed Aluminum Metallic, matte", "manufacturer_normalized_id": "mfr-matthews" },
+        { "ref": "V5", "category": "vinyl", "product": "3M 4090DG3 White, reflective", "manufacturer_normalized_id": "mfr-3m-graphics" }
+      ],
+      "dimensions": { "overall_width_in": 87, "overall_height_in": 18, "frame_depth_in": 8, "unit_system": "imperial", "provenance": "drawing" },
+      "open_items": ["Ceiling attachment hardware and placement pending structural review and GPR/X-ray of post-tensioned slab"],
+      "design_assessment": {
+        "quality_grade": null,
+        "grade_provenance": "ungraded_pending_review",
+        "rules_observations": ["Mirrored face layout (arrow and content reversed face to face) keeps the directional read correct from both travel directions."]
+      }
+    }
+  ],
+
+  "schema_strain_log": {
+    "new_enum_values_surfaced": {
+      "sign_category": ["wayfinding", "directional"],
+      "illumination_method": ["non_illuminated_reflective", "non_illuminated"],
+      "fabrication_family": ["post_and_panel", "dimensional_letters_plus_cabinet", "suspended_hatbox_cabinet"],
+      "mounting": ["breakaway_slipbase_post", "wall_mounted", "ceiling_suspended"],
+      "component_types": ["space_counting_unit", "clearance_panel", "clearance_bar", "dimensional_letters", "dimensional_logo", "hanging_bracket_frame", "post_assembly"]
+    },
+    "new_fields_added": ["classification.digital_integration", "structure[].component_ref", "structure[].install_caution", "variant_note"],
+    "note": "This is the controlled-vocabulary seed for the extraction contract. These values came from real drawings, not invented up front."
+  }
+}

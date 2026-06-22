@@ -1,0 +1,133 @@
+{
+  "record_id": "rec-directional-freestanding-postandpanel-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "Multi-sign permit submittal. All client, property-owner, vendor, salesperson, designer, and contact data excluded at extraction. Names, emails, phones, order number, and street addresses stripped. Industrial business-park vertical retained; copy excluded, copy structure retained.",
+  "source": {
+    "doc_type": "permit"
+  },
+  "context": {
+    "industry_vertical": "commercial_real_estate_industrial_business_park"
+  },
+  "classification": {
+    "sign_category": "directional",
+    "sub_type": "freestanding_double_sided_fabricated_aluminum_directional",
+    "primary_function": "park_directional_and_address_identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 2,
+    "fabrication_family": "panel",
+    "mounting": "ground_mounted_footing",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "one freestanding directional design deployed as several units (type 3A.1 through 3A.7) differing by destination/address copy and location; identical fabricated construction",
+    "variant_axis": "destination_copy_and_location"
+  },
+  "knowledge": {
+    "plain_language_summary": "A freestanding, double-sided directional sign built as a fabricated aluminum tube-frame panel on 4x4 aluminum posts, painted satin and decorated with applied vinyl copy and logo on both faces. Deployed in quantity across the business park to direct traffic to buildings/units. Non-illuminated.",
+    "rationale": "A fabricated aluminum tube frame on 4x4 posts gives a rigid, weatherable, double-sided panel that serves both directions of travel and ties to the same color/copy system as the monuments.",
+    "tradeoffs": "Fabricated tube-frame panels are more robust and refined than flat sheet on simple posts, at higher fabrication cost; non-illuminated keeps them simple and permit-friendly for daytime-read directionals.",
+    "when_to_use": "Multi-building campuses and business parks needing consistent, durable, double-sided directional/address signs at drives and decision points.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "fabricated_panel_frame",
+      "function": "double-sided directional panel",
+      "construction": "fabricated aluminum tube frame from 1x1x1/8in and 2x2x1/8in aluminum tube, with applied vinyl copy and logo on both faces",
+      "face": {
+        "decoration": "applied vinyl copy and logo (both sides)",
+        "decoration_refs": [
+          "V1"
+        ]
+      },
+      "finish_refs": [
+        "P1"
+      ],
+      "fabrication_method": "fabricated_aluminum_tube_frame_panel",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "support_posts",
+      "function": "structural support and ground mounting",
+      "construction": "4x4x3/16in aluminum tube posts with aluminum tube accents; set in ground footings",
+      "finish_refs": [
+        "P1"
+      ],
+      "mounted_to": "ground_footing",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "AL1",
+      "category": "structure_skin",
+      "product": "fabricated aluminum tube frame and 4x4 aluminum tube posts",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews satin (park color system; color-matched)",
+      "finish": "satin",
+      "manufacturer_normalized_id": "mfr-matthews"
+    },
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "3M high-performance vinyl, applied copy and logo",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    }
+  ],
+  "dimensions": {
+    "post_in": "4 x 4",
+    "unit_system": "imperial",
+    "provenance": "drawing",
+    "note": "Panel sizes per the 3A elevation pages; carried at medium confidence from extraction. Permit set carries full material/finish codes (R3: high completeness)."
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "directional_destinations",
+        "treatment": "destination/address lines, both faces"
+      },
+      {
+        "slot": "logo",
+        "treatment": "park/owner logo"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "rules_observations": [
+      "Double-sided faces serve both travel directions; mirrored layout keeps the directional read correct each way.",
+      "Shared color and logo system with the monuments holds park-wide family consistency."
+    ],
+    "craft_observations": [
+      "Fabricated tube-frame panel on 4x4 posts with tube accents reads as a designed sign rather than a flat panel bolted to two pipes."
+    ],
+    "aesthetic_notes": [
+      {
+        "note": "Clean, utilitarian directional language consistent with the industrial-park identity.",
+        "provenance": "opinion"
+      }
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high on construction and finish codes (permit completeness); medium on exact panel dimensions",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment",
+      "program_model"
+    ],
+    "notes": "All enum fields conform (no proposed_new_term); types 3A.1-3A.7 collapsed to one design record + program_model.",
+    "reconciliation_v1_2": "fabrication_family post_and_panel -> panel (closed set; mounting already ground_mounted_footing)."
+  }
+}

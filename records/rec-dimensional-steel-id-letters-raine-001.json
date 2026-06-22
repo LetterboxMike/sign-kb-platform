@@ -1,0 +1,95 @@
+{
+  "record_id": "rec-dimensional-steel-id-letters-raine-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data and actual copy excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "financial_investment_office"
+  },
+  "classification": {
+    "sign_category": "plaque",
+    "sub_type": "flat_cut_steel_dimensional_id_mirror_blackened",
+    "primary_function": "room_and_area_identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "dimensional_letter_or_logo",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "flat-cut steel dimensional copy (room IDs, numbers, names) across types",
+    "variant_axis": "message"
+  },
+  "knowledge": {
+    "plain_language_summary": "Flat-cut steel dimensional ID letters and numbers with mirror-polished faces and blackened returns (or the inverse), on a shim backer inset from the perimeter, with color-matched photopolymer raster braille tags. VHB-mounted; on glass a first-surface black vinyl backer hides the tape.",
+    "rationale": "Mirror-polished/blackened steel inversions give a premium finance-office finish; raster braille tags keep the dimensional copy ADA-compliant.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "steel_copy",
+      "construction": "1/4in (and 1/16in/1/8in) flat-cut steel, mirror-polished faces + blackened returns (or inverse), 1/16in shim backer inset 1/8in; returns sanded/polished smooth",
+      "material_refs": [
+        "ST1"
+      ],
+      "fabrication_method": "flat_cut_steel_polished_blackened",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "braille_and_mount",
+      "construction": "photopolymer raster braille tags color-matched; full-coverage VHB foam (glass = first-surface black vinyl backer); 0-80x1in aluminum studs in silicone-filled holes for wall",
+      "mounted_to": "wall_or_glass",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "ST1",
+      "category": "letter_face",
+      "product": "flat-cut steel, mirror-polished / blackened",
+      "application": "material_finish",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing",
+    "note": "conference ID elevation 60x30in"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "room_id_or_name"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "compliance": {
+    "ada": {
+      "tactile": true,
+      "braille": true
+    },
+    "notes": "Grade-II photopolymer raster braille; tactile dimensional copy."
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Mirror-polished vs blackened face/return inversions per sign type; returns polished after cutting = high finish discipline."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

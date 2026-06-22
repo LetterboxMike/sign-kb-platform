@@ -1,0 +1,152 @@
+{
+  "record_id": "rec-monument-northside-stone-composite-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data excluded. Multifamily residential vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "multifamily_residential"
+  },
+  "classification": {
+    "sign_category": "monument",
+    "sub_type": "routed_face_cabinet_with_stone_base_and_composite_wings",
+    "primary_function": "community_identification",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "illumination_scope": "core cabinet only; wings and stone base unlit",
+    "sides": 2,
+    "fabrication_family": "composite_structure",
+    "mounting": "ground_mounted_footing",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A double-sided community monument: a routed-and-backed illuminated aluminum ID cabinet flanked by composite-clad accent wings, set on a dry-stacked stone base, with brushed flat-cut address numerals. Logo and copy are routed from the faces and backed with translucent white polycarbonate for an even night glow.",
+    "rationale": "Routed-and-backed faces give a cheaper even halo of light through the copy than push-thru; the stone base, Trex wood-look wings and brushed-aluminum address build curb appeal for a residential audience.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "core_id_cabinet",
+      "construction": "fabricated aluminum frame + .090in skin + 0.125in faces, logo/copy routed and backed with translucent white polycarbonate, internal white LEDs, painted P1",
+      "finish_refs": [
+        "P1"
+      ],
+      "illumination": "internal white LED",
+      "fabrication_method": "routed_and_backed_face",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "accent_wings",
+      "construction": "fabricated aluminum core + top cap painted P2, sheathed with 1x3in Trex Transcend Havana Gold composite cladding",
+      "material_buildup": [
+        "aluminum core",
+        "Trex composite cladding"
+      ],
+      "material_refs": [
+        "CL1"
+      ],
+      "finish_refs": [
+        "P2"
+      ],
+      "provenance": "drawing"
+    },
+    {
+      "ref": "03",
+      "component": "stone_base",
+      "construction": "EPS foam block core with dry-stacked stone veneer, field-installed",
+      "material_buildup": [
+        "EPS foam core",
+        "dry-stacked stone veneer"
+      ],
+      "material_refs": [
+        "ST1"
+      ],
+      "provenance": "drawing"
+    },
+    {
+      "ref": "04",
+      "component": "address_numerals",
+      "construction": "flat-cut 1/4in aluminum, horizontal brushed grain, flush-mounted to base",
+      "material_refs": [
+        "AN1"
+      ],
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "CL1",
+      "category": "cladding",
+      "product": "Trex Transcend Havana Gold composite board",
+      "application": "material_finish",
+      "manufacturer_normalized_id": "mfr-trex"
+    },
+    {
+      "ref": "ST1",
+      "category": "cladding_stone",
+      "product": "dry-stacked stone veneer over EPS foam core",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "AN1",
+      "category": "letter_face",
+      "product": "1/4in brushed aluminum flat-cut numerals",
+      "application": "material_finish",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews MP11611 Coal Blue matte",
+      "manufacturer_normalized_id": "mfr-matthews"
+    },
+    {
+      "ref": "P2",
+      "category": "paint",
+      "product": "Matthews MP07102 Deep River matte",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "overall_width_in": 204,
+    "unit_system": "imperial",
+    "provenance": "drawing",
+    "note": "approx 17ft wide"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "primary_wordmark"
+      },
+      {
+        "slot": "established_or_address_numerals"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Strong residential material mix: matte coal-blue cabinet, brushed-aluminum address, Trex wood-look wings, real stone base.",
+      "Routed-and-backed faces are a simpler, cheaper lit-copy method than push-thru."
+    ],
+    "aesthetic_notes": [
+      {
+        "note": "Reads as a built landscape element, warmer than a bare cabinet on a pole.",
+        "provenance": "opinion"
+      }
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

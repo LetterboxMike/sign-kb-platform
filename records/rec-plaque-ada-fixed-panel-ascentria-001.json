@@ -1,0 +1,97 @@
+{
+  "record_id": "rec-plaque-ada-fixed-panel-ascentria-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "nonprofit_office_interior"
+  },
+  "classification": {
+    "sign_category": "plaque",
+    "sub_type": "fixed_ada_tactile_p99_panel",
+    "primary_function": "ada_restroom_and_exit_stair_id",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "restroom + exit-stair IDs; 2 color options",
+    "variant_axis": "message_x_color"
+  },
+  "knowledge": {
+    "plain_language_summary": "A fixed ADA tactile panel: 1/4in P99 non-glare acrylic, 2nd-surface painted, direct-print logo, 1/32in Rowmark tactile + clear Raster braille; glass-backer variant.",
+    "rationale": "Fixed-copy counterpart to the paper-insert panel.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "fixed_panel",
+      "construction": "1/4in P99 non-glare acrylic CNC-cut, 2nd-surface painted, direct-print logo, Rowmark tactile + clear Raster braille, VHB; glass-backer variant",
+      "material_refs": [
+        "M1",
+        "M2"
+      ],
+      "fabrication_method": "tactile_acrylic",
+      "mounted_to": "wall_or_glass",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "M1",
+      "category": "substrate",
+      "product": "1/4in P99 non-glare acrylic",
+      "manufacturer_normalized_id": "mfr-p99-acrylic"
+    },
+    {
+      "ref": "M2",
+      "category": "substrate",
+      "product": "1/32in Rowmark ADA-Alternative",
+      "manufacturer_normalized_id": "mfr-rowmark"
+    }
+  ],
+  "dimensions": {
+    "restroom_in": "6x8",
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "restroom_or_exit_id"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "compliance": {
+    "ada": {
+      "tactile": true,
+      "braille": true,
+      "pictogram": true,
+      "non_glare": true
+    },
+    "notes": "Restroom message schedule; ADA tactile/braille."
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Fixed-copy ADA panel matching the insert-panel family."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

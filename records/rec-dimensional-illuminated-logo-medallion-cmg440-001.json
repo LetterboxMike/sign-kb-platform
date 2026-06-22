@@ -1,0 +1,74 @@
+{
+  "record_id": "rec-dimensional-illuminated-logo-medallion-cmg440-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "retail_quick_service"
+  },
+  "classification": {
+    "sign_category": "plaque",
+    "sub_type": "illuminated_logo_medallion_disk",
+    "primary_function": "logo_identification",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 1,
+    "fabrication_family": "dimensional_letter_or_logo",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "48in illuminated logo medallions (qty 2) replacing existing disks.",
+    "rationale": "Lit medallion swap in the reskin program.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "medallion",
+      "construction": "48in dia illuminated logo medallion, internal LED",
+      "illumination": "internal LED",
+      "fabrication_method": "illuminated_disk",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "face_substrate",
+      "product": "acrylic face",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "diameter_in": 48,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "logo"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Lit medallion swap."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "medium-high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

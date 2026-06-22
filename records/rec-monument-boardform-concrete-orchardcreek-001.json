@@ -1,0 +1,109 @@
+{
+  "record_id": "rec-monument-boardform-concrete-orchardcreek-001",
+  "schema_version": "1.3",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "design_intent"
+  },
+  "context": {
+    "industry_vertical": "residential_community_development"
+  },
+  "classification": {
+    "sign_category": "monument",
+    "sub_type": "board_formed_concrete_planter_monument_with_brushed_letters",
+    "primary_function": "community_identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "composite_structure",
+    "mounting": "ground_mounted_footing",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A board-formed poured-concrete monument/planter box (natural, sealed) clad with board-form concrete veneer, with brushed-finish 2in-deep aluminum letters and a 1/2in flat-cut aluminum logo on spacers.",
+    "rationale": "Board-form texture on both the poured concrete and the veneer, with brushed-aluminum letters reading as solid stainless, gives a quiet permanent community monument.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "concrete_monument",
+      "construction": "board-formed poured concrete monument/planter box, natural color sealed; Creative Mines Cedar Craft Board Form concrete veneer flush-mounted",
+      "material_buildup": [
+        "board-formed concrete",
+        "board-form concrete veneer"
+      ],
+      "material_refs": [
+        "C1",
+        "CL1"
+      ],
+      "mounted_to": "ground_footing",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "letters_logo",
+      "construction": "non-illuminated aluminum letters 2in deep, brushed stainless finish, flush stud-mounted; flat-cut 1/2in aluminum logo on 1in spacers",
+      "material_refs": [
+        "AL1"
+      ],
+      "fabrication_method": "flat_cut_out",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "C1",
+      "category": "structural_concrete_masonry",
+      "product": "board-formed poured concrete",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "CL1",
+      "category": "cladding",
+      "product": "Creative Mines Cedar Craft Board Form concrete veneer",
+      "manufacturer_normalized_id": "mfr-creative-mines"
+    },
+    {
+      "ref": "AL1",
+      "category": "letter_face",
+      "product": "brushed-finish aluminum letters",
+      "application": "material_finish",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews to match PMS (TBD)",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "overall_width_in": 204,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "community_wordmark"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Board-form texture on poured concrete + veneer; brushed-aluminum letters read as solid stainless."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

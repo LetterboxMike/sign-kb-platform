@@ -1,0 +1,115 @@
+{
+  "record_id": "rec-wayfinding-modular-extrusion-insert-system-asi105-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "corporate_campus_office"
+  },
+  "classification": {
+    "sign_category": "wayfinding",
+    "sub_type": "modular_aluminum_extrusion_interior_id_system_swappable_inserts",
+    "primary_function": "interior_identification_and_wayfinding",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "one modular extrusion sized by part-number; copy method varies (ADA-integral tactile / screen-print / laser paper insert / magnetic)",
+    "variant_axis": "size_x_copy_method_x_message"
+  },
+  "knowledge": {
+    "plain_language_summary": "The dominant interior family: a proprietary 'Modular Thin' aluminum extrusion profile sized by part number, holding a painted ABS insert. Copy method varies by code: ADA integral raised tactile + braille for permanent room IDs, screen-printed inserts, laser-printed paper inserts, or a magnetic backer for changeable workstation IDs.",
+    "rationale": "One extrusion system with swappable insert technologies (tactile / printed / paper / magnetic) reproduces a whole campus program at scale while isolating the changeable copy from the permanent ADA portion.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "extrusion_and_insert",
+      "construction": "Modular Thin aluminum extrusion (part numbers 4X4A/2X4A/2X6A/6X8A/3X11VA/14X18) with square-corner aluminum end caps; painted ABS insert seated in extrusion",
+      "material_refs": [
+        "AL1",
+        "INS1"
+      ],
+      "fabrication_method": "modular_extrusion_panel",
+      "mounted_via": "VHB_or_silicone",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "copy_layer",
+      "construction": "per code: integral raised tactile + Grade-2 braille (ADA room IDs); screen-printed insert; laser-printed paper insert behind face; or magnetic backer (changeable workstation ID)",
+      "fabrication_method": "variable_copy_method",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "AL1",
+      "category": "structure_skin",
+      "product": "Modular Thin aluminum extrusion",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "INS1",
+      "category": "substrate",
+      "product": "painted ABS insert",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "mounting_height_in": [
+      60,
+      48
+    ],
+    "unit_system": "imperial",
+    "provenance": "drawing",
+    "note": "panels ~3-18in tall; huge QTY (room IDs 31-670, workstation 1158)"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "room_or_workstation_id"
+      },
+      {
+        "slot": "changeable_insert",
+        "required": false
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "compliance": {
+    "ada": {
+      "tactile": true,
+      "braille": true
+    },
+    "notes": "Permanent room IDs carry integral raised tactile + braille; latch-side mounting; 60in baseline."
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "One extrusion, four copy technologies (ADA-integral / screen / paper / magnetic) is the cost driver and the variant axis.",
+      "Magnetic backer on workstation IDs enables high churn without reprinting panels."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ],
+    "modeling_notes": [
+      "~25 sign-type codes collapsed to one modular-extrusion archetype + message_schedule."
+    ]
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "record_id": "rec-plaque-dimensional-bronze-id-aurelius-001",
+  "schema_version": "1.3",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data and copy excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "corporate_office"
+  },
+  "classification": {
+    "sign_category": "plaque",
+    "sub_type": "flat_cut_bronze_dimensional_id_letters_and_logo",
+    "primary_function": "identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "dimensional_letter_or_logo",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "elevator-jamb numbers + reception logo in brushed bronze",
+    "variant_axis": "location_and_size"
+  },
+  "knowledge": {
+    "plain_language_summary": "Flat-cut light-bronze dimensional numbers/letters in horizontal satin brushed finish, VHB-mounted to elevator jambs and reception walls, with separate dark-bronze braille tags where required.",
+    "rationale": "Brushed-bronze FCO numbers give a premium corporate read; the separate dark-bronze braille tag keeps the dimensional copy ADA-compliant.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "bronze_copy",
+      "construction": "1/16in & 1/4in laser-cut light bronze numbers/letters, horizontal satin brushed, full-coverage VHB; 1/4in acrylic spacer painted to match inset 1/2in (logo)",
+      "material_refs": [
+        "BR1"
+      ],
+      "fabrication_method": "flat_cut_out",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "braille_tag",
+      "construction": "1/32in dark bronze tag with Type-II Raster braille",
+      "material_refs": [
+        "BR2"
+      ],
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "BR1",
+      "category": "letter_face",
+      "product": "light bronze, satin brushed",
+      "application": "material_finish",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "BR2",
+      "category": "face_substrate",
+      "product": "dark bronze braille tag",
+      "application": "material_finish",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "mounting_height_in": 56,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "floor_number_or_logo"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "compliance": {
+    "ada": {
+      "tactile": true,
+      "braille": true
+    },
+    "notes": "Separate Raster braille tag; brushed bronze dimensional copy."
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Brushed-bronze FCO with separate braille tag = premium corporate ADA detail."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

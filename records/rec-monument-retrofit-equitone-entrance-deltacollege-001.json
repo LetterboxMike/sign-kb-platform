@@ -1,0 +1,75 @@
+{
+  "record_id": "rec-monument-retrofit-equitone-entrance-deltacollege-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data and actual copy excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "design_intent"
+  },
+  "context": {
+    "industry_vertical": "education_community_college"
+  },
+  "classification": {
+    "sign_category": "monument",
+    "sub_type": "retrofit_equitone_clad_entrance_with_waterjet_logo",
+    "primary_function": "campus_entrance_identification_retrofit",
+    "illuminated": true,
+    "illumination_method": "external_uplight",
+    "sides": 2,
+    "fabrication_family": "composite_structure",
+    "mounting": "ground_mounted_masonry_columns",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A retrofit of an existing campus entrance sign: new Equitone Lunara textured concrete-tile cladding (peaked for runoff) over the existing structure, with 1/2in and 1/4in waterjet-cut aluminum logo and letters stud-mounted to the existing brick, plus an accent-lighting retrofit.",
+    "rationale": "Re-cladding an existing entrance with Equitone tile and waterjet letters modernizes it without rebuilding; accent lighting gives a night read.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "equitone_recladding",
+      "construction": "Equitone Lunara textured concrete-tile cladding over existing structure (peaked), 1/2in waterjet aluminum logo + 1/4in waterjet aluminum letters stud-mounted to existing brick, accent lighting retrofit (~10A)",
+      "material_refs": [
+        "EQ1"
+      ],
+      "mounted_to": "existing_entrance_structure",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "EQ1",
+      "category": "cladding",
+      "product": "Equitone Lunara textured fiber-cement tile",
+      "manufacturer_normalized_id": "mfr-equitone"
+    }
+  ],
+  "dimensions": {
+    "area_sqft_per_side": 21.75,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "campus_entrance_id"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Equitone tile re-clad + waterjet letters modernizes an existing entrance without rebuild."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

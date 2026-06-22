@@ -1,0 +1,81 @@
+{
+  "record_id": "rec-awning-illuminated-soffit-zos-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data and actual copy excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "restaurant_qsr_burger"
+  },
+  "classification": {
+    "sign_category": "awning",
+    "sub_type": "fabric_awning_with_illuminated_soffit",
+    "primary_function": "storefront_canopy_and_branding",
+    "illuminated": true,
+    "illumination_method": "external_downlight",
+    "illumination_detail": "under-soffit LED downlighting; translucent white mesh soffit",
+    "sides": 1,
+    "fabrication_family": "composite_structure",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "awning at front/rear/alley elevations",
+    "variant_axis": "length_and_location"
+  },
+  "knowledge": {
+    "plain_language_summary": "A fabric awning on a fabricated aluminum tube frame with 'Z' clips, water-repellant awning fabric stapled to the frame, and an illuminated translucent white mesh soffit underside.",
+    "rationale": "An illuminated-soffit awning provides both weather canopy and a lit branded element; the fabric-on-frame assembly is a composite structure.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "awning",
+      "construction": "fabricated 1in aluminum square-tube frame with Z clips, Tempotest T416 Pacific Blue 9.7oz awning fabric stapled to frame, translucent white mesh soffit with under-soffit LED downlighting",
+      "material_refs": [
+        "FAB1"
+      ],
+      "illumination": "under-soffit LED",
+      "fabrication_method": "fabric_awning_lit_soffit",
+      "mounted_to": "building_wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "FAB1",
+      "category": "awning_fabric",
+      "product": "Tempotest T416 Pacific Blue 9.7oz awning fabric",
+      "manufacturer_normalized_id": "mfr-tempotest",
+      "note": "awning fabric; no material_category enum value."
+    }
+  ],
+  "dimensions": {
+    "front_ft": 25,
+    "rear_ft": 10,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Illuminated mesh soffit makes the awning a lit branded element, not just a canopy."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ],
+    "reconciliation_v1_3": "Applied v1.3 enums (blade/awning/halo_illuminated/exposed_lamp/external_downlight + concrete/awning_fabric/digital_display_module/adhesive categories)."
+  }
+}

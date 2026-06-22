@@ -1,0 +1,94 @@
+{
+  "record_id": "rec-feature-moss-wall-illuminated-nexthealth-interior-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "design_intent"
+  },
+  "context": {
+    "industry_vertical": "healthcare_wellness_clinic"
+  },
+  "classification": {
+    "sign_category": "feature_wall",
+    "sub_type": "moss_wall",
+    "primary_function": "brand_feature_wall",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 1,
+    "fabrication_family": "composite_structure",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "moss wall small/large size variants",
+    "variant_axis": "size"
+  },
+  "knowledge": {
+    "plain_language_summary": "An illuminated moss feature wall: a welded 1x3.5in aluminum-tube frame with 1/8in back forming a 'moss well', plus a separate 3in-deep internally illuminated sign panel (Aristech 7328 acrylic face, 3M blockout vinyl, 12V 5500K LED, Velcro-removable face) set into the frame; well infilled with 2-tone lichen/moss.",
+    "rationale": "A biophilic moss + backlit panel feature; Velcro-removable face for service.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "frame_and_panel",
+      "construction": "welded 1x3.5in aluminum tube frame + 1/8in back (welds ground/filled); 3in extruded illuminated panel, 3/16in Aristech 7328 acrylic + 3M 3635-222 blockout vinyl reverse-weeded, 12V 5500K LED, 3/4in black Velcro face retention; moss-well infill TBD",
+      "material_refs": [
+        "A1",
+        "V1"
+      ],
+      "illumination": "internal LED",
+      "fabrication_method": "moss_feature_wall",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "letter_face",
+      "product": "3/16in Aristech 7328 translucent white acrylic",
+      "manufacturer_normalized_id": "mfr-aristech"
+    },
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "3M 3635-222 blockout black",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    }
+  ],
+  "dimensions": {
+    "sizes_in": [
+      "50x74",
+      "74x50"
+    ],
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "brand_logo"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Velcro-removable lit face for service; biophilic moss-well infill."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ],
+    "reconciliation_v1_5": "sign_category -> feature_wall (promoted v1.5); sub_type moss_wall."
+  }
+}

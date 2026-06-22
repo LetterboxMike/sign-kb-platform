@@ -1,0 +1,77 @@
+{
+  "record_id": "rec-dimensional-stainless-bonsai-art-treefarm-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "design_conceptual"
+  },
+  "context": {
+    "industry_vertical": "mixed_use_retail_development"
+  },
+  "classification": {
+    "sign_category": "plaque",
+    "sub_type": "halo_lit_brushed_stainless_dimensional_wall_art",
+    "primary_function": "feature_wall_art_identification",
+    "illuminated": true,
+    "illumination_method": "halo_illuminated",
+    "sides": 1,
+    "fabrication_family": "dimensional_letter_or_logo",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A dimensional bonsai wall-art piece: 1/2in flat-cut stainless with 2in SS returns, random grinder-brushed texture, dark-bronze anodized, weatherproof halo LEDs on the back, pin-mounted on 1/4-20x4in SS studs + standoffs.",
+    "rationale": "Halo-lit textured stainless makes a sculptural brand art feature.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "stainless_art",
+      "construction": "1/2in flat-cut stainless, 2in SS returns, grinder-brushed, dark-bronze anodized, weatherproof halo LED on back, 1/4-20x4in SS studs + standoffs",
+      "material_refs": [
+        "ST1"
+      ],
+      "illumination": "halo LED",
+      "fabrication_method": "halo_dimensional_stainless",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "ST1",
+      "category": "letter_face",
+      "product": "1/2in stainless, grinder-brushed dark-bronze anodized",
+      "application": "material_finish",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "brand_art"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Textured stainless + halo = sculptural brand art."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/room copy excluded; county rehab hospital vertical retained; bilingual program.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "healthcare_county_rehab_hospital"
+  },
+  "record_id": "rec-plaque-evac-map-exit-screenprint-001",
+  "classification": {
+    "sign_category": "plaque",
+    "sub_type": "screen_printed_evacuation_map_and_exit_route_id",
+    "primary_function": "egress_and_evacuation",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "Elevator evacuation maps and exit-route ID panels: screen-printed evac map and tactile/charcoal screen copy on P99 non-glare acrylic.",
+    "rationale": "Egress/code signage in the same non-glare acrylic family as the room IDs, Title 24 program.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "evac_panel",
+      "construction": "P99 non-glare acrylic, screen-printed evac map + tactile/charcoal screen copy",
+      "material_refs": [
+        "M1"
+      ],
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "M1",
+      "category": "substrate",
+      "product": "P99 non-glare acrylic",
+      "manufacturer_normalized_id": "mfr-p99-acrylic"
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "evacuation_map_and_exit_route"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "compliance": {
+    "ada": {
+      "non_glare": true,
+      "tactile": true
+    },
+    "title_24": true,
+    "notes": "Egress/code signage, Title 24 family."
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "rules_observations": [
+      "Egress maps in the same non-glare acrylic family hold program consistency."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

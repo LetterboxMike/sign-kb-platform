@@ -1,0 +1,93 @@
+{
+  "record_id": "rec-dimensional-logo-acrylic-aluminum-ahri-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data and actual copy excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "corporate_trade_association_office"
+  },
+  "classification": {
+    "sign_category": "plaque",
+    "sub_type": "flat_cut_dimensional_logo_acrylic_or_anodized_aluminum",
+    "primary_function": "reception_lobby_identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "dimensional_letter_or_logo",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "same dimensional logo + tagline in two substrate families across locations",
+    "variant_axis": "substrate_acrylic_vs_anodized_aluminum_location"
+  },
+  "knowledge": {
+    "plain_language_summary": "A flush stud-mounted dimensional reception logo and tagline: flat-cut 1/2in acrylic painted to brand colors at reception, or flat-cut 1/2in anodized-black brushed aluminum at the elevator lobby.",
+    "rationale": "Two substrate families (painted acrylic vs anodized aluminum) carry the same logo across locations; flush stud + VHB + silicone is the clean mount.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "logo_and_tagline",
+      "construction": "flat-cut 1/2in acrylic logo painted PMS 300C/144C + 1/4in acrylic tagline PMS 424C; variant flat-cut 1/2in aluminum vertical brushed grain anodized black, masked/painted PMS 424C",
+      "material_refs": [
+        "A1",
+        "AL1"
+      ],
+      "fabrication_method": "flat_cut_out",
+      "mounted_via": "#6 all-thread + VHB + silicone",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "letter_face",
+      "product": "1/2in & 1/4in acrylic, painted",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "AL1",
+      "category": "letter_face",
+      "product": "1/2in aluminum, vertical brushed, anodized black",
+      "application": "material_finish",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "logo_in": "56.375x26.125",
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "logo"
+      },
+      {
+        "slot": "tagline"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Two substrate families for one logo across locations is a deliberate variant, not a new type."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

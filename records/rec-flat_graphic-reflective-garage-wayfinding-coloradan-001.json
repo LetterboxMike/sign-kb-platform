@@ -1,0 +1,54 @@
+{
+  "record_id": "rec-flat_graphic-reflective-garage-wayfinding-coloradan-001",
+  "schema_version": "1.4",
+  "record_type": "flat_graphic",
+  "provenance_note": "All client/vendor/human/copy excluded; vertical retained.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "residential_high_rise"
+  },
+  "classification": {
+    "graphic_method": "plotter_cut",
+    "applied_to": "wall",
+    "contour_cut": true
+  },
+  "materials_manifest": [
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "engineering-grade reflective sheeting + cut opaque vinyl copy (3M 680-71 Yellow/680-77 Green/680-75 Blue/680-10 Brown, 7125 copy)",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    },
+    {
+      "ref": "AL1",
+      "category": "substrate",
+      "product": "1/8in aluminum face",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing",
+    "note": "overhead double-sided (cable-hung) + wall/post single-sided; qty N 51, O 9, P 12, T 6"
+  },
+  "messaging_pattern": {
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "One reflective-vinyl-on-aluminum archetype, message/color/mount-driven; overhead variant cable-hung back-to-back."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "medium-high",
+    "inferred_fields": [
+      "design_assessment"
+    ],
+    "plain_language_summary": "Reflective-vinyl-on-aluminum garage wayfinding: overhead double-sided panels hung on stainless cable plus wall/post single-sided directional, EV, regulatory, and penthouse parking panels, color-coded."
+  }
+}

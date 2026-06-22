@@ -1,0 +1,83 @@
+{
+  "record_id": "rec-channel_letter-halo-reverse-pan-treefarm-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "design_conceptual"
+  },
+  "context": {
+    "industry_vertical": "mixed_use_retail_development"
+  },
+  "classification": {
+    "sign_category": "channel_letter",
+    "sub_type": "halo_reverse_pan_channel_letters_primary_id",
+    "primary_function": "primary_identification",
+    "illuminated": true,
+    "illumination_method": "halo_illuminated",
+    "sides": 1,
+    "fabrication_family": "channel_letter",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "primary ID + secondary canopy + tenant wall (shared reverse-pan halo DNA)",
+    "variant_axis": "scale_and_backer"
+  },
+  "knowledge": {
+    "plain_language_summary": "Reverse-pan halo channel letters: 3in deep .063 returns, .090 faces, .150 clear polycarbonate backs, warm-white LEDs, 1.5in stainless standoffs, remote supplies; secondary/tenant variants add Dark Bronze aluminum backer panels on a wireway.",
+    "rationale": "Reverse-pan halo gives a soft premium night glow; backer-panel variants for tenant/canopy contexts.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "halo_letters",
+      "construction": "reverse-pan aluminum channel letters, 3in deep, .063 returns, .090 faces, .150 clear polycarbonate backs, warm-white LED, 1.5in SS standoffs, remote supplies; Matthews MP20046 Frosty Nickel Metallic matte; backer variant 1/4in aluminum MP20303 Dark Bronze on 3x3/3x4 wireway",
+      "finish_refs": [
+        "P1"
+      ],
+      "illumination": "halo LED",
+      "fabrication_method": "reverse_pan_halo",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews MP20046 Frosty Nickel / MP20303 Dark Bronze metallic, matte",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "width_in": 171,
+    "cap_in": 12,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "property_or_tenant_wordmark"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Reverse-pan halo DNA shared across primary/secondary/tenant; backer-panel + wireway variants."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

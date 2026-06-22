@@ -1,0 +1,134 @@
+{
+  "record_id": "rec-monument-aluminum-reskin-existing-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "Multi-sign permit submittal. All client, property-owner, vendor, salesperson, designer, and contact data excluded at extraction. Names, emails, phones, order number, and street addresses stripped. Industrial business-park vertical retained; tenant copy excluded, copy structure retained.",
+  "source": {
+    "doc_type": "permit"
+  },
+  "context": {
+    "industry_vertical": "commercial_real_estate_industrial_business_park"
+  },
+  "classification": {
+    "sign_category": "monument",
+    "sub_type": "fabricated_aluminum_reskin_over_existing_concrete_monument",
+    "primary_function": "primary_and_secondary_property_identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "cabinet",
+    "mounting": "ground_mounted_footing",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "one re-skin technique applied at several sizes/locations across the park (primary monument type 1, secondary monument type 2, and type 3B units); identical construction approach, different size and copy",
+    "variant_axis": "size_location_and_copy"
+  },
+  "knowledge": {
+    "plain_language_summary": "A retrofit that re-skins existing concrete monument signs with a new fabricated aluminum cabinet/face frame, painted dark satin and decorated with applied white vinyl copy and a tenant/owner logo. New aluminum tube-and-angle framing bolts to the existing concrete monument and carries the new face, modernizing the sign without demolishing the masonry. Non-illuminated.",
+    "rationale": "Re-skinning reuses the existing concrete mass and footing, so the park gets a consistent updated identity at lower cost and permitting burden than tearing out and rebuilding each monument.",
+    "tradeoffs": "Re-skinning is economical and fast but is constrained by the existing monument's size and proportions, and depends on sound existing concrete to bolt to.",
+    "when_to_use": "Repositioning or rebranding a property that already has structurally sound concrete monuments worth keeping.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "existing_concrete_monument_host",
+      "function": "reused structural base (existing, not in fabrication scope)",
+      "construction": "existing concrete monument sign; new work bolts to it",
+      "status": "confirmed",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "fabricated_aluminum_face_cabinet",
+      "function": "new face/cabinet re-skinning the existing monument",
+      "construction": "fabricated aluminum face on a frame of 2x2x1/8in aluminum tube, 1-1/2x1-1/2x1/8in and 2x2x1/8in aluminum angle, and 2x2x1/8in aluminum channel; 2x2x1/8in aluminum 'C' channel reveal; heavy-duty extruded aluminum and 2x2x3/16in aluminum tube",
+      "face": {
+        "decoration": "applied vinyl copy and logo",
+        "decoration_refs": [
+          "V1"
+        ]
+      },
+      "finish_refs": [
+        "P1"
+      ],
+      "mounted_via": "aluminum tube bottom-bolted to existing concrete monument",
+      "mounted_to": "existing_concrete_monument_host",
+      "fabrication_method": "fabricated_aluminum_reskin",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "AL1",
+      "category": "structure_skin",
+      "product": "fabricated aluminum face, tube, angle, and channel framing",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews satin, color-matched to Sherwin-Williams SW7069 Iron Ore",
+      "finish": "satin",
+      "manufacturer_normalized_id": "mfr-matthews"
+    },
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "3M high-performance vinyl, applied copy and logo",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing",
+    "note": "Sizes vary by instance (primary larger than secondary); exact cabinet dimensions per the elevation pages, carried at medium confidence from extraction. Permit set carries full material/finish codes (R3: high completeness)."
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "property_name",
+        "treatment": "primary white vinyl wordmark on dark face"
+      },
+      {
+        "slot": "owner_or_tenant_logo",
+        "treatment": "secondary logo lockup"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "rules_observations": [
+      "Single dark face with high-contrast white copy gives one clear daytime read across the park.",
+      "Consistent face color and copy system across primary/secondary/3B units holds family consistency."
+    ],
+    "craft_observations": [
+      "A 'C' channel reveal detail gives the re-skin a shadow line so it reads as a designed cabinet rather than a panel slapped on the old monument.",
+      "Reusing the existing concrete base is a pragmatic, material-honest move when the masonry is sound."
+    ],
+    "aesthetic_notes": [
+      {
+        "note": "Restrained industrial identity (dark face, white type, minimal logo); appropriate to a business park rather than expressive.",
+        "provenance": "opinion"
+      }
+    ]
+  },
+  "open_items": [
+    "Condition/adequacy of existing concrete monuments to receive new bolted framing assumed, not verified on this set"
+  ],
+  "extraction_meta": {
+    "field_confidence": "high on construction, framing, and finish codes (permit completeness); medium on exact per-instance dimensions",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment",
+      "program_model"
+    ],
+    "reconciliation_v1_2": "fabrication_family -> cabinet (dominant construction: fabricated aluminum face/cabinet); reskin specificity in sub_type. Cleared to records/."
+  }
+}

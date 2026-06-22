@@ -1,0 +1,77 @@
+{
+  "record_id": "rec-dimensional-waterjet-stainless-flushcut-rtd-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "public_transit_light_rail"
+  },
+  "classification": {
+    "sign_category": "channel_letter",
+    "sub_type": "flush_cut_stainless_letters_on_masonry",
+    "primary_function": "station_identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "dimensional_letter_or_logo",
+    "mounting": "ground_mounted_masonry_columns",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "Waterjet-cut 1/2in stainless letters, fine horizontal brush, drilled/tapped for 1/4x4in studs in epoxy-filled holes >=3in embed, on 1/2in SS spacers off the masonry.",
+    "rationale": "Flush-cut stainless letters stud-mounted off the masonry give a clean dimensional station ID.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "ss_letters",
+      "construction": "1/2in waterjet stainless letters, fine brush, 1/4x4in studs epoxy-set >=3in, 1/2in SS spacers (2.25in standoff)",
+      "material_refs": [
+        "ST1"
+      ],
+      "fabrication_method": "flush_cut_stainless",
+      "mounted_to": "masonry",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "ST1",
+      "category": "letter_face",
+      "product": "1/2in stainless, fine brush",
+      "application": "material_finish",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "thickness_in": 0.5,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "station_name"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Flush-cut stainless letters, epoxy-set studs, spacer standoff."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

@@ -1,0 +1,211 @@
+{
+  "record_id": "rec-blade-marquee-projecting-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client, vendor, designer, sales-rep, and contact data excluded at extraction. Venue name excluded as PII; performing-arts vertical retained. Copy content excluded; copy structure retained as pattern.",
+  "source": {
+    "doc_type": "design_conceptual"
+  },
+  "context": {
+    "industry_vertical": "performing_arts_theater"
+  },
+  "option_set_id": "optset-blade-marquee-001",
+  "design_status": "proposed_option",
+  "classification": {
+    "sign_category": "blade",
+    "sub_type": "double_sided_projecting_blade_marquee_pushthru_faux_neon_lamp_border",
+    "primary_function": "pedestrian_and_street_venue_identification",
+    "illuminated": true,
+    "illumination_method": "mixed",
+    "illumination_detail": "6500K white LED behind push-thru acrylic letters; amber LED faux-neon flexible tubing in channel letters; E27 medium-base sockets with amber LED lamps as an exposed marquee-bulb border",
+    "sides": 2,
+    "fabrication_family": "blade",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "Option 1 of three for a tall double-sided projecting blade sign in a theater-marquee idiom, mounted perpendicular to the building on square-tube arms so it reads down the sidewalk both ways. This option stacks the venue name as internally lit push-thru acrylic letters over a painted aluminum body, framed by faux-neon channel letters and an exposed amber-bulb border that animates the edge at night.",
+    "rationale": "A projecting blade is the correct device for a storefront theater on a pedestrian street because it is read along the sidewalk rather than head-on; combining push-thru letters, faux neon, and an exposed-lamp border layers three illumination techniques to get the vintage marquee read while using LED sources for service life.",
+    "tradeoffs": "Stacking push-thru, faux neon, and socketed lamp borders gives the richest, most animated marquee of the three options at the cost of the highest fabrication complexity and the most failure points to service.",
+    "when_to_use": "Pedestrian-facing entertainment venues wanting a maximalist, period-correct projecting marquee.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "main_sign_body",
+      "function": "primary blade panel carrying the name and decoration",
+      "construction": "fabricated aluminum frame with aluminum skin, double-sided",
+      "finish": "face painted gold metallic with masked/painted dark blue and a background accent color; sides gold metallic with a center body section in bronze metallic",
+      "finish_refs": [
+        "P1",
+        "P2",
+        "P3",
+        "P4"
+      ],
+      "fabrication_method": "fabricated_aluminum_blade_panel",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "push_thru_letters",
+      "function": "primary internally lit venue name",
+      "construction": "3/4in thick translucent white acrylic push-thru letterforms through the body face",
+      "face": {
+        "material_refs": [
+          "A1"
+        ],
+        "decoration": "translucent vinyl on first surface",
+        "decoration_refs": [
+          "V1"
+        ]
+      },
+      "illumination": "6500K white LEDs, internal",
+      "fabrication_method": "push_thru_acrylic_letters",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "03",
+      "component": "faux_neon_channel_letters",
+      "function": "decorative secondary lettering / accent",
+      "construction": "fabricated aluminum channel letters",
+      "finish": "gold metallic",
+      "finish_refs": [
+        "P1"
+      ],
+      "illumination": "amber LED faux-neon flexible tubing",
+      "fabrication_method": "led_faux_neon_in_open_channel",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "04",
+      "component": "border_channel",
+      "function": "exposed-lamp marquee border framing the blade",
+      "construction": "fabricated aluminum channel",
+      "finish": "dark tartar red",
+      "finish_refs": [
+        "P5"
+      ],
+      "illumination": "E27 medium-base socket inserts with amber LED lamps (exposed marquee bulbs)",
+      "fabrication_method": "exposed_socketed_lamp_border",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "05",
+      "component": "mounting_arms",
+      "function": "project the blade off the wall and carry its load",
+      "construction": "5in x 5in heavy-wall aluminum square tube arms with welded 8in x 12in x 3/4in aluminum mounting plates, thru-bolted to wall",
+      "status": "open",
+      "mounted_to": "building_wall",
+      "install_caution": "wall attachment TBD pending structural engineering review",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "letter_face",
+      "product": "translucent white acrylic push-thru letterforms",
+      "spec": "3/4in thick",
+      "manufacturer_normalized_id": null,
+      "optical_behavior": {
+        "day_unlit": "white letterforms standing proud of the painted body",
+        "night_lit": "even white glow with a dark-red face tint from the first-surface film",
+        "provenance": "inferred"
+      }
+    },
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "3M translucent Dark Red film, first surface",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews MP Fools Gold Metallic",
+      "manufacturer_normalized_id": "mfr-matthews"
+    },
+    {
+      "ref": "P2",
+      "category": "paint",
+      "product": "Matthews MP Dark Colonial Blue",
+      "manufacturer_normalized_id": "mfr-matthews"
+    },
+    {
+      "ref": "P3",
+      "category": "paint",
+      "product": "Matthews Diplomat (background accent)",
+      "manufacturer_normalized_id": "mfr-matthews"
+    },
+    {
+      "ref": "P4",
+      "category": "paint",
+      "product": "Matthews MP Golden Bronze Metallic",
+      "manufacturer_normalized_id": "mfr-matthews"
+    },
+    {
+      "ref": "P5",
+      "category": "paint",
+      "product": "Matthews MP Dark Tartar Red",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "total_sign_area_sqft": 30.5,
+    "mounting_height_ft": 10,
+    "unit_system": "imperial",
+    "provenance": "drawing",
+    "note": "Option 1 area read from drawing; exact blade panel width/height carried at medium confidence from the scaled face view."
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "article_word",
+        "location": "blade_top",
+        "treatment": "small horizontal word above the stack"
+      },
+      {
+        "slot": "venue_name",
+        "location": "blade_body",
+        "treatment": "vertically stacked push-thru letters, one per row"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "rules_observations": [
+      "Vertical stack plus projecting mount is correct for a pedestrian street: the name reads along the sidewalk, not only head-on.",
+      "Single dominant element (the stacked name) with the bulb border and faux neon as subordinate framing keeps one primary read."
+    ],
+    "craft_observations": [
+      "Three illumination techniques (push-thru white, faux-neon amber, exposed amber lamps) are layered to build a period marquee look while staying all-LED for service life.",
+      "Gold/blue/red metallic palette with a bronze center band gives a warm vintage-theater read rather than a flat modern cabinet."
+    ],
+    "aesthetic_notes": [
+      {
+        "note": "The maximalist option: exposed-lamp border plus faux neon plus push-thru is the most animated and most nostalgic of the three.",
+        "provenance": "opinion"
+      }
+    ]
+  },
+  "open_items": [
+    "Wall attachment / mounting-arm engineering TBD pending structural review",
+    "One of three competing options; final selection not made on this exploration set"
+  ],
+  "extraction_meta": {
+    "field_confidence": "high on construction, finishes, and illumination; medium on exact panel dimensions",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment.craft_observations",
+      "design_assessment.aesthetic_notes",
+      "structure.rationale",
+      "materials.optical_behavior"
+    ],
+    "reconciliation_v1_2": "Re-modeled per Ruling 2: this was one record with alternatives in extraction_meta; now option 1 of three sibling records sharing option_set_id 'optset-blade-marquee-001', each design_status proposed_option. fabrication_family proposed_new_term -> blade (closed set).",
+    "reconciliation_v1_3": "Applied v1.3 enums (blade/awning/halo_illuminated/exposed_lamp/external_downlight + concrete/awning_fabric/digital_display_module/adhesive categories)."
+  }
+}

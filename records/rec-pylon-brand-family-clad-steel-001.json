@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "From a retail-bank brand sign-standards family. All client/vendor/human/address data excluded; banking vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "retail_banking"
+  },
+  "record_id": "rec-pylon-brand-family-clad-steel-001",
+  "classification": {
+    "sign_category": "pylon",
+    "sub_type": "internally_illuminated_clad_steel_pole_sign",
+    "primary_function": "roadside_branch_identification",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 2,
+    "fabrication_family": "composite_structure",
+    "mounting": "ground_mounted_footing",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "pole sign standard in 4 heights (25/20/15/12ft)",
+    "variant_axis": "height"
+  },
+  "knowledge": {
+    "plain_language_summary": "An internally illuminated double-sided pole sign: routed aluminum face cabinets on a clad steel pole, with pocket-routed clear-acrylic push-through letters and an illuminated logo element. Offered in four heights.",
+    "rationale": "An engineered steel head-and-base column on a concrete foundation carries the cabinet loads at height, making this a composite structure rather than a simple cabinet.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "steel_column_foundation",
+      "construction": "steel pipe head-support column + steel square-tube base support column, in concrete foundation with anchor bolts/base plate",
+      "mounted_to": "ground_footing",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "face_cabinets",
+      "construction": ".125in routed aluminum cladding painted brand silver, 4x2x.125in aluminum tube frames, .063in/.125in aluminum faces, 3/4in clear acrylic pocket-routed push-through letters, UL raceway, SloanLED 6500K",
+      "material_refs": [
+        "V1"
+      ],
+      "illumination": "internal 6500K LED",
+      "fabrication_method": "pocket_routed_push_through",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "3M translucent films (3635-70 white, 3630-125 yellow-gold, 3632-157 Sultan Blue)",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews Rockland Silver / Blue palette",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "height_ft_options": [
+      25,
+      20,
+      15,
+      12
+    ],
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "brand_wordmark"
+      },
+      {
+        "slot": "banking_descriptor"
+      },
+      {
+        "slot": "growth_logo"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Engineered steel column + foundation + aluminum cladding = composite structure.",
+      "Pocket-routed acrylic push-through letters are a clean lit detail at height."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ],
+    "modeling_notes": [
+      "SloanLED illumination captured in structure construction per consumable policy (not a materials_manifest row)."
+    ]
+  }
+}

@@ -1,9 +1,11 @@
-import { notFound } from 'next/navigation';
+import { notFound, redirect } from 'next/navigation';
 import Link from 'next/link';
 import { FileText, ExternalLink } from 'lucide-react';
 import { getRecord } from '@/lib/kb';
 import { sourceInfoFor } from '@/lib/review';
 import { signedViewUrl } from '@/lib/storage';
+import { currentAppUser, roleAtLeast } from '@/lib/auth';
+import { NotAuthorized } from '@/components/not-authorized';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ReviewActions } from '@/components/review-actions';
@@ -11,6 +13,9 @@ import { ReviewActions } from '@/components/review-actions';
 export const dynamic = 'force-dynamic';
 
 export default async function ReviewDetail({ params }: { params: Promise<{ id: string }> }) {
+  const me = await currentAppUser();
+  if (!me) redirect('/login');
+  if (!roleAtLeast(me.role, 'admin')) return <NotAuthorized required="admin" have={me.role} />;
   const { id } = await params;
   const recordId = decodeURIComponent(id);
   const [rec, source] = await Promise.all([getRecord(recordId, { resolveRefs: true }), sourceInfoFor(recordId)]);

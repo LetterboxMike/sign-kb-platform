@@ -1,0 +1,159 @@
+{
+  "record_id": "rec-monument-pushthru-pole-logistics-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/contact/address data excluded. Logistics vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "logistics_last_mile_delivery"
+  },
+  "classification": {
+    "sign_category": "monument",
+    "sub_type": "double_sided_pushthru_cabinet_monument_on_twin_pipes",
+    "primary_function": "primary_brand_identification_plus_directional",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 2,
+    "fabrication_family": "cabinet",
+    "mounting": "ground_mounted_footing",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A double-sided internally lit fabricated aluminum cabinet monument with push-thru acrylic logo and ID panels, saddle-mounted on twin steel pipes in a cast-in-place footing. Carries a primary wordmark, a directional legend, and an address bar.",
+    "rationale": "Push-thru acrylic with welded studs and concealed reveal bars gives a clean seam-free lit face; twin-pipe saddle mount carries a wide cabinet and keeps service access (removable top + end panel).",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "sign_body",
+      "construction": "2x2x3/16in aluminum angle frame + .090in aluminum skin, removable top panel for service, painted brand blue, internal white LEDs, saddle-mounted to two 6in dia Sch40 steel pipes",
+      "finish_refs": [
+        "P1"
+      ],
+      "illumination": "internal white LEDs",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "pushthru_logo_letters",
+      "construction": "3/4in clear acrylic with milled mounting shoulders (1/2in visible lip), 2nd surface 3M white light-diffuser film, 1st surface 3M translucent blue + opaque black, adhered to back of aluminum faces with welded studs",
+      "material_refs": [
+        "A1",
+        "V1",
+        "V2",
+        "V3"
+      ],
+      "fabrication_method": "push_thru_acrylic",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "03",
+      "component": "primary_id_panels",
+      "construction": "2x2x1/8in aluminum tube inner frame, 1/8in aluminum faces, push-thru acrylic, on 2x3x1/8in outer angle frame, painted white",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "04",
+      "component": "end_panels_and_reveals",
+      "construction": ".090in skin end panels (inward one removable for power-supply access) + 1x2in aluminum reveal bars hiding face seams, painted brand gray",
+      "finish_refs": [
+        "P3"
+      ],
+      "provenance": "drawing"
+    },
+    {
+      "ref": "05",
+      "component": "mounting_and_footing",
+      "construction": "1.5x1.5in steel angle saddles, field-welded to 6in dia Sch40 pipes, 3/8x1in through-bolts; cast-in-place concrete footing per engineer",
+      "status": "open",
+      "mounted_to": "ground_footing",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "letter_face",
+      "product": "3/4in clear acrylic push-thru",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "3M white light-diffuser film (2nd surface)",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    },
+    {
+      "ref": "V2",
+      "category": "vinyl",
+      "product": "3M 3630 translucent blue (brand blue)",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    },
+    {
+      "ref": "V3",
+      "category": "vinyl",
+      "product": "3M 3630-22 opaque black blockout",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews brand blue satin (T/M code)",
+      "manufacturer_normalized_id": "mfr-matthews"
+    },
+    {
+      "ref": "P3",
+      "category": "paint",
+      "product": "Matthews brand gray satin (T/M code)",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "overall_width_in": 132,
+    "overall_height_in": 96,
+    "unit_system": "imperial",
+    "provenance": "drawing",
+    "note": "approx; footing ~108x48"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "primary_wordmark"
+      },
+      {
+        "slot": "directional_legend"
+      },
+      {
+        "slot": "address_bar"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "rules_observations": [
+      "Directional legend and address bar subordinate to the primary wordmark; one clear primary read."
+    ],
+    "craft_observations": [
+      "Welded-stud push-thru with concealed reveal bars yields a seam-free lit face.",
+      "Dedicated brand-color paint codes plus removable top and end panel show production discipline."
+    ]
+  },
+  "open_items": [
+    "Footing pending structural engineering; one 3M blue film code marked verify"
+  ],
+  "extraction_meta": {
+    "field_confidence": "high on construction/materials; medium on dims",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

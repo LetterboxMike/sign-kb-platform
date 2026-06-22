@@ -1,0 +1,184 @@
+{
+  "record_id": "rec-blade-marquee-projecting-002",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client, vendor, designer, sales-rep, and contact data excluded at extraction. Venue name excluded as PII; performing-arts vertical retained. Copy content excluded; copy structure retained as pattern.",
+  "source": {
+    "doc_type": "design_conceptual"
+  },
+  "context": {
+    "industry_vertical": "performing_arts_theater"
+  },
+  "option_set_id": "optset-blade-marquee-001",
+  "design_status": "proposed_option",
+  "classification": {
+    "sign_category": "blade",
+    "sub_type": "double_sided_projecting_blade_marquee_applique_open_face_channel",
+    "primary_function": "pedestrian_and_street_venue_identification",
+    "illuminated": true,
+    "illumination_method": "exposed_lamp",
+    "illumination_detail": "open-faced channel letters lit by exposed E27 medium-base sockets with amber LED lamps; applique and body unlit",
+    "sides": 2,
+    "fabrication_family": "blade",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "Option 2 of three for the projecting blade sign. A smaller blade than option 1: a painted aluminum body with a laser-cut acrylic decorative applique and article word, and the venue name set as open-faced channel letters lit by exposed amber lamps. No push-thru letters and no faux neon.",
+    "rationale": "Trading push-thru and faux neon for flush-mounted acrylic applique plus open-faced exposed-lamp letters is simpler and cheaper to build than option 1 while keeping the warm exposed-lamp marquee character.",
+    "tradeoffs": "Less luminous depth than option 1 (no glowing push-thru faces), but fewer failure points and a cleaner daytime read from the dimensional applique.",
+    "when_to_use": "When the marquee character is wanted at a lower fabrication cost and smaller footprint than the maximalist option.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "main_sign_body",
+      "function": "primary blade panel",
+      "construction": "fabricated aluminum frame with aluminum skin, double-sided",
+      "finish": "gold metallic with masked dark tartar red and barolo red background and a wood-ash accent pinstripe border",
+      "finish_refs": [
+        "P1",
+        "P5",
+        "P6",
+        "P7"
+      ],
+      "fabrication_method": "fabricated_aluminum_blade_panel",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "decorative_applique_and_article_word",
+      "function": "dimensional decorative element and small article word",
+      "construction": "laser-cut 1/2in thick acrylic, flush mounted to the body faces",
+      "finish": "gold metallic and wood ash",
+      "finish_refs": [
+        "P1",
+        "P8"
+      ],
+      "material_refs": [
+        "A2"
+      ],
+      "fabrication_method": "laser_cut_acrylic_applique",
+      "mounted_to": "main_sign_body",
+      "illuminated": false,
+      "provenance": "drawing"
+    },
+    {
+      "ref": "03",
+      "component": "open_faced_channel_letters",
+      "function": "primary venue name, exposed-lamp lit",
+      "construction": "fabricated aluminum open-faced channel letters",
+      "finish": "gold metallic",
+      "finish_refs": [
+        "P1"
+      ],
+      "illumination": "E27 medium-base sockets with amber LED lamps (exposed)",
+      "fabrication_method": "open_faced_channel_exposed_lamp",
+      "mounted_to": "main_sign_body",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "04",
+      "component": "mounting_arms",
+      "function": "project the blade off the wall and carry its load",
+      "construction": "5in x 5in heavy-wall aluminum square tube arms with welded 8in x 12in x 3/4in aluminum mounting plates, thru-bolted to wall",
+      "status": "open",
+      "mounted_to": "building_wall",
+      "install_caution": "wall attachment TBD pending structural engineering review",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A2",
+      "category": "letter_face",
+      "product": "laser-cut acrylic applique",
+      "spec": "1/2in thick",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews MP Fools Gold Metallic",
+      "manufacturer_normalized_id": "mfr-matthews"
+    },
+    {
+      "ref": "P5",
+      "category": "paint",
+      "product": "Matthews MP Dark Tartar Red",
+      "manufacturer_normalized_id": "mfr-matthews"
+    },
+    {
+      "ref": "P6",
+      "category": "paint",
+      "product": "Matthews Barolo Red",
+      "manufacturer_normalized_id": "mfr-matthews"
+    },
+    {
+      "ref": "P7",
+      "category": "paint",
+      "product": "Matthews MP Wood Ash (pinstripe border)",
+      "manufacturer_normalized_id": "mfr-matthews"
+    },
+    {
+      "ref": "P8",
+      "category": "paint",
+      "product": "Matthews MP Wood Ash (applique)",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "total_sign_area_sqft": 21,
+    "mounting_height_ft": 10,
+    "unit_system": "imperial",
+    "provenance": "drawing",
+    "note": "Smaller than option 1; exact panel dimensions medium confidence from scaled face view."
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "article_word",
+        "location": "blade_top",
+        "treatment": "laser-cut acrylic applique word"
+      },
+      {
+        "slot": "venue_name",
+        "location": "blade_body",
+        "treatment": "open-faced exposed-lamp channel letters"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "rules_observations": [
+      "Single dominant venue name with a subordinate decorative applique keeps one primary read."
+    ],
+    "craft_observations": [
+      "Flush-mounted laser-cut acrylic applique gives daytime dimension; open-faced exposed-lamp letters carry the marquee character at night with the simplest possible lit construction.",
+      "Two-tone gold/red palette with a wood-ash pinstripe reads as a restrained version of the marquee idiom."
+    ],
+    "aesthetic_notes": [
+      {
+        "note": "The middle option: marquee character with less hardware than option 1, more dimension than a flat sign.",
+        "provenance": "opinion"
+      }
+    ]
+  },
+  "open_items": [
+    "Wall attachment / mounting-arm engineering TBD pending structural review",
+    "One of three competing options; final selection not made on this exploration set"
+  ],
+  "extraction_meta": {
+    "field_confidence": "high on construction and finishes; medium on dimensions",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment",
+      "structure.rationale"
+    ],
+    "reconciliation_v1_2": "Option 2 of three (Ruling 2), option_set_id 'optset-blade-marquee-001', design_status proposed_option.",
+    "reconciliation_v1_3": "Applied v1.3 enums (blade/awning/halo_illuminated/exposed_lamp/external_downlight + concrete/awning_fabric/digital_display_module/adhesive categories)."
+  }
+}

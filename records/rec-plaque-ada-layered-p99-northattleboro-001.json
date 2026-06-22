@@ -1,0 +1,107 @@
+{
+  "record_id": "rec-plaque-ada-layered-p99-northattleboro-001",
+  "schema_version": "1.3",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "civic_nonprofit_community_services"
+  },
+  "classification": {
+    "sign_category": "plaque",
+    "sub_type": "layered_p99_nonglare_ada_room_id_with_insert_variant",
+    "primary_function": "ada_identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "one layered-acrylic ADA system across room/restroom/stair/elevator + insert-window subtype",
+    "variant_axis": "functional_type"
+  },
+  "knowledge": {
+    "plain_language_summary": "A layered ADA system: 1/16in P99 non-glare acrylic 2nd-surface painted over a 1/4in painted acrylic, with 1/32in white Rowmark ADA-Alternative tactile, clear Raster braille embedded in the lens, VHB; glass-mount variant adds a 3M dark-gray backer; an A2 subtype has a CNC-milled insert pocket for changeable copy.",
+    "rationale": "A stacked non-glare/painted-acrylic build with embedded Raster braille is the compliant civic standard; wall and glass mounting plus an insert subtype cover all conditions.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "layered_ada_panel",
+      "construction": "1/16in P99 non-glare acrylic 2nd-surface MP satin + 1/4in acrylic painted MP satin, 1/32in white Rowmark ADA-Alt tactile, clear Raster braille in lens, VHB; glass variant adds 3M dark gray backer; A2 adds 1/16in CNC-milled insert pocket",
+      "material_refs": [
+        "M1",
+        "M2",
+        "BR1"
+      ],
+      "fabrication_method": "layered_tactile_plus_insert",
+      "mounted_to": "wall_or_glass",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "M1",
+      "category": "substrate",
+      "product": "1/16in P99 non-glare acrylic",
+      "manufacturer_normalized_id": "mfr-p99-acrylic"
+    },
+    {
+      "ref": "M2",
+      "category": "substrate",
+      "product": "1/32in white Rowmark ADA-Alternative",
+      "manufacturer_normalized_id": "mfr-rowmark"
+    },
+    {
+      "ref": "BR1",
+      "category": "coating",
+      "product": "clear Raster braille",
+      "manufacturer_normalized_id": "mfr-raster-braille"
+    }
+  ],
+  "dimensions": {
+    "typ_width_in": 6,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "room_or_facility_id"
+      },
+      {
+        "slot": "changeable_insert",
+        "required": false
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "compliance": {
+    "ada": {
+      "tactile": true,
+      "braille": true,
+      "non_glare": true
+    },
+    "notes": "Grade-2 Raster braille; non-glare lens; wall + glass mount."
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Stacked non-glare/painted-acrylic build with embedded Raster braille; insert subtype for changeable copy."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

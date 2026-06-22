@@ -1,0 +1,50 @@
+{
+  "record_id": "rec-flat_graphic-architectural-supergraphics-chs-001",
+  "schema_version": "1.2",
+  "record_type": "flat_graphic",
+  "provenance_note": "All client/vendor/human/copy excluded; high-school education vertical retained.",
+  "source": {
+    "doc_type": "design_conceptual"
+  },
+  "context": {
+    "industry_vertical": "education_high_school"
+  },
+  "classification": {
+    "graphic_method": "digital_print",
+    "applied_to": "wall",
+    "contour_cut": false,
+    "sub_type": "supergraphic"
+  },
+  "materials_manifest": [
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Dunn-Edwards palette (Tuscan Sun DE5341, Riviera DE5753, Untamed Orange DEA110, etc.)",
+      "manufacturer_normalized_id": "mfr-dunn-edwards"
+    }
+  ],
+  "dimensions": {
+    "largest_wall_field_ft": "30x20",
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Large architectural supergraphics across multiple buildings; brief-stage palette + type studies only, fabrication method not yet specified."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "low",
+    "inferred_fields": [
+      "design_assessment"
+    ],
+    "plain_language_summary": "Large-scale interior architectural supergraphics across a high-school campus; conceptual brief (palette + type studies), method TBD.",
+    "reconciliation_v1_3": "Applied v1.3 enums (blade/awning/halo_illuminated/exposed_lamp/external_downlight + concrete/awning_fabric/digital_display_module/adhesive categories).",
+    "reconciliation_v1_5": "Applied supergraphic modeled as flat_graphic; sub_type supergraphic. graphic_method defaulted to digital_print (conceptual brief did not specify painted vs printed; R3 method-TBD, set to the common production method)."
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "record_id": "rec-channel_letter-facelit-zos-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data and actual copy excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "restaurant_qsr_burger"
+  },
+  "classification": {
+    "sign_category": "channel_letter",
+    "sub_type": "face_lit_channel_letters_trim_cap",
+    "primary_function": "storefront_identification",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 1,
+    "fabrication_family": "channel_letter",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "Face-lit channel letters: 5in deep returns with 1in factory-finished white trim cap and 3/16in translucent white acrylic faces, remote power, flush-mounted, paired with the logo cabinet.",
+    "rationale": "Standard face-lit channel letters with remote supplies complete the storefront set.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "channel_letters",
+      "construction": "5in deep returns, 1in white trim cap, 3/16in translucent white acrylic faces, 6500K LED, remote PSU, flush mount",
+      "illumination": "internal 6500K LED",
+      "fabrication_method": "face_lit_channel",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "letter_face",
+      "product": "3/16in translucent white acrylic",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "brand_wordmark"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Standard face-lit channel letters; remote supplies vs the cabinet's internal PSU."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

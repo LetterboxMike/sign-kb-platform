@@ -1,0 +1,99 @@
+{
+  "record_id": "rec-channel_letter-halo-reverse-pan-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data excluded. Multifamily/mixed-use vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "design_intent"
+  },
+  "context": {
+    "industry_vertical": "residential_multifamily_mixed_use"
+  },
+  "classification": {
+    "sign_category": "channel_letter",
+    "sub_type": "halo_illuminated_reverse_pan_letters_on_dual_raceways",
+    "primary_function": "building_identification",
+    "illuminated": true,
+    "illumination_method": "halo_illuminated",
+    "illumination_detail": "halo-only (reverse-pan letters back-lit through clear polycarbonate backs; reflective-white interiors); no face lighting",
+    "sides": 1,
+    "fabrication_family": "channel_letter",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A long building-ID wordmark in 5in-deep reverse-pan aluminum letters that glow as a halo against the wall, mounted on two fabricated raceways with through-wall power.",
+    "rationale": "Reverse-pan halo gives a soft architectural night read appropriate to a residential building, and dual raceways carry a long wordmark with concealed wiring and service access.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "reverse_pan_letters",
+      "construction": "5in deep reverse-pan letters, 0.080in aluminum faces/returns fully welded, 0.150in clear polycarbonate backs, reflective-white interiors",
+      "finish_refs": [
+        "P1"
+      ],
+      "illumination": "halo, 5000K white LED",
+      "fabrication_method": "reverse_pan_halo",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "raceways_and_backer",
+      "construction": "two fabricated 4x12in aluminum raceways with top service door, on 1/8in aluminum backer panels, plus 2x2x3/16in aluminum angle backer full length behind brick, 1/2in allthread through-wall",
+      "finish_refs": [
+        "P3"
+      ],
+      "mounted_to": "building_wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews MP20190 Duranodic 313 metallic matte",
+      "manufacturer_normalized_id": "mfr-matthews"
+    },
+    {
+      "ref": "P3",
+      "category": "paint",
+      "product": "Matthews 41342SP Brushed Aluminum metallic",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "overall_width_in": 247,
+    "unit_system": "imperial",
+    "provenance": "drawing",
+    "note": "33ft span, ~47.9 sqft"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "building_wordmark"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Reflective-white letter interiors specified to maximize even halo.",
+      "Full-length angle backer distributes load behind the brick over a long span."
+    ]
+  },
+  "open_items": [
+    "P2 raceway color to match wall (verify)"
+  ],
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ],
+    "reconciliation_v1_3": "Applied v1.3 enums (blade/awning/halo_illuminated/exposed_lamp/external_downlight + concrete/awning_fabric/digital_display_module/adhesive categories)."
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "record_id": "rec-digital_display-campus-emc-deltacollege-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data and actual copy excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "design_intent"
+  },
+  "context": {
+    "industry_vertical": "education_community_college"
+  },
+  "option_set_id": "optset-deltacollege-emc-001",
+  "design_status": "proposed_option",
+  "classification": {
+    "sign_category": "digital_display",
+    "sub_type": "campus_emc_in_signcomp_cabinet_on_masonry",
+    "primary_function": "campus_electronic_message_center",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 1,
+    "fabrication_family": "digital_display_assembly",
+    "mounting": "ground_mounted_masonry_columns",
+    "digital_integration": true
+  },
+  "knowledge": {
+    "plain_language_summary": "A campus electronic message center: a full-color EMC in a SignComp Architectural Series 12 hinge-body cabinet with 6in quarter-round end posts on a limestone-cap/red-brick base. Priced as reuse-existing-EMC vs new 6-8mm EMC (two options).",
+    "rationale": "An EMC carries dynamic campus messaging; the price options (reuse vs new display) are competing approaches in the same housing.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "signcomp_cabinet_base",
+      "construction": "SignComp Arch Series 12 hinge-body cabinet + 6in quarter-round end posts painted Dark Green, limestone cap/red-brick base",
+      "component_ref": "comp-signcomp-series12",
+      "mounted_to": "ground_footing",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "emc_display",
+      "construction": "reuse existing EMC hardware OR new 6-8mm full-color EMC (Daktronics/Watchfire/Cirrus suggested), ~20A@240V/side",
+      "status": "open",
+      "illumination": "self-emissive LED display",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "dynamic_campus_message"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "rules_observations": [
+      "EMC in the campus cabinet/masonry vocabulary keeps the dynamic sign on-system."
+    ]
+  },
+  "open_items": [
+    "Option: reuse existing EMC vs new full-color EMC (price option)"
+  ],
+  "extraction_meta": {
+    "field_confidence": "medium-high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ],
+    "modeling_notes": [
+      "reuse-vs-new-EMC modeled as an option_set on one record (price option, same housing)."
+    ]
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "record_id": "rec-plaque-regulatory-bilingual-ascentria-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "nonprofit_office_interior"
+  },
+  "classification": {
+    "sign_category": "plaque",
+    "sub_type": "direct_print_bilingual_regulatory_behavioral_panel",
+    "primary_function": "regulatory_and_behavioral_notice",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "cleanliness + child-supervision behavioral signs (bilingual)",
+    "variant_axis": "message"
+  },
+  "knowledge": {
+    "plain_language_summary": "Acrylic panels, 2nd-surface painted, decorated with direct-to-surface digitally printed bilingual (EN/ES) regulatory/behavioral copy and graphics; non-tactile.",
+    "rationale": "Direct-print bilingual behavioral notices for a community-services office.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "regulatory_panel",
+      "construction": "acrylic panel, 2nd-surface painted, direct-to-surface digital print copy + graphics, VHB",
+      "material_refs": [
+        "M1"
+      ],
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "M1",
+      "category": "substrate",
+      "product": "acrylic panel",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "in": "12x18",
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "behavioral_notice"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Direct-print bilingual behavioral notices; non-ADA."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

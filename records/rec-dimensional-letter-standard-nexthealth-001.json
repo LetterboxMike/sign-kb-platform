@@ -1,0 +1,80 @@
+{
+  "record_id": "rec-dimensional-letter-standard-nexthealth-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data and actual copy excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "design_intent"
+  },
+  "context": {
+    "industry_vertical": "healthcare_wellness_franchise"
+  },
+  "classification": {
+    "sign_category": "channel_letter",
+    "sub_type": "non_illuminated_flat_cut_dimensional_letters_standard",
+    "primary_function": "brand_identification_non_illuminated",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "dimensional_letter_or_logo",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "dimensional letter standard, painted/brushed, own size matrix",
+    "variant_axis": "finish_and_size"
+  },
+  "knowledge": {
+    "plain_language_summary": "Non-illuminated 1/2in-thick aluminum flat-cut-out letterforms in Iron Ore matte or brushed, stud-mounted with 1/2in spacers; the non-lit counterpart to the channel-letter standard.",
+    "rationale": "A non-lit dimensional standard for applications that prohibit illumination.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "dimensional_letters",
+      "construction": "1/2in aluminum FCO letterforms, MP Iron Ore matte / brushed, stud-mounted with 1/2in spacers",
+      "finish_refs": [
+        "P1"
+      ],
+      "fabrication_method": "flat_cut_out",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews Iron Ore matte / Brushed Aluminum",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "brand_wordmark"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Non-lit dimensional counterpart to the channel-letter standard."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

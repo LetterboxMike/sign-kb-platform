@@ -1,0 +1,78 @@
+{
+  "record_id": "rec-flat_graphic-full-coverage-wall-mural-001",
+  "schema_version": "1.2",
+  "record_type": "flat_graphic",
+  "provenance_note": "All client, vendor, designer, and contact data excluded at extraction. K-12 school athletics vertical retained; slogan/mascot copy excluded, copy structure retained.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "education_k12_school_athletics"
+  },
+  "classification": {
+    "graphic_method": "digital_print",
+    "applied_to": "wall",
+    "contour_cut": false
+  },
+  "materials_manifest": [
+    {
+      "ref": "G1",
+      "category": "graphic",
+      "product": "digitally printed full-coverage mural on 3M heat-applied textured-surface wall film",
+      "spec": "full-bleed coverage; textured-surface film heat-conformed to masonry wall",
+      "application": "digital_print",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    },
+    {
+      "ref": "G2",
+      "category": "vinyl",
+      "product": "matching 3M overlaminate",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    }
+  ],
+  "dimensions": {
+    "overall_width_ft": 100,
+    "overall_height_ft": 9,
+    "unit_system": "imperial",
+    "provenance": "drawing",
+    "note": "Single continuous wall mural; tiled/seamed across panels in production."
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "primary_spirit_slogan",
+        "treatment": "oversized dimensional-look wordmark across the wall"
+      },
+      {
+        "slot": "mascot_motif",
+        "treatment": "repeating background pattern + figural accents"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "rules_observations": [
+      "A single dominant oversized wordmark holds one primary read along a long corridor/gym wall at distance."
+    ],
+    "craft_observations": [
+      "Full-coverage textured-film mural turns an entire block wall into the brand surface; the dimensional-look rendering fakes depth without fabrication.",
+      "Heat-conformed textured film keeps the print married to the wall texture across a 100ft run."
+    ],
+    "aesthetic_notes": [
+      {
+        "note": "Immersive spirit-wall approach typical of athletic facilities; impact comes from scale and a tight purple/black palette rather than detail.",
+        "provenance": "opinion"
+      }
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high on method, film, and overall size",
+    "inferred_fields": [
+      "design_assessment"
+    ],
+    "notes": "Distinct from the contour-cut wall graphics: full-coverage mural (contour_cut false), same 3M textured wall film family."
+  }
+}

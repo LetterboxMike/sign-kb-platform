@@ -1,0 +1,84 @@
+{
+  "record_id": "rec-plaque-pvc-logo-standoff-barre3-001",
+  "schema_version": "1.3",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data and copy excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "fitness_boutique_studio"
+  },
+  "classification": {
+    "sign_category": "plaque",
+    "sub_type": "pvc_logo_and_acrylic_panel_interior",
+    "primary_function": "interior_brand_identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "dimensional_letter_or_logo",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "Interior brand graphics: 1/2in PVC logo in white acrylic-urethane enamel on brushed-nickel standoffs, and an opaque white acrylic panel with vinyl copy matched to a Roland print.",
+    "rationale": "PVC logo on standoffs and a vinyl-on-acrylic panel are cost-effective interior brand pieces.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "pvc_logo",
+      "construction": "1/2in PVC logo, white acrylic-urethane enamel satin, 1/2in brushed-nickel standoffs",
+      "mounted_via": "standoff",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "acrylic_panel",
+      "construction": "1/8in opaque white acrylic panel, vinyl copy matched to Roland PR 44-I, painted Pantone Cool Grey 7C, VHB",
+      "material_refs": [
+        "V1"
+      ],
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "vinyl matched to Roland PR 44-I print",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-roland"
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "logo"
+      },
+      {
+        "slot": "copy"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "PVC logo on standoffs + vinyl-on-acrylic panel; restrained boutique interior."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "record_id": "rec-monument-entrance-wing-id-masonry-deltacollege-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data and actual copy excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "design_intent"
+  },
+  "context": {
+    "industry_vertical": "education_community_college"
+  },
+  "classification": {
+    "sign_category": "monument",
+    "sub_type": "illuminated_signcomp_entrance_wing_id_on_masonry",
+    "primary_function": "building_entrance_identification",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 1,
+    "fabrication_family": "cabinet",
+    "mounting": "ground_mounted_masonry_columns",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "entrance/wing ID using the same SignComp cabinet + masonry base, smaller",
+    "variant_axis": "layout"
+  },
+  "knowledge": {
+    "plain_language_summary": "A smaller illuminated building entrance/wing ID using the same SignComp Series 7 cabinet system and limestone-cap/red-brick base as the vehicular guides, with mask-and-spray logo.",
+    "rationale": "Re-using the campus sign vocabulary at building scale holds family consistency.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "signcomp_cabinet_on_base",
+      "construction": "SignComp Series 7 cabinet (4ft-3in) on limestone-cap/red-brick base, internal white LED, mask-and-spray logo",
+      "component_ref": "comp-signcomp-series7",
+      "material_buildup": [
+        "concrete footing",
+        "red-brick base",
+        "limestone cap"
+      ],
+      "illumination": "internal white LED",
+      "mounted_to": "ground_footing",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews MP Dark Green / Silver Cup Metallic",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "cabinet_ft": 4.25,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "entrance_or_wing_id"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Same SignComp + masonry vocabulary at building scale for family consistency."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

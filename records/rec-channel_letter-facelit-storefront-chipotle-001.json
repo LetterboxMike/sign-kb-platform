@@ -1,0 +1,96 @@
+{
+  "record_id": "rec-channel_letter-facelit-storefront-chipotle-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "restaurant_fast_casual"
+  },
+  "classification": {
+    "sign_category": "channel_letter",
+    "sub_type": "facelit_channel_letters_with_logo_and_tenant_panels",
+    "primary_function": "storefront_identification",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 1,
+    "fabrication_family": "channel_letter",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "wall channel letters (qty 3) + tenant panels (qty 2) + pick-up blade",
+    "variant_axis": "element"
+  },
+  "knowledge": {
+    "plain_language_summary": "A storefront ID package: face-lit channel letters and channel logo (A-3 spec), tenant panel inserts, and a projecting 'PICK UP' blade.",
+    "rationale": "Standard fast-casual storefront ID set.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "channel_letters",
+      "construction": "A-3 face-lit channel letters + channel logo medallion, internal LED, vinyl on faces",
+      "illumination": "internal LED",
+      "fabrication_method": "face_lit_channel",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "tenant_panels_blade",
+      "construction": "tenant panel inserts; projecting 'PICK UP' blade",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "letter_face",
+      "product": "acrylic faces",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "P-prefix brand paint",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "wordmark"
+      },
+      {
+        "slot": "logo"
+      },
+      {
+        "slot": "pickup_blade"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Channel letters + logo + tenant panels + pick-up blade storefront set."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "medium-high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

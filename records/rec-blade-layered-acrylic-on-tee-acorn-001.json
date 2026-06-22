@@ -1,0 +1,92 @@
+{
+  "record_id": "rec-blade-layered-acrylic-on-tee-acorn-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "design_intent"
+  },
+  "context": {
+    "industry_vertical": "education_higher_ed"
+  },
+  "classification": {
+    "sign_category": "blade",
+    "sub_type": "flag_mounted_layered_acrylic_on_aluminum_tee",
+    "primary_function": "corridor_directional_id",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 2,
+    "fabrication_family": "blade",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "flag blade on 2in aluminum tee; stem 7/10/18in",
+    "variant_axis": "tee_length"
+  },
+  "knowledge": {
+    "plain_language_summary": "A double-sided projecting blade: 2in extruded aluminum tee (flush mechanical fasteners) with acrylic panel filler + Chemetal Satin Silver backer/arrow laminated both faces, charcoal/orange palette.",
+    "rationale": "Same layered-acrylic-on-tee flag construction as the broader program.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "flag_blade",
+      "construction": "2in W x 2in stem aluminum tee, 0.188in acrylic filler + Chemetal Satin Silver backer/arrow both faces, 0.125in acrylic face routed/vinyl, orange-hatched tee accent",
+      "material_refs": [
+        "A1",
+        "CL1"
+      ],
+      "fabrication_method": "flag_on_tee",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "face_substrate",
+      "product": "acrylic",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "CL1",
+      "category": "cladding",
+      "product": "Chemetal Satin Silver laminate",
+      "manufacturer_normalized_id": "mfr-chemetal"
+    }
+  ],
+  "dimensions": {
+    "tee_stem_in": [
+      7,
+      10,
+      18
+    ],
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "directional_or_id"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Double-sided flag, flush mechanical fastening; 3 tee lengths by message."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "record_id": "rec-channel_letter-illuminated-acrylic-feature-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data excluded; equipment-dealer vertical retained.",
+  "source": {
+    "doc_type": "design_intent"
+  },
+  "context": {
+    "industry_vertical": "heavy_equipment_dealership_office"
+  },
+  "classification": {
+    "sign_category": "channel_letter",
+    "sub_type": "internally_lit_built_up_acrylic_feature_letters",
+    "primary_function": "interior_brand_feature_wall",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 1,
+    "fabrication_family": "dimensional_letter_or_logo",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "Internally lit dimensional brand letters: 1.5in-thick translucent white acrylic letterforms with a CNC-milled interior void for LEDs and a removable, tapped acrylic back, stud-mounted off the wall on a dedicated circuit.",
+    "rationale": "Built-up acrylic with an internal void gives a soft glowing feature letter; the removable tapped back makes the LEDs serviceable.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "acrylic_letters",
+      "construction": "laser-cut 1.5in 2447 translucent white acrylic, CNC-milled interior void, 12V 3000K warm-white LEDs, 3/16in removable acrylic back drilled/tapped for studs",
+      "material_refs": [
+        "A1"
+      ],
+      "illumination": "internal 3000K LED",
+      "fabrication_method": "built_up_acrylic_internal_void",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "mount",
+      "construction": "10-24 aluminum all-thread studs set in silicone-filled wall holes; Class II 12V supply, J-box w/ disconnect, dedicated 120V/20A circuit",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "letter_face",
+      "product": "1.5in 2447 translucent white cast acrylic",
+      "manufacturer_normalized_id": "mfr-acrylite"
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "brand_feature_copy"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "compliance": {
+    "notes": "Electrical only (Class II LV, disconnect, dedicated circuit); no ADA tactile (branding)."
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Removable tapped acrylic back = serviceable LEDs, a notable maintainability detail."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

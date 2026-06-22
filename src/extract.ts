@@ -126,8 +126,72 @@ function softFlags(record: any): string[] {
   return flags;
 }
 
+/** Derive a content-type from the filename so the model receives the right kind of input.
+ *  Browsers sometimes drop file.type, but the extension is reliable for our accepted formats. */
+function contentTypeFor(filename: string): string {
+  const ext = filename.toLowerCase().split('.').pop() ?? '';
+  const map: Record<string, string> = {
+    pdf: 'application/pdf',
+    png: 'image/png',
+    jpg: 'image/jpeg',
+    jpeg: 'image/jpeg',
+    webp: 'image/webp',
+    tif: 'image/tiff',
+    tiff: 'image/tiff',
+  };
+  return map[ext] ?? 'application/pdf';
+}
+
+// How long to wait on the OpenAI call before aborting with a clear error (default 280s, just under
+// the 300s function budget). A large/complex drawing that exceeds this fails loudly instead of
+// being silently killed by the platform and blind-retried.
+const EXTRACTION_TIMEOUT_MS = Number(process.env.EXTRACTION_TIMEOUT_MS ?? '280000');
+
+/** Upload a drawing to the OpenAI Files API and return its file_id. PDFs are referenced by
+ *  file_id (not inlined as base64) so a large drawing never inflates the JSON request body past
+ *  the API limit — the historical cause of large uploads "uploading fine but never ingesting". */
+async function uploadDrawing(bytes: Buffer, filename: string, contentType: string): Promise<string> {
+  const form = new FormData();
+  form.append('purpose', 'user_data');
+  // Copy into a standalone Uint8Array so the Blob part types cleanly under both Node and DOM libs.
+  form.append('file', new Blob([new Uint8Array(bytes)], { type: contentType }), filename);
+  const res = await fetch('https://api.openai.com/v1/files', {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${requireOpenAIKey()}` },
+    body: form,
+  });
+  if (!res.ok) throw new Error(`OpenAI file upload ${res.status}: ${await res.text()}`);
+  const json = (await res.json()) as { id?: string };
+  if (!json.id) throw new Error('OpenAI file upload returned no id');
+  return json.id;
+}
+
+/** Best-effort cleanup so uploaded drawings don't accumulate in the OpenAI account. */
+async function deleteDrawing(fileId: string): Promise<void> {
+  try {
+    await fetch(`https://api.openai.com/v1/files/${fileId}`, {
+      method: 'DELETE',
+      headers: { Authorization: `Bearer ${requireOpenAIKey()}` },
+    });
+  } catch {
+    /* non-fatal */
+  }
+}
+
 export async function extractFromPdf(pdf: Buffer, filename: string): Promise<ExtractionResult> {
-  const dataUrl = `data:application/pdf;base64,${pdf.toString('base64')}`;
+  const contentType = contentTypeFor(filename);
+  const isImage = contentType.startsWith('image/');
+
+  // Images are small enough to inline; PDFs go through the Files API (file_id reference).
+  let fileId: string | null = null;
+  let filePart: any;
+  if (isImage) {
+    filePart = { type: 'image_url', image_url: { url: `data:${contentType};base64,${pdf.toString('base64')}` } };
+  } else {
+    fileId = await uploadDrawing(pdf, filename, contentType);
+    filePart = { type: 'file', file: { file_id: fileId } };
+  }
+
   const body = {
     model: config.extractionModel,
     messages: [
@@ -136,28 +200,43 @@ export async function extractFromPdf(pdf: Buffer, filename: string): Promise<Ext
         role: 'user',
         content: [
           { type: 'text', text: `Extract knowledge-base records from this sign drawing ("${filename}"). Output JSON only.` },
-          { type: 'file', file: { filename, file_data: dataUrl } },
+          filePart,
         ],
       },
     ],
     response_format: { type: 'json_object' },
   };
 
-  const res = await fetch('https://api.openai.com/v1/chat/completions', {
-    method: 'POST',
-    headers: { Authorization: `Bearer ${requireOpenAIKey()}`, 'Content-Type': 'application/json' },
-    body: JSON.stringify(body),
-  });
-  if (!res.ok) throw new Error(`OpenAI extraction ${res.status}: ${await res.text()}`);
-  const json = (await res.json()) as { choices?: { message?: { content?: string } }[] };
-  const { records, extraction_notes } = parseJson(json.choices?.[0]?.message?.content ?? '{}');
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), EXTRACTION_TIMEOUT_MS);
+  try {
+    const res = await fetch('https://api.openai.com/v1/chat/completions', {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${requireOpenAIKey()}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+      signal: controller.signal,
+    });
+    if (!res.ok) throw new Error(`OpenAI extraction ${res.status}: ${(await res.text()).slice(0, 1000)}`);
+    const json = (await res.json()) as { choices?: { message?: { content?: string } }[] };
+    const { records, extraction_notes } = parseJson(json.choices?.[0]?.message?.content ?? '{}');
 
-  const candidates: ExtractionCandidate[] = records.map((record) => {
-    const { valid, errors } = validateRecord(record);
-    return { record, valid, errors, flags: softFlags(record) };
-  });
+    const candidates: ExtractionCandidate[] = records.map((record) => {
+      const { valid, errors } = validateRecord(record);
+      return { record, valid, errors, flags: softFlags(record) };
+    });
 
-  return { candidates, extraction_notes, model: config.extractionModel };
+    return { candidates, extraction_notes, model: config.extractionModel };
+  } catch (e) {
+    if (e instanceof Error && e.name === 'AbortError') {
+      throw new Error(
+        `extraction timed out after ${Math.round(EXTRACTION_TIMEOUT_MS / 1000)}s — the drawing is likely too large or complex. Try uploading a single sheet.`,
+      );
+    }
+    throw e;
+  } finally {
+    clearTimeout(timer);
+    if (fileId) await deleteDrawing(fileId);
+  }
 }
 
 export async function extractFromFile(filePath: string): Promise<ExtractionResult> {

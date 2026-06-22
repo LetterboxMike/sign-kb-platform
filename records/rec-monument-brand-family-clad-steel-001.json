@@ -1,0 +1,114 @@
+{
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "From a retail-bank brand sign-standards family. All client/vendor/human/address data excluded; banking vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "retail_banking"
+  },
+  "record_id": "rec-monument-brand-family-clad-steel-001",
+  "classification": {
+    "sign_category": "monument",
+    "sub_type": "low_profile_illuminated_monument_on_steel_base_column",
+    "primary_function": "branch_identification",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 2,
+    "fabrication_family": "composite_structure",
+    "mounting": "ground_mounted_footing",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "monument standard in 4 heights (8/6/5/4ft)",
+    "variant_axis": "height"
+  },
+  "knowledge": {
+    "plain_language_summary": "The low-profile monument counterpart to the pylon: an aluminum cabinet with routed/clad faces on a steel base column set in concrete, with pocket-routed clear-acrylic letters. Four heights.",
+    "rationale": "Shares the pylon's construction vocabulary at lower height; steel base column in concrete carries the load.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "steel_base_column_foundation",
+      "construction": "steel square-tube base support column set in concrete foundation",
+      "mounted_to": "ground_footing",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "cabinet",
+      "construction": "aluminum cabinet with .125in routed/clad faces, 3/4in clear acrylic pocket-routed letters, Spray-Lat painted interiors, SloanLED 6500K",
+      "material_refs": [
+        "V1"
+      ],
+      "finish_refs": [
+        "SL1"
+      ],
+      "illumination": "internal 6500K LED",
+      "fabrication_method": "pocket_routed_push_through",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "3M translucent films (3635-70 white, 3630-125 yellow-gold, 3632-157 Sultan Blue)",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    },
+    {
+      "ref": "SL1",
+      "category": "coating",
+      "product": "Spray-Lat reflective interior coating",
+      "application": "sprayed",
+      "manufacturer_normalized_id": "mfr-spraylat"
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews Rockland palette",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "height_ft_options": [
+      8,
+      6,
+      5,
+      4
+    ],
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "brand_wordmark"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Same clad-steel construction as the pylon, lower profile.",
+      "Spray-Lat reflective interiors brighten the lit faces."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ],
+    "modeling_notes": [
+      "SloanLED illumination captured in structure construction per consumable policy (not a materials_manifest row)."
+    ]
+  }
+}

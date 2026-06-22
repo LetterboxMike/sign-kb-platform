@@ -1,0 +1,77 @@
+{
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/copy data excluded; health/wellness clinic vertical retained.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "healthcare_wellness_clinic"
+  },
+  "record_id": "rec-dimensional-letter-brushed-aluminum-nexthealth-001",
+  "classification": {
+    "sign_category": "channel_letter",
+    "sub_type": "flat_cut_brushed_aluminum_dimensional_letters",
+    "primary_function": "front_desk_identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "dimensional_letter_or_logo",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "Flat-cut 1/2in plate-aluminum dimensional letters, horizontal brushed grain with matte anodized clear finish, flush stud-mounted with VHB and silicone for the front-desk and wall logos.",
+    "rationale": "Brushed-aluminum FCO letters give a clean clinical dimensional read without illumination.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "aluminum_letters",
+      "construction": "laser-cut 1/2in plate aluminum, horizontal brushed grain, matte anodized clear, flush stud + VHB + silicone",
+      "material_refs": [
+        "AL1"
+      ],
+      "fabrication_method": "flat_cut_out",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "AL1",
+      "category": "letter_face",
+      "product": "1/2in brushed aluminum, matte anodized",
+      "application": "material_finish",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "letter_run_in": 68,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "brand_wordmark"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Brushed-aluminum FCO is a clean clinical dimensional treatment."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "record_id": "rec-plaque-ada-acrylic-panel-bny-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "financial_services_office"
+  },
+  "classification": {
+    "sign_category": "plaque",
+    "sub_type": "ada_tactile_p95_acrylic_panel",
+    "primary_function": "ada_room_identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "one ADA acrylic panel across team-room/conference/restroom/exit-stair/coat-closet; per-floor message_schedule",
+    "variant_axis": "room_type_x_floor"
+  },
+  "knowledge": {
+    "plain_language_summary": "The core ADA panel: 1/4in P95 acrylic, frosted fascia + polished returns, second-surface painted, with 1/32in raised tactile copy and clear Grade-2 braille; a white vinyl backer for glass mounting; an overhead variant uses 1/2in painted acrylic with blind-stud mount.",
+    "rationale": "One P95 acrylic construction absorbs seven sign types via message schedule; adhesive vs mechanical mount is the only real option split.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "ada_panel",
+      "construction": "1/4in P95 acrylic, frosted fascia/polished returns, 2nd-surface painted (Benjamin Moore OC-64; tactile Matthews Metallics MP18213), 1/32in raised tactile + clear Grade-2 braille, white vinyl backer to glass; VHB or blind-stud+silicone",
+      "material_refs": [
+        "M1"
+      ],
+      "finish_refs": [
+        "P1",
+        "P2"
+      ],
+      "fabrication_method": "tactile_acrylic",
+      "mounted_to": "wall_or_glass",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "M1",
+      "category": "substrate",
+      "product": "1/4in P95 acrylic",
+      "manufacturer_normalized_id": "mfr-p95-acrylic"
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Benjamin Moore OC-64 Pure White",
+      "manufacturer_normalized_id": "mfr-benjamin-moore"
+    },
+    {
+      "ref": "P2",
+      "category": "paint",
+      "product": "Matthews Metallics MP18213 (tactile copy)",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "baseline_mount_in": 60,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "room_id"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "compliance": {
+    "ada": {
+      "tactile": true,
+      "braille": true,
+      "non_glare": true,
+      "mounting_height_in": 60
+    },
+    "notes": "Raised 1/32in tactile + Grade-2 braille; 60in baseline; exit-stair adds re-entry code copy."
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "One P95 construction absorbs 7 sign types via message schedule; adhesive vs blind-stud option set."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

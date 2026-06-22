@@ -1,0 +1,47 @@
+{
+  "record_id": "rec-flat_graphic-plottercut-wall-cabinet-vinyl-dimdata-001",
+  "schema_version": "1.3",
+  "record_type": "flat_graphic",
+  "provenance_note": "All client/vendor/human/copy excluded; vertical retained.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "corporate_office_it"
+  },
+  "classification": {
+    "graphic_method": "plotter_cut",
+    "applied_to": "wall",
+    "contour_cut": true
+  },
+  "materials_manifest": [
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "3M 7125-196 Apple Green / 7125-41 Dark Gray / 7125-12 Black high-performance opaque vinyl",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Strict 3M opaque palette reused across walls and cabinetry; small direct-print acrylic markers complete the set."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "medium-high",
+    "inferred_fields": [
+      "design_assessment"
+    ],
+    "plain_language_summary": "Plotter-cut opaque vinyl wall/cabinetry graphics plus direct-print acrylic recycle/trash/push-pull markers, in a unified 3M palette."
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "record_id": "rec-supergraphic-panel-hatbox-bell-001",
+  "schema_version": "1.3",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data and copy excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "automotive_truck_dealership"
+  },
+  "classification": {
+    "sign_category": "plaque",
+    "sub_type": "supergraphic",
+    "primary_function": "brand_supergraphic",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A wall-mounted supergraphic on a fabricated 'hatbox' aluminum frame: 1/8in aluminum face with a matching 2in aluminum angle wall frame painted satin black, decorated with digitally printed vinyl + matte UV overlaminate.",
+    "rationale": "A printed graphic on a fabricated frame reads as a dimensional supergraphic rather than a flat decal; it is more than a flat_graphic but is not an ID cabinet.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "hatbox_panel",
+      "construction": "3in deep fabricated aluminum angle frame, 1/8in aluminum face + 2in aluminum angle wall frame, painted Matthews satin black, digitally printed vinyl + matte UV overlaminate",
+      "material_refs": [
+        "G1"
+      ],
+      "finish_refs": [
+        "P1"
+      ],
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "G1",
+      "category": "graphic",
+      "product": "digital print vinyl + matte UV overlaminate",
+      "application": "digital_print",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews satin black",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing",
+    "note": "option_set Op1/Op2 placement"
+  },
+  "messaging_pattern": {
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Printed graphic on a fabricated hatbox frame reads dimensional, not a flat decal."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ],
+    "reconciliation_v1_5": "sign_category proposed_new_term -> plaque; framed supergraphic modeled as fabricated_sign panel; sub_type supergraphic."
+  }
+}

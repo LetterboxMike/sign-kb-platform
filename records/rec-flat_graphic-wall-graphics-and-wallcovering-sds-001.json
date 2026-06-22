@@ -1,0 +1,55 @@
+{
+  "record_id": "rec-flat_graphic-wall-graphics-and-wallcovering-sds-001",
+  "schema_version": "1.4",
+  "record_type": "flat_graphic",
+  "provenance_note": "All client/vendor/human/copy excluded; vertical retained.",
+  "source": {
+    "doc_type": "design_intent"
+  },
+  "context": {
+    "industry_vertical": "education_higher_ed"
+  },
+  "classification": {
+    "graphic_method": "digital_print",
+    "applied_to": "wall",
+    "contour_cut": false
+  },
+  "materials_manifest": [
+    {
+      "ref": "G1",
+      "category": "graphic",
+      "product": "digitally printed opaque-white PS vinyl wall graphics (incl. curved wall)",
+      "application": "digital_print",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    },
+    {
+      "ref": "WC1",
+      "category": "graphic",
+      "product": "DesignTex DNA PVC-free Type II wallcovering, Guardian matte laminate",
+      "application": "digital_print",
+      "manufacturer_normalized_id": "mfr-designtex"
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing",
+    "note": "feature/welcome walls; curved-wall conformable vinyl"
+  },
+  "messaging_pattern": {
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "PVC-free / low-VOC sustainability spec; conformable vinyl for curved walls; wallcovering wraps corners."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "medium-high",
+    "inferred_fields": [
+      "design_assessment"
+    ],
+    "plain_language_summary": "Digitally printed wall graphics (including conformable curved-wall vinyl) plus DesignTex DNA PVC-free wallcovering on welcome/feature walls, with owner-supplied storytelling content."
+  }
+}

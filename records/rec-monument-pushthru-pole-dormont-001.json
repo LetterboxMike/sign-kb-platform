@@ -1,0 +1,111 @@
+{
+  "record_id": "rec-monument-pushthru-pole-dormont-001",
+  "schema_version": "1.3",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "retail_appliance"
+  },
+  "classification": {
+    "sign_category": "monument",
+    "sub_type": "double_sided_pushthru_cabinet_on_steel_pole",
+    "primary_function": "primary_brand_identification",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 2,
+    "fabrication_family": "cabinet",
+    "mounting": "ground_mounted_footing",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A double-sided internally lit 12in-deep extruded aluminum push-through cabinet monument with a layered aluminum-angle/skin stepped-accent body, saddle-mounted to a 5x5 HSS steel pole in a direct-burial concrete footing.",
+    "rationale": "Push-through logo with a diffuser film gives an even halo; a single welded-saddle steel pole carries the cabinet on an engineered footing.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "id_cabinet",
+      "construction": "double-sided 12in deep extruded aluminum, 2in retainers, 1/8in faces; logo 3/4in clear acrylic push-thru (1/2in returns) with vinyl + 60% white diffuser film 2nd-surface; saddle-mounted to pole via 2x2x1/4in aluminum angle saddles",
+      "material_refs": [
+        "A1",
+        "V1",
+        "V2"
+      ],
+      "finish_refs": [
+        "P1"
+      ],
+      "illumination": "internal white LED",
+      "fabrication_method": "push_thru_acrylic",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "body_and_pole",
+      "construction": "1.5x1.5x1/8in aluminum angle frame + 0.090in skin (stepped accent); 5x5x1/4in HSS steel pole; 3500psi direct-burial concrete footing",
+      "mounted_to": "ground_footing",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "letter_face",
+      "product": "3/4in clear acrylic push-thru",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "3M 3630-20 White + 3630-157 Sultan Blue translucent",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    },
+    {
+      "ref": "V2",
+      "category": "vinyl",
+      "product": "3M 7125-10 White opaque",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews MP07026 Stormy Sky / MP32071 White Wonder / MP02110 Cook Islands Blue",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "cabinet_width_in": 42,
+    "overall_height_in": 126,
+    "cabinet_depth_in": 12,
+    "total_sign_area_sqft": 18.5,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "brand_logo"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Diffuser film behind push-through for even halo; engineered single-pole footing."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

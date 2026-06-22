@@ -1,0 +1,84 @@
+{
+  "record_id": "rec-directional-egress-map-panel-d1-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "financial_investment_office"
+  },
+  "classification": {
+    "sign_category": "directional",
+    "sub_type": "direct_print_egress_map_panel",
+    "primary_function": "egress_map",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "passenger egress map + freight egress map",
+    "variant_axis": "elevator_type"
+  },
+  "knowledge": {
+    "plain_language_summary": "Direct-print egress map panels: a 1/4in aluminum panel with holes cut for elevator call buttons (brushed black lacquer, copy/map printed after lacquer, stud+VHB) and a 1/4in P95 acrylic + shim freight version.",
+    "rationale": "Direct-print maps on the program substrates cover code egress.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "egress_panel",
+      "construction": "1/4in aluminum (call-button holes, brushed black lacquer, direct-print, #6x3in studs+VHB+silicone) or 1/4in P95 acrylic + 1/16in shim (sign-white, direct-print black, VHB)",
+      "material_refs": [
+        "AL1"
+      ],
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "AL1",
+      "category": "face_substrate",
+      "product": "1/4in aluminum / P95 acrylic",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "passenger_in": "19.5x30",
+    "freight_in": "12x12",
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "egress_map"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "compliance": {
+    "notes": "Code egress maps."
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Call-button cutouts in the passenger map panel; direct-print after lacquer."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

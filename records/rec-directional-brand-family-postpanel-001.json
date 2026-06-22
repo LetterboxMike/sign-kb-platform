@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "From a retail-bank brand sign-standards family. All client/vendor/human/address data excluded; banking vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "retail_banking"
+  },
+  "record_id": "rec-directional-brand-family-postpanel-001",
+  "classification": {
+    "sign_category": "directional",
+    "sub_type": "non_illuminated_post_mounted_directional_optional_message_panels",
+    "primary_function": "site_directional",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "ground_mounted_footing",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "directional standard in size series with optional message panels",
+    "variant_axis": "height_and_message_panels"
+  },
+  "knowledge": {
+    "plain_language_summary": "Non-illuminated post-mounted directional signs, single or double face, with optional modular message panels, in a size series.",
+    "rationale": "Modular optional-message panels let one directional design serve many on-site needs.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "post_and_panel",
+      "construction": "aluminum sign faces/frames, .063in white translucent acrylic option, post-mounted",
+      "mounted_to": "ground_footing",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews Rockland palette",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "height_ft_options": [
+      6,
+      5,
+      4,
+      3,
+      2
+    ],
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "directional_destinations"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "rules_observations": [
+      "Modular message panels support information sequencing at decision points."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "record_id": "rec-plaque-garage-door-numbers-silos-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "multifamily_residential"
+  },
+  "classification": {
+    "sign_category": "plaque",
+    "sub_type": "non_tactile_dimensional_garage_door_numerals",
+    "primary_function": "garage_door_identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "garage door number signs, qty 42, 2 color options",
+    "variant_axis": "number_and_color"
+  },
+  "knowledge": {
+    "plain_language_summary": "Garage door number signs: acrylic panels with masked, 2nd-surface painted 10in numerals (non-tactile, vehicular).",
+    "rationale": "Large non-ADA numerals for garage-door identification.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "number_panel",
+      "construction": "acrylic panel, masked + 2nd-surface painted 10in numerals (SW Pure White/Iron Ore)",
+      "material_refs": [
+        "M1"
+      ],
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "M1",
+      "category": "substrate",
+      "product": "acrylic panel",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "numeral_h_in": 10,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "garage_door_number"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Large non-tactile vehicular numerals."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "medium-high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

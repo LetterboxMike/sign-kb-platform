@@ -1,0 +1,98 @@
+{
+  "record_id": "rec-plaque-ada-photopolymer-acorn-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "design_intent"
+  },
+  "context": {
+    "industry_vertical": "education_higher_ed"
+  },
+  "classification": {
+    "sign_category": "plaque",
+    "sub_type": "ada_photopolymer_room_id_with_offset_backer",
+    "primary_function": "ada_room_identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "photopolymer ADA restroom/room/stair/equipment IDs; some add Apco Notifier paper insert",
+    "variant_axis": "room_type"
+  },
+  "knowledge": {
+    "plain_language_summary": "ADA photopolymer panels (charcoal face, orange returns) with raised silkscreen-white text and integral Grade-2 braille over a back-painted acrylic backer + clear offset; some add an Apco Notifier orange paper-insert holder.",
+    "rationale": "Integral photopolymer tactile+braille on the program's layered-acrylic backer; Notifier for changeable occupant lists.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "photopolymer_panel",
+      "construction": "0.0625-0.125in photopolymer painted charcoal/orange, raised text silkscreen white, integral braille, reverse-cut symbols; back-painted acrylic backer + clear offset; Apco Notifier (orange) + 3M VHB",
+      "component_ref": "comp-apco-notifier",
+      "fabrication_method": "photopolymer_tactile",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "M1",
+      "category": "substrate",
+      "product": "photopolymer panel",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "charcoal/orange program palette",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "restroom_in": "9x5.25",
+    "stair_in": "12x18",
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "room_id"
+      },
+      {
+        "slot": "occupant_insert",
+        "required": false
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "compliance": {
+    "ada": {
+      "tactile": true,
+      "braille": true,
+      "pictogram": true
+    },
+    "notes": "Integral photopolymer raised copy + Grade-2 braille; satin per ADA glare."
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Photopolymer tactile on the program's layered-acrylic backer; Apco Notifier paper insert."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "record_id": "rec-monument-multitenant-stacked-cabinet-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/contact data excluded. Retail mixed-use vertical retained; tenant copy excluded.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "retail_mixed_use_center"
+  },
+  "classification": {
+    "sign_category": "monument",
+    "sub_type": "stacked_multicabinet_monument_pole_mounted",
+    "primary_function": "center_identification_plus_tenant_directory",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "illumination_detail": "7500K white LEDs throughout",
+    "sides": 2,
+    "fabrication_family": "cabinet",
+    "mounting": "ground_mounted_footing",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "one monument assembly of stacked sub-cabinets (anchor tenant + center ID + tenant directory + topper)",
+    "variant_axis": "stacked_cabinet_role"
+  },
+  "knowledge": {
+    "plain_language_summary": "A tall stacked-cabinet monument that reads as a low pylon: an anchor-tenant cabinet with pan-formed polycarbonate faces, a center landlord ID cabinet with premium push-thru acrylic copy, a lit decorative topper, and a tenant directory cabinet with divider bars, all pole-mounted on twin steel pipes.",
+    "rationale": "Mixing cost-effective pan-formed poly faces for the national anchor brand with push-thru acrylic on the landlord ID balances brand reproduction against premium identity; stacked cabinets let each tenant zone be built and serviced separately.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "anchor_tenant_cabinet",
+      "construction": "double-sided 24in deep aluminum angle frame + .090in skin + 2in retainers, pan-formed 0.150in clear polycarbonate faces backsprayed blockout black + translucent color, saddle-mounted, painted P1",
+      "finish_refs": [
+        "P1"
+      ],
+      "illumination": "internal 7500K LED",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "center_id_cabinet",
+      "construction": "double-sided 24in deep, .090in skin with 1/8in removable faces, routed push-thru 3/4in translucent white acrylic copy with 1/8in milled flanges, painted P2/P3",
+      "finish_refs": [
+        "P2",
+        "P3"
+      ],
+      "fabrication_method": "push_thru_acrylic",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "03",
+      "component": "decorative_topper",
+      "construction": "aluminum angle frame, removable .090in top, 3/16in translucent white acrylic faces on 3 sides, 2x2in accent bars painted P2, lit",
+      "finish_refs": [
+        "P2"
+      ],
+      "provenance": "drawing"
+    },
+    {
+      "ref": "04",
+      "component": "tenant_directory_cabinet",
+      "construction": "double-sided 24in deep with 2in retainers, T-bar dividers + 2in extruded aluminum divider bars, 3/16in translucent white acrylic faces, painted P3",
+      "finish_refs": [
+        "P3"
+      ],
+      "provenance": "drawing"
+    },
+    {
+      "ref": "05",
+      "component": "poles_and_base",
+      "construction": "twin 5in dia Sch40 steel pipes 16ft (5ft in footing, 11ft above grade) painted black; aluminum base frame + skin + square-tube accent cap",
+      "mounted_to": "ground_footing",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "face_substrate",
+      "product": "0.150in clear polycarbonate, pan-formed",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "A2",
+      "category": "letter_face",
+      "product": "3/16in and 3/4in translucent white acrylic",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews black satin",
+      "manufacturer_normalized_id": "mfr-matthews"
+    },
+    {
+      "ref": "P2",
+      "category": "paint",
+      "product": "Matthews T/M SW6144 Enduring Bronze satin",
+      "manufacturer_normalized_id": "mfr-matthews"
+    },
+    {
+      "ref": "P3",
+      "category": "paint",
+      "product": "Matthews T/M SW7055 Dapper Tan satin",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "overall_height_in": 137,
+    "pole_height_above_grade_in": 132,
+    "unit_system": "imperial",
+    "provenance": "drawing",
+    "note": "graphic stack ~137in on 16ft poles"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "anchor_tenant_brand"
+      },
+      {
+        "slot": "center_id_wordmark"
+      },
+      {
+        "slot": "tenant_directory"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "rules_observations": [
+      "Clear hierarchy: anchor + landlord ID dominate, tenant panels uniform/subordinate."
+    ],
+    "craft_observations": [
+      "Pan-formed poly anchor faces vs push-thru acrylic landlord ID is a deliberate cost/quality split.",
+      "SW-matched bronze/tan earth palette for site-fit; external disconnect + Class II supplies for service."
+    ]
+  },
+  "open_items": [
+    "BWW backspray colors marked verify"
+  ],
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ],
+    "modeling_notes": [
+      "Pole-mounted multi-cabinet monument borders pylon; tagged monument per drawing title."
+    ]
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "record_id": "rec-directional-layered-acrylic-wayfinding-acorn-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "design_intent"
+  },
+  "context": {
+    "industry_vertical": "education_higher_ed"
+  },
+  "classification": {
+    "sign_category": "directional",
+    "sub_type": "layered_acrylic_directional_with_chemetal_arrow",
+    "primary_function": "wayfinding_directional",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "composite_structure",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "Layered-acrylic directional: 0.125in acrylic face (charcoal face / orange returns, orange behind routed arrow) + a Chemetal Satin Silver routed-arrow panel + backer + clear offset; a single silkscreened aluminum variant for ramps.",
+    "rationale": "Same layered-acrylic grammar as the directory with a metal-laminate arrow accent.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "directional_stack",
+      "construction": "0.125in acrylic face + Chemetal Satin Silver routed-arrow panel + 0.0625in backer + clear offset; ramp variant = 0.125in silkscreened aluminum",
+      "material_refs": [
+        "A1",
+        "CL1"
+      ],
+      "fabrication_method": "layered_acrylic_reveal",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "face_substrate",
+      "product": "acrylic",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "CL1",
+      "category": "cladding",
+      "product": "Chemetal Satin Silver laminate",
+      "manufacturer_normalized_id": "mfr-chemetal"
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "directional_destinations_and_arrow"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Chemetal routed-arrow accent on the layered-acrylic directional."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "record_id": "rec-directional-aframe-sandwich-board-barre3-001",
+  "schema_version": "1.3",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data and copy excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "fitness_boutique_studio"
+  },
+  "classification": {
+    "sign_category": "directional",
+    "sub_type": "double_face_a_frame_sandwich_board",
+    "primary_function": "sidewalk_directional",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 2,
+    "fabrication_family": "panel",
+    "mounting": "proposed_new_term",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A double-faced freestanding A-frame (sandwich-board) parking/directional sign.",
+    "rationale": "A portable A-frame serves temporary sidewalk directional needs; its mounting (freestanding hinged frame) is not a fixed ground/wall/ceiling mount.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "a_frame",
+      "construction": "double-faced hinged A-frame panel (sandwich board)",
+      "fabrication_method": "a_frame",
+      "mounted_to": "freestanding",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "brand palette",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "parking_or_directional"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Portable double-faced sidewalk sign."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ],
+    "proposed_new_terms": [
+      {
+        "field": "classification.mounting",
+        "proposed_value": "freestanding_a_frame",
+        "context": "Portable hinged A-frame/sandwich-board is not a fixed ground/wall/ceiling mount. New value."
+      }
+    ],
+    "v1_5_note": "freestanding_a_frame NOT addressed in the v1.5 rulings. By the stated n=1 discipline it is identical to tensioned_cable_rail (genuinely novel, single occurrence), so HELD as proposed_new_term rather than silently mis-mapped. Surface for promote/hold decision."
+  }
+}

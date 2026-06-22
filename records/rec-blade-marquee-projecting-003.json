@@ -1,0 +1,170 @@
+{
+  "record_id": "rec-blade-marquee-projecting-003",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client, vendor, designer, sales-rep, and contact data excluded at extraction. Venue name excluded as PII; performing-arts vertical retained. Copy content excluded; copy structure retained as pattern.",
+  "source": {
+    "doc_type": "design_conceptual"
+  },
+  "context": {
+    "industry_vertical": "performing_arts_theater"
+  },
+  "option_set_id": "optset-blade-marquee-001",
+  "design_status": "proposed_option",
+  "classification": {
+    "sign_category": "blade",
+    "sub_type": "double_sided_projecting_blade_marquee_figural_applique_open_face_channel",
+    "primary_function": "pedestrian_and_street_venue_identification",
+    "illuminated": true,
+    "illumination_method": "exposed_lamp",
+    "illumination_detail": "open-faced channel letters lit by exposed E27 medium-base sockets with amber LED lamps; figural applique and body unlit",
+    "sides": 2,
+    "fabrication_family": "blade",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "Option 3 of three for the projecting blade sign. Same size class as option 2 but with a red-dominant body and a figural laser-cut acrylic applique (a classical figure tied to the venue theme) as the signature element, with the venue name in open-faced exposed-lamp channel letters.",
+    "rationale": "Leads with a figural emblem rather than a typographic article word, making the applique the brand signature; keeps the simple open-faced exposed-lamp letter construction of option 2.",
+    "tradeoffs": "The figural applique is the most distinctive of the three but is the most theme-specific, so it ages with the venue's identity rather than reading as a neutral marquee.",
+    "when_to_use": "When a distinctive figural emblem is wanted as the identity anchor over a purely typographic marquee.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "main_sign_body",
+      "function": "primary blade panel",
+      "construction": "fabricated aluminum frame with aluminum skin, double-sided",
+      "finish": "dark tartar red with a gold-metallic pinstripe border and hotrod-red accents",
+      "finish_refs": [
+        "P1",
+        "P5",
+        "P9"
+      ],
+      "fabrication_method": "fabricated_aluminum_blade_panel",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "figural_applique",
+      "function": "signature figural emblem",
+      "construction": "laser-cut 1/2in thick acrylic figural applique, flush mounted to the body faces",
+      "finish": "gold metallic",
+      "finish_refs": [
+        "P1"
+      ],
+      "material_refs": [
+        "A2"
+      ],
+      "fabrication_method": "laser_cut_acrylic_applique",
+      "mounted_to": "main_sign_body",
+      "illuminated": false,
+      "provenance": "drawing"
+    },
+    {
+      "ref": "03",
+      "component": "open_faced_channel_letters",
+      "function": "primary venue name, exposed-lamp lit",
+      "construction": "fabricated aluminum open-faced channel letters",
+      "finish": "gold metallic",
+      "finish_refs": [
+        "P1"
+      ],
+      "illumination": "E27 medium-base sockets with amber LED lamps (exposed)",
+      "fabrication_method": "open_faced_channel_exposed_lamp",
+      "mounted_to": "main_sign_body",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "04",
+      "component": "mounting_arms",
+      "function": "project the blade off the wall and carry its load",
+      "construction": "5in x 5in heavy-wall aluminum square tube arms with welded 8in x 12in x 3/4in aluminum mounting plates, thru-bolted to wall",
+      "status": "open",
+      "mounted_to": "building_wall",
+      "install_caution": "wall attachment TBD pending structural engineering review",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A2",
+      "category": "letter_face",
+      "product": "laser-cut acrylic figural applique",
+      "spec": "1/2in thick",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews MP Fools Gold Metallic",
+      "manufacturer_normalized_id": "mfr-matthews"
+    },
+    {
+      "ref": "P5",
+      "category": "paint",
+      "product": "Matthews MP Dark Tartar Red",
+      "manufacturer_normalized_id": "mfr-matthews"
+    },
+    {
+      "ref": "P9",
+      "category": "paint",
+      "product": "Matthews MP Hotrod Red (accents)",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "total_sign_area_sqft": 21,
+    "mounting_height_ft": 10,
+    "unit_system": "imperial",
+    "provenance": "drawing",
+    "note": "Same size class as option 2; exact panel dimensions medium confidence from scaled face view."
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "figural_emblem",
+        "location": "blade",
+        "treatment": "laser-cut acrylic figural applique"
+      },
+      {
+        "slot": "venue_name",
+        "location": "blade_body",
+        "treatment": "open-faced exposed-lamp channel letters"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "rules_observations": [
+      "Figural emblem as the dominant element with subordinate name keeps a clear hierarchy, though the emblem competes more with the name than the typographic options do."
+    ],
+    "craft_observations": [
+      "Red-dominant body with gold figural applique is the boldest palette of the three; the figural applique is the signature craft move.",
+      "Same simple open-faced exposed-lamp letter construction as option 2."
+    ],
+    "aesthetic_notes": [
+      {
+        "note": "The most thematic, identity-specific option; distinctive but less neutral than the typographic marquees.",
+        "provenance": "opinion"
+      }
+    ]
+  },
+  "open_items": [
+    "Wall attachment / mounting-arm engineering TBD pending structural review",
+    "One of three competing options; final selection not made on this exploration set"
+  ],
+  "extraction_meta": {
+    "field_confidence": "high on construction and finishes; medium on dimensions",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment",
+      "structure.rationale"
+    ],
+    "reconciliation_v1_2": "Option 3 of three (Ruling 2), option_set_id 'optset-blade-marquee-001', design_status proposed_option.",
+    "reconciliation_v1_3": "Applied v1.3 enums (blade/awning/halo_illuminated/exposed_lamp/external_downlight + concrete/awning_fabric/digital_display_module/adhesive categories)."
+  }
+}

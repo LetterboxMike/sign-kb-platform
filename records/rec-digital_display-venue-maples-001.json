@@ -1,0 +1,74 @@
+{
+  "record_id": "rec-digital_display-venue-maples-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "design_intent"
+  },
+  "context": {
+    "industry_vertical": "collegiate_athletics_venue"
+  },
+  "classification": {
+    "sign_category": "digital_display",
+    "sub_type": "wall_mounted_digital_display_in_frame",
+    "primary_function": "dynamic_brand_content",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 1,
+    "fabrication_family": "digital_display_assembly",
+    "mounting": "wall_mounted",
+    "digital_integration": true
+  },
+  "knowledge": {
+    "plain_language_summary": "Wall-mounted digital displays integrated into the graphics program (screen by others) for dynamic team/brand content.",
+    "rationale": "Digital displays carry dynamic content within the experiential program.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "display",
+      "construction": "digital display in integrated frame; screen by others",
+      "material_refs": [
+        "D1"
+      ],
+      "illumination": "self-emissive",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "D1",
+      "category": "digital_display_module",
+      "product": "LED/LCD display (by others)",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "dynamic_content"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "rules_observations": [
+      "Digital content integrated into the experiential program."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "medium",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

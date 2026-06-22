@@ -1,0 +1,124 @@
+{
+  "record_id": "rec-monument-faux-material-changeable-bowstreet-001",
+  "schema_version": "1.3",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "retail_beverage"
+  },
+  "classification": {
+    "sign_category": "monument",
+    "sub_type": "hdu_faux_wood_monument_with_magnetic_changeable_panel",
+    "primary_function": "tenant_directory_identification",
+    "illuminated": false,
+    "illumination_method": "external_uplight",
+    "sides": 1,
+    "fabrication_family": "composite_structure",
+    "mounting": "ground_mounted_pedestal",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A faux-material monument: two ACM-wrapped wood posts on a faux brick/stone planter base carrying a routed/carved faux-woodgrain HDU sign panel, a dimensional logo, a magnetic changeable steel message panel, and ACM tenant panels. Customer-supplied solar uplight.",
+    "rationale": "A heavy faux-material program (faux wood HDU, faux brick) plus a magnetic changeable panel and solar uplight gives a low-electrical, serviceable tenant monument.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "posts_and_base",
+      "construction": "two 6x6 wood posts wrapped in 3mm black ACM with flat caps; fabricated aluminum angle planter frame + basin, sheathed in TexturePlus faux brick/stone",
+      "material_buildup": [
+        "wood post",
+        "3mm ACM cladding"
+      ],
+      "material_refs": [
+        "CL1",
+        "ST1"
+      ],
+      "mounted_to": "ground_pedestal",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "hdu_sign_panel",
+      "construction": "2in HDU routed/carved faux-woodgrain with faux bands + rivet heads, painted faux-wood, on 2x2 aluminum tube rails; dimensional logo flush-mounted",
+      "material_refs": [
+        "HDU1"
+      ],
+      "fabrication_method": "carved_hdu",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "03",
+      "component": "changeable_message_panel",
+      "construction": "2x2 aluminum rails + 1/16in steel faces satin black with changeable magnetic message inserts",
+      "fabrication_method": "magnetic_changeable",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "04",
+      "component": "uplight",
+      "construction": "customer-supplied solar light kit on bracket",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "HDU1",
+      "category": "substrate",
+      "product": "2in HDU (carved faux woodgrain)",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "CL1",
+      "category": "cladding",
+      "product": "3mm black ACM",
+      "manufacturer_normalized_id": "mfr-3a-composites"
+    },
+    {
+      "ref": "ST1",
+      "category": "cladding_stone",
+      "product": "TexturePlus Antique Select Old World faux brick + Coral Block Ledgers",
+      "manufacturer_normalized_id": "mfr-texture-plus"
+    }
+  ],
+  "dimensions": {
+    "overall_height_in": 149,
+    "panel_width_in": 52,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "business_name"
+      },
+      {
+        "slot": "magnetic_changeable_message"
+      },
+      {
+        "slot": "tenant_panels"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Magnetic changeable message panel is serviceable/reusable.",
+      "Solar uplight avoids electrical trenching.",
+      "Heavy faux-material program (HDU faux wood + faux brick)."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

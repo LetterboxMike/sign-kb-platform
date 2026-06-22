@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { claimNextJob, completeJob, failJob, stageFromBuffer, pendingJobCount } from '@/lib/kb';
 import { downloadDrawing, storageConfigured } from '@/lib/storage';
+import { guardRoute } from '@/lib/auth';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -35,6 +36,8 @@ async function processOne(): Promise<ProcessedJob | null> {
 // Client-driven: process one job per call so the UI shows fine-grained progress and each call
 // stays well under the function time limit. Re-callable — resumes the queue after any interruption.
 export async function POST() {
+  const gate = await guardRoute('contributor');
+  if (gate instanceof NextResponse) return gate;
   if (!storageConfigured()) {
     return NextResponse.json({ error: 'Storage not configured.' }, { status: 503 });
   }

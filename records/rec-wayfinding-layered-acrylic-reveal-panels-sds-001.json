@@ -1,0 +1,109 @@
+{
+  "record_id": "rec-wayfinding-layered-acrylic-reveal-panels-sds-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "design_intent"
+  },
+  "context": {
+    "industry_vertical": "education_higher_ed"
+  },
+  "classification": {
+    "sign_category": "wayfinding",
+    "sub_type": "layered_clear_acrylic_reveal_panel_system",
+    "primary_function": "interior_id_directory_directional",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "one layered-acrylic construction across room-ID/directory/directional codes",
+    "variant_axis": "size_x_message"
+  },
+  "knowledge": {
+    "plain_language_summary": "The program backbone: stacked clear ACRYCAST acrylic (face + offset/backer panels around a filler core), offset panels cut 0.25-0.5in smaller to create a floating reveal; back-painted faces, accent-painted returns, silkscreen or cut-vinyl copy.",
+    "rationale": "The offset/reveal acrylic stack is the signature aesthetic and a single construction grammar across the whole interior family.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "layered_panel",
+      "construction": "ACRYCAST clear/non-glare cell-cast acrylic stack (0.0625-0.5in), offset panels inset 0.25-0.5in, back-painted faces, accent returns, surface/subsurface silkscreen or 3M Scotchcal cut vinyl, 3M 467MP laminating adhesive, 3M VHB 4941 mount",
+      "material_refs": [
+        "A1",
+        "V1",
+        "AD1"
+      ],
+      "finish_refs": [
+        "P1"
+      ],
+      "fabrication_method": "layered_acrylic_reveal",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "face_substrate",
+      "product": "ACRYCAST cell-cast acrylic (clear + non-glare)",
+      "manufacturer_normalized_id": "mfr-calsak-acrycast"
+    },
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "3M Scotchcal pressure-sensitive vinyl",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    },
+    {
+      "ref": "AD1",
+      "category": "adhesive",
+      "product": "3M 467MP laminating adhesive + 3M VHB 4941",
+      "manufacturer_normalized_id": "mfr-3m-industrial"
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews color-matched semi-matte/eggshell",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "directional_w_in": "28.5-69.5",
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "id_directory_or_directional"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Offset/reveal clear-acrylic stack = floating depth, the program signature.",
+      "Accent color consistently on returns/arrows/edges."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ],
+    "modeling_notes": [
+      "~26 sign codes collapsed; message_schedule external."
+    ]
+  }
+}

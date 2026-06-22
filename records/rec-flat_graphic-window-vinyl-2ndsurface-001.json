@@ -1,0 +1,56 @@
+{
+  "record_id": "rec-flat_graphic-window-vinyl-2ndsurface-001",
+  "schema_version": "1.2",
+  "record_type": "flat_graphic",
+  "provenance_note": "All client/vendor/human/copy excluded; commercial office vertical retained.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "commercial_office_building"
+  },
+  "classification": {
+    "graphic_method": "plotter_cut",
+    "applied_to": "glass",
+    "contour_cut": true
+  },
+  "program_model_note": "variant_axis = location/copy; A2/A3/A4 collapsed",
+  "materials_manifest": [
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "3M 7125-10 white (opacity underlayer) + 7125-12 + black vinyl, 2nd surface",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    },
+    {
+      "ref": "F1",
+      "category": "vinyl",
+      "product": "3M 7725SE-314 Dusted Crystal (distraction); 3M IJ8150 optically clear (privacy)",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "White underlayer gives opacity over colored vinyl; second-surface application typical for storefront glass.",
+      "Package also includes dusted-crystal distraction and optically-clear privacy films."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "design_assessment"
+    ],
+    "plain_language_summary": "Second-surface plotter-cut window vinyl (building logo) with a white opacity underlayer, plus dusted-crystal distraction and optically-clear privacy films."
+  }
+}

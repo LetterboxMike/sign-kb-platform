@@ -1,0 +1,79 @@
+{
+  "record_id": "rec-directional-replacement-insert-panel-kaiser-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "healthcare_medical_office"
+  },
+  "classification": {
+    "sign_category": "directional",
+    "sub_type": "slide_in_replacement_directory_panel",
+    "primary_function": "wayfinding_directory_replacement",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A replacement information/directory panel that slides into an existing freestanding monument carrier (panel-only scope), with stacked directional rows, arrows, and a suite-number system; an end panel relocates from top to bottom slot.",
+    "rationale": "Slide-in panel replacement updates the directory without refabricating the existing monument.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "insert_panel",
+      "construction": "replacement aluminum panel with applied flat graphic, slides into existing freestanding monument carrier (existing post/monument retained); verify dims/attachment in field",
+      "material_refs": [
+        "G1"
+      ],
+      "mounted_to": "existing_monument",
+      "status": "open",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "G1",
+      "category": "graphic",
+      "product": "applied flat graphic on aluminum panel",
+      "application": "digital_print",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "directional_rows_and_suites"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "open_items": [
+    "Field-verify dimensions and attachment method of new panel into existing carrier"
+  ],
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Slide-in directory replacement; reuses existing monument carrier."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "From a retail-bank brand sign-standards family. All client/vendor/human/address data excluded; banking vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "retail_banking"
+  },
+  "record_id": "rec-channel_letter-brand-family-facelit-001",
+  "classification": {
+    "sign_category": "channel_letter",
+    "sub_type": "face_lit_pan_channel_letters_brand_family_v_and_h",
+    "primary_function": "branch_identification",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 1,
+    "fabrication_family": "channel_letter",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "brand channel-letter standard in many sizes/orientations/colors",
+    "variant_axis": "orientation(V/H) x color(blue/white) x raceway(yes/no) x cap_height(1-4ft) x banking_copy"
+  },
+  "knowledge": {
+    "plain_language_summary": "The brand's face-lit pan channel letter standard: vertical and horizontal formats, blue and white color variants, with or without raceway, plus a separate illuminated 'Growth' logo element. Sizes run from 1ft to 4ft cap height.",
+    "rationale": "A sizing-coded channel-letter standard lets the brand reproduce consistent identity across branch sizes; trim-cap color and the logo element are locked brand details.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "channel_letters",
+      "construction": "routed/formed aluminum returns, acrylic faces, Jewelite 1in trim cap (white or blue), internal SloanLED 6500K, UL raceway where used",
+      "material_refs": [
+        "A1",
+        "T1"
+      ],
+      "illumination": "internal 6500K LED",
+      "fabrication_method": "face_lit_pan",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "growth_logo_element",
+      "construction": ".235in clear/white acrylic illuminated symbol",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "3M translucent films (3635-70 white, 3630-125 yellow-gold, 3632-157 Sultan Blue)",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    },
+    {
+      "ref": "A1",
+      "category": "letter_face",
+      "product": "acrylic faces",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "T1",
+      "category": "coating",
+      "product": "Jewelite 1in trim cap (white/blue)",
+      "manufacturer_normalized_id": "mfr-jewelite"
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews brand palette: Rockland Blue PMS 288C / Lt Blue 298C / Silver gloss / Yellow 1235C",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "cap_height_range_ft": "1 to 4",
+    "max_area_sqft": 305,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "brand_wordmark"
+      },
+      {
+        "slot": "growth_logo"
+      },
+      {
+        "slot": "banking_descriptor"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Brand-locked palette with dual trim-cap colors; logo element as a separate lit acrylic piece."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ],
+    "modeling_notes": [
+      "SloanLED illumination captured in structure construction per consumable policy (not a materials_manifest row)."
+    ]
+  }
+}

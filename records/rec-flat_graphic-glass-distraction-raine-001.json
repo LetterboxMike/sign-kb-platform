@@ -1,0 +1,48 @@
+{
+  "record_id": "rec-flat_graphic-glass-distraction-raine-001",
+  "schema_version": "1.2",
+  "record_type": "flat_graphic",
+  "provenance_note": "All client/vendor/human/copy excluded; finance office vertical retained.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "financial_investment_office"
+  },
+  "classification": {
+    "graphic_method": "plotter_cut",
+    "applied_to": "glass",
+    "contour_cut": true
+  },
+  "materials_manifest": [
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "Avery SC900-825-O Light Gray Ash, second surface",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-avery"
+    }
+  ],
+  "dimensions": {
+    "marking_modules_in": "1.5, 1.375, 0.75",
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Plotter-cut distraction markings, second surface, in a restrained gray ash."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "design_assessment"
+    ],
+    "plain_language_summary": "Second-surface plotter-cut glass distraction markings in light gray ash vinyl."
+  }
+}

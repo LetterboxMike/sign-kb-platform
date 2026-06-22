@@ -1,0 +1,48 @@
+{
+  "record_id": "rec-flat_graphic-wall-values-program-kidde-001",
+  "schema_version": "1.3",
+  "record_type": "flat_graphic",
+  "provenance_note": "All client/vendor/human/copy excluded; vertical retained.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "industrial_fire_safety_office"
+  },
+  "classification": {
+    "graphic_method": "digital_print",
+    "applied_to": "wall",
+    "contour_cut": true
+  },
+  "materials_manifest": [
+    {
+      "ref": "G1",
+      "category": "graphic",
+      "product": "wall graphic program (INSITES wordline + value icons); method per location (printed/cut vinyl)",
+      "application": "digital_print",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing",
+    "note": "3 room placements (training/break/cafeteria); spec-less mockup pages"
+  },
+  "messaging_pattern": {
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "One graphic program deployed across three rooms; placement renderings lack per-location specs."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "medium-high",
+    "inferred_fields": [
+      "design_assessment"
+    ],
+    "plain_language_summary": "A 'values' wall-graphic program (a wordline in circular discs + six value icons), rendered in three rooms; placement mockups without separate dims/materials."
+  }
+}

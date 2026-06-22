@@ -1,0 +1,1399 @@
+{
+  "artifact": "manufacturer_reference",
+  "schema_version": "0.1-draft",
+  "purpose": "Normalized, deduplicated knowledge about manufacturers and their components. Sign records reference entries here by id instead of re-describing a product. Each manufacturer/component is researched once, deeply, and reused everywhere it appears.",
+  "research_scope_rule": "Corpus-complete, not catalog-cloning. Document the company and the specific components that appear in the drawing corpus, plus directly relevant alternatives. Do not mirror entire vendor catalogs.",
+  "entries": [
+    {
+      "id": "mfr-signcomp",
+      "type": "manufacturer",
+      "name": "SignComp",
+      "founded": 1986,
+      "category": "extruded_aluminum_framing",
+      "summary": "Long-standing supplier of extruded aluminum framing, cabinet, and raceway systems to the sign industry. Sells full-length extrusions or cut-and-mitered kits with corner keys and hardware included.",
+      "product_lines": [
+        {
+          "name": "EconoComp",
+          "use": "lightweight cabinets, slide access, smaller wall and monument signs"
+        },
+        {
+          "name": "Standard (1Part-2Part / 1P2P)",
+          "use": "medium-duty cabinets, removable retainers on three sides, also channel-letter raceways, snap frames, edge-lit LED, vandal systems"
+        },
+        {
+          "name": "Commercial",
+          "use": "heavy-duty cabinets for rigid or flex faces, hinge or slide service, radius corners and ends"
+        },
+        {
+          "name": "Architectural",
+          "use": "post-and-panel wayfinding, hingeable wall and monument cabinets, insert panel systems, monolithic edges, radius ends"
+        }
+      ],
+      "distribution": [
+        "Grimco",
+        "Glantz",
+        "S&F Supplies"
+      ],
+      "provenance": "researched",
+      "sources": [
+        "https://signcomp.com/about-us/",
+        "https://signcomp.com/",
+        "https://www.linkedin.com/company/signcomp"
+      ]
+    },
+    {
+      "id": "comp-signcomp-1927",
+      "type": "component",
+      "manufacturer_id": "mfr-signcomp",
+      "name": "#1927 extruded aluminum sign body",
+      "spec": "8in deep, 2-part extruded aluminum cabinet body profile",
+      "used_for": "single-faced internally illuminated cabinet sign bodies",
+      "spec_provenance": "from_drawing",
+      "context_provenance": "researched",
+      "notes": "Profile number and depth read from drawing; classified within SignComp's cabinet body system via research."
+    },
+    {
+      "id": "comp-signcomp-k1602-32",
+      "type": "component",
+      "manufacturer_id": "mfr-signcomp",
+      "name": "K1602/32 hinge-body cabinet",
+      "spec": "6in deep single-faced hinge-body extruded aluminum cabinet, welded construction",
+      "used_for": "wall-mounted single-faced cabinet signs with serviceable hinged face",
+      "spec_provenance": "from_drawing",
+      "context_provenance": "researched"
+    },
+    {
+      "id": "mfr-indect",
+      "type": "manufacturer",
+      "name": "Indect",
+      "category": "parking_guidance_systems",
+      "summary": "Manufacturer of parking guidance and wayfinding signage synced to its own space sensors and web-based software. Signage rated IP-65 for outdoor use, with a stated minimum 99% space-counting accuracy.",
+      "product_families": [
+        "entry signs",
+        "monument signs",
+        "pillar signs",
+        "aisle signs",
+        "matrix (full-color) signs"
+      ],
+      "provenance": "researched",
+      "sources": [
+        "https://indect.com/wayfinding-signage/",
+        "https://indect.com/aisle-signs/",
+        "https://parkingguidancesystems.com/my-product/matrix-signs/"
+      ]
+    },
+    {
+      "id": "comp-indect-ak4d130",
+      "type": "component",
+      "manufacturer_id": "mfr-indect",
+      "name": "AK 4-Digit 130 space counter display",
+      "spec": "4-digit LED count display, 130mm (5.1in) digit height",
+      "digit_color_options": [
+        "green",
+        "red",
+        "blue",
+        "white",
+        "amber"
+      ],
+      "function": "displays live available space count per level/zone, synced to Indect sensors and software",
+      "behavior": {
+        "auto_brightness": "ambient light sensor auto-dims by time of day to maintain legibility",
+        "states": "can display numeric count plus OPEN / FULL / CLOSED",
+        "rating": "IP-65 outdoor"
+      },
+      "optical_behavior": {
+        "appearance": "high-contrast lit digits on dark face; green digits read as the parking-availability convention",
+        "provenance": "researched"
+      },
+      "spec_provenance": "from_drawing",
+      "context_provenance": "researched"
+    },
+    {
+      "id": "mfr-matthews",
+      "type": "manufacturer",
+      "name": "Matthews Paint",
+      "category": "sign_coatings",
+      "summary": "Matthews Paint (MAP), the dominant acrylic-polyurethane sign coating (since 1935, now PPG Refinish). MP-coded primers/topcoats/clears in gloss/satin/matte + metallics, conventional/Low-SVOC/Ultra-Low-VOC, color-matched to PMS/RAL across 100,000+ colors; anti-graffiti clears.",
+      "provenance": "researched",
+      "key_products": [
+        "Matthews Acrylic Polyurethane (MAP)",
+        "MAP-LV Low VOC",
+        "MAP anti-graffiti clears",
+        "MP color-match"
+      ],
+      "sources": [
+        "https://www.ppg.com/en-US/refinish/products/matthews-paint",
+        "https://www.ppg.com/en-US/refinish/markets/signs"
+      ],
+      "optical_behavior": {
+        "appearance": "Highly pigmented sign enamel in gloss/satin/matte + metallic-effect colors; strong gloss retention and color depth; clears enhance vibrancy and UV durability.",
+        "provenance": "researched"
+      }
+    },
+    {
+      "id": "mfr-3m-graphics",
+      "type": "manufacturer",
+      "name": "3M Commercial Graphics",
+      "category": "vinyl_films",
+      "summary": "3M Commercial Graphics supplies the cast-film light-management system used corpus-wide for illuminated faces, channel letters, reflective/roadside, and etched-glass privacy: translucent color for transmitted light, blockout/diffuser for control, retroreflective sheeting for night conspicuity.",
+      "provenance": "researched",
+      "key_products": [
+        "Scotchcal 3630/3730 translucent",
+        "3635 dual-color/diffuser/blockout",
+        "7125 opaque cast",
+        "3650 opaque metallic",
+        "7725SE Dusted/Frosted Crystal",
+        "Diamond Grade DG3 4090 + Scotchlite 280/680 reflective",
+        "Panaflex flex-face",
+        "IJ180C + 8519/8520 overlaminate"
+      ],
+      "sources": [
+        "https://multimedia.3m.com/mws/media/9493O/3m-scotchcal-translucent-graphic-film-series-3630-3730.pdf",
+        "https://multimedia.3m.com/mws/media/138749O/3m-dual-color-film-series-3635-200.pdf",
+        "https://multimedia.3m.com/mws/media/823536O/3m-diffuser-film-3635-30-3635-70.pdf"
+      ],
+      "optical_behavior": {
+        "appearance": "3630/3730 translucent: opaque-looking unlit, color-glow when backlit. 3635 family are light-management: blockout (-20B/-22B) masks structure/holds color, diffuser (-30/-70, ~30%+ T) evens brightness/kills hotspots, dual-color (3635-222) reads one color by day, a different color backlit. 7125/3650 opaque cast = reflected-light only (3650 metallic grey over 3630-22B blockout = metallic day face that masks light). 7725 Dusted/Frosted Crystal mimics etched glass (translucent diffuse privacy, ~85% LT). 4090 DG3 / Scotchlite 280/680 retroreflective: flat in ambient day, bright glow-back at night under headlights. 8519 luster / 8520 matte overlaminates adjust surface gloss without changing transmission.",
+        "provenance": "researched"
+      }
+    },
+    {
+      "id": "mfr-oracal",
+      "type": "manufacturer",
+      "name": "Oracal (Orafol)",
+      "category": "vinyl_films",
+      "summary": "ORAFOL's ORACAL line: 8800 translucent premium cast (illuminated color), 8870 blockout (light control), 651 intermediate opaque cut, 680 reflective.",
+      "provenance": "researched",
+      "key_products": [
+        "ORACAL 8800 Translucent",
+        "8870 Blockout",
+        "651 Intermediate",
+        "680 Reflective"
+      ],
+      "sources": [
+        "https://www.orafol.com/en/americas/products/oracal-8800-translucent-premium-cast",
+        "https://www.orafol.com/en/americas/products/oracal-8870-blockout-film"
+      ],
+      "optical_behavior": {
+        "appearance": "8800 translucent reads solid by day, color-glows backlit; 8870 blockout masks cabinet/LED structure and builds dual-tone faces; 651 opaque (reflected-light only); 680 retroreflective (low-key by day, glow-back at night).",
+        "provenance": "researched"
+      }
+    },
+    {
+      "id": "mfr-texture-plus",
+      "type": "manufacturer",
+      "name": "Texture Plus",
+      "category": "faux_architectural_panels",
+      "summary": "Texture Plus lightweight HDU faux wall panels (2x4ft) replicating brick/stacked stone/masonry/wood/metal; interlock or screw, saw-cut, adhesive install; 25-yr warranty, ASTM-E84 Class A; cladding for sign bases/monuments.",
+      "provenance": "researched",
+      "key_products": [
+        "Historic/Smooth Brick",
+        "Stacked Stone",
+        "Stonewall (standard & interlocking)"
+      ],
+      "sources": [
+        "https://www.textureplus.com/"
+      ],
+      "optical_behavior": {
+        "appearance": "Dimensional cast brick/stone relief with realistic mortar joints/texture; color blends sandstone tan to dark red to light gray; matte, opaque, mimics real masonry depth.",
+        "provenance": "researched"
+      }
+    },
+    {
+      "id": "mfr-3a-composites",
+      "type": "manufacturer",
+      "name": "3A Composites (Dibond)",
+      "category": "aluminum_composite_panel",
+      "summary": "3A Composites DIBOND — the original ACM: two 0.3mm aluminum skins on a polyethylene/mineral core; lightweight, extremely flat, rigid; painted-coil and brushed (butlerfinish) faces.",
+      "corpus_appearances": [
+        "6mm white Dibond flat-cut wall element (storefront channel-letter package)"
+      ],
+      "provenance": "researched",
+      "key_products": [
+        "DIBOND ACM (white/black matte, gloss)",
+        "DIBOND butlerfinish brushed",
+        "DIBOND fire-rated"
+      ],
+      "sources": [
+        "https://3acompositesusa.com/products/dibond/"
+      ],
+      "optical_behavior": {
+        "appearance": "Opaque rigid panel (no transmission); optical read is its surface finish. Matte coil faces (white/black matte) are low-glare and take print flatly (even lit appearance); gloss faces more specular; butlerfinish brushed-aluminum gives a directional metallic sheen along the grain. Exceptional flatness = no oil-canning of reflected light.",
+        "provenance": "researched"
+      }
+    },
+    {
+      "id": "mfr-rowmark",
+      "type": "manufacturer",
+      "name": "Rowmark",
+      "category": "engravable_and_sign_plastics",
+      "summary": "Rowmark engravable/ADA sign plastics. ADA Alternative = single-ply matte acrylic, braille-receptive/routable, made to meet ADA non-glare; appliqué 311-series (1/32in) and Value Series for tactile/braille.",
+      "provenance": "researched",
+      "key_products": [
+        "ADA Alternative matte acrylic",
+        "ADA Alternative Appliqué 311 (1/32in)",
+        "Value Series"
+      ],
+      "sources": [
+        "https://www.rowmark.com/products/ada-alternative"
+      ],
+      "optical_behavior": {
+        "appearance": "Matte non-reflective face meets ADA non-glare so raised tactile + braille read without specular glare; even flat opacity, high light/dark contrast between face and characters; surface takes routed tactile and drilled raster braille cleanly.",
+        "provenance": "researched"
+      }
+    },
+    {
+      "id": "comp-rowmark-311-101",
+      "type": "component",
+      "manufacturer_id": "mfr-rowmark",
+      "name": "Rowmark Clear 311-101",
+      "spec": "1/32in (0.8mm) clear acrylic sheet",
+      "used_for": "laser-cut ADA-compliant tactile letters / clear tactile layer on interior ID signs",
+      "spec_provenance": "from_drawing",
+      "context_provenance": "knowledge"
+    },
+    {
+      "id": "mfr-nanolumens",
+      "type": "manufacturer",
+      "name": "NanoLumens",
+      "category": "direct_view_led_displays",
+      "summary": "Manufacturer of direct-view LED video displays and video walls for indoor and outdoor use, across fine-to-coarse pixel pitches (roughly 0.9mm up). Indoor lines (e.g. NXT/Engage) and outdoor lines (Performance) cover fixed-install digital signage; displays are self-emissive, seamless across tiles, and rated for long service life.",
+      "provenance": "researched",
+      "sources": [
+        "https://www.nanolumens.com/products/",
+        "https://www.nanolumens.com/performance/"
+      ]
+    },
+    {
+      "id": "comp-nanolumens-p187",
+      "type": "component",
+      "manufacturer_id": "mfr-nanolumens",
+      "name": "P1.87 direct-view LED display (HDS indoor / OD outdoor)",
+      "spec": "1.87mm pixel pitch direct-view LED display; drawing calls indoor 'P1.87HDS' and outdoor 'P1.87OD'",
+      "used_for": "fine-pitch dynamic information displays in architectural surrounds",
+      "optical_behavior": {
+        "appearance": "self-emissive, seamless, high-contrast video surface; reads as a near-black panel when off and a saturated lit image when on; indoor brightness ~800 nits, wide viewing angle; not a backlit translucent face",
+        "provenance": "researched"
+      },
+      "spec_provenance": "from_drawing",
+      "context_provenance": "researched"
+    },
+    {
+      "id": "mfr-lord",
+      "type": "manufacturer",
+      "name": "Lord (Parker Lord)",
+      "category": "structural_adhesives",
+      "summary": "LORD (Parker LORD) two-part structural adhesives bonding aluminum/ACM/steel/plastics. Signlok 810 = fast-cure acrylic (8-12min working, low bondline read-through on thin/glossy panels); LORD 310 = 2K epoxy for prepared metals/rubber/urethane/plastics; bonds cladding/faces without fasteners.",
+      "provenance": "researched",
+      "key_products": [
+        "Signlok 810 acrylic",
+        "Signlok 310",
+        "LORD 310 epoxy",
+        "Sign Industry adhesive range"
+      ],
+      "sources": [
+        "https://lord.com/products-and-solutions/adhesives/lord-signlok-810-adhesive"
+      ]
+    },
+    {
+      "id": "mfr-everbrite",
+      "type": "manufacturer",
+      "name": "Everbrite",
+      "category": "protective_coatings",
+      "summary": "Everbrite clear solvent-based protective coatings that seal/preserve metal, masonry, and weathering (Corten) steel; on Corten it locks the patina so it won't bleed/rub off; restores/protects painted, anodized, polished, plated, brushed, patinated finishes.",
+      "provenance": "researched",
+      "key_products": [
+        "Everbrite Protective Coating",
+        "Corten/weathering-steel sealer",
+        "ProtectaClear"
+      ],
+      "sources": [
+        "https://www.everbritecoatings.com/corten-steel-sealer"
+      ],
+      "optical_behavior": {
+        "appearance": "Clear self-leveling film that seals without obscuring the substrate; preserves the existing finish look (matte to polished) and the Corten patina rather than adding sheen.",
+        "provenance": "researched"
+      }
+    },
+    {
+      "id": "mfr-3m-industrial",
+      "type": "manufacturer",
+      "name": "3M Industrial (Bonding Solutions)",
+      "category": "structural_adhesive",
+      "summary": "3M Industrial VHB acrylic-foam double-sided tapes — fastener-free alternative to rivets/welds/screws for sign panels/stiffeners/trim. 4941 = 45-mil conformable multi-purpose gray (HSE/MSE); 4611 = 45-mil firm high-temp (pre-paint-oven); 4950 = firm general-purpose.",
+      "provenance": "researched",
+      "key_products": [
+        "VHB 4941 (conformable)",
+        "VHB 4950 (firm GP)",
+        "VHB 4611 (high-temp HSE)"
+      ],
+      "sources": [
+        "https://www.3m.com/3M/en_US/p/d/b40072028/"
+      ]
+    },
+    {
+      "id": "comp-3m-vhb",
+      "type": "component",
+      "manufacturer_id": "mfr-3m-industrial",
+      "name": "3M VHB foam tape",
+      "spec": "acrylic foam double-sided structural bonding tape",
+      "used_for": "bonding metal cladding/faces/trim in fabricated sign assemblies (e.g. stainless display surrounds)",
+      "spec_provenance": "from_drawing",
+      "context_provenance": "knowledge"
+    },
+    {
+      "id": "comp-cirrus-emc",
+      "type": "component",
+      "manufacturer_id": "mfr-cirrus",
+      "name": "Cirrus full-color digital EMC panel",
+      "used_for": "outdoor full-color LED message panel",
+      "spec_provenance": "from_drawing",
+      "context_provenance": "knowledge"
+    },
+    {
+      "id": "comp-signcomp-series12",
+      "type": "component",
+      "manufacturer_id": "mfr-signcomp",
+      "name": "SignComp Architectural Series 12 hinge body",
+      "used_for": "extruded aluminum hinge-body cabinet for EMC housings",
+      "spec_provenance": "from_drawing",
+      "context_provenance": "knowledge"
+    },
+    {
+      "id": "comp-signcomp-series7",
+      "type": "component",
+      "manufacturer_id": "mfr-signcomp",
+      "name": "SignComp Architectural Series 7 hinge body",
+      "used_for": "extruded aluminum hinge-body cabinet/post-and-panel system",
+      "spec_provenance": "from_drawing",
+      "context_provenance": "researched",
+      "spec": "Architectural Series 7 hinge-body insert-panel system (Part #1592 body / #1666 insert retainer / #1698 end cover; kit K1592/66/98); hingeable retainers for service, concealed divider, 4/6/8in aluminum insert panels (#1674/76/78), .090 panel thickness, mill/anodized",
+      "sources": [
+        "(SignComp Insert Panel System datasheet, in corpus)"
+      ]
+    },
+    {
+      "id": "comp-tectonics-seg",
+      "type": "component",
+      "manufacturer_id": "mfr-tectonics",
+      "name": "Tectonics SEG extrusion (LP 1G 02 / SP 2L 02)",
+      "used_for": "aluminum SEG frame/support for backlit fabric",
+      "spec_provenance": "from_drawing",
+      "context_provenance": "knowledge"
+    },
+    {
+      "id": "comp-zipchange-track",
+      "type": "component",
+      "manufacturer_id": "mfr-zipchange",
+      "name": "Zip-Change letter track",
+      "used_for": "changeable-letter track for reader-board cabinets",
+      "spec_provenance": "from_drawing",
+      "context_provenance": "knowledge"
+    },
+    {
+      "id": "mfr-acrylite",
+      "type": "manufacturer",
+      "name": "Acrylite (Roehm)",
+      "category": "acrylic_sheet",
+      "summary": "Acrylite (Roehm/Evonik) cast/extruded PMMA, the illuminated-signage standard: #7328 translucent white (faces/push-through), #2447 white diffuser, 407-2 yellow, 015-2GP; LED sign grade.",
+      "provenance": "researched",
+      "key_products": [
+        "#7328 translucent white",
+        "#2447 white diffuser",
+        "407-2 yellow translucent",
+        "015-2GP",
+        "LED sign grade"
+      ],
+      "sources": [
+        "https://www.acrylite.co/resources/faq/acrylite-led-sign-grade"
+      ],
+      "optical_behavior": {
+        "appearance": "Milky translucent white reads as a uniform glowing face backlit; #7328 transmits ~28-32% and diffuses to hide LEDs and kill hotspots (brightness tuned by gauge). #2447 / LED sign grade push diffusion further for shallow cabinets; colored grades transmit a saturated hue. UV-stabilized (stays neutral outdoors).",
+        "provenance": "researched"
+      }
+    },
+    {
+      "id": "mfr-avery",
+      "type": "manufacturer",
+      "name": "Avery Dennison",
+      "category": "vinyl_films",
+      "summary": "Avery Dennison high-performance cast cut films: SC950 opaque/metallic, SC900 (incl. decorative window/etched-glass looks), and an optically-clear grade for second-surface glass.",
+      "provenance": "researched",
+      "key_products": [
+        "SC950 Opaque/Metallic cast",
+        "SC900 (decorative window films)",
+        "SC950 optically-clear"
+      ],
+      "sources": [
+        "https://graphics.averydennison.com/content/dam/averydennison/graphics/na/en/documents/Product-Data-Sheets-NA-ONLY/cut-vinyl-film/pds-sc-950-opaque-perm.pdf"
+      ],
+      "optical_behavior": {
+        "appearance": "SC950/SC900 opaque/metallic = reflected-light only, sharp cut graphics, metallics read by specular reflection (day only). Optically-clear SC950 is a transparent carrier for second-surface glass (clarity, not transmission control). SC900 decorative films give frosted/etched diffusion (privacy by scatter).",
+        "provenance": "researched"
+      }
+    },
+    {
+      "id": "mfr-canon",
+      "type": "manufacturer",
+      "name": "Canon",
+      "category": "wallcovering_media",
+      "summary": "Canon (Oce) wide-format printers + printable wallcovering media (textured non-woven, vinyl-coated, self-adhesive PSA), incl. IJM698 extra-fine textured wallcovering and PVC-free Type II grades; Oce Colorado inks.",
+      "provenance": "researched",
+      "key_products": [
+        "IJM698 textured non-woven wallcovering",
+        "Canon Media wallcovering program",
+        "PSA wall-graphic media",
+        "Oce Colorado/Arizona printers"
+      ],
+      "sources": [
+        "https://cpp.canon/products/wallpaper/"
+      ],
+      "optical_behavior": {
+        "appearance": "Fine-textured matte print surface whose subtle relief diffuses light and hides minor wall imperfections, giving printed wall graphics a non-glare finish.",
+        "provenance": "researched"
+      }
+    },
+    {
+      "id": "mfr-cirrus",
+      "type": "manufacturer",
+      "name": "Cirrus",
+      "category": "digital_emc",
+      "summary": "Cirrus LED Systems (US): outdoor full-color EMC panels dropped into monument/pylon message areas, 4/6/9/12mm pitch, lightweight solid-state IP67, gold wire-bonded LEDs, sensor auto-dim.",
+      "provenance": "researched",
+      "key_products": [
+        "Outdoor LED 4mm",
+        "6mm hi-res",
+        "9mm",
+        "12mm",
+        "OOH billboards"
+      ],
+      "sources": [
+        "https://www.cirrusled.com/products/outdoor-led-signs"
+      ],
+      "optical_behavior": {
+        "appearance": "Full-color 4/6/9/12mm (6mm typical for monuments/pylons); ~6,000-8,500 nits (approx, reseller-sourced) with sensor auto-dim (bright day, non-glare night); legibility ~8-40ft by pitch; IP67, ~100,000hr; reads as a saturated full-color panel embedded in the monument/pylon face.",
+        "provenance": "researched"
+      }
+    },
+    {
+      "id": "mfr-dunn-edwards",
+      "type": "manufacturer",
+      "name": "Dunn-Edwards",
+      "category": "architectural_paint",
+      "summary": "Dunn-Edwards Western-US architectural paint; DE/DEW/DET codes for supergraphic/large-format wall palettes. Lines: Evershield (exterior), Suprema (interior), Aristoshield.",
+      "provenance": "researched",
+      "key_products": [
+        "DE/DEW/DET color line",
+        "Evershield exterior",
+        "Suprema interior",
+        "Aristoshield"
+      ],
+      "sources": [
+        "https://www.dunnedwards.com/products/"
+      ]
+    },
+    {
+      "id": "mfr-equitone",
+      "type": "manufacturer",
+      "name": "Equitone",
+      "category": "fiber_cement_cladding",
+      "summary": "EQUITONE (Etex) through-colored fiber-cement facade material (cement + mineral + cellulose) for ventilated rainscreen; color/texture retained at cut edges. Lunara = water-repellent high-density panel, non-repeating lunar-crater surface, subtle two-tone; architectural sign-face/wing cladding.",
+      "provenance": "researched",
+      "key_products": [
+        "Lunara",
+        "EQUITONE facade range (face/back-fastened)"
+      ],
+      "sources": [
+        "https://www.equitone.com/en-us/materials-en-us/lunara/"
+      ],
+      "optical_behavior": {
+        "appearance": "Through-colored matte fiber-cement with randomized crater-like relief and soft two-tone shading; raw tactile mineral surface; opaque, consistent color even at cut edges.",
+        "provenance": "researched"
+      }
+    },
+    {
+      "id": "mfr-jewelite",
+      "type": "manufacturer",
+      "name": "Jewelite",
+      "category": "trim_cap",
+      "summary": "Jewelite (Vidon; via Gemini/sign-supply) flexible 1in trim cap securing acrylic/poly faces to channel-letter returns; 20+ colors in 150ft coils; PRO grade adds flexibility for complex letterforms — a core channel-letter component.",
+      "provenance": "researched",
+      "key_products": [
+        "Jewelite 1in trim cap (white/black/color, 150ft)",
+        "Jewelite PRO"
+      ],
+      "sources": [
+        "https://jewelite.com/"
+      ]
+    },
+    {
+      "id": "mfr-p95-acrylic",
+      "type": "manufacturer",
+      "name": "P95 non-glare acrylic",
+      "category": "non_glare_acrylic",
+      "summary": "P-95 (Plaskolite OPTIX 95) non-glare matte acrylic: matte one face, smooth reverse; meets ADA 'eggshell/matte/non-glare' surface for tactile/braille panels.",
+      "provenance": "researched",
+      "key_products": [
+        "P-95 / OPTIX 95 matte acrylic (one-side matte)"
+      ],
+      "sources": [
+        "https://plaskolite.com/catalog/optix-95-acrylic"
+      ],
+      "optical_behavior": {
+        "appearance": "One-side matte scatters specular highlights so the face throws no glare/mirror reflections (ADA non-glare) while staying near-clear for transmitted light; raised tactile + braille read cleanly without hot spots.",
+        "provenance": "researched"
+      }
+    },
+    {
+      "id": "mfr-p99-acrylic",
+      "type": "manufacturer",
+      "name": "P99 non-glare acrylic",
+      "category": "non_glare_acrylic",
+      "summary": "P-99 (Plaskolite OPTIX 99) premium non-glare acrylic: ultra-light matte both faces, museum/gallery grade; meets ADA non-glare.",
+      "provenance": "researched",
+      "key_products": [
+        "P-99 / OPTIX 99 non-glare acrylic"
+      ],
+      "sources": [
+        "https://plaskolite.com/catalog/optix-99-acrylic"
+      ],
+      "optical_behavior": {
+        "appearance": "Ultra-fine matte diffuses reflections without distorting content behind, ~90% light transmission so the face reads almost clear yet glare-free from any angle; finer/lighter matte than P-95.",
+        "provenance": "researched"
+      }
+    },
+    {
+      "id": "mfr-phototex",
+      "type": "manufacturer",
+      "name": "Phototex",
+      "category": "fabric_wallcovering",
+      "summary": "Photo Tex self-adhesive removable/repositionable 100% polyester print fabric for wall graphics/murals; low-tack no-residue adhesive, reusable; aqueous/eco-solvent/solvent/latex/UV inks.",
+      "provenance": "researched",
+      "key_products": [
+        "Photo Tex Original removable",
+        "Photo Tex PSA rolls/sheets"
+      ],
+      "sources": [
+        "https://www.phototexgroup.com/products/"
+      ],
+      "optical_behavior": {
+        "appearance": "Matte woven polyester fabric receiving full-color print; fine tight weave = soft textile surface, minimal glare, opaque coverage.",
+        "provenance": "researched"
+      }
+    },
+    {
+      "id": "mfr-raster-braille",
+      "type": "manufacturer",
+      "name": "Raster/Accent (raster braille)",
+      "category": "ada_braille",
+      "summary": "Accent Signage Raster (Accent) Braille beads — uniform spheres set into drilled holes for ADA tactile braille; clear/black/white acrylic (and brass); ADA / ANSI A117.1 / CA Title 24.",
+      "provenance": "researched",
+      "key_products": [
+        "Accent Acrylic Raster Spheres (clear/black/white)",
+        "Accent Brass Raster Spheres"
+      ],
+      "sources": [
+        "https://www.jpplus.com/accent-acrylic-spheres",
+        "https://www.gravostoreusa.com/eng/raster-braille"
+      ],
+      "optical_behavior": {
+        "appearance": "Each bead is a perfectly rounded dome reading tactually as a consistent dot and optically as a discrete hemisphere; clear spheres are near-transparent and read by highlight/shadow (unobtrusive), black/white chosen to match/contrast; smooth polished sphere gives a small specular highlight per dot; uniform height/reflectivity across the field.",
+        "provenance": "researched"
+      }
+    },
+    {
+      "id": "mfr-solyx",
+      "type": "manufacturer",
+      "name": "Solyx (Decorative Films)",
+      "category": "window_films",
+      "summary": "Solyx (Decorative Films LLC) decorative window films — frosted, etched, patterned, light-diffusing PSA polyester. SX-C300 Dusted Etch is used as an etched-glass privacy treatment.",
+      "provenance": "researched",
+      "key_products": [
+        "SX-C300 Dusted Etch",
+        "frosted/etched decorative window films",
+        "light-diffusing films"
+      ],
+      "sources": [
+        "https://www.decorativefilm.com/solyx-sx-c300-dusted-etch-48-wide"
+      ],
+      "optical_behavior": {
+        "appearance": "SX-C300 Dusted Etch: light-grey, slightly transparent light-diffusing film mimicking sandblasted/acid-etched glass; translucent (privacy by diffusion, not blockout), no inherent lit/reflective behavior.",
+        "provenance": "researched"
+      }
+    },
+    {
+      "id": "mfr-spraylat",
+      "type": "manufacturer",
+      "name": "Spray-Lat",
+      "category": "reflective_coatings",
+      "summary": "Spraylat (a PPG brand) sign paints/coatings — sprayable enamels, anti-graffiti clears, and 'Starbright' reflective-white interior cabinet coating that brightens lit cabinet interiors. CAVEAT: the specific Starbright product page wasn't independently reachable; brand ownership verified, product role from corpus context.",
+      "provenance": "researched",
+      "key_products": [
+        "Starbright reflective interior coating",
+        "Spraylat sign enamels",
+        "anti-graffiti clears"
+      ],
+      "sources": [
+        "https://www.ndgraphics.com/brand/spraylat"
+      ],
+      "optical_behavior": {
+        "appearance": "High-reflectance flat/matte white interior coating to maximize diffuse light bounce inside lit cabinets — a brightness amplifier, not a face color.",
+        "provenance": "researched"
+      }
+    },
+    {
+      "id": "mfr-sunbrella",
+      "type": "manufacturer",
+      "name": "Sunbrella",
+      "category": "awning_fabric",
+      "summary": "Sunbrella (Glen Raven) 100% solution-dyed acrylic performance fabric (UV/water/mildew resistant, 10-yr fade warranty). 4684 Slate = 46in, 9.25 oz/yd2, reversible awning/marine cloth; storefront/entry awnings.",
+      "provenance": "researched",
+      "key_products": [
+        "Awning/Marine 4684 Slate",
+        "solution-dyed acrylic awning range"
+      ],
+      "sources": [
+        "https://www.sunbrella.com/sunbrella-shade-slate-4684-0000c"
+      ],
+      "optical_behavior": {
+        "appearance": "Woven matte solution-dyed acrylic in solid slate gray; soft canvas texture, even through-yarn color, breathable, non-reflective.",
+        "provenance": "researched"
+      }
+    },
+    {
+      "id": "mfr-tempotest",
+      "type": "manufacturer",
+      "name": "Tempotest",
+      "category": "awning_fabric",
+      "summary": "Tempotest (Para/Para Group) highly water-repellent woven awning fabric, 100% solution-dyed acrylic with Hi-Clean coating; breathable, mildew-resistant, graphic-receptive, weldable; T416 in the awning collection (e.g. Pacific Blue).",
+      "provenance": "researched",
+      "key_products": [
+        "Para Tempotest awning fabric (T416)",
+        "Hi-Clean finish"
+      ],
+      "sources": [
+        "https://www.tempotestusa.com/Products/"
+      ],
+      "optical_behavior": {
+        "appearance": "Matte woven solution-dyed acrylic canvas (solid & striped); breathable, non-reflective, even through-yarn color with water-repellent surface.",
+        "provenance": "researched"
+      }
+    },
+    {
+      "id": "mfr-tremco",
+      "type": "manufacturer",
+      "name": "Tremco",
+      "category": "sealants",
+      "summary": "Tremco high-performance silicone glazing sealants (Spectrem line) for sign/curtainwall assemblies. Spectrem 2 = single-component medium-modulus silicone for two-sided structural glazing and perimeter/weather seals; bonds without primer to metal/glass/stone/masonry (black for structural glazing).",
+      "provenance": "researched",
+      "key_products": [
+        "Spectrem 2 (structural glazing silicone)",
+        "Spectrem 1 (high-movement)",
+        "commercial glazing systems"
+      ],
+      "sources": [
+        "https://www.tremcosealants.com/products/spectrem-2"
+      ]
+    },
+    {
+      "id": "mfr-trex",
+      "type": "manufacturer",
+      "name": "Trex",
+      "category": "composite_cladding",
+      "summary": "Trex capped wood-look composite decking/cladding (95% recycled film + reclaimed sawdust, polymer shell); Transcend Havana Gold = warm caramel/honey multi-tonal teak tone; repurposed as sign-wing/fascia cladding.",
+      "provenance": "researched",
+      "key_products": [
+        "Transcend (Havana Gold etc.)",
+        "Tropical Collection grooved/square boards"
+      ],
+      "sources": [
+        "https://www.trex.com/products/decking/transcend/havana-gold/"
+      ],
+      "optical_behavior": {
+        "appearance": "Matte multi-tonal wood grain in warm caramel-to-honey browns; embossed streaked grain reads as exotic teak; opaque, non-reflective.",
+        "provenance": "researched"
+      }
+    },
+    {
+      "id": "comp-bandit-clamp",
+      "type": "component",
+      "manufacturer_id": "mfr-band-it",
+      "name": "Band-It stainless band clamp + turnbuckle",
+      "used_for": "non-penetrating pole/column attachment",
+      "spec_provenance": "from_drawing",
+      "context_provenance": "knowledge"
+    },
+    {
+      "id": "comp-principal-ps",
+      "type": "component",
+      "manufacturer_id": "mfr-principal-led",
+      "name": "Principal 12V LED + 60W power supply",
+      "used_for": "sign illumination",
+      "spec_provenance": "from_drawing",
+      "context_provenance": "knowledge"
+    },
+    {
+      "id": "comp-signcomp-1391",
+      "type": "component",
+      "manufacturer_id": "mfr-signcomp",
+      "name": "SignComp #1391 single-face extruded cabinet + #1694 retainers",
+      "used_for": "extruded aluminum cabinet system",
+      "spec_provenance": "from_drawing",
+      "context_provenance": "knowledge"
+    },
+    {
+      "id": "mfr-benjamin-moore",
+      "type": "manufacturer",
+      "name": "Benjamin Moore",
+      "category": "architectural_paint",
+      "summary": "Benjamin Moore premium architectural paint; OC and other codes cited for interior sign palettes (e.g. OC-17 White Dove). Lines: Aura, Regal Select, ben; flat-semigloss.",
+      "provenance": "researched",
+      "key_products": [
+        "Off-White Collection (OC codes)",
+        "Aura",
+        "Regal Select",
+        "ben"
+      ],
+      "sources": [
+        "https://www.benjaminmoore.com/en-us/paint-colors/color-collections"
+      ]
+    },
+    {
+      "id": "mfr-creative-mines",
+      "type": "manufacturer",
+      "name": "Creative Mines",
+      "category": "concrete_veneer",
+      "summary": "Creative Mines lightweight architectural masonry/stone veneer (100% natural Pozzolan pumice, non-combustible, high freeze-thaw). Craft Board Form = handcast from rough boards exposing woodgrain/knotholes (5 colors), an alternative to poured board-form concrete; ICC-ES ESR-3685.",
+      "provenance": "researched",
+      "key_products": [
+        "Craft Board Form (Grayscale/Sycamore/Barnwood/Saltspray/Monsoon)",
+        "stone & brick veneer"
+      ],
+      "sources": [
+        "https://creativemines.us/products/wood-board-form"
+      ],
+      "optical_behavior": {
+        "appearance": "Board-form concrete with imprinted rough woodgrain/knotholes; smooth-but-textured cementitious surface in cool grays/muted earth tones; matte, opaque, reads as architectural cast concrete.",
+        "provenance": "researched"
+      }
+    },
+    {
+      "id": "mfr-harristone",
+      "type": "manufacturer",
+      "name": "Harristone",
+      "category": "faux_stone_veneer",
+      "summary": "Harristone (Salt Lake City) cast concrete stone veneer; Uintah Ledgestone = rough textures/jagged ledge edges in 10 colorways (Slate, Cape Cod, Chablis, Canmore...); veneer cladding for monument/entry-feature bases.",
+      "provenance": "researched",
+      "key_products": [
+        "Uintah Ledgestone (Slate/Cape Cod/Chablis/Canmore...)",
+        "stone-texture profiles"
+      ],
+      "sources": [
+        "https://www.harristone.com/"
+      ],
+      "optical_behavior": {
+        "appearance": "Rough-split ledgestone courses, jagged edges, irregular stacking; multi-tonal earth blends (silver/charcoal slate, warm brown, beige/rose); matte stone surface, opaque.",
+        "provenance": "researched"
+      }
+    },
+    {
+      "id": "mfr-minwax",
+      "type": "manufacturer",
+      "name": "Minwax",
+      "category": "wood_stains",
+      "summary": "Minwax penetrating oil-based wood stains/finishes for trim, doors, dimensional sign elements; Wood Finish #2716 Dark Walnut = semi-transparent brown, one-coat, ~2hr dry; on timber posts/frames/carved faces.",
+      "provenance": "researched",
+      "key_products": [
+        "Wood Finish penetrating stain (Dark Walnut #2716 + tones)"
+      ],
+      "sources": [
+        "https://www.minwax.com/en/wood-stain-color-guide/browse-color-stains/brown/dark-walnut-2716-semi-transparent"
+      ],
+      "optical_behavior": {
+        "appearance": "Semi-transparent dark brown stain that deepens grain while letting figure show through; satin penetrating finish, non-opaque.",
+        "provenance": "researched"
+      }
+    },
+    {
+      "id": "mfr-precision-coating",
+      "type": "manufacturer",
+      "name": "Precision Coating",
+      "category": "specialty_coatings",
+      "summary": "Precision Coatings Inc. — specialty architectural metallic/pearlescent/iridescent polyurethane & polysiloxane finishes for high-end sign/architectural metalwork (also IR-reflective, anti-slip). NOTE: the sign-relevant entity, not the medical/thermal-spray firms of similar name.",
+      "provenance": "researched",
+      "key_products": [
+        "custom metallic/pearlescent PU finishes",
+        "polysiloxane finishes",
+        "iridescent finishes"
+      ],
+      "sources": [
+        "https://precisioncoatingsinc.com/collections/specialty-coatings"
+      ],
+      "optical_behavior": {
+        "appearance": "Metallic, pearlescent, and iridescent finishes that shift with light/viewing angle, in gloss to matte sheens.",
+        "provenance": "researched"
+      }
+    },
+    {
+      "id": "mfr-roland",
+      "type": "manufacturer",
+      "name": "Roland DG",
+      "category": "print_devices_media",
+      "summary": "Roland DG wide-format eco-solvent/UV/resin inkjet printer-cutters + vinyl cutters, an industry color benchmark. TrueVIS (VG4-540/640, XG-640, SG3) print + contour-cut signs/decals/vehicle/window graphics with wide-gamut TR inks.",
+      "provenance": "researched",
+      "key_products": [
+        "TrueVIS VG4 (540/640) + TR3 inks",
+        "TrueVIS XG-640",
+        "TrueVIS SG3",
+        "CAMM-1 GR cutters"
+      ],
+      "sources": [
+        "https://www.rolanddga.com/products/printers/truevis"
+      ]
+    },
+    {
+      "id": "mfr-sherwin-williams",
+      "type": "manufacturer",
+      "name": "Sherwin-Williams",
+      "category": "architectural_paint",
+      "summary": "Sherwin-Williams architectural paint; SW codes (e.g. SW7069 Iron Ore, LRV ~6) referenced for sign color-match. Industrial/sign lines include Polane 2K urethane topcoats and Pro Industrial DTM Acrylic for fabricated metal.",
+      "provenance": "researched",
+      "key_products": [
+        "SW color line (SW7069 Iron Ore etc.)",
+        "Polane D8700/8910 urethane",
+        "Pro Industrial DTM Acrylic"
+      ],
+      "sources": [
+        "https://www.sherwin-williams.com/en-us/color/color-family/neutral-paint-colors/sw7069-iron-ore"
+      ]
+    },
+    {
+      "id": "mfr-signfoam",
+      "type": "manufacturer",
+      "name": "SignFoam",
+      "category": "hdu_sign_board",
+      "summary": "SignFoam high-density urethane (HDU) carving board for dimensional signs/3-D displays; closed-cell, naturally waterproof, uniform density, carves/routes/sandblasts/CNCs; ~15-18 lb/ft3 (denser = crisper detail).",
+      "provenance": "researched",
+      "key_products": [
+        "SignFoam HDU board (density/thickness grades ~15-18 lb/ft3)"
+      ],
+      "sources": [
+        "http://www.signfoam.com/signfoam.html"
+      ],
+      "optical_behavior": {
+        "appearance": "Uniform tan/off-white closed-cell foam before finishing; smooth machined or sandblasted faux-woodgrain surface that takes primer/paint; matte, opaque substrate.",
+        "provenance": "researched"
+      }
+    },
+    {
+      "id": "mfr-watchfire",
+      "type": "manufacturer",
+      "name": "Watchfire",
+      "category": "digital_emc",
+      "summary": "Watchfire Signs (US, Danville IL): durable full-color outdoor LED EMCs/billboards, 4-19mm pitch, silicone-potted weather-sealed modules, hardware auto-dimming.",
+      "provenance": "researched",
+      "key_products": [
+        "W-Series outdoor EMC",
+        "4/6/8mm fine-pitch",
+        "10/12mm mid",
+        "16/19mm wide",
+        "digital billboards"
+      ],
+      "sources": [
+        "https://www.watchfire.com/products/outdoor-led-signs",
+        "https://www.watchfire.com/resources/led-basics/led-signs-and-pixel-pitch"
+      ],
+      "optical_behavior": {
+        "appearance": "Pitch 4/6/8/10mm (close) and 12/16/19mm (elevated/roadside); peak ~up to 12,000 nits (model-dependent, some from ~7,000), high-contrast lensing reads clean at lower nits; horizontal viewing >=140deg (half-value ~70deg). 100-step photocell + software dimming: bright/saturated by day, dims to a calm night level (e.g. ~300 nit permit caps), low glare/spill.",
+        "provenance": "researched"
+      }
+    },
+    {
+      "id": "comp-apco-notifier",
+      "type": "component",
+      "manufacturer_id": "mfr-apco",
+      "name": "APCO Notifier page holder",
+      "used_for": "changeable paper-insert holder for ADA room IDs",
+      "spec_provenance": "from_drawing",
+      "context_provenance": "knowledge"
+    },
+    {
+      "id": "comp-brunner-hmolding",
+      "type": "component",
+      "manufacturer_id": "mfr-brunner",
+      "name": "Brunner G849S H-molding",
+      "used_for": "1/4in H-molding (3/4in face) for fascia-panel joints",
+      "spec_provenance": "from_drawing",
+      "context_provenance": "knowledge"
+    },
+    {
+      "id": "comp-colite-lp4",
+      "type": "component",
+      "manufacturer_id": "mfr-colite",
+      "name": "Colite Signature LED LP4",
+      "used_for": "LED module for channel letters/logos",
+      "spec_provenance": "from_drawing",
+      "context_provenance": "knowledge"
+    },
+    {
+      "id": "comp-daktronics-df2053",
+      "type": "component",
+      "manufacturer_id": "mfr-daktronics",
+      "name": "Daktronics DF-2053 space counter",
+      "used_for": "drop-in wireless live parking space-count display",
+      "spec_provenance": "from_drawing",
+      "context_provenance": "researched",
+      "spec": "monochrome red or green digits, 5in/7in character height, ~110deg V x 70deg H viewing, color-coded open/full",
+      "optical_behavior": {
+        "appearance": "Mono red/green numeric digits on a dark face, ~110x70 viewing; green vs red color-codes availability (open vs full).",
+        "provenance": "researched"
+      },
+      "sources": [
+        "https://www.daktronics.com/web-documents/transportation-documents/parking/product-overview-df-2053.pdf"
+      ]
+    },
+    {
+      "id": "mfr-3form",
+      "type": "manufacturer",
+      "name": "3Form",
+      "category": "resin_panels",
+      "summary": "3form Varia (Ecoresin): formable architectural resin on Spectar PETG (up to 40% recycled, ~40x glass impact), with a custom interlayer (color/texture/crushed glass/capiz/botanical) suspended between resin layers — the 'sea glass' cast-resin sign panel.",
+      "provenance": "researched",
+      "key_products": [
+        "Varia Ecoresin",
+        "Varia Play (crushed glass/capiz)",
+        "Varia formable/outdoor"
+      ],
+      "sources": [
+        "https://www.3-form.com/materials/varia"
+      ],
+      "optical_behavior": {
+        "appearance": "Translucent color-infused resin glows backlit/edge-lit and reads with depth because the interlayer floats inside the panel (layered sea-glass effect); transmits a saturated color wash while diffusing the source; finishes clear-gloss to textured; holds transmission after weathering (outdoor).",
+        "provenance": "researched"
+      }
+    },
+    {
+      "id": "mfr-aristech",
+      "type": "manufacturer",
+      "name": "Aristech Surfaces (Acrysteel)",
+      "category": "acrylic_sheet",
+      "summary": "Aristech Surfaces (Acrysteel) cast PMMA, incl. a 7328 translucent bright-white sign face cross-compatible with the industry 7328 standard; cast construction machines/thermoforms cleanly.",
+      "provenance": "researched",
+      "key_products": [
+        "Acrysteel 7328 translucent white",
+        "Acrysteel cast acrylic"
+      ],
+      "sources": [
+        "https://aristechsurfaces.com/market/architectural/acrysteel/colors/white"
+      ],
+      "optical_behavior": {
+        "appearance": "Translucent bright white ~28-32% transmission, diffuses backlight evenly to a clean glowing face; strong opaque contrast against copy when unlit; cast resists yellowing for outdoor face life.",
+        "provenance": "researched"
+      }
+    },
+    {
+      "id": "mfr-arlon",
+      "type": "manufacturer",
+      "name": "Arlon Graphics",
+      "category": "vinyl_films",
+      "summary": "Arlon Graphics cast films: #236 turquoise translucent (illuminated color) and the Series 5590 85/15 perforated dual-color light-management film for first-surface channel-letter faces.",
+      "provenance": "researched",
+      "key_products": [
+        "#236 Turquoise translucent",
+        "Series 5590 dual-color perforated (5590-120/-122)"
+      ],
+      "sources": [
+        "https://www.arlon.com/na_en/products/series-5590",
+        "https://www.arlon.com/assets/docs/Series_5590_PIB_ENG.pdf"
+      ],
+      "optical_behavior": {
+        "appearance": "#236 translucent: solid turquoise by day, turquoise glow backlit. 5590 perforated (first-surface over a translucent face): reads its solid surface color by day (black 5590-122 / white 5590-120), at night the face color shines through the perforations for a dual-color day/night read while evening the emitted light.",
+        "provenance": "researched"
+      }
+    },
+    {
+      "id": "mfr-calsak-acrycast",
+      "type": "manufacturer",
+      "name": "Calsak Plastics (ACRYCAST)",
+      "category": "acrylic_sheet",
+      "summary": "Calsak Plastics distributes ACRYCAST cell-cast PMMA (superior clarity/impact vs continuous-cast/extruded), in water-clear and non-glare matte (N2); used for layered architectural sign panels and dimensional lettering.",
+      "provenance": "researched",
+      "key_products": [
+        "Acrycast cell-cast clear",
+        "Acrycast N2 non-glare matte",
+        "architectural sheet 0.060in-6in"
+      ],
+      "sources": [
+        "https://calsakplastics.com/products/acrycast-cell-cast-acrylic/",
+        "https://calsakplastics.com/plastic-materials/acrycast-n2-2/"
+      ],
+      "optical_behavior": {
+        "appearance": "Clear grade: highly transparent, low haze, crisp polished edges so layered panels read with depth/light-piping. N2 non-glare: true matte, no sheen/reflection, kills specular glare while keeping graphics legible. UV-stable.",
+        "provenance": "researched"
+      }
+    },
+    {
+      "id": "mfr-chemetal",
+      "type": "manufacturer",
+      "name": "Chemetal",
+      "category": "aluminum_laminate",
+      "summary": "Chemetal decorative real-metal/metal-look laminate sheets for sign faces/accents, incl. #909 Satin Silver Aluminum (900 anodized series); solid anodized aluminum ~0.025in, interior commercial use (not exterior/wet).",
+      "provenance": "researched",
+      "key_products": [
+        "#909 Satin Silver Aluminum",
+        "900 Series anodized aluminum",
+        "real-metal laminate"
+      ],
+      "sources": [
+        "https://www.chemetal.com/designs/909-satin-silver-aluminum/"
+      ],
+      "optical_behavior": {
+        "appearance": "Genuine satin-brushed anodized aluminum surface with a soft directional sheen and real metallic reflectivity — reads as actual brushed metal, not a printed simulation.",
+        "provenance": "researched"
+      }
+    },
+    {
+      "id": "mfr-daktronics",
+      "type": "manufacturer",
+      "name": "Daktronics",
+      "category": "digital_emc_and_counters",
+      "summary": "Daktronics (US, Brookings SD): outdoor full-color LED EMCs/video (fine-pitch GT6x to wide-pitch Galaxy) plus the DF-2053 drop-in parking space-count display (comp-daktronics-df2053).",
+      "provenance": "researched",
+      "key_products": [
+        "GT6x 6/8mm full-color",
+        "Galaxy 16mm/34mm",
+        "DF-2053 space-availability display"
+      ],
+      "sources": [
+        "https://www.daktronics.com/en-us/products/message-displays/gt6x-6mm-full-color",
+        "https://www.daktronics.com/web-documents/transportation-documents/parking/product-overview-df-2053.pdf"
+      ],
+      "optical_behavior": {
+        "appearance": "Full-color RGB families 6/8mm fine to 16/34mm wide. Peak ~12,000 nits at 16mm to ~7,500 at 34mm; ambient auto-dim (crisp day, non-glare night). Viewing angle widens with finer pitch (16mm ~140Hx70V, 34mm ~70Hx30V). Reads as a saturated full-color video panel by day, controlled at night. DF-2053 space-counter = separate mono red/green 5in/7in digits, ~110V x 70H viewing, color-coded open/full.",
+        "provenance": "researched"
+      }
+    },
+    {
+      "id": "mfr-designtex",
+      "type": "manufacturer",
+      "name": "DesignTex",
+      "category": "wallcovering",
+      "summary": "Designtex commercial wallcovering; DNA Non-Vinyl = PVC-free Type II, digitally printed by-the-yard, SCS Gold facility, strong material-health credentials (LEED/WELL/HPD/EPD).",
+      "provenance": "researched",
+      "key_products": [
+        "DNA Non-Vinyl (PVC-free Type II)",
+        "Output printed wallcovering",
+        "by-the-yard custom"
+      ],
+      "sources": [
+        "https://shop.designtex.com/dna-non-vinyl/"
+      ]
+    },
+    {
+      "id": "mfr-gkd",
+      "type": "manufacturer",
+      "name": "GKD Metal Fabrics",
+      "category": "architectural_metal_mesh",
+      "summary": "GKD Metal Fabrics weaves architectural stainless mesh as transparent sign fields/screens. Tigris (3-cable cluster + fine rod, pinstripe look) ~65% open area; used for facades, partitions, railing infill, graphic screens.",
+      "provenance": "researched",
+      "key_products": [
+        "Tigris",
+        "PC-Tigris",
+        "Tigris TC-3"
+      ],
+      "sources": [
+        "https://www.gkdmetalfabrics.com/product/tigris/"
+      ],
+      "optical_behavior": {
+        "appearance": "Semi-transparent metallic screen (~65% open): see-through veil up close, continuous surface at distance, backgrounds/light show through. Polished stainless is specular/reflective (shimmer that shifts with viewer); regular weave can MOIRE against fine graphics or LED/media behind it; Tigris adds a directional pinstripe texture.",
+        "provenance": "researched"
+      }
+    },
+    {
+      "id": "mfr-reflectiv",
+      "type": "manufacturer",
+      "name": "Reflectiv",
+      "category": "reflective_films",
+      "summary": "Reflectiv SAS (France, est. 1981) makes adhesive technical glazing films — solar/mirror, blackout, security, frosted/decorative. CAVEAT: its 'reflective' films are solar/mirror (one-way-mirror glare/heat rejection), NOT retroreflective traffic sheeting. If a corpus drawing needs headlight retroreflection for parking/roadside, confirm the exact SKU/brand.",
+      "provenance": "researched",
+      "key_products": [
+        "solar/mirror glazing films",
+        "blackout films",
+        "frosted/decorative diffusing films",
+        "security films"
+      ],
+      "sources": [
+        "https://www.reflectiv.com/en/window-films"
+      ],
+      "optical_behavior": {
+        "appearance": "Solar/mirror films read one-way-mirror by day (silvered exterior, see-through interior), rejecting solar/glare — not glow-back retroreflection. Blackout grades fully opaque; frosted grades translucent diffusers.",
+        "provenance": "researched"
+      }
+    },
+    {
+      "id": "mfr-apco",
+      "type": "manufacturer",
+      "name": "APCO (APCO Graphics)",
+      "category": "modular_sign_systems",
+      "summary": "APCO Graphics (since 1966) modular architectural sign systems with interchangeable inserts/finishes. Notifier Message Strip = extruded-aluminum machined-roller holder that auto-grips paper/card up to 1/64in for changeable notices; integrates with Arcadia/Fullview/Accord/IM systems.",
+      "provenance": "researched",
+      "key_products": [
+        "Notifier Message Strip",
+        "Accord 15",
+        "Arcadia",
+        "Fullview",
+        "IM/SignMatch"
+      ],
+      "sources": [
+        "https://www.apcosigns.com/notifier.html"
+      ]
+    },
+    {
+      "id": "mfr-colite",
+      "type": "manufacturer",
+      "name": "Colite Technologies",
+      "category": "led_illumination",
+      "summary": "Colite Technologies (US, West Columbia SC) makes the Signature LED line. The LP4 low-profile module lights thin letter strokes and shallow push-through cabinet faces where deeper modules won't fit, without a trim cap. Exact lumens/beam figures sit behind the Signature LED spec book (not confirmed).",
+      "provenance": "researched",
+      "key_products": [
+        "Signature LED",
+        "Signature LED LP4 (low-profile)"
+      ],
+      "sources": [
+        "https://colite.com/colite-signage/signature-leds/",
+        "https://colite.com/wp-content/uploads/2015/05/LED-book-layout_JS-5-17-15.pdf"
+      ],
+      "optical_behavior": {
+        "appearance": "Low-profile form lights very thin strokes and shallow push-through faces uniformly without a recessed source; exact lm/beam unconfirmed.",
+        "provenance": "researched"
+      }
+    },
+    {
+      "id": "mfr-brunner",
+      "type": "manufacturer",
+      "name": "Brunner",
+      "category": "extrusions_moldings",
+      "summary": "Brunner Enterprises aluminum-extrusion distributor (200+ profiles): J/F/H/T/Z channels, division bars, sign-frame extrusions, caps/coves, trim. H/J moldings join/edge fascia-band and sign panels. CAVEAT: exact part G849S not confirmable on the public site.",
+      "provenance": "researched",
+      "key_products": [
+        "H/h/F/T/Z channel moldings",
+        "J-channel",
+        "sign-frame extrusions",
+        "division bars/caps"
+      ],
+      "sources": [
+        "https://brunnerent.com/product-category/aluminum/aluminum-hhft-z-channels/"
+      ]
+    },
+    {
+      "id": "mfr-band-it",
+      "type": "manufacturer",
+      "name": "Band-It (BAND-IT)",
+      "category": "attachment_hardware",
+      "summary": "BAND-IT (IDEX) stainless band clamps/buckles/strapping with hand/drill tensioning (manual tension up to ~2,400 lb) for non-penetrating sign/hardware attachment to poles/columns of any diameter; 201 SS resists corrosion/vibration/wind.",
+      "provenance": "researched",
+      "key_products": [
+        "201 Stainless Band & buckles",
+        "ValuStrap",
+        "Standard Banding Tool C00169",
+        "DABT drill tool"
+      ],
+      "sources": [
+        "https://www.band-it-idex.com/solutions/municipal/sign-and-pole-mounting/"
+      ]
+    },
+    {
+      "id": "mfr-principal-led",
+      "type": "manufacturer",
+      "name": "Principal LED (Principal-Sloan)",
+      "category": "led_illumination",
+      "summary": "Principal LED (US, Abilene TX; now Principal-Sloan) makes optics-based sign LED modules. Qwik Mod (American-made, 7100K, wide diffusing lens, ~150 lm/ft on Qwik Mod 1/2 up to ~260 lm/ft on Qwik Mod 4, 24V for long runs, IP68) and the value Street Fighter / Street Fighter Colors (160deg optic).",
+      "provenance": "researched",
+      "key_products": [
+        "Qwik Mod 1/2/3/4",
+        "Street Fighter / Colors / Plus",
+        "Street Wrap"
+      ],
+      "sources": [
+        "https://www.p-led.com/product/families/qwik-mod/",
+        "https://www.p-led.com/product/families/street-fighter/"
+      ],
+      "optical_behavior": {
+        "appearance": "Wide-optic lenses spread light for even, hotspot-free face fill from small letters (~150 lm/ft) to large cans/backlit (~260 lm/ft) at a single warm 7100K white; Street Fighter Colors give saturated accent color through a 160deg optic.",
+        "provenance": "researched"
+      }
+    },
+    {
+      "id": "mfr-tectonics",
+      "type": "manufacturer",
+      "name": "Tectonics",
+      "category": "seg_extrusions",
+      "summary": "Tectonics extruded-aluminum frame systems paired with silicone-edge graphics (SEG) for large-format/backlit fabric; a silicone keder sewn to the fabric edge tensions into the frame channel for a smooth hardware-free face.",
+      "provenance": "researched",
+      "key_products": [
+        "Tectonics Extrusion System (SEG profiles)",
+        "keder-edge tension/backlit frames"
+      ],
+      "sources": [
+        "https://tectonics.com/what-we-make/extrusion/"
+      ]
+    },
+    {
+      "id": "mfr-zipchange",
+      "type": "manufacturer",
+      "name": "Zip-Change",
+      "category": "changeable_copy_systems",
+      "summary": "Zip-Change (Wagner) changeable rigid-letter system: scratch-resistant self-spacing acrylic letters in push-up/drop-down acrylic track adhered to readerboard faces; tracking in 8ft lengths; interchangeable with Gemini Pronto.",
+      "provenance": "researched",
+      "key_products": [
+        "Zip-Change acrylic letters",
+        "top & bottom tracking (8ft)",
+        "Zip/Pronto interchangeable"
+      ],
+      "sources": [
+        "https://www.spantonreaderboard.com/letters/zip.html"
+      ]
+    },
+    {
+      "id": "mfr-sloanled",
+      "type": "manufacturer",
+      "name": "SloanLED",
+      "category": "led_illumination",
+      "summary": "SloanLED (US, Ventura CA) — established optics-based sign LED maker. Prism (12V, 3 LEDs/module, IP66/68, >60,000hr) covers white 3000-7100K + colors (~124 lm/module @1.12W, ~111 lm/W) for 3-8in cans; VL4 value series (Mini/Standard/HO, 40-130 lm/module, 2-8in); Prism24 HO is the 24V option for the largest letters/cabinets (5-12in).",
+      "optical_behavior": {
+        "appearance": "Patented prism optics throw a wide balanced distribution to fill the face evenly without hotspots across can depths; white Prism gives bright neutral-to-cool faces (selectable 3000-7100K), color modules light faces in saturated hues; module density tuned by depth and face material; VL4 steps output from Mini (shallow 2-3in) to HO (deep 5-8in).",
+        "provenance": "researched"
+      },
+      "key_products": [
+        "Prism / Prism12 / Prism24 HO / Prism Nano",
+        "VL4 (Mini/Standard/HO)"
+      ],
+      "provenance": "researched",
+      "sources": [
+        "https://sloanled.com/downloads/SpecSheet-SloanLEDPrism-Global.pdf"
+      ]
+    },
+    {
+      "id": "mfr-lumificient",
+      "type": "manufacturer",
+      "name": "Lumificient",
+      "category": "led_illumination",
+      "summary": "Lumificient Corp (US, Maple Grove MN; later Nexxus Lighting) — LED illumination + drivers for signs. Hyperion R-Lite flexible LED strip for channel letters with toroidal-transformer Class-2 drivers using an 8VAC output (vs 12VDC electronic supplies). Module-level lumens/beam not exposed publicly.",
+      "optical_behavior": {
+        "appearance": "Hyperion R-Lite is a flexible strip run inside letters to wash the face evenly along the stroke (continuous line of light vs discrete dots); brightness/uniformity scale with run length on the matched toroidal driver. Exact lm/ft unconfirmed.",
+        "provenance": "researched"
+      },
+      "key_products": [
+        "Hyperion R-Lite flexible strip",
+        "HRL-PS96-70 / HRL-PFC-24 / HRL-PSSQ-25 drivers"
+      ],
+      "provenance": "researched",
+      "sources": [
+        "https://www.signsofthetimes.com/content/lumificient-led-drivers-hyperion-r-lite"
+      ]
+    },
+    {
+      "id": "mfr-us-led",
+      "type": "manufacturer",
+      "name": "US LED, Ltd",
+      "category": "led_illumination",
+      "summary": "US LED, Ltd (US, Katy TX; since 2001) — channel-letter/cabinet LED modules with a 10-yr warranty, ~200,000hr L70. PointXL (PXL) evenly lights letters on 8in centers / 12in rows for 2-12in depths; 3000/4000/5000/6500K (min 70 CRI), IP67, -40 to 60C. Exact lumens/beam not published.",
+      "optical_behavior": {
+        "appearance": "PointXL gives wide even coverage so letters light uniformly with modules on ~8in centers / ~12in rows, filling 2-12in depths without obvious hotspots; CCT 3000-6500K. Exact lumens/beam unconfirmed.",
+        "provenance": "researched"
+      },
+      "key_products": [
+        "PointXL (PXL) channel-letter module",
+        "cabinet modules",
+        "power supplies"
+      ],
+      "provenance": "researched",
+      "sources": [
+        "https://www.usled.com/channel-letter-lighting-1/point-xl-led-modules"
+      ]
+    },
+    {
+      "id": "mfr-tmt",
+      "type": "manufacturer",
+      "name": "TMT Elektronik / TMT LEDs",
+      "category": "led_illumination",
+      "summary": "TMT Elektronik (Türkiye; US arm Irving TX) — Game Changer sign LED modules. Flagship Platinum Midi 4 uses CrystaLens optics for a 170deg viewing angle, 240-320 lumens/module at up to ~155 lm/W (1.7-2W, 12/24V), for large channel letters (3-6in) and cabinets (2-10in from face); cuts module count ~3x and power ~30%.",
+      "optical_behavior": {
+        "appearance": "CrystaLens 170deg distribution floods the face with bright even light and no hotspots even when widely spaced (standard 12in OC, 1 module/ft); at 240-320 lm/module it lights large letters/deep cabinets with ~1/3 the modules; 7.5-25cm (3-10in) depths, 6500K white.",
+        "provenance": "researched"
+      },
+      "key_products": [
+        "Game Changer Platinum Midi 4 (comp-tmt-midi4)",
+        "Midi Edge-lit",
+        "Midi 3 Game Player",
+        "Mini 2 Game Changer"
+      ],
+      "provenance": "researched",
+      "sources": [
+        "https://www.tmtleds.com/technology,c1072.html",
+        "https://tmtledsusa.com/productDetails-1088-midi_4_game_changer.html"
+      ]
+    },
+    {
+      "id": "comp-tmt-midi4",
+      "type": "component",
+      "manufacturer_id": "mfr-tmt",
+      "name": "Game Changer Platinum Midi 4 LED module",
+      "spec": "CrystaLens 170deg viewing angle, 240-320 lm/module, up to ~155 lm/W @2W, 12/24V; channel letters 3-6in deep, cabinets 2-10in from face",
+      "used_for": "even hotspot-free illumination of large channel letters and sign cabinets",
+      "optical_behavior": {
+        "appearance": "Extremely wide 170deg spread floods deep faces evenly with no hotspots at ~1 module/ft; high per-module output reduces count ~3x vs conventional layouts.",
+        "provenance": "researched"
+      },
+      "spec_provenance": "from_datasheet",
+      "context_provenance": "researched",
+      "sources": [
+        "https://www.reliablesignsupply.com/images/products/5187/1775930325851-8bcb50d0e2bdedbe.pdf"
+      ]
+    },
+    {
+      "id": "mfr-everylite",
+      "type": "manufacturer",
+      "name": "EveryLite",
+      "category": "power_supply",
+      "summary": "EveryLite (US, Orlando FL) — LED sign power supplies, modules, channel-letter systems. Class-2 12V supplies incl. JUL-60-12 (60W, IP68, ~85% eff, 100-277VAC w/ PFC, UL8750/1310/879, ~30,000hr MTBF) and EVE-180-12-II-K (180W, IP68 silicone-encapsulated metal case, 100-305VAC active PFC, -40F to +122F, 5-yr warranty); built for outdoor dry/damp/wet service.",
+      "key_products": [
+        "JUL-60-12 (60W 12V Class-2)",
+        "EVE-180-12-II-K (180W 12V Class-2)",
+        "JUL-120-12-II",
+        "Alpha channel letters & modules"
+      ],
+      "provenance": "researched",
+      "sources": [
+        "https://everylite.com/portfolio/jul-60-12/",
+        "https://everylite.com/portfolio/eve-180-12-ii/"
+      ]
+    },
+    {
+      "id": "comp-everylite-jul60-12",
+      "type": "component",
+      "manufacturer_id": "mfr-everylite",
+      "name": "JUL-60-12 LED power supply",
+      "spec": "60W, 12V, 5A, Class-2, IP68, 100-277VAC input w/ PFC, ~85% efficiency, UL8750/1310/879, ~30,000hr MTBF, -? to +? outdoor",
+      "used_for": "low-voltage DC supply for sign LED modules/strips (small-medium runs)",
+      "spec_provenance": "from_datasheet",
+      "context_provenance": "researched",
+      "sources": [
+        "https://everylite.com/portfolio/jul-60-12/"
+      ]
+    },
+    {
+      "id": "comp-everylite-eve180-12",
+      "type": "component",
+      "manufacturer_id": "mfr-everylite",
+      "name": "EVE-180-12-II-K LED power supply",
+      "spec": "180W, 12V, Class-2, IP68 silicone-encapsulated aluminum case, 100-305VAC active PFC (PF>=0.9), -40F to +122F, UL/CE/FCC, 5-yr warranty",
+      "used_for": "low-voltage DC supply for larger sign LED loads / long runs, outdoor",
+      "spec_provenance": "from_datasheet",
+      "context_provenance": "researched",
+      "sources": [
+        "https://everylite.com/portfolio/eve-180-12-ii/"
+      ]
+    }
+  ]
+}

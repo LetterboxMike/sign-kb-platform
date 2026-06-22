@@ -1,0 +1,97 @@
+{
+  "record_id": "rec-channel_letter-ledge-stanchion-raceway-utica-001",
+  "schema_version": "1.3",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data and actual copy excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "education_k12"
+  },
+  "classification": {
+    "sign_category": "channel_letter",
+    "sub_type": "facelit_channel_letters_on_stanchion_raceway",
+    "primary_function": "building_identification",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 1,
+    "fabrication_family": "channel_letter",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "Face-lit channel letters stood off on welded aluminum stanchions from a sectioned aluminum raceway, mounted to an existing building ledge; Principal LEDs and supplies, removable access hatches.",
+    "rationale": "Stanchions raise the letters off the ledge for depth, and the sectioned raceway with hatches keeps the run serviceable.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "channel_letters",
+      "construction": "0.117in 7328 white acrylic faces, 1in Jewelite trim cap, 4in deep 0.040in returns, 0.063in backs, Principal 12V 5000K LEDs",
+      "material_refs": [
+        "A1",
+        "T1"
+      ],
+      "illumination": "internal 5000K LED",
+      "fabrication_method": "face_lit_channel",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "stanchion_raceway",
+      "construction": "1.5x1.5x1/8in aluminum angle raceway with 0.090in skin in 3 sections with removable hatches; 2x2x1/8in aluminum stanchions welded to raceway with grommeted LED pass-thru; to existing ledge with 1/4-20x2in stainless screws",
+      "component_ref": "comp-principal-ps",
+      "mounted_to": "existing_building_ledge",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "letter_face",
+      "product": "0.117in 7328 white acrylic",
+      "manufacturer_normalized_id": "mfr-acrylite"
+    },
+    {
+      "ref": "T1",
+      "category": "coating",
+      "product": "1in Jewelite trim cap",
+      "manufacturer_normalized_id": "mfr-jewelite"
+    }
+  ],
+  "dimensions": {
+    "overall_length_in": 304,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "building_wordmark"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "utilities": {
+    "power": "120V/20A dedicated circuit, photocell/timer"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Stanchions lift letters off the ledge for depth; sectioned raceway with hatches keeps it serviceable."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ],
+    "modeling_notes": [
+      "LED illumination captured in structure per consumable policy."
+    ]
+  }
+}

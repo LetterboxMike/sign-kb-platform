@@ -1,0 +1,93 @@
+{
+  "record_id": "rec-cabinet-pushthru-wall-display-coloradan-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "residential_high_rise"
+  },
+  "classification": {
+    "sign_category": "cabinet",
+    "sub_type": "illuminated_pushthru_identity_wall_cabinet",
+    "primary_function": "identity_wall_display",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 1,
+    "fabrication_family": "cabinet",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "illuminated identity wall displays, qty 3 (8ft + 4ft)",
+    "variant_axis": "size"
+  },
+  "knowledge": {
+    "plain_language_summary": "Fabricated aluminum cabinets with 3/4in clear-acrylic push-through graphics (white diffuser 2nd-surface + printed translucent vinyl + matte UV 1st-surface) and internal dimmable white LEDs, concealed mounting.",
+    "rationale": "Push-through with diffuser gives crisp lit identity displays.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "cabinet",
+      "construction": ".125 aluminum face, .090 returns, .040 back; 3/4in clear acrylic push-thru + white diffuser film 2nd-surface + printed translucent vinyl + matte UV 1st-surface; internal dimmable white LED, concealed mounting",
+      "material_refs": [
+        "A1",
+        "V1"
+      ],
+      "illumination": "internal LED",
+      "fabrication_method": "push_thru_cabinet",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "letter_face",
+      "product": "3/4in clear acrylic push-thru",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "printed translucent vinyl + matte UV",
+      "application": "digital_print",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "widths_ft": [
+      8,
+      4
+    ],
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "identity"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Push-through + diffuser; dimmable LED identity displays."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

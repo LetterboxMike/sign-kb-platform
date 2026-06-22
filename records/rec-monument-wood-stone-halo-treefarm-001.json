@@ -1,0 +1,112 @@
+{
+  "record_id": "rec-monument-wood-stone-halo-treefarm-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "design_conceptual"
+  },
+  "context": {
+    "industry_vertical": "mixed_use_retail_development"
+  },
+  "classification": {
+    "sign_category": "monument",
+    "sub_type": "wood_clad_monument_with_halo_letters_and_stone_planter",
+    "primary_function": "property_identification",
+    "illuminated": true,
+    "illumination_method": "halo_illuminated",
+    "sides": 1,
+    "fabrication_family": "composite_structure",
+    "mounting": "ground_mounted_footing",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A property-ID monument: an aluminum tube frame sheathed in vertical wood siding (match building) with a .090 aluminum pan roof and a 2in tube decorative reveal, halo channel letters on the body, and a site-built stone planter (veneer + cast capstone) on a poured footing with a 4in curb.",
+    "rationale": "Wood + stone + halo letters give a warm site-rooted mixed-use identity.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "wood_body",
+      "construction": "aluminum tube frame, vertical wood siding (match building), .090 aluminum pan roof, 2in sq-tube decorative reveal; halo channel letters on body",
+      "material_refs": [
+        "W1"
+      ],
+      "illumination": "halo LED",
+      "fabrication_method": "reverse_pan_halo",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "stone_planter",
+      "construction": "site-built stone veneer + cast-concrete capstone on poured concrete footing with 4in curb",
+      "material_buildup": [
+        "poured footing",
+        "stone veneer",
+        "cast capstone"
+      ],
+      "material_refs": [
+        "ST1",
+        "C1"
+      ],
+      "mounted_to": "ground_footing",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "W1",
+      "category": "structural_timber",
+      "product": "vertical wood siding",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "ST1",
+      "category": "cladding_stone",
+      "product": "site-built stone veneer + cast capstone",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "C1",
+      "category": "structural_concrete_masonry",
+      "product": "poured concrete footing",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews MP20046/MP20303/MP20144 metallic matte",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "property_name"
+      },
+      {
+        "slot": "address_numbers"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Wood + stone + halo letters; site-built stone planter on footing."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

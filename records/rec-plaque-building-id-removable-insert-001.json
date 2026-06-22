@@ -1,0 +1,94 @@
+{
+  "record_id": "rec-plaque-building-id-removable-insert-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data and actual copy excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "commercial_office_building"
+  },
+  "classification": {
+    "sign_category": "plaque",
+    "sub_type": "standoff_backer_plaque_with_removable_insert",
+    "primary_function": "building_and_messaging_identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "building-ID and interior messaging plaques on standoff backers; removable insert",
+    "variant_axis": "exterior_id_vs_interior_messaging"
+  },
+  "knowledge": {
+    "plain_language_summary": "A building-ID plaque on a 1/4in aluminum standoff backer with a removable plaque insert held by tamper-resistant screws; an interior messaging plaque variant shares the construction.",
+    "rationale": "A removable insert on a standoff backer allows changeable building/messaging copy with tamper-resistant security.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "backer_and_plaque",
+      "construction": "1/4in aluminum plate backer (matte), removable plaque insert, #4-40x1/4in tamper-resistant flat-head screws, on 3/16x2.5in stainless studs set in silicone-filled holes",
+      "material_refs": [
+        "AL1"
+      ],
+      "fabrication_method": "standoff_with_removable_insert",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "AL1",
+      "category": "face_substrate",
+      "product": "1/4in aluminum plate, matte",
+      "application": "material_finish",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews MP32071 White Wonder; sign panel PMS Cool Gray 11C/2C",
+      "manufacturer_normalized_id": "mfr-matthews"
+    },
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "vinyl copy, logo PMS 274/285/354",
+      "application": "vinyl",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "building_id_or_messaging"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Removable insert + tamper-resistant fasteners = changeable, secure building plaque."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

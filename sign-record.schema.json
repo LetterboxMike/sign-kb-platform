@@ -1,0 +1,238 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://substrate.dev/schemas/sign-record.schema.json",
+  "title": "Sign KB Record",
+  "description": "Validation contract v1.5. Discriminated on record_type. fabricated_sign shape locked (v1.0), held across the full 217-record corpus. flat_graphic (v1.1) and vehicle_wrap (v1.4) siblings. v1.2 closed fabrication_family; v1.3-v1.5 are vocabulary only. v1.5 promotes sign_category feature_wall and mounting band_clamp_to_pole_or_column after the complete-corpus vocab pass. Shape unchanged.",
+  "type": "object",
+  "required": ["record_id", "schema_version", "record_type", "source"],
+  "properties": {
+    "record_id": { "type": "string" },
+    "schema_version": { "type": "string" },
+    "record_type": { "type": "string", "enum": ["fabricated_sign", "vehicle_wrap", "flat_graphic"] },
+    "provenance_note": { "type": "string" },
+    "source": {
+      "type": "object",
+      "required": ["doc_type"],
+      "properties": {
+        "doc_type": { "type": "string", "enum": ["design_conceptual", "design_intent", "permit", "shop", "as_built", "survey"] }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "record_type": { "const": "fabricated_sign" } } },
+      "then": { "$ref": "#/$defs/fabricated_sign" }
+    },
+    {
+      "if": { "properties": { "record_type": { "const": "flat_graphic" } } },
+      "then": { "$ref": "#/$defs/flat_graphic" }
+    },
+    {
+      "if": { "properties": { "record_type": { "const": "vehicle_wrap" } } },
+      "then": { "$ref": "#/$defs/vehicle_wrap" }
+    }
+  ],
+  "$defs": {
+    "provenance": { "type": "string", "enum": ["drawing", "inferred", "researched", "opinion"] },
+
+    "fabricated_sign": {
+      "required": ["classification", "structure"],
+      "properties": {
+        "context": {
+          "type": "object",
+          "properties": { "industry_vertical": { "type": "string" } }
+        },
+        "classification": {
+          "type": "object",
+          "required": ["sign_category", "illuminated"],
+          "properties": {
+            "sign_category": { "type": "string", "enum": ["monument", "pylon", "wayfinding", "directional", "plaque", "channel_letter", "cabinet", "digital_display", "blade", "awning", "feature_wall", "proposed_new_term"] },
+            "sub_type": { "type": "string", "description": "Open vocabulary. Carries construction/illumination specifics that used to live in fabrication_family (e.g. push_thru_facelit, suspended_hatbox)." },
+            "primary_function": { "type": "string" },
+            "illuminated": { "type": "boolean" },
+            "illumination_method": { "type": "string", "enum": ["internal_led", "external_uplight", "external_downlight", "combination_face_and_halo", "halo_illuminated", "neon", "exposed_lamp", "non_illuminated", "non_illuminated_reflective", "mixed", "proposed_new_term"] },
+            "illumination_scope": { "type": "string" },
+            "illumination_detail": { "type": "string" },
+            "sides": { "type": "integer", "minimum": 1 },
+            "fabrication_family": { "type": "string", "enum": ["cabinet", "channel_letter", "dimensional_letter_or_logo", "panel", "blade", "composite_structure", "digital_display_assembly", "proposed_new_term"] },
+            "mounting": { "type": "string", "enum": ["ground_mounted_footing", "ground_mounted_pedestal", "ground_mounted_masonry_columns", "wall_mounted", "ceiling_suspended", "breakaway_slipbase_post", "band_clamp_to_pole_or_column", "proposed_new_term"] },
+            "digital_integration": { "type": "boolean" }
+          }
+        },
+        "program_model": {
+          "type": "object",
+          "properties": {
+            "is_program": { "type": "boolean" },
+            "instance_model": { "type": "string" },
+            "variant_axis": { "type": "string" }
+          }
+        },
+        "knowledge": {
+          "type": "object",
+          "properties": {
+            "plain_language_summary": { "type": "string" },
+            "rationale": { "type": "string" },
+            "tradeoffs": { "type": "string" },
+            "when_to_use": { "type": "string" },
+            "provenance": { "$ref": "#/$defs/provenance" }
+          }
+        },
+        "structure": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["component", "provenance"],
+            "properties": {
+              "ref": { "type": "string" },
+              "component": { "type": "string" },
+              "function": { "type": "string" },
+              "construction": { "type": "string" },
+              "face": { "type": "object" },
+              "finish_refs": { "type": "array", "items": { "type": "string" } },
+              "material_refs": { "type": "array", "items": { "type": "string" } },
+              "material_buildup": { "type": "array", "items": { "type": "string" } },
+              "illumination": { "type": "string" },
+              "fabrication_method": { "type": "string" },
+              "component_ref": { "type": "string" },
+              "mounting_relationship": { "type": "object" },
+              "mounted_via": { "type": "string" },
+              "mounted_to": { "type": "string" },
+              "status": { "type": "string", "enum": ["open", "confirmed"] },
+              "provenance": { "$ref": "#/$defs/provenance" }
+            }
+          }
+        },
+        "materials_manifest": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["ref", "category"],
+            "properties": {
+              "ref": { "type": "string" },
+              "category": { "type": "string", "enum": ["face_substrate", "letter_face", "cladding", "cladding_stone", "structural_timber", "structural_concrete_masonry", "structure_skin", "substrate", "paint", "coating", "vinyl", "graphic", "awning_fabric", "digital_display_module", "adhesive", "proposed_new_term"] },
+              "product": { "type": "string" },
+              "spec": { "type": "string" },
+              "application": { "type": "string", "enum": ["paint", "digital_print", "silkscreen_print", "hot_stamp", "vinyl", "special_material", "material_finish", "sprayed", "proposed_new_term"] },
+              "manufacturer_normalized_id": { "type": ["string", "null"] },
+              "optical_behavior": { "type": "object" }
+            }
+          }
+        },
+        "dimensions": { "type": "object" },
+        "messaging_pattern": {
+          "type": "object",
+          "properties": {
+            "copy_blocks": { "type": "array" },
+            "copy_content": { "type": "string", "enum": ["excluded_pii", "retained"] }
+          }
+        },
+        "finish_patterns": { "type": "array" },
+        "utilities": { "type": "object" },
+        "design_assessment": {
+          "type": "object",
+          "properties": {
+            "quality_grade": { "type": ["string", "null"], "enum": ["exemplary", "strong", "competent", "weak", "poor", null] },
+            "grade_provenance": { "type": "string" },
+            "rules_observations": { "type": "array" },
+            "craft_observations": { "type": "array" },
+            "aesthetic_notes": { "type": "array" }
+          }
+        },
+        "open_items": { "type": "array", "items": { "type": "string" } },
+        "option_set_id": { "type": "string", "description": "Links competing design options from the same drawing." },
+        "design_status": { "type": "string", "enum": ["proposed_option", "selected", "built", "unbuilt_concept"] },
+        "compliance": { "$ref": "#/$defs/compliance" },
+        "message_schedule": {
+          "type": "object",
+          "description": "For wayfinding/program records: sign-type deployed as many location-coded instances.",
+          "properties": {
+            "sign_type_code": { "type": "string" },
+            "instances": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "location_ref": { "type": "string" },
+                  "message": { "type": "string" },
+                  "copy_content": { "type": "string", "enum": ["excluded_pii", "retained"] }
+                }
+              }
+            }
+          }
+        },
+        "extraction_meta": { "type": "object" }
+      }
+    },
+
+    "flat_graphic": {
+      "description": "v1.1 sibling: a graphic applied to a surface. No structure, mounting, or illumination.",
+      "required": ["classification"],
+      "properties": {
+        "context": { "type": "object" },
+        "classification": {
+          "type": "object",
+          "required": ["graphic_method", "applied_to"],
+          "properties": {
+            "graphic_method": { "type": "string", "enum": ["digital_print", "plotter_cut", "contour_cut", "screen_print", "proposed_new_term"] },
+            "applied_to": { "type": "string", "enum": ["wall", "glass", "window", "floor", "door", "proposed_new_term"] },
+            "contour_cut": { "type": "boolean" }
+          }
+        },
+        "materials_manifest": { "type": "array" },
+        "dimensions": { "type": "object" },
+        "messaging_pattern": { "type": "object" },
+        "compliance": { "$ref": "#/$defs/compliance" },
+        "design_assessment": { "type": "object" },
+        "extraction_meta": { "type": "object" }
+      }
+    },
+
+    "vehicle_wrap": {
+      "description": "v1.4 sibling: a printed graphic applied to a vehicle. Specified on first encounter (Pike County). Most fields optional so a design-approval-only proof (no film/laminate spec) still validates, per R3.",
+      "required": ["classification"],
+      "properties": {
+        "context": { "type": "object" },
+        "classification": {
+          "type": "object",
+          "required": ["vehicle_class", "coverage"],
+          "properties": {
+            "vehicle_class": { "type": "string", "enum": ["cargo_van", "box_truck", "pickup", "sedan", "suv", "trailer", "bus", "specialty", "proposed_new_term"] },
+            "coverage": { "type": "string", "enum": ["full_wrap", "partial_wrap", "lettering_decals", "spot_graphics", "proposed_new_term"] },
+            "finish": { "type": "string", "enum": ["gloss", "matte", "satin", "textured", "proposed_new_term"] }
+          }
+        },
+        "coverage_areas": { "type": "array", "items": { "type": "string" }, "description": "Surfaces wrapped: sides, rear, hood, roof, windows." },
+        "materials_manifest": { "type": "array", "description": "Print film and overlaminate by ref; absent is valid for spec-light proofs." },
+        "messaging_pattern": { "type": "object" },
+        "program_model": { "type": "object", "description": "For fleets: multiple identical vehicles from one design." },
+        "dimensions": { "type": "object" },
+        "design_status": { "type": "string", "enum": ["proposed_option", "selected", "built", "unbuilt_concept"] },
+        "compliance": { "$ref": "#/$defs/compliance" },
+        "design_assessment": { "type": "object" },
+        "open_items": { "type": "array", "items": { "type": "string" } },
+        "extraction_meta": { "type": "object" }
+      }
+    },
+
+    "compliance": {
+      "type": "object",
+      "description": "Optional. Present only where the job is regulated (e.g. ADA, California Title 24).",
+      "properties": {
+        "ada": {
+          "type": "object",
+          "properties": {
+            "tactile": { "type": "boolean" },
+            "braille": { "type": "boolean" },
+            "pictogram": { "type": "boolean" },
+            "non_glare": { "type": "boolean" },
+            "contrast_compliant": { "type": "boolean" },
+            "mounting_height_in": { "type": "number" }
+          }
+        },
+        "title_24": { "type": "boolean" },
+        "notes": { "type": "string" }
+      }
+    }
+  }
+}

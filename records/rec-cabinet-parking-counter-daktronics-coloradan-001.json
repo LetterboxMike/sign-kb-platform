@@ -1,0 +1,107 @@
+{
+  "record_id": "rec-cabinet-parking-counter-daktronics-coloradan-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "residential_high_rise"
+  },
+  "classification": {
+    "sign_category": "cabinet",
+    "sub_type": "illuminated_parking_id_cabinet_with_live_space_counter",
+    "primary_function": "parking_identification_with_live_count",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 2,
+    "fabrication_family": "cabinet",
+    "mounting": "wall_mounted",
+    "digital_integration": true
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "projecting double-sided (FF) + canopy single-sided (GG) parking cabinets",
+    "variant_axis": "projecting_vs_canopy"
+  },
+  "knowledge": {
+    "plain_language_summary": "An illuminated parking-ID cabinet: .090 aluminum over fabricated structure with trimless 3/4in translucent white acrylic shoulder-cut letters, 1in edge-lit acrylic accent bands, push-through 'SPACES' letters, internal white LEDs, and a Daktronics DF-2053 drop-in live space counter; projecting version on 6x6 steel arms, canopy version notched onto the canopy edge.",
+    "rationale": "Combines lit acrylic identity with a live digital space-count module for a parking structure.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "cabinet_letters",
+      "construction": ".090 aluminum skin over fabricated structure, 3/4in translucent white acrylic shoulder-cut trimless letters + .063 returns, 1in edge-lit acrylic accent bands, push-thru SPACES letters, internal white LED",
+      "material_refs": [
+        "A1"
+      ],
+      "illumination": "internal LED",
+      "fabrication_method": "trimless_acrylic_cabinet",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "space_counter",
+      "construction": "Daktronics DF-2053 drop-in wireless space counter (x2 back-to-back) with removable service hatches",
+      "component_ref": "comp-daktronics-df2053",
+      "material_refs": [
+        "D1"
+      ],
+      "provenance": "drawing"
+    },
+    {
+      "ref": "03",
+      "component": "mount",
+      "construction": "6x6x1/4in steel tube arms + 12x12x3/4in welded plates with slide-on covers (projecting); or notched canopy bolt-through (GG)",
+      "mounted_to": "building_wall_or_canopy",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "letter_face",
+      "product": "3/4in translucent white acrylic",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "D1",
+      "category": "digital_display_module",
+      "product": "Daktronics DF-2053 space counter",
+      "manufacturer_normalized_id": "mfr-daktronics"
+    }
+  ],
+  "dimensions": {
+    "projecting_overall_in": 210,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "parking_id"
+      },
+      {
+        "slot": "live_space_count"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Lit trimless acrylic identity + live digital space-count; projecting and canopy variants."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

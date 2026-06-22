@@ -1,0 +1,88 @@
+{
+  "record_id": "rec-cabinet-faux-neon-themed-series-flatcreek-001",
+  "schema_version": "1.3",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "design_conceptual"
+  },
+  "context": {
+    "industry_vertical": "restaurant_qsr"
+  },
+  "classification": {
+    "sign_category": "cabinet",
+    "sub_type": "themed_printed_face_cabinet_with_faux_neon",
+    "primary_function": "decorative_themed_identification",
+    "illuminated": true,
+    "illumination_method": "neon",
+    "illumination_detail": "LED faux-neon tubing/letters (color varies per sign) plus printed faces",
+    "sides": 1,
+    "fabrication_family": "cabinet",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "one cabinet template re-skinned per menu item (Omelette/Pancake/Bacon/Wings)",
+    "variant_axis": "graphic_and_neon_color"
+  },
+  "knowledge": {
+    "plain_language_summary": "A themed 'bullet sign' series: a 4in extruded aluminum cabinet with a hinged service face, fully decorated with digitally printed vinyl + matte UV laminate and bordered/lettered in LED faux-neon tubing, re-skinned per menu item.",
+    "rationale": "One serviceable hinged-face cabinet template re-skinned with printed graphics and faux-neon color makes an economical themed series.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "themed_cabinet",
+      "construction": "4in extruded aluminum cabinet with hinged service face, digitally printed vinyl + matte UV laminate all surfaces, LED faux-neon tubing border + letters",
+      "material_refs": [
+        "G1"
+      ],
+      "illumination": "LED faux-neon",
+      "fabrication_method": "hinged_face_cabinet_faux_neon",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "G1",
+      "category": "graphic",
+      "product": "digitally printed vinyl + matte UV laminate",
+      "application": "digital_print",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "each_in": "86x48x4",
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "menu_item_theme"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Hinged face = serviceable faux-neon/LED access.",
+      "One template re-skinned per menu item (option/variant by graphic + neon color)."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "medium-high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ],
+    "modeling_notes": [
+      "LED faux-neon mapped to illumination_method 'neon' (closest enum)."
+    ]
+  }
+}

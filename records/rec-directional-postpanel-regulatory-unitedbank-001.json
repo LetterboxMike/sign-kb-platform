@@ -1,0 +1,95 @@
+{
+  "record_id": "rec-directional-postpanel-regulatory-unitedbank-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data and actual copy excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "retail_banking"
+  },
+  "classification": {
+    "sign_category": "directional",
+    "sub_type": "non_illuminated_post_panel_directional_regulatory_and_hours",
+    "primary_function": "directional_regulatory_and_hours",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "ground_mounted_footing",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "directional/regulatory post panels (1-pole/2-pole) plus hours plaques",
+    "variant_axis": "pole_count_and_message"
+  },
+  "knowledge": {
+    "plain_language_summary": "Non-illuminated post-panel directionals (one-pole preferred, two-pole for longer text), regulatory siblings, and .080 aluminum hours plaques with first-surface brand vinyl.",
+    "rationale": "A flat-panel family covers directional, regulatory, and hours content; one-pole vs two-pole scales to text length.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "post_panels",
+      "construction": "aluminum panels front+back P3, copy V8, square posts P1; 1-pole or 2-pole",
+      "material_refs": [
+        "V1"
+      ],
+      "mounted_to": "ground_footing",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "hours_plaque",
+      "construction": ".080 aluminum P1/P3/P5, first-surface V2/V3/V9 copy (lobby + drive-up hours)",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "brand vinyls V1 logo / V8 white copy / V10 lettering / V11 disclaimer",
+      "application": "vinyl",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews brand paints P1-P5",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "directional_regulatory_or_hours"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "rules_observations": [
+      "One-pole vs two-pole scales to text length."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ],
+    "modeling_notes": [
+      "Directional + regulatory + hours collapsed into one panel-family record."
+    ]
+  }
+}

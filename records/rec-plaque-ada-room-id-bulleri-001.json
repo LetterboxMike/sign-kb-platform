@@ -1,0 +1,96 @@
+{
+  "record_id": "rec-plaque-ada-room-id-bulleri-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data and actual copy excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "design_intent"
+  },
+  "context": {
+    "industry_vertical": "commercial_multitenant_building"
+  },
+  "classification": {
+    "sign_category": "plaque",
+    "sub_type": "ada_tactile_room_id_aluminum_panel",
+    "primary_function": "ada_room_identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "ADA room/floor/restroom/stair IDs in one panel archetype",
+    "variant_axis": "message"
+  },
+  "knowledge": {
+    "plain_language_summary": "An ADA room/floor/restroom/stair ID: an aluminum panel painted matte duranodic with raised tactile copy applied as 1/16in Rowmark ADA Alternative and Type II clear raster braille, with a duranodic vinyl backer, flush-mounted.",
+    "rationale": "Raised Rowmark tactile + raster braille on a painted aluminum panel meets ADA in the building's finish system.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "ada_panel",
+      "construction": "aluminum panel painted MP Duranodic 313, raised 1/16in Rowmark ADA Alternative tactile + Type II raster braille, 3M Duranodic vinyl backer, flush mount",
+      "material_refs": [
+        "M2"
+      ],
+      "finish_refs": [
+        "P1"
+      ],
+      "fabrication_method": "tactile_plus_raster_braille",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "M2",
+      "category": "substrate",
+      "product": "1/16in Rowmark ADA Alternative tactile",
+      "manufacturer_normalized_id": "mfr-rowmark"
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews MP Duranodic 313",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "room_id"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "compliance": {
+    "ada": {
+      "tactile": true,
+      "braille": true
+    },
+    "notes": "Raised Rowmark tactile + Type II raster braille."
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Compliant ADA IDs in the building's duranodic finish system."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

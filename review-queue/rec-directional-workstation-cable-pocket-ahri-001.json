@@ -1,0 +1,83 @@
+{
+  "record_id": "rec-directional-workstation-cable-pocket-ahri-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data and actual copy excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "corporate_trade_association_office"
+  },
+  "classification": {
+    "sign_category": "directional",
+    "sub_type": "changeable_acrylic_pocket_on_tensioned_cable_rail",
+    "primary_function": "workstation_identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "composite_structure",
+    "mounting": "proposed_new_term",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A reconfigurable workstation sign: a CNC-milled 1/8in clear acrylic insert pocket held on a vertical tensioned-cable mount system with wall-mount and side-clamp hardware.",
+    "rationale": "A tensioned-cable insert rail lets workstation labels be reconfigured as the floorplan changes; the cable system is a composite mounting assembly outside the standard mounting enum.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "cable_pocket_system",
+      "construction": "CNC-milled 1/8in clear acrylic insert holder on vertical cable mount system, cable + wall-mount + side-clamp hardware",
+      "material_refs": [
+        "A1"
+      ],
+      "fabrication_method": "tensioned_cable_insert_rail",
+      "mounted_to": "cable_rail",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "substrate",
+      "product": "1/8in clear acrylic insert",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "workstation_label"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Modular tensioned-cable insert pocket = reconfigurable workstation ID."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ],
+    "proposed_new_terms": [
+      {
+        "field": "classification.mounting",
+        "proposed_value": "tensioned_cable_rail",
+        "context": "Vertical tensioned-cable mount system has no value in the mounting enum (ground/wall/ceiling/post)."
+      }
+    ],
+    "reconciliation_v1_3": "Applied v1.3 enums (blade/awning/halo_illuminated/exposed_lamp/external_downlight + concrete/awning_fabric/digital_display_module/adhesive categories)."
+  }
+}

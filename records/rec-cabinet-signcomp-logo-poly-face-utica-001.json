@@ -1,0 +1,94 @@
+{
+  "record_id": "rec-cabinet-signcomp-logo-poly-face-utica-001",
+  "schema_version": "1.3",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data and actual copy excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "education_k12"
+  },
+  "classification": {
+    "sign_category": "cabinet",
+    "sub_type": "single_face_extruded_cabinet_decorated_poly_face",
+    "primary_function": "building_logo_identification",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 1,
+    "fabrication_family": "cabinet",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A single-face SignComp #1391 extruded aluminum cabinet with slide-in retainers, a solar-grade polycarbonate face decorated with CNC-cut painted aluminum panels, plus separate non-illuminated laser-cut acrylic secondary letters.",
+    "rationale": "An extruded cabinet with slide-in retainers is serviceable; decorating a poly face with CNC aluminum panels gives a dimensional lit logo.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "signcomp_cabinet",
+      "construction": "SignComp #1391 4in single-face extruded aluminum cabinet, #1694 slide-in retainers, 2x2x1/8in internal angle frame, 0.090in back, 0.150in translucent white polycarbonate face with CNC-cut 0.090in aluminum panels masked/painted, Principal 12V 5000K LEDs",
+      "component_ref": "comp-signcomp-1391",
+      "finish_refs": [
+        "P2"
+      ],
+      "illumination": "internal 5000K LED",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "secondary_letters",
+      "construction": "laser-cut 1in acrylic, painted, flush-mounted with 3/16in allthread studs in silicone-filled holes",
+      "material_refs": [
+        "A2"
+      ],
+      "fabrication_method": "flat_cut_out",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A2",
+      "category": "letter_face",
+      "product": "1in laser-cut acrylic",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "P2",
+      "category": "paint",
+      "product": "Matthews P2/P3/P4",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "logo"
+      },
+      {
+        "slot": "secondary_name"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Slide-in retainers make the face serviceable; CNC aluminum panels on the poly face give dimensional lit logo."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

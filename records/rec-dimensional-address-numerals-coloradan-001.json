@@ -1,0 +1,81 @@
+{
+  "record_id": "rec-dimensional-address-numerals-coloradan-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "residential_high_rise"
+  },
+  "classification": {
+    "sign_category": "plaque",
+    "sub_type": "flat_cut_dimensional_address_numerals",
+    "primary_function": "building_address_identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "dimensional_letter_or_logo",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "building address numerals, qty 3",
+    "variant_axis": "size"
+  },
+  "knowledge": {
+    "plain_language_summary": "Waterjet-cut 1/2in plate-aluminum address numerals (~25in tall), painted Duranodic Bronze, stud-mounted off the wall on 1/2in spacers.",
+    "rationale": "Large dimensional address numerals standoff-mounted.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "numerals",
+      "construction": "waterjet 1/2in plate aluminum numerals, painted Duranodic Bronze, 10-24x3in SS studs + 1/2in SS spacers",
+      "finish_refs": [
+        "P1"
+      ],
+      "fabrication_method": "flat_cut_out",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Duranodic Bronze",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "numeral_h_in": 25,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "building_address"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Large standoff-mounted dimensional address numerals."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

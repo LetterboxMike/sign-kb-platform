@@ -1,0 +1,77 @@
+{
+  "record_id": "rec-dimensional-acrylic-letters-feature-sds-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "design_intent"
+  },
+  "context": {
+    "industry_vertical": "education_higher_ed"
+  },
+  "classification": {
+    "sign_category": "channel_letter",
+    "sub_type": "non_illuminated_dimensional_acrylic_letters_over_print",
+    "primary_function": "suite_and_feature_identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "dimensional_letter_or_logo",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "Flat-cut/routed clear acrylic letters and logo (polished faces, back-painted), often adhered over a digitally-printed wall graphic for a layered dimensional-over-print feature ID.",
+    "rationale": "Polished back-painted acrylic letters over print create a dimensional hero ID.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "acrylic_letters",
+      "construction": "0.375in letters (7in) + 0.5in clear acrylic logo (18.5in), polished face, painted back/returns, flush VHB/stud per mfr",
+      "material_refs": [
+        "A1"
+      ],
+      "fabrication_method": "flat_cut_acrylic",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "letter_face",
+      "product": "ACRYCAST clear acrylic, polished/back-painted",
+      "manufacturer_normalized_id": "mfr-calsak-acrycast"
+    }
+  ],
+  "dimensions": {
+    "logo_h_in": 18.5,
+    "letter_cap_in": 7,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "suite_logo_or_wordmark"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Polished back-painted acrylic letters over print = dimensional-over-print feature."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

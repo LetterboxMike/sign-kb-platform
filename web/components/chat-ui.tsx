@@ -160,7 +160,16 @@ export function ChatUI() {
           ))
         )}
         {loading ? <div className="text-sm text-muted-foreground">Thinking…</div> : null}
-        {error ? <div className="text-sm text-destructive">{error}</div> : null}
+        {error ? (
+          <div className="flex items-center gap-2 text-sm text-destructive">
+            <span>{error}</span>
+            {messages.length > 0 && messages[messages.length - 1].role === 'user' ? (
+              <Button size="sm" variant="outline" onClick={() => ask(messages[messages.length - 1].content)} disabled={loading}>
+                Retry
+              </Button>
+            ) : null}
+          </div>
+        ) : null}
         <div ref={endRef} />
       </div>
 

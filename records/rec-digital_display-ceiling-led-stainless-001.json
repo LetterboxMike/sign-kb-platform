@@ -1,0 +1,153 @@
+{
+  "record_id": "rec-digital_display-ceiling-led-stainless-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client, general-contractor, vendor, project-manager, and designer data excluded at extraction. Vendor identity/address/phone, GC name, airline/airport project identity, and human initials stripped. Aviation vertical retained.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "transportation_aviation_airport_terminal"
+  },
+  "classification": {
+    "sign_category": "digital_display",
+    "sub_type": "ceiling_mounted_direct_view_led_display_in_stainless_surround",
+    "primary_function": "dynamic_passenger_information_display",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "illumination_detail": "self-emissive direct-view fine-pitch LED video display (1.87mm pixel pitch); content-driven, not a backlit face",
+    "sides": 1,
+    "fabrication_family": "digital_display_assembly",
+    "mounting": "ceiling_suspended",
+    "digital_integration": true
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "one stainless-clad ceiling-display design built at several display footprints (2x3, 2x5, and a 6x4 exterior unit); interior units use an indoor LED module, the exterior unit an outdoor-rated module of the same pitch family",
+    "variant_axis": "display_size_and_indoor_vs_outdoor_module"
+  },
+  "knowledge": {
+    "plain_language_summary": "A ceiling-suspended direct-view LED video display wrapped in a brushed #304 stainless steel surround. A fine-pitch (1.87mm) LED display sits in a 3in aluminum U-channel frame with a 1/4in airflow gap, clad in 22ga stainless with a #4 finish, hung from the structure on 2in stainless support tubes through an escutcheon plate. Built in several footprints, including an outdoor-rated exterior unit.",
+    "rationale": "Direct-view fine-pitch LED gives a bright, seamless, fully dynamic display for changing passenger information, and the minimal stainless surround with a concealed support-tube hang reads as architectural hardware rather than a sign box.",
+    "tradeoffs": "A direct-view LED display is the most flexible and legible dynamic medium but is far costlier than static signage, generates heat (hence the airflow gap), and needs data/power runs and structural ceiling attachment.",
+    "when_to_use": "High-traffic transit and terminal environments needing bright, fully dynamic information at a ceiling datum with an architectural finish.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "led_display",
+      "function": "self-emissive content surface",
+      "construction": "NanoLumens P1.87HDS indoor direct-view LED display (P1.87OD outdoor module on the exterior unit), 1.87mm pixel pitch",
+      "component_ref": "comp-nanolumens-p187",
+      "illumination": "self-emissive direct-view LED",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "display_frame",
+      "function": "structural frame carrying the display",
+      "construction": "3in x 3in x 1/8in aluminum U-channel frame with 1/4in gap for airflow; 1/4in aluminum spacers; aluminum clips screwed to spacers with #8 x 3/8in pan-head screws",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "03",
+      "component": "stainless_cladding",
+      "function": "architectural surround and edge cladding",
+      "construction": "22ga #304 stainless steel cladding with #4 finish; brake-formed stainless Z-clips soldered/bonded to cladding; corners brake-formed and bonded with structural adhesive and 3M VHB foam tape",
+      "material_refs": [
+        "SS1"
+      ],
+      "fabrication_method": "brake_formed_stainless_clad_surround",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "04",
+      "component": "support_tubes_and_mount",
+      "function": "ceiling suspension and structural attachment",
+      "construction": "2in x 2in x 1/4in #304 stainless support tubes with escutcheon plate and mounting bracket assembly; 1in dia holes for data/power cable; ceiling attachment method to be verified",
+      "status": "open",
+      "mounted_to": "building_structure_ceiling",
+      "install_caution": "ceiling attachment method TBD pending structural verification",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "SS1",
+      "category": "structure_skin",
+      "product": "22ga #304 stainless steel, #4 brushed finish",
+      "application": "material_finish",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "AL1",
+      "category": "structure_skin",
+      "product": "aluminum U-channel frame, spacers, and clips",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "instances": [
+      {
+        "config": "2x3",
+        "overall_width_in": 71.875,
+        "overall_height_in": 29.5625,
+        "depth_in": 7.5
+      },
+      {
+        "config": "2x5",
+        "overall_width_in": 119.125,
+        "overall_height_in": 29.5625,
+        "depth_in": 7.5
+      },
+      {
+        "config": "6x4_exterior",
+        "note": "outdoor module, footprint per page 6"
+      }
+    ],
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "utilities": {
+    "data_power": "1in dia. penetrations for data/power cable through support tubes; circuiting not detailed on this set"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "rules_observations": [
+      "Minimal stainless reveal keeps the display itself the single read; the surround is hardware, not message.",
+      "Consistent 2-1/2in stainless border and #4 finish hold family consistency across the size variants."
+    ],
+    "craft_observations": [
+      "Soldered/bonded brake-formed Z-clips and VHB-plus-adhesive corners give a fastener-free, seamless stainless surround, the pro-vs-amateur tell on architectural metal.",
+      "A 1/4in airflow gap is designed in to manage LED heat without visible venting.",
+      "Concealed support-tube hang through an escutcheon plate reads as architectural mounting rather than a sign bracket."
+    ],
+    "aesthetic_notes": [
+      {
+        "note": "Reads as integrated terminal architecture: a floating dark display in a precise brushed-steel frame, appropriate to a premium airline environment.",
+        "provenance": "opinion"
+      }
+    ]
+  },
+  "open_items": [
+    "Ceiling attachment method to be verified / structurally engineered",
+    "Display power and data circuiting not detailed on this set",
+    "Exterior 6x4 unit footprint and outdoor module rating to confirm against page 6"
+  ],
+  "extraction_meta": {
+    "field_confidence": "high on cladding construction, mounting approach, and display product; medium on exterior-unit specifics and power",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment",
+      "program_model",
+      "classification.primary_function"
+    ],
+    "modeling_notes": [
+      "primary_function (passenger information) inferred from venue and display medium; actual content not shown on the construction set.",
+      "Adhesive/tape materials have no material_category enum value; placeholdered as proposed_new_term in materials_manifest.category."
+    ],
+    "reconciliation_v1_2": "sign_category -> digital_display; fabrication_family -> digital_display_assembly (Ruling 4); illumination_method -> internal_led (coarse bucket; true self-emissive optical behavior lives in comp-nanolumens-p187.optical_behavior). Adhesive materials moved out of materials_manifest into structure construction notes per consumable policy (Ruling 5/6). Cleared to records/."
+  }
+}

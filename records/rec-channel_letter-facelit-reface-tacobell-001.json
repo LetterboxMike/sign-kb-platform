@@ -1,0 +1,99 @@
+{
+  "record_id": "rec-channel_letter-facelit-reface-tacobell-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "restaurant_qsr_drive_thru"
+  },
+  "classification": {
+    "sign_category": "channel_letter",
+    "sub_type": "facelit_channel_letters_plus_pylon_monument_reface",
+    "primary_function": "building_and_ground_identification",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 1,
+    "fabrication_family": "channel_letter",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "new channel letters + reface/repaint existing pylon and monument cabinets",
+    "variant_axis": "element_and_scope"
+  },
+  "knowledge": {
+    "plain_language_summary": "A QSR refresh: new 12in face-lit channel letters on a parapet wireway, plus re-paint/re-face of the existing pylon (cabinet + pole 'brand violet') and monument cabinet.",
+    "rationale": "New letters plus cabinet reface is a standard QSR rebrand scope.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "channel_letters",
+      "construction": "12in cap face-lit channel letters (part 823-IN-12-CL-WHITE), internal LED, wireway behind parapet",
+      "illumination": "internal LED",
+      "fabrication_method": "face_lit_channel",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "pylon_monument_reface",
+      "construction": "repaint existing pylon cabinet+pole 'brand violet', replace appendage faces; reface existing P-64 monument cabinet",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "letter_face",
+      "product": "acrylic faces",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "brand violet",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "cap_in": 12,
+    "runs_in": [
+      146,
+      71.375,
+      67
+    ],
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "brand_wordmark"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "New letters + existing pylon/monument reface; brand-architectural elements (slat walls/swoosh/canopies) out of sign scope."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ],
+    "modeling_notes": [
+      "Branded building elements (swoosh/slat-walls/canopies) noted as out-of-scope, not recorded as signs."
+    ]
+  }
+}

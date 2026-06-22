@@ -1,0 +1,104 @@
+{
+  "record_id": "rec-plaque-ada-tactile-nonglare-aurora-001",
+  "schema_version": "1.3",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data and copy excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "multifamily_residential"
+  },
+  "classification": {
+    "sign_category": "plaque",
+    "sub_type": "ada_tactile_2nd_surface_painted_nonglare_with_optional_backer",
+    "primary_function": "ada_identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "uniform ADA panel across unit/restroom/room/stair IDs (Type A unit qty 210)",
+    "variant_axis": "type_x_copy_x_option"
+  },
+  "knowledge": {
+    "plain_language_summary": "An ADA interior panel: 1/8in non-glare clear acrylic, beveled/polished edges, 2nd-surface painted satin, with 1/32in Rowmark Charcoal Gray raised tactile and Grade-II clear Raster braille, VHB-mounted. Option 2 adds a Rowmark backer (and a digital-print logo on Type A).",
+    "rationale": "A single beveled-edge non-glare panel system scales across hundreds of unit IDs; the optional backer is an upsell tier.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "ada_panel",
+      "construction": "1/8in non-glare clear acrylic, beveled/polished edges, 2nd-surface MP06013 Bewitching satin, 1/32in Rowmark ADA-Alt Charcoal Gray 311307 raised tactile, Grade-II clear Raster braille, VHB; Option 2 adds 1/8in Rowmark Charcoal backer",
+      "material_refs": [
+        "M2"
+      ],
+      "finish_refs": [
+        "P1"
+      ],
+      "fabrication_method": "tactile_plus_raster_braille",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "M2",
+      "category": "substrate",
+      "product": "1/32in Rowmark ADA-Alternative Charcoal Gray 311307",
+      "manufacturer_normalized_id": "mfr-rowmark"
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews MP06013 Bewitching satin",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "type_a_in": "7x4",
+    "type_b_in": "12x18",
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "unit_or_room_id"
+      },
+      {
+        "slot": "stair_advisory",
+        "required": false
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "compliance": {
+    "ada": {
+      "tactile": true,
+      "braille": true,
+      "non_glare": true
+    },
+    "notes": "Grade-II Raster braille; raised tactile."
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Beveled-edge non-glare panel scales across 200+ unit IDs; optional backer is a finish tier."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ],
+    "option_set_note": "Option 1 single panel / Option 2 backer panel"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "record_id": "rec-plaque-cast-bronze-developer-coloradan-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "residential_high_rise"
+  },
+  "classification": {
+    "sign_category": "plaque",
+    "sub_type": "cast_bronze_developer_dedication_plaque",
+    "primary_function": "developer_dedication",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "dimensional_letter_or_logo",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A precision-tooled cast bronze developer plaque, 1/2in thick, single-line bevel border, leatherette-texture semi-gloss duranodic-bronze background, blind-stud mounted.",
+    "rationale": "A cast bronze dedication plaque, a permanent developer mark.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "bronze_plaque",
+      "construction": "1/2in cast bronze, single-line bevel border, leatherette-texture semi-gloss duranodic bronze background, blind studs",
+      "material_refs": [
+        "BR1"
+      ],
+      "fabrication_method": "cast_bronze",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "BR1",
+      "category": "face_substrate",
+      "product": "cast bronze, leatherette texture",
+      "application": "material_finish",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "in": "12x12",
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "dedication_copy"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Cast bronze with leatherette-texture ground; blind-stud mount."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "record_id": "rec-directional-reflective-aluminum-band-clamp-rtd-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "public_transit_light_rail"
+  },
+  "classification": {
+    "sign_category": "directional",
+    "sub_type": "reflective_aluminum_info_directional_pole_railing_band_mount",
+    "primary_function": "pedestrian_safety_directional_regulatory",
+    "illuminated": false,
+    "illumination_method": "non_illuminated_reflective",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "band_clamp_to_pole_or_column",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "router-cut reflective aluminum info/warning/directional/station-ID panels; some with photopolymer ADA tactile + clear braille stripe",
+    "variant_axis": "message_and_tactile"
+  },
+  "knowledge": {
+    "plain_language_summary": "Router-cut .125in (or 3/16in with 1/16in photopolymer message panel) aluminum signs with reflective graphics, band-clamped (Band-It/Brack-It) to poles or bolted to railings; area-of-refuge/accessible-ramp variants add raised copy + a clear braille stripe.",
+    "rationale": "Reflective aluminum on band-clamp/railing mounts covers transit pedestrian safety, directional, and ADA tactile needs.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "reflective_panel",
+      "construction": ".125in router-cut aluminum (or 3/16in + 1/16in photopolymer message panel), 3M Scotchlite 280 reflective + 3M 8519 luster; ADA variant screen-print raised copy + clear photopolymer braille stripe; Band-It + Brack-It to pole or bolt to railing with gasket",
+      "component_ref": "comp-bandit-clamp",
+      "material_refs": [
+        "V1"
+      ],
+      "mounted_to": "pole_or_railing",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "3M Scotchlite 280 reflective + 8519 luster",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    }
+  ],
+  "dimensions": {
+    "size_in_range": "16-30",
+    "mount_height_in": [
+      48,
+      60,
+      24
+    ],
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "safety_directional_or_regulatory"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "compliance": {
+    "ada": {
+      "tactile": true,
+      "braille": true
+    },
+    "notes": "Area-of-refuge/accessible-ramp tactile + clear braille stripe; reflective for visibility; CRS regulatory copy."
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "rules_observations": [
+      "Reflective for night; ADA tactile sub-variant; band-clamp/railing mount to existing structure."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ],
+    "reconciliation_v1_5": "mounting now a promoted v1.5 enum value."
+  }
+}

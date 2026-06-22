@@ -1,0 +1,80 @@
+{
+  "record_id": "rec-dimensional-painted-building-numbers-aurora-001",
+  "schema_version": "1.3",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data and copy excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "multifamily_residential"
+  },
+  "classification": {
+    "sign_category": "plaque",
+    "sub_type": "flat_cut_painted_building_entrance_numbers",
+    "primary_function": "building_and_entrance_id",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "dimensional_letter_or_logo",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "building ID numbers (mfg-only) + entrance ID numbers (mfg+install)",
+    "variant_axis": "scope"
+  },
+  "knowledge": {
+    "plain_language_summary": "Flat-cut aluminum building/entrance numbers painted satin white, stud-mounted; building-ID sets are manufacture-only, entrance-ID sets manufacture-and-install.",
+    "rationale": "Painted FCO numerals are the low-cost exterior building-ID standard.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "numbers",
+      "construction": "flat-cut aluminum numbers painted Matthews satin white, stud-mounted",
+      "finish_refs": [
+        "P1"
+      ],
+      "fabrication_method": "flat_cut_out",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews satin white",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "building_number"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Painted FCO numerals; mfg-only vs mfg+install scope split."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "record_id": "rec-blade-column-clamp-perforated-panel-jhu-001",
+  "schema_version": "1.3",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data and actual copy excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "design_conceptual"
+  },
+  "context": {
+    "industry_vertical": "education_higher_ed"
+  },
+  "classification": {
+    "sign_category": "blade",
+    "sub_type": "column_clamped_perforated_aluminum_identity_panel",
+    "primary_function": "building_column_identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "composite_structure",
+    "mounting": "band_clamp_to_pole_or_column",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "perforated-panel identity signs A/B/C (panel sizes) + bracket-arm footer signs D/E",
+    "variant_axis": "panel_size_and_mount"
+  },
+  "knowledge": {
+    "plain_language_summary": "A rigid perforated-aluminum identity panel clamped to an existing building column with stainless band clamps and turnbuckle tensioners (non-penetrating), with flat-cut aluminum letters stud-mounted to the panel. A projecting bracket-arm variant epoxy-anchors to masonry.",
+    "rationale": "Band-clamp-to-column avoids drilling historic masonry, and the perforated face cuts wind load on a column-mounted panel.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "perforated_panel",
+      "construction": "1x1x1/8in aluminum tube frame, 1/8in perforated aluminum face, 1x1x1/8in angle perimeter retainer, #8 countersunk screws",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "flat_cut_letters",
+      "construction": "1/4in flat-cut aluminum letters, stud-mounted to panel",
+      "material_refs": [
+        "AL1"
+      ],
+      "fabrication_method": "flat_cut_out",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "03",
+      "component": "column_clamp_mount",
+      "construction": "Band-It stainless steel band clamps with turnbuckle tensioners top and bottom (non-penetrating)",
+      "component_ref": "comp-bandit-clamp",
+      "mounted_to": "existing_building_column",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "AL1",
+      "category": "letter_face",
+      "product": "1/4in flat-cut aluminum letters",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "PERF1",
+      "category": "structure_skin",
+      "product": "1/8in perforated aluminum panel",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing",
+    "note": "bracket-arm variant: 2x2x3/16in arm + gussets, 3/8in plate, epoxy-set studs to masonry"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "building_identity"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Non-penetrating band-clamp mount protects historic masonry.",
+      "Perforated face mitigates wind load on a column-mounted panel."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ],
+    "reconciliation_v1_5": "mounting band_clamp_to_existing_column -> band_clamp_to_pole_or_column (consolidated, promoted v1.5)."
+  }
+}

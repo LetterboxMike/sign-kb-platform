@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/copy data excluded; health/wellness clinic vertical retained.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "healthcare_wellness_clinic"
+  },
+  "record_id": "rec-feature-moss-wall-backlit-001",
+  "classification": {
+    "sign_category": "feature_wall",
+    "sub_type": "moss_wall",
+    "primary_function": "brand_feature_wall",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 1,
+    "fabrication_family": "composite_structure",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "An illuminated feature wall combining a backlit SEG fabric graphic in a fabricated aluminum frame with a preserved-moss 'well' infill, on extruded SEG support, mounted to a stud wall with a plywood backer.",
+    "rationale": "A living/preserved-moss feature with SEG backlit fabric makes a biophilic brand wall; the SEG frame and aluminum tube structure are a composite assembly.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "frame_and_backer",
+      "construction": "fabricated 1x6x1/8in aluminum rectangular tube outer frame with 1/8in ACM back, welds ground/filled, to 2x4/2x6 steel stud wall + 5/8in plywood backer",
+      "material_refs": [
+        "ACM1"
+      ],
+      "mounted_to": "stud_wall",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "seg_backlit_fabric",
+      "construction": "Tectonics LP 1G 02 + SP 2L 02 extruded aluminum SEG frame/support; digitally-printed backlit fabric with sewn SEG keder; 12V 7000K white LED (Principal-Sloan)",
+      "component_ref": "comp-tectonics-seg",
+      "material_refs": [
+        "FAB1"
+      ],
+      "illumination": "internal 7000K LED edge/backlit",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "03",
+      "component": "moss_infill",
+      "construction": "moss 'well' infilled with 2-tone lichen/moss (TBD)",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "ACM1",
+      "category": "substrate",
+      "product": "ACM back panel",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "FAB1",
+      "category": "graphic",
+      "product": "digitally printed backlit SEG fabric",
+      "application": "digital_print",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "brand_feature"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "aesthetic_notes": [
+      {
+        "note": "Biophilic moss + backlit fabric is a premium wellness-brand feature wall.",
+        "provenance": "opinion"
+      }
+    ]
+  },
+  "open_items": [
+    "Moss species/2-tone infill TBD"
+  ],
+  "extraction_meta": {
+    "field_confidence": "medium-high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ],
+    "reconciliation_v1_3": "Applied v1.3 enums (blade/awning/halo_illuminated/exposed_lamp/external_downlight + concrete/awning_fabric/digital_display_module/adhesive categories).",
+    "reconciliation_v1_5": "sign_category -> feature_wall (promoted v1.5); sub_type moss_wall."
+  }
+}

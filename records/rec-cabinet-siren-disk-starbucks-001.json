@@ -1,0 +1,86 @@
+{
+  "record_id": "rec-cabinet-siren-disk-starbucks-001",
+  "schema_version": "1.3",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "food_beverage_retail"
+  },
+  "classification": {
+    "sign_category": "cabinet",
+    "sub_type": "single_face_illuminated_logo_disk",
+    "primary_function": "brand_logo_identification",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 1,
+    "fabrication_family": "cabinet",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A 60in single-face illuminated logo disk: 3in deep fabricated aluminum sidewalls/back painted black, 3/16in Acrylite face, 2in black trim cap, first-surface translucent Scotchcal green with the logo showing through white, Lumificient LEDs, remote supply.",
+    "rationale": "A backlit logo disk is the brand's signature wall element.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "logo_disk",
+      "construction": "60in single-face, 3in deep fabricated aluminum sidewalls + back, black polyurethane, 3/16in Acrylite 015-2GP face, 2in black trim cap, first-surface 3M Scotchcal Holly Green 3630-76 (logo shows white), Lumificient white LEDs, remote supply in UL enclosure",
+      "material_refs": [
+        "A1",
+        "V1"
+      ],
+      "illumination": "internal LED",
+      "fabrication_method": "face_lit_disk",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "face_substrate",
+      "product": "3/16in Acrylite 015-2GP",
+      "manufacturer_normalized_id": "mfr-acrylite"
+    },
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "3M Scotchcal 3630-76 Holly Green translucent",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    }
+  ],
+  "dimensions": {
+    "diameter_in": 60,
+    "depth_in": 3,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "logo_mark"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Signature backlit logo disk; logo reverses to white through translucent green."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

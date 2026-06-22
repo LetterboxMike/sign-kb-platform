@@ -1,0 +1,71 @@
+{
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/room copy excluded; county rehab hospital vertical retained; bilingual program.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "healthcare_county_rehab_hospital"
+  },
+  "record_id": "rec-digital_display-directory-rancho-001",
+  "classification": {
+    "sign_category": "digital_display",
+    "sub_type": "interactive_or_static_digital_directory",
+    "primary_function": "wayfinding_directory",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 1,
+    "fabrication_family": "digital_display_assembly",
+    "mounting": "wall_mounted",
+    "digital_integration": true
+  },
+  "knowledge": {
+    "plain_language_summary": "A digital directory listed in the wayfinding family; an LCD/EMC display assembly for dynamic directory content. Construction detail is thin on this set.",
+    "rationale": "A digital directory carries dynamic wayfinding content; modeled as a digital_display assembly per the schedule.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "display_assembly",
+      "construction": "digital directory display (LCD/EMC); detail not fully specified on this set",
+      "status": "open",
+      "illumination": "self-emissive display",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "dynamic_directory"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "rules_observations": [
+      "Digital directory enables dynamic wayfinding updates."
+    ]
+  },
+  "open_items": [
+    "Display make/model and housing not detailed on this set"
+  ],
+  "extraction_meta": {
+    "field_confidence": "low",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ],
+    "ambiguity_flags": [
+      "Digital directory asserted from schedule label only; spec thin."
+    ]
+  }
+}

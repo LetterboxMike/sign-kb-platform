@@ -1,0 +1,101 @@
+{
+  "record_id": "rec-plaque-ada-paper-insert-panel-ascentria-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "nonprofit_office_interior"
+  },
+  "classification": {
+    "sign_category": "plaque",
+    "sub_type": "ada_tactile_panel_with_masked_paper_insert_window",
+    "primary_function": "ada_room_identification_with_changeable_copy",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "room IDs with changeable paper insert; wall + glass-backer variant; 2 color options",
+    "variant_axis": "message_x_mount_x_color"
+  },
+  "knowledge": {
+    "plain_language_summary": "The differentiator: a 1/4in P99 non-glare acrylic CNC-cut panel, 2nd-surface painted with a masked clear window for a changeable paper insert (acrylic backer + spacers behind), a direct-print logo, and 1/32in Rowmark tactile + clear Raster braille; a glass-mount backer variant.",
+    "rationale": "Permanent tactile + a masked paper-insert window covers ADA plus changeable office occupants; bilingual program.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "insert_panel",
+      "construction": "1/4in P99 non-glare acrylic CNC-cut, 2nd-surface painted (MP White/2597C), masked window + 1/16in acrylic backer on 1/16in spacers + paper insert, direct-print logo, 1/32in Rowmark ADA-Alt tactile + clear Raster braille, 1in VHB; glass-backer variant",
+      "material_refs": [
+        "M1",
+        "M2"
+      ],
+      "fabrication_method": "tactile_plus_paper_insert",
+      "mounted_to": "wall_or_glass",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "M1",
+      "category": "substrate",
+      "product": "1/4in P99 non-glare acrylic",
+      "manufacturer_normalized_id": "mfr-p99-acrylic"
+    },
+    {
+      "ref": "M2",
+      "category": "substrate",
+      "product": "1/32in Rowmark ADA-Alternative",
+      "manufacturer_normalized_id": "mfr-rowmark"
+    }
+  ],
+  "dimensions": {
+    "core_in": "6x6",
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "room_id",
+        "required": true
+      },
+      {
+        "slot": "changeable_paper_insert",
+        "required": false
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "compliance": {
+    "ada": {
+      "tactile": true,
+      "braille": true,
+      "non_glare": true
+    },
+    "notes": "Permanent tactile + braille; paper insert = changeable non-tactile content; bilingual EN/ES."
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Masked paper-insert window behind the permanent tactile panel; bilingual."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

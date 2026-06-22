@@ -1,0 +1,98 @@
+{
+  "record_id": "rec-atm-kiosk-freestanding-unitedbank-001",
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data and actual copy excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "retail_banking"
+  },
+  "classification": {
+    "sign_category": "cabinet",
+    "sub_type": "atm_surround",
+    "primary_function": "atm_surround_and_branding",
+    "illuminated": true,
+    "illumination_method": "external_downlight",
+    "illumination_detail": "illuminated push-through acrylic logo/letters + canopy under-lighting",
+    "sides": 1,
+    "fabrication_family": "composite_structure",
+    "mounting": "ground_mounted_footing",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "ATM treatments: walk-up thru-wall, drive-up thru-wall, freestanding drive-up, freestanding kiosk, refurbished, reface",
+    "variant_axis": "atm_type"
+  },
+  "knowledge": {
+    "plain_language_summary": "A family of ATM treatments: thru-wall walk-up/drive-up surrounds, freestanding drive-up and kiosk units with an illuminated canopy (push-through acrylic logo + letters, canopy down-lighting), refurbished surrounds, and non-illuminated reface faces.",
+    "rationale": "ATM surrounds/kiosks are a distinct structure family (canopy + surround + branding) outside the standard sign categories.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "kiosk_structure",
+      "construction": "aluminum structure P1, illuminated push-through acrylic logo + letters (V8), canopy with under-lighting, Tier-4 vinyl wrap V2/V3/V8",
+      "material_refs": [
+        "A1",
+        "V1"
+      ],
+      "illumination": "push-through + canopy downlight",
+      "mounted_to": "ground_footing",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "atm_reface_variant",
+      "construction": "replacement aluminum pan face, non-illuminated, V8 lettering, P3 cabinet (cap electrical)",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "letter_face",
+      "product": "1/2in push-through acrylic (1/4in protrusion)",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "brand vinyls V1 logo / V8 white copy / V10 lettering / V11 disclaimer",
+      "application": "vinyl",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews brand paints P1-P5",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Illuminated canopy + push-through branding on a freestanding ATM kiosk."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "medium-high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ],
+    "reconciliation_v1_3": "Applied v1.3 enums (blade/awning/halo_illuminated/exposed_lamp/external_downlight + concrete/awning_fabric/digital_display_module/adhesive categories).",
+    "reconciliation_v1_5": "sign_category proposed_new_term -> cabinet; sub_type atm_surround (fabrication_family composite_structure retained)."
+  }
+}

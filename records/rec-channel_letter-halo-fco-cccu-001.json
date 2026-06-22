@@ -1,0 +1,84 @@
+{
+  "record_id": "rec-channel_letter-halo-fco-cccu-001",
+  "schema_version": "1.3",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data and actual copy excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "design_intent"
+  },
+  "context": {
+    "industry_vertical": "financial_services_credit_union"
+  },
+  "classification": {
+    "sign_category": "channel_letter",
+    "sub_type": "halo_lit_fco_brushed_aluminum_letters",
+    "primary_function": "branch_identification",
+    "illuminated": true,
+    "illumination_method": "halo_illuminated",
+    "sides": 1,
+    "fabrication_family": "dimensional_letter_or_logo",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "halo-lit 1/2in FCO entrance/lobby letters + 1/4in non-lit routed letters",
+    "variant_axis": "thickness_and_illumination"
+  },
+  "knowledge": {
+    "plain_language_summary": "Halo-lit flat-cut brushed-aluminum letters (1/2in) standoff-mounted off the wall/ATM, plus a non-illuminated 1/4in routed FCO letterset, for a credit-union branch.",
+    "rationale": "Halo-lit FCO letters give a soft premium night read; the non-lit 1/4in set covers restricted locations.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "fco_letters",
+      "construction": "1/2in brushed aluminum FCO letters, back-routed halo, LED behind, standoff-mounted; non-lit variant 1/4in brushed aluminum",
+      "material_refs": [
+        "AL1"
+      ],
+      "illumination": "halo white LED",
+      "fabrication_method": "halo_fco",
+      "mounted_via": "standoff",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "AL1",
+      "category": "letter_face",
+      "product": "1/2in & 1/4in brushed aluminum FCO",
+      "application": "material_finish",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "mounting_height_in": 75,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "brand_wordmark"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Halo-lit brushed FCO = soft premium night read."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

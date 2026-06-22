@@ -10,7 +10,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { research, save } from '@/app/reference/actions';
 import type { ReferenceLayerEntry, ReferenceProposal } from '@/lib/kb';
 
-export function ReferenceAdd() {
+export function ReferenceAdd({ canPublish = true }: { canPublish?: boolean }) {
   const [name, setName] = useState('');
   const [notes, setNotes] = useState('');
   const [proposal, setProposal] = useState<ReferenceProposal | null>(null);
@@ -86,9 +86,13 @@ export function ReferenceAdd() {
             {proposal!.issues.length ? (
               <div className="flex items-center gap-1 text-xs text-destructive"><AlertTriangle className="h-3 w-3" /> {proposal!.issues.join('; ')}</div>
             ) : null}
-            <Button onClick={() => doSave(e)} disabled={phase !== 'idle' || proposal!.issues.length > 0}>
-              {phase === 'saving' ? <Loader2 className="h-4 w-4 animate-spin" /> : <Check className="h-4 w-4" />} Save to reference
-            </Button>
+            {canPublish ? (
+              <Button onClick={() => doSave(e)} disabled={phase !== 'idle' || proposal!.issues.length > 0}>
+                {phase === 'saving' ? <Loader2 className="h-4 w-4 animate-spin" /> : <Check className="h-4 w-4" />} Save to reference
+              </Button>
+            ) : (
+              <p className="text-xs text-muted-foreground">An admin approves and saves researched entries to the reference layer.</p>
+            )}
           </div>
         ) : null}
       </CardContent>

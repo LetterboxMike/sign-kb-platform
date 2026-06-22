@@ -1,0 +1,88 @@
+{
+  "record_id": "rec-plaque-acrylic-tactile-shim-d1-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "financial_investment_office"
+  },
+  "classification": {
+    "sign_category": "plaque",
+    "sub_type": "flush_acrylic_tactile_panel_back_painted_shim",
+    "primary_function": "ada_room_and_egress_id",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "stair ID + NYC reentry (4 message variants) + support-room ID",
+    "variant_axis": "egress_message"
+  },
+  "knowledge": {
+    "plain_language_summary": "A 1/4in P95 acrylic tactile panel with applied raised characters + Raster braille, backed with a 1/16in inset acrylic shim, sandblasted edges; back-painted white + vinyl backer for opacity, or photoluminescent paint for stair/reentry signs.",
+    "rationale": "The shimmed acrylic panel carries ADA tactile and NYC stair-reentry code logic; photoluminescent paint for egress.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "acrylic_panel",
+      "construction": "1/4in P95 acrylic, raised tactile + Raster braille, 1/16in inset shim, sandblasted edges, back-painted white + vinyl backer (or photoluminescent), VHB",
+      "material_refs": [
+        "M1"
+      ],
+      "fabrication_method": "tactile_acrylic_shim",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "M1",
+      "category": "substrate",
+      "product": "1/4in P95 acrylic",
+      "manufacturer_normalized_id": "mfr-p95-acrylic"
+    }
+  ],
+  "dimensions": {
+    "stair_in": "8x8+4 bar",
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "stair_or_reentry_or_room"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "compliance": {
+    "ada": {
+      "tactile": true,
+      "braille": true
+    },
+    "notes": "NYC stair reentry logic (4 message schedules); photoluminescent egress paint."
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Shimmed acrylic tactile panel; NYC reentry code message set."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

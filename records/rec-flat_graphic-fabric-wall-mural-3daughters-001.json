@@ -1,0 +1,49 @@
+{
+  "record_id": "rec-flat_graphic-fabric-wall-mural-3daughters-001",
+  "schema_version": "1.2",
+  "record_type": "flat_graphic",
+  "provenance_note": "All client/vendor/human/copy excluded; restaurant (BBQ) vertical retained.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "restaurant_bbq"
+  },
+  "classification": {
+    "graphic_method": "digital_print",
+    "applied_to": "wall",
+    "contour_cut": false
+  },
+  "materials_manifest": [
+    {
+      "ref": "G1",
+      "category": "graphic",
+      "product": "Phototex self-adhesive fabric wallcovering, digitally printed",
+      "application": "digital_print",
+      "manufacturer_normalized_id": "mfr-phototex"
+    }
+  ],
+  "dimensions": {
+    "overall_in": "553x63",
+    "unit_system": "imperial",
+    "provenance": "drawing",
+    "note": "~46ft x 5ft single-piece mural"
+  },
+  "messaging_pattern": {
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Very large single-piece mural on repositionable fabric wallcovering (no surface damage)."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "design_assessment"
+    ],
+    "plain_language_summary": "A large single-piece interior wall mural digitally printed on Phototex self-adhesive fabric wallcovering."
+  }
+}

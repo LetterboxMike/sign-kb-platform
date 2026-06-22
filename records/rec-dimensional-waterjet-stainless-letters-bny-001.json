@@ -1,0 +1,88 @@
+{
+  "record_id": "rec-dimensional-waterjet-stainless-letters-bny-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "financial_services_office"
+  },
+  "classification": {
+    "sign_category": "channel_letter",
+    "sub_type": "waterjet_stainless_dimensional_letters_and_logo",
+    "primary_function": "identification_and_wayfinding",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "dimensional_letter_or_logo",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "elevator-jamb letters, BNY logo, E/W wayfinding; jamb pairs SS letters with SS braille panel",
+    "variant_axis": "location"
+  },
+  "knowledge": {
+    "plain_language_summary": "1/4in water-jet-cut stainless letters/symbols, No.6 horizontal fine-brush faces with sandblasted returns; elevator-jamb sets pair SS letters with a 1/16in SS Grade-2 braille panel.",
+    "rationale": "Brushed stainless dimensional copy is the premium finance-office finish; SS braille panel keeps jamb IDs ADA.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "ss_letters",
+      "construction": "1/4in waterjet stainless letters, No.6 brushed faces, sandblasted returns; 1/16in SS braille panel (jamb); VHB or flush-stud",
+      "material_refs": [
+        "ST1"
+      ],
+      "fabrication_method": "waterjet_stainless",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "ST1",
+      "category": "letter_face",
+      "product": "stainless steel, No.6 brushed",
+      "application": "material_finish",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "floor_logo_or_wayfinding"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "compliance": {
+    "ada": {
+      "tactile": true,
+      "braille": true
+    },
+    "notes": "Elevator-jamb SS braille panel = ADA."
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Brushed-stainless dimensional copy; VHB vs flush-stud option set."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

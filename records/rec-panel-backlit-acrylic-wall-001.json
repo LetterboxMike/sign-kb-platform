@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.2",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/copy data excluded; health/wellness clinic vertical retained.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "healthcare_wellness_clinic"
+  },
+  "record_id": "rec-panel-backlit-acrylic-wall-001",
+  "classification": {
+    "sign_category": "cabinet",
+    "sub_type": "internally_lit_translucent_acrylic_wall_panel",
+    "primary_function": "brand_backlit_wall",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "An internally lit translucent-acrylic wall panel on an extruded aluminum U-channel frame and angle cleats with 3M Dual Lock, seams filled with structural glazing silicone, lit by mini LED modules with remote supply.",
+    "rationale": "A backlit acrylic wall gives a soft brand glow; Dual Lock cleating allows clean removable mounting.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "frame_and_mount",
+      "construction": "3/4x1.5in extruded aluminum U-channel on 1.5in aluminum angle cleats with 3M Dual Lock fastener",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "acrylic_panels",
+      "construction": "1/4in Acrylite 7328 translucent white acrylic panels, seams filled with Tremco clear structural glazing silicone, 12V 4100K Principal-Sloan Qwik Mod 1 mini LEDs, remote PSU",
+      "material_refs": [
+        "A1",
+        "SIL1"
+      ],
+      "illumination": "internal 4100K LED",
+      "fabrication_method": "backlit_acrylic_panel",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "face_substrate",
+      "product": "1/4in Acrylite 7328 translucent white acrylic",
+      "manufacturer_normalized_id": "mfr-acrylite"
+    },
+    {
+      "ref": "SIL1",
+      "category": "coating",
+      "product": "Tremco structural glazing silicone",
+      "manufacturer_normalized_id": "mfr-tremco"
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "brand_field"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Dual Lock cleating allows clean removable mounting; silicone-filled seams keep a continuous lit field."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

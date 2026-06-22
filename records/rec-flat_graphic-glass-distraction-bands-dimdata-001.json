@@ -1,0 +1,48 @@
+{
+  "record_id": "rec-flat_graphic-glass-distraction-bands-dimdata-001",
+  "schema_version": "1.3",
+  "record_type": "flat_graphic",
+  "provenance_note": "All client/vendor/human/copy excluded; vertical retained.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "corporate_office_it"
+  },
+  "classification": {
+    "graphic_method": "digital_print",
+    "applied_to": "glass",
+    "contour_cut": false
+  },
+  "materials_manifest": [
+    {
+      "ref": "G1",
+      "category": "graphic",
+      "product": "digitally printed pattern on optically clear vinyl, first surface (color-match black)",
+      "application": "digital_print",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "band_height_in_range": "25-32",
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "First-surface print on optically clear film; unified palette with the ADA program."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "medium-high",
+    "inferred_fields": [
+      "design_assessment"
+    ],
+    "plain_language_summary": "Digitally printed distraction-band pattern on optically clear vinyl, first-surface on glass at multiple elevations."
+  }
+}

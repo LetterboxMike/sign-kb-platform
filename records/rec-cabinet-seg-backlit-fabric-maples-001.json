@@ -1,0 +1,81 @@
+{
+  "record_id": "rec-cabinet-seg-backlit-fabric-maples-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "design_intent"
+  },
+  "context": {
+    "industry_vertical": "collegiate_athletics_venue"
+  },
+  "classification": {
+    "sign_category": "cabinet",
+    "sub_type": "backlit_seg_tension_fabric_graphic_panel",
+    "primary_function": "impact_brand_graphic",
+    "illuminated": true,
+    "illumination_method": "internal_led",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "Large-format backlit SEG (silicone-edge-graphic) tension-fabric wall murals in a 1.25in extruded aluminum frame with internal LED backlighting.",
+    "rationale": "SEG backlit fabric makes seamless large-format glowing brand graphics, swappable by changing the fabric.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "seg_panel",
+      "construction": "1.25in extruded aluminum SEG frame, digitally printed backlit fabric with sewn keder, internal LED backlight",
+      "material_refs": [
+        "FAB1"
+      ],
+      "illumination": "internal LED backlight",
+      "fabrication_method": "backlit_seg_fabric",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "FAB1",
+      "category": "graphic",
+      "product": "digitally printed backlit SEG fabric",
+      "application": "digital_print",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing",
+    "note": "large-format wall murals"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "impact_graphic"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Seamless backlit SEG fabric; fabric-swappable graphics."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "medium-high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ],
+    "modeling_notes": [
+      "SEG backlit fabric mapped to fabrication_family panel + sign_category cabinet (internally lit panel)."
+    ]
+  }
+}

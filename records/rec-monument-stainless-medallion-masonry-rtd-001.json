@@ -1,0 +1,130 @@
+{
+  "record_id": "rec-monument-stainless-medallion-masonry-rtd-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "public_transit_light_rail"
+  },
+  "classification": {
+    "sign_category": "monument",
+    "sub_type": "stainless_logo_medallion_on_masonry_columns",
+    "primary_function": "station_identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated_reflective",
+    "sides": 1,
+    "fabrication_family": "composite_structure",
+    "mounting": "ground_mounted_masonry_columns",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "per-station medallion (height variants 8'-7\"/9'-6\")",
+    "variant_axis": "station_and_height"
+  },
+  "knowledge": {
+    "plain_language_summary": "A waterjet-cut 1/2in stainless logo medallion (fine horizontal brushed) on a 1/2in stainless stud embedded >=3in into the CMU core of masonry columns (by others), plus a fabricated aluminum stanchion with reflective station graphics.",
+    "rationale": "Stainless medallion into masonry columns gives a permanent station identity; reflective graphics carry night legibility.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "ss_medallion",
+      "construction": "1/2in waterjet stainless medallion, fine horizontal brush, 1/2in SS stud welded back, embedded >=3in in CMU core (columns by others)",
+      "material_refs": [
+        "ST1",
+        "C1"
+      ],
+      "mounted_to": "masonry_columns",
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "aluminum_stanchion",
+      "construction": "2x2x1/8in sq-tube welded frame, .125 aluminum face bonded with Lord adhesive, 4x4x1/2in plates; 3M Scotchlite 280 reflective white + digital print + 3M 8520 matte UV laminate",
+      "material_refs": [
+        "V1",
+        "AD1"
+      ],
+      "finish_refs": [
+        "P1"
+      ],
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "ST1",
+      "category": "letter_face",
+      "product": "304 stainless, brushed",
+      "application": "material_finish",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "C1",
+      "category": "structural_concrete_masonry",
+      "product": "CMU columns (by others)",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "V1",
+      "category": "vinyl",
+      "product": "3M Scotchlite 280 reflective white + 8520 matte UV",
+      "application": "vinyl",
+      "manufacturer_normalized_id": "mfr-3m-graphics"
+    },
+    {
+      "ref": "AD1",
+      "category": "adhesive",
+      "product": "Lord adhesive",
+      "manufacturer_normalized_id": "mfr-lord"
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews satin white",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "medallion_in": 18.75,
+    "stanchion_in": [
+      101,
+      111.75
+    ],
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "station_name"
+      },
+      {
+        "slot": "logo_medallion"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "compliance": {
+    "notes": "SS stud min 3.5in embed in CMU; field-verify."
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Stainless medallion into masonry columns; reflective station graphics."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

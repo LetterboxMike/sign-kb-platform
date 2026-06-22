@@ -1,0 +1,77 @@
+{
+  "record_id": "rec-dimensional-painted-acrylic-lobby-logo-veolia-001",
+  "schema_version": "1.3",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "environmental_services_corporate"
+  },
+  "classification": {
+    "sign_category": "plaque",
+    "sub_type": "non_illuminated_painted_acrylic_lobby_logo",
+    "primary_function": "lobby_identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "dimensional_letter_or_logo",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A non-illuminated dimensional lobby logo: laser-cut 1/2in acrylic painted matte to a PMS, flush stud-mounted in silicone-filled holes, ~78in wide.",
+    "rationale": "Painted flat-cut acrylic gives a clean dimensional corporate lobby logo.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "logo",
+      "construction": "laser-cut 1/2in acrylic painted matte Matthews PMS 485C, 3/8in aluminum studs in silicone-filled holes, 3in projection",
+      "finish_refs": [
+        "P1"
+      ],
+      "fabrication_method": "flat_cut_out",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews matte PMS 485C",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "overall_width_in": 78,
+    "projection_in": 3,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "logo"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Clean painted flat-cut acrylic lobby logo."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

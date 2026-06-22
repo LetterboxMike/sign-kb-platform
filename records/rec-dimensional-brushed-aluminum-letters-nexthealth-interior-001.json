@@ -1,0 +1,78 @@
+{
+  "record_id": "rec-dimensional-brushed-aluminum-letters-nexthealth-interior-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "design_intent"
+  },
+  "context": {
+    "industry_vertical": "healthcare_wellness_clinic"
+  },
+  "classification": {
+    "sign_category": "channel_letter",
+    "sub_type": "flat_cut_brushed_aluminum_front_desk_letters",
+    "primary_function": "front_desk_identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "dimensional_letter_or_logo",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "Laser-cut 1/2in plate-aluminum letters, horizontal brushed grain matte anodized, flush-stud mounted at the front desk.",
+    "rationale": "Brushed-aluminum FCO letters, a clean clinical dimensional read.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "letters",
+      "construction": "1/2in plate aluminum, brushed grain matte anodized, flush stud",
+      "material_refs": [
+        "AL1"
+      ],
+      "fabrication_method": "flat_cut_out",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "AL1",
+      "category": "letter_face",
+      "product": "1/2in brushed aluminum, matte anodized",
+      "application": "material_finish",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "field_w_in": 84,
+    "cap_in": "7-12.75",
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "brand_wordmark"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Brushed-aluminum FCO; clinical dimensional read."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

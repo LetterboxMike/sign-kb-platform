@@ -1,0 +1,79 @@
+{
+  "record_id": "rec-directional-parking-space-id-silos-001",
+  "schema_version": "1.4",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "multifamily_residential"
+  },
+  "classification": {
+    "sign_category": "directional",
+    "sub_type": "parking_space_id_panel",
+    "primary_function": "parking_space_identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "panel",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "program_model": {
+    "is_program": true,
+    "instance_model": "parking space ID, qty 52, 2 color options",
+    "variant_axis": "number_and_color"
+  },
+  "knowledge": {
+    "plain_language_summary": "Parking space ID panels (garage wall/column-mounted, non-tactile numerals).",
+    "rationale": "Numeric parking-stall IDs in the garage.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "parking_panel",
+      "construction": "acrylic/aluminum panel, 2nd-surface painted parking numerals",
+      "material_refs": [
+        "M1"
+      ],
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "M1",
+      "category": "substrate",
+      "product": "acrylic/aluminum panel",
+      "manufacturer_normalized_id": null
+    }
+  ],
+  "dimensions": {
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "parking_space_number"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Numeric parking-stall IDs; spec sparse (face-view pages)."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "low",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

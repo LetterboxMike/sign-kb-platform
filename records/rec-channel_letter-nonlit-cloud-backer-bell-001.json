@@ -1,0 +1,81 @@
+{
+  "record_id": "rec-channel_letter-nonlit-cloud-backer-bell-001",
+  "schema_version": "1.3",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address data and copy excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "automotive_truck_dealership"
+  },
+  "classification": {
+    "sign_category": "channel_letter",
+    "sub_type": "non_illuminated_pan_channel_letters_on_cloud_backer",
+    "primary_function": "wall_identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "channel_letter",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "Non-illuminated pan channel letters (3in returns, white trim cap, Sign White faces) on a non-illuminated fabricated aluminum cloud backer painted satin black, flush to wall.",
+    "rationale": "A cloud backer frames the letters; non-illuminated keeps cost down for a dealership wall.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "cloud_backer",
+      "construction": "fabricated 3in deep aluminum tube frame, 1/8in aluminum face, painted Matthews satin black",
+      "finish_refs": [
+        "P1"
+      ],
+      "provenance": "drawing"
+    },
+    {
+      "ref": "02",
+      "component": "channel_letters",
+      "construction": "non-illuminated aluminum pan channel letters, 3in returns, 1in white trim cap, Sign White faces",
+      "fabrication_method": "pan_channel",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Matthews satin black",
+      "manufacturer_normalized_id": "mfr-matthews"
+    }
+  ],
+  "dimensions": {
+    "overall_width_in": 189.5,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "brand_wordmark"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Cloud backer frames non-lit pan letters."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}

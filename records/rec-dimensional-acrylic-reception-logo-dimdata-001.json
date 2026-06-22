@@ -1,0 +1,82 @@
+{
+  "record_id": "rec-dimensional-acrylic-reception-logo-dimdata-001",
+  "schema_version": "1.3",
+  "record_type": "fabricated_sign",
+  "provenance_note": "All client/vendor/human/address/copy data excluded; vertical retained; copy structure only.",
+  "source": {
+    "doc_type": "shop"
+  },
+  "context": {
+    "industry_vertical": "corporate_office_it"
+  },
+  "classification": {
+    "sign_category": "plaque",
+    "sub_type": "optically_clear_acrylic_2nd_surface_logo",
+    "primary_function": "reception_identification",
+    "illuminated": false,
+    "illumination_method": "non_illuminated",
+    "sides": 1,
+    "fabrication_family": "dimensional_letter_or_logo",
+    "mounting": "wall_mounted",
+    "digital_integration": false
+  },
+  "knowledge": {
+    "plain_language_summary": "A reception logo in 1in optically-clear acrylic letters, laser-cut polished edges, backs CNC-milled to an 87-degree desk angle, 2nd-surface painted, VHB-mounted.",
+    "rationale": "Optically-clear acrylic with polished edges and 2nd-surface paint gives a floating dimensional reception logo.",
+    "provenance": "inferred"
+  },
+  "structure": [
+    {
+      "ref": "01",
+      "component": "acrylic_logo",
+      "construction": "1in optically-clear acrylic, laser-cut polished edges, back CNC-milled to 87deg, 2nd-surface painted (BM), VHB",
+      "material_refs": [
+        "A1"
+      ],
+      "fabrication_method": "clear_acrylic_2nd_surface",
+      "mounted_to": "wall",
+      "provenance": "drawing"
+    }
+  ],
+  "materials_manifest": [
+    {
+      "ref": "A1",
+      "category": "letter_face",
+      "product": "1in optically-clear acrylic",
+      "manufacturer_normalized_id": null
+    },
+    {
+      "ref": "P1",
+      "category": "paint",
+      "product": "Benjamin Moore palette",
+      "manufacturer_normalized_id": "mfr-benjamin-moore"
+    }
+  ],
+  "dimensions": {
+    "logo_run_in": 60,
+    "unit_system": "imperial",
+    "provenance": "drawing"
+  },
+  "messaging_pattern": {
+    "copy_blocks": [
+      {
+        "slot": "logo"
+      }
+    ],
+    "copy_content": "excluded_pii"
+  },
+  "design_assessment": {
+    "quality_grade": null,
+    "grade_provenance": "ungraded_pending_review",
+    "craft_observations": [
+      "Polished-edge clear acrylic + 2nd-surface paint = floating dimensional logo."
+    ]
+  },
+  "extraction_meta": {
+    "field_confidence": "high",
+    "inferred_fields": [
+      "knowledge",
+      "design_assessment"
+    ]
+  }
+}
